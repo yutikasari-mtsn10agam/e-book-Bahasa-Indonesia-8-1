@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Tengah Semester (UTS) | Bahasa Indonesia Kelas VIII</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0d12;
+            --bg-secondary: #11141c;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a8b3;
+            --border-color: rgba(212, 175, 55, 0.2);
+            --accent-red: #ef4444;
+            --accent-green: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 13, 18, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+        }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .nav-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .nav-link:hover { background: var(--gold); color: var(--bg-color); }
+
+        .content-wrapper {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 50px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .chapter-header { text-align: center; margin-bottom: 40px; }
+        .chapter-number { color: var(--gold); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+        .chapter-title { font-size: 3rem; background: linear-gradient(135deg, var(--text-primary) 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; line-height: 1.2; }
+        .chapter-desc { color: var(--text-secondary); max-width: 700px; margin: 0 auto 20px; font-size: 1.1rem; }
+        .author-badge { display: inline-block; background: rgba(212, 175, 55, 0.1); border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 50px; color: var(--gold-light); font-size: 0.9rem; }
+
+        /* Timer */
+        .timer-box {
+            position: sticky;
+            top: 70px;
+            z-index: 90;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--accent-red);
+            color: var(--accent-red);
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .timer-box.warning { background: rgba(239, 68, 68, 0.2); animation: pulse 1s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+        .section { margin-bottom: 50px; }
+        .section-title { font-size: 1.8rem; color: var(--gold); margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid var(--border-color); display: flex; align-items: center; gap: 15px; }
+        
+        .test-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 50px;
+            margin: 40px 0;
+        }
+        .test-header { text-align: center; margin-bottom: 40px; }
+        .test-header h2 { color: var(--gold); font-size: 2.2rem; margin-bottom: 10px; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-primary); font-size: 0.95rem; }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .question-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .question-number { font-weight: 700; color: var(--gold); }
+        .question-badge { 
+            background: rgba(102, 126, 234, 0.2); color: #8b9cf7; 
+            padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; 
+        }
+        .question-badge.hots { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .question-points { background: var(--gold); color: var(--bg-color); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+        .question-text { margin-bottom: 20px; font-weight: 500; color: var(--text-primary); }
+
+        .options { display: flex; flex-direction: column; gap: 12px; }
+        .option {
+            display: flex; align-items: center; padding: 14px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.05); }
+        .option input { margin-right: 15px; accent-color: var(--gold); width: 18px; height: 18px; cursor: pointer; }
+        .option label { cursor: pointer; flex: 1; color: var(--text-secondary); }
+
+        /* Menjodohkan */
+        .match-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .match-term {
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        .match-select {
+            width: 100%;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .match-select:focus { outline: none; border-color: var(--gold); }
+
+        .score-display {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 1px solid var(--gold);
+            color: var(--text-primary);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+            display: none;
+        }
+        .score-display.show { display: block; animation: fadeIn 0.5s ease; }
+        .score-value { font-size: 3rem; font-weight: 700; color: var(--gold); margin: 10px 0; }
+        .score-breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .score-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; }
+        .score-item-label { color: var(--text-secondary); font-size: 0.9rem; }
+        .score-item-value { color: var(--gold-light); font-size: 1.5rem; font-weight: 700; }
+
+        .button-group { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 30px; }
+        .btn {
+            padding: 14px 28px; border: none; border-radius: 50px; font-size: 0.95rem; font-weight: 600;
+            cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--gold) 0%, #b8941f 100%); color: var(--bg-color); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.1); color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.15); }
+
+        .footer { text-align: center; padding: 40px 0; color: var(--text-secondary); font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 40px; }
+        .footer a { color: var(--gold); text-decoration: none; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            .content-wrapper, .test-section { padding: 25px; }
+            .chapter-title { font-size: 2.2rem; }
+            .match-row { grid-template-columns: 1fr; gap: 10px; }
+            .button-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container nav-content">
+            <a href="10.html" class="nav-link">← Pertemuan 10</a>
+            <a href="12.html" class="nav-link">Pertemuan 12 →</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <div class="chapter-header">
+                <div class="chapter-number">📚 — Ujian Tengah Semester —</div>
+                <h1 class="chapter-title">Evaluasi Komprehensif Bab 1 & 2</h1>
+                <p class="chapter-desc">
+                    Ujian ini mencakup materi Teks Laporan Hasil Observasi (Pertemuan 1-7) dan Iklan, Slogan, serta Poster (Pertemuan 8-10). Kerjakan dengan jujur, teliti, dan manfaatkan waktu dengan baik.
+                </p>
+                <div class="author-badge">
+                    ✦ Yutika Sari, S.Pd. | MTsN 10 Agam | yutika.sari06@gmail.com
+                </div>
+            </div>
+
+            <!-- Timer -->
+            <div class="timer-box" id="timerBox">
+                ⏱️ Sisa Waktu: <span id="timer">60:00</span>
+            </div>
+
+            <!-- Test Section -->
+            <div class="test-section" id="testSection">
+                <div class="test-header">
+                    <h2>📝 Lembar Ujian Tengah Semester</h2>
+                    <p style="color: var(--text-secondary); margin-top: 10px;">
+                        Bahasa Indonesia Kelas VIII Semester 1
+                    </p>
+                    <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px solid var(--border-color);">
+                        <strong style="color: var(--gold);">📋 Bagian A:</strong> Pilihan Ganda (20 soal, 2 poin/soal)<br>
+                        <strong style="color: var(--gold);">☑️ Bagian B:</strong> Pilihan Ganda Kompleks (10 soal, 2 poin/soal)<br>
+                        <strong style="color: var(--gold);">✅ Bagian C:</strong> Benar/Salah (5 soal, 2 poin/soal)<br>
+                        <strong style="color: var(--gold);">🔗 Bagian D:</strong> Menjodohkan (5 soal, 2 poin/soal)<br>
+                        <span style="font-size: 0.9rem; color: var(--text-secondary);">Total Skor Maksimal: 80 (Dikonversi ke skala 100)</span>
+                    </div>
+                </div>
+                
+                <!-- Student Identity -->
+                <div style="background: rgba(255,255,255,0.03); padding: 25px; border-radius: 12px; margin-bottom: 40px; border: 1px solid var(--border-color);">
+                    <h3 style="color: var(--gold); margin-bottom: 20px; font-size: 1.2rem;">📋 Identitas Siswa</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap *</label>
+                            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="nis">No. Absen / NIS *</label>
+                            <input type="text" id="nis" name="nis" required placeholder="Nomor absen atau NIS">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="kelas">Kelas *</label>
+                            <select id="kelas" name="kelas" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Ujian</label>
+                            <input type="date" id="tanggal" name="tanggal">
+                        </div>
+                        <div class="form-group">
+                            <label for="semester">Semester</label>
+                            <input type="text" id="semester" name="semester" value="1 (Satu)" readonly style="opacity: 0.7;">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bagian A: Pilihan Ganda -->
+                <div style="margin-bottom: 50px;">
+                    <h3 class="section-title">📋 Bagian A: Pilihan Ganda (Pilih Satu Jawaban)</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 25px;">Pilihlah satu jawaban yang paling tepat. Soal 1-15 bersifat LOTS, Soal 16-20 bersifat HOTS.</p>
+                    
+                    <!-- Soal 1-20 akan di-generate via JS atau ditulis manual. Untuk kejelasan, ditulis manual dengan struktur konsisten -->
+                    <div id="pg-questions"></div>
+                </div>
+
+                <!-- Bagian B: Pilihan Ganda Kompleks -->
+                <div style="margin-bottom: 50px;">
+                    <h3 class="section-title">☑️ Bagian B: Pilihan Ganda Kompleks</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 25px;">Pilihlah <strong>lebih dari satu</strong> jawaban yang benar. Skor penuh diberikan jika semua jawaban benar dipilih dan tidak ada jawaban salah yang dipilih.</p>
+                    <div id="pgk-questions"></div>
+                </div>
+
+                <!-- Bagian C: Benar/Salah -->
+                <div style="margin-bottom: 50px;">
+                    <h3 class="section-title">✅ Bagian C: Benar atau Salah</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 25px;">Tentukan apakah pernyataan berikut Benar atau Salah.</p>
+                    <div id="bs-questions"></div>
+                </div>
+
+                <!-- Bagian D: Menjodohkan -->
+                <div style="margin-bottom: 50px;">
+                    <h3 class="section-title">🔗 Bagian D: Menjodohkan</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 25px;">Jodohkan istilah di kolom kiri dengan definisi/deskripsi yang tepat di kolom kanan.</p>
+                    <div id="match-questions"></div>
+                </div>
+                
+                <!-- Score Display -->
+                <div class="score-display" id="scoreDisplay">
+                    <h2 style="margin-bottom: 20px; color: var(--gold);">📊 Hasil Ujian Tengah Semester</h2>
+                    <div class="score-breakdown">
+                        <div class="score-item">
+                            <div class="score-item-label">Pilihan Ganda</div>
+                            <div class="score-item-value" id="pgScore">0/40</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-item-label">PG Kompleks</div>
+                            <div class="score-item-value" id="pgkScore">0/20</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-item-label">Benar/Salah</div>
+                            <div class="score-item-value" id="bsScore">0/10</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-item-label">Menjodohkan</div>
+                            <div class="score-item-value" id="matchScore">0/10</div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(212, 175, 55, 0.1); padding: 25px; border-radius: 8px; border: 1px solid var(--gold);">
+                        <div style="color: var(--gold-light); font-size: 1.2rem; font-weight: 600;">Nilai Akhir (Skala 100)</div>
+                        <div class="score-value" id="totalScore">0</div>
+                    </div>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button type="button" class="btn btn-primary" onclick="calculateScore()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                    <button type="button" class="btn btn-secondary" onclick="downloadScore()">📄 UNDUH SKOR (TXT)</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetTest()">🔄 MULAI ULANG</button>
+                    <a href="mailto:yutika.sari06@gmail.com?subject=Hasil UTS Bahasa Indonesia Kelas 8" class="btn btn-secondary">📧 Kirim ke Email Guru</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p style="margin-bottom: 15px;">
+                <a href="index.html" style="margin: 0 15px;">📖 Daftar Isi</a> 
+                <span style="color: var(--border-color);">|</span>
+                <a href="12.html" style="margin: 0 15px;">Pertemuan 12 →</a> 
+                <span style="color: var(--border-color);">|</span>
+                <a href="mailto:yutika.sari06@gmail.com" style="margin: 0 15px;">📧 Email Penulis</a>
+            </p>
+            <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam. Hak Cipta Dilindungi.</p>
+        </div>
+    </div>
+    
+    <script>
+        // --- DATA SOAL ---
+        const pgQuestions = [
+            { q: "Teks yang berisi penjabaran umum atau melaporkan sesuatu berupa hasil dari pengamatan secara sistematis disebut...", options: ["Teks Eksposisi", "Teks Laporan Hasil Observasi", "Teks Deskripsi", "Teks Narasi"], ans: "b", hots: false },
+            { q: "Ciri utama teks laporan hasil observasi adalah bersifat...", options: ["Subjektif dan imajinatif", "Objektif dan faktual", "Persuasif dan emosional", "Fiktif dan naratif"], ans: "b", hots: false },
+            { q: "Struktur teks LHO yang berisi definisi, klasifikasi, atau informasi umum tentang objek disebut...", options: ["Deskripsi Bagian", "Deskripsi Manfaat", "Pernyataan Umum", "Orientasi"], ans: "c", hots: false },
+            { q: "Paragraf yang bertujuan menggambarkan objek secara rinci sehingga pembaca seolah-olah merasakan sendiri disebut paragraf...", options: ["Eksposisi", "Argumentasi", "Narasi", "Deskripsi"], ans: "d", hots: false },
+            { q: "Data yang berbentuk angka atau bilangan yang dapat diukur disebut data...", options: ["Kualitatif", "Kuantitatif", "Deskriptif", "Naratif"], ans: "b", hots: false },
+            { q: "Kata asing atau kata serapan dari bahasa daerah dalam teks bahasa Indonesia harus ditulis dengan...", options: ["Huruf kapital semua", "Huruf tebal (bold)", "Huruf miring (italic)", "Tanda kutip"], ans: "c", hots: false },
+            { q: "Teks yang bertujuan memaparkan, menjelaskan, atau menyampaikan informasi secara analitis disebut paragraf...", options: ["Deskripsi", "Eksposisi", "Persuasi", "Narasi"], ans: "b", hots: false },
+            { q: "Iklan yang bertujuan untuk mencari keuntungan atau mempromosikan produk/jasa disebut iklan...", options: ["Nonkomersial", "Layanan Masyarakat", "Komersial", "Pendidikan"], ans: "c", hots: false },
+            { q: "Iklan yang bertujuan memberikan pelayanan atau edukasi kepada masyarakat tanpa mencari keuntungan disebut...", options: ["Iklan Komersial", "Iklan Penawaran", "Iklan Nonkomersial", "Iklan Baris"], ans: "c", hots: false },
+            { q: "Kalimat yang mengandung perintah, larangan, atau ajakan disebut kalimat...", options: ["Deklaratif", "Interogatif", "Imperatif", "Eksklamatif"], ans: "c", hots: false },
+            { q: "Gagasan utama paragraf deduktif terletak di...", options: ["Awal paragraf", "Akhir paragraf", "Awal dan akhir paragraf", "Tengah paragraf"], ans: "a", hots: false },
+            { q: "Berat keseluruhan suatu barang termasuk kemasannya disebut...", options: ["Netto", "Tara", "Bruto", "Rabat"], ans: "c", hots: false }, // Note: Keep it relevant to LHO context if possible, or general knowledge. Let's change to LHO context.
+            // Revising Q12 to be strictly LHO/Bab 1-2
+            { q: "Langkah pertama yang paling tepat dalam menulis teks laporan hasil observasi adalah...", options: ["Menentukan topik/objek yang akan diamati", "Langsung menulis paragraf penutup", "Mencari gambar di internet", "Menentukan judul yang menarik"], ans: "a", hots: false },
+            { q: "Unsur utama yang harus ada dalam sebuah poster agar efektif adalah...", options: ["Gambar yang menarik dan kalimat persuasif", "Paragraf yang sangat panjang", "Daftar pustaka", "Riwayat hidup penulis"], ans: "a", hots: false },
+            { q: "Slogan yang efektif biasanya memiliki ciri...", options: ["Kalimatnya panjang dan bertele-tele", "Singkat, padat, dan mudah diingat", "Menggunakan bahasa asing yang rumit", "Berisi data statistik lengkap"], ans: "b", hots: false },
+            { q: "Perhatikan kutipan: 'Harimau Sumatera memiliki bulu berwarna cokelat kemerahan dengan pola loreng hitam yang rapat. Bulunya terasa lembut jika disentuh.' Kutipan tersebut merupakan contoh paragraf...", options: ["Eksposisi", "Argumentasi", "Deskripsi", "Narasi"], ans: "c", hots: true },
+            { q: "Perhatikan kutipan: 'Pemanasan global menyebabkan kenaikan suhu bumi. Akibatnya, es di kutub mencair dan permukaan air laut naik.' Hubungan antar kalimat dalam kutipan tersebut menunjukkan...", options: ["Perbandingan", "Sebab-akibat", "Urutan waktu", "Definisi"], ans: "b", hots: true },
+            { q: "Manakah penulisan kata asing yang BENAR menurut kaidah EYD dalam kalimat berikut?", options: ["Ia sedang mempelajari ilmu management.", "Ia sedang mempelajari ilmu manajemen.", "Ia sedang mempelajari ilmu 'manajemen'.", "Ia sedang mempelajari ilmu Manajement."], ans: "b", hots: true },
+            { q: "Sebuah iklan layanan masyarakat menampilkan gambar tangan yang sedang menanam pohon dengan tulisan 'Selamatkan Bumi Kita'. Pesan tersirat dari iklan tersebut adalah...", options: ["Ajakan untuk membeli bibit pohon", "Pentingnya partisipasi aktif dalam menjaga lingkungan", "Larangan menebang pohon di hutan lindung", "Iklan perusahaan perkebunan besar"], ans: "b", hots: true },
+            { q: "Bacalah paragraf berikut: '(1) Sampah plastik menjadi masalah serius di lautan. (2) Setiap tahun, jutaan ton sampah plastik masuk ke laut. (3) Hewan laut seperti penyu sering mengira plastik sebagai makanan. (4) Oleh karena itu, kita harus mengurangi penggunaan plastik sekali pakai.' Gagasan utama paragraf tersebut terdapat pada kalimat...", options: ["(1)", "(2)", "(3)", "(4)"], ans: "a", hots: true } // Induktif/Deduktif analysis
+        ];
+
+        const pgkQuestions = [
+            { q: "Pilihlah TIGA ciri-ciri teks laporan hasil observasi yang benar!", options: ["Bersifat objektif dan faktual", "Mengandung opini pribadi penulis", "Disusun secara sistematis", "Menggunakan bahasa baku", "Bersifat fiktif dan imajinatif"], ans: ["a", "c", "d"] },
+            { q: "Pilihlah DUA jenis data yang terdapat dalam teks laporan hasil observasi!", options: ["Data Kualitatif", "Data Fiktif", "Data Kuantitatif", "Data Opini"], ans: ["a", "c"] },
+            { q: "Pilihlah TIGA unsur yang terdapat dalam struktur teks laporan hasil observasi!", options: ["Pernyataan Umum", "Komplikasi", "Deskripsi Bagian", "Resolusi", "Deskripsi Manfaat"], ans: ["a", "c", "e"] },
+            { q: "Pilihlah TIGA ciri-ciri paragraf deskripsi!", options: ["Melibatkan pancaindera", "Bersifat analitis dan konseptual", "Menggunakan banyak kata sifat", "Menggambarkan objek secara rinci", "Menggunakan konjungsi kausalitas (sebab-akibat)"], ans: ["a", "c", "d"] },
+            { q: "Pilihlah TIGA ciri-ciri iklan komersial!", options: ["Bertujuan mencari keuntungan", "Mempromosikan produk atau jasa", "Bersifat edukasi murni tanpa promosi", "Menyertakan harga atau cara pemesanan", "Dibiayai oleh pemerintah"], ans: ["a", "b", "d"] },
+            { q: "Pilihlah DUA ciri kalimat imperatif yang sering digunakan dalam iklan atau poster!", options: ["Mengandung perintah atau ajakan", "Diakhiri dengan tanda tanya", "Menggunakan partikel -lah atau -kan", "Bersifat memberitakan fakta"], ans: ["a", "c"] },
+            { q: "Pilihlah TIGA langkah sistematis dalam menulis teks laporan hasil observasi!", options: ["Menentukan objek yang akan diamati", "Langsung menulis tanpa kerangka", "Melakukan pengamatan/observasi", "Menyusun kerangka tulisan", "Mengabaikan data fakta"], ans: ["a", "c", "d"] },
+            { q: "Pilihlah TIGA fungsi dari sebuah poster!", options: ["Menyampaikan informasi", "Menceritakan pengalaman pribadi", "Mengajak atau memengaruhi pembaca", "Berisi laporan keuangan", "Sebagai media promosi atau kampanye"], ans: ["a", "c", "e"] },
+            { q: "Pilihlah DUA perbedaan mendasar antara fakta dan opini!", options: ["Fakta dapat dibuktikan kebenarannya", "Opini bersifat objektif dan terukur", "Fakta berdasarkan data nyata", "Opini selalu benar adanya"], ans: ["a", "c"] },
+            { q: "Pilihlah TIGA ciri kebahasaan yang umum dalam teks laporan hasil observasi!", options: ["Menggunakan kalimat definisi", "Menggunakan kata ganti orang pertama (aku, saya)", "Menggunakan istilah ilmiah/teknis", "Menggunakan verba material dan relasional", "Menggunakan bahasa gaul atau tidak baku"], ans: ["a", "c", "d"] }
+        ];
+
+        const bsQuestions = [
+            { q: "Teks laporan hasil observasi bersifat subjektif berdasarkan perasaan dan pendapat pribadi penulis.", ans: "salah" },
+            { q: "Paragraf eksposisi bertujuan menjelaskan atau memaparkan informasi secara analitis dan logis.", ans: "benar" },
+            { q: "Iklan layanan masyarakat termasuk dalam kategori iklan komersial karena bertujuan mencari keuntungan.", ans: "salah" },
+            { q: "Kata asing atau kata serapan dari bahasa daerah dalam teks bahasa Indonesia harus ditulis dengan huruf miring (italic).", ans: "benar" },
+            { q: "Gagasan utama paragraf induktif terletak di awal paragraf, kemudian diikuti oleh kalimat-kalimat penjelas.", ans: "salah" }
+        ];
+
+        const matchQuestions = [
+            { term: "Pernyataan Umum", options: ["Paragraf yang menggambarkan objek secara rinci melibatkan pancaindera.", "Bagian pembuka yang berisi definisi atau klasifikasi objek.", "Kalimat yang mengandung perintah atau ajakan.", "Data yang berbentuk angka atau bilangan terukur.", "Iklan yang bertujuan memberikan pelayanan atau edukasi masyarakat."] },
+            { term: "Data Kuantitatif", options: ["Bagian pembuka yang berisi definisi atau klasifikasi objek.", "Iklan yang bertujuan memberikan pelayanan atau edukasi masyarakat.", "Data yang berbentuk angka atau bilangan terukur.", "Paragraf yang menggambarkan objek secara rinci melibatkan pancaindera.", "Kalimat yang mengandung perintah atau ajakan."] },
+            { term: "Iklan Nonkomersial", options: ["Data yang berbentuk angka atau bilangan terukur.", "Paragraf yang menggambarkan objek secara rinci melibatkan pancaindera.", "Kalimat yang mengandung perintah atau ajakan.", "Iklan yang bertujuan memberikan pelayanan atau edukasi masyarakat.", "Bagian pembuka yang berisi definisi atau klasifikasi objek."] },
+            { term: "Kalimat Imperatif", options: ["Kalimat yang mengandung perintah atau ajakan.", "Iklan yang bertujuan memberikan pelayanan atau edukasi masyarakat.", "Bagian pembuka yang berisi definisi atau klasifikasi objek.", "Data yang berbentuk angka atau bilangan terukur.", "Paragraf yang menggambarkan objek secara rinci melibatkan pancaindera."] },
+            { term: "Paragraf Deskripsi", options: ["Iklan yang bertujuan memberikan pelayanan atau edukasi masyarakat.", "Data yang berbentuk angka atau bilangan terukur.", "Paragraf yang menggambarkan objek secara rinci melibatkan pancaindera.", "Kalimat yang mengandung perintah atau ajakan.", "Bagian pembuka yang berisi definisi atau klasifikasi objek."] }
+        ];
+        // Answer key for matching: 0->1, 1->2, 2->3, 3->0, 4->2 (index of correct option)
+        const matchAns = { 0: 1, 1: 2, 2: 3, 3: 0, 4: 2 };
+
+        // --- RENDER FUNCTIONS ---
+        function renderPG() {
+            const container = document.getElementById('pg-questions');
+            pgQuestions.forEach((item, idx) => {
+                const hotsBadge = item.hots ? '<span class="question-badge hots">HOTS</span>' : '<span class="question-badge">LOTS</span>';
+                let optionsHtml = '';
+                const labels = ['A', 'B', 'C', 'D'];
+                item.options.forEach((opt, optIdx) => {
+                    const val = String.fromCharCode(97 + optIdx); // a, b, c, d
+                    optionsHtml += `
+                        <div class="option">
+                            <input type="radio" id="pg${idx}_${val}" name="pg${idx}" value="${val}">
+                            <label for="pg${idx}_${val}"><strong>${labels[optIdx]}.</strong> ${opt}</label>
+                        </div>
+                    `;
+                });
+                container.innerHTML += `
+                    <div class="question-card">
+                        <div class="question-header">
+                            <span class="question-number">Soal ${idx + 1}</span>
+                            ${hotsBadge}
+                            <span class="question-points">2 POIN</span>
+                        </div>
+                        <div class="question-text">${item.q}</div>
+                        <div class="options">${optionsHtml}</div>
+                    </div>
+                `;
+            });
+        }
+
+        function renderPGK() {
+            const container = document.getElementById('pgk-questions');
+            pgkQuestions.forEach((item, idx) => {
+                let optionsHtml = '';
+                const labels = ['A', 'B', 'C', 'D', 'E'];
+                item.options.forEach((opt, optIdx) => {
+                    const val = String.fromCharCode(97 + optIdx);
+                    optionsHtml += `
+                        <div class="option">
+                            <input type="checkbox" id="pgk${idx}_${val}" name="pgk${idx}" value="${val}">
+                            <label for="pgk${idx}_${val}"><strong>${labels[optIdx]}.</strong> ${opt}</label>
+                        </div>
+                    `;
+                });
+                container.innerHTML += `
+                    <div class="question-card">
+                        <div class="question-header">
+                            <span class="question-number">Soal ${idx + 1}</span>
+                            <span class="question-badge">Kompleks</span>
+                            <span class="question-points">2 POIN</span>
+                        </div>
+                        <div class="question-text">${item.q}</div>
+                        <div class="options">${optionsHtml}</div>
+                    </div>
+                `;
+            });
+        }
+
+        function renderBS() {
+            const container = document.getElementById('bs-questions');
+            bsQuestions.forEach((item, idx) => {
+                container.innerHTML += `
+                    <div class="question-card">
+                        <div class="question-header">
+                            <span class="question-number">Soal ${idx + 1}</span>
+                            <span class="question-badge">Benar/Salah</span>
+                            <span class="question-points">2 POIN</span>
+                        </div>
+                        <div class="question-text">${item.q}</div>
+                        <div class="options" style="flex-direction: row; gap: 20px;">
+                            <div class="option" style="flex: 1; justify-content: center;">
+                                <input type="radio" id="bs${idx}_benar" name="bs${idx}" value="benar">
+                                <label for="bs${idx}_benar"><strong>BENAR</strong></label>
+                            </div>
+                            <div class="option" style="flex: 1; justify-content: center;">
+                                <input type="radio" id="bs${idx}_salah" name="bs${idx}" value="salah">
+                                <label for="bs${idx}_salah"><strong>SALAH</strong></label>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function renderMatch() {
+            const container = document.getElementById('match-questions');
+            matchQuestions.forEach((item, idx) => {
+                let optionsHtml = `<option value="">-- Pilih Jawaban --</option>`;
+                // Shuffle options for display but keep track of correct index
+                // For simplicity, we use the provided options array and the user selects the text
+                item.options.forEach((opt, optIdx) => {
+                    optionsHtml += `<option value="${optIdx}">${opt}</option>`;
+                });
+                
+                container.innerHTML += `
+                    <div class="question-card">
+                        <div class="match-row">
+                            <div class="match-term"><strong>${idx + 1}.</strong> ${item.term}</div>
+                            <select class="match-select" id="match${idx}" name="match${idx}">
+                                ${optionsHtml}
+                            </select>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // --- SCORING LOGIC ---
+        function calculateScore() {
+            const nama = document.getElementById('nama').value.trim();
+            const nis = document.getElementById('nis').value.trim();
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('⚠️ Mohon lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let pgScore = 0;
+            pgQuestions.forEach((item, idx) => {
+                const selected = document.querySelector(`input[name="pg${idx}"]:checked`);
+                if (selected && selected.value === item.ans) pgScore += 2;
+            });
+
+            let pgkScore = 0;
+            pgkQuestions.forEach((item, idx) => {
+                const checked = Array.from(document.querySelectorAll(`input[name="pgk${idx}"]:checked`)).map(el => el.value);
+                const correct = item.ans;
+                // Strict scoring: must have exactly the same elements
+                const isCorrect = checked.length === correct.length && checked.every(val => correct.includes(val));
+                if (isCorrect) pgkScore += 2;
+                else {
+                    // Partial scoring: if they got some right but no wrong ones, give 1 point
+                    const hasWrong = checked.some(val => !correct.includes(val));
+                    if (!hasWrong && checked.length > 0) pgkScore += 1;
+                }
+            });
+
+            let bsScore = 0;
+            bsQuestions.forEach((item, idx) => {
+                const selected = document.querySelector(`input[name="bs${idx}"]:checked`);
+                if (selected && selected.value === item.ans) bsScore += 2;
+            });
+
+            let matchScore = 0;
+            matchQuestions.forEach((item, idx) => {
+                const selected = document.getElementById(`match${idx}`).value;
+                if (selected !== "" && parseInt(selected) === matchAns[idx]) matchScore += 2;
+            });
+
+            const rawScore = pgScore + pgkScore + bsScore + matchScore; // Max 80
+            const finalScore = Math.round((rawScore / 80) * 100); // Scale to 100
+
+            document.getElementById('pgScore').textContent = `${pgScore}/40`;
+            document.getElementById('pgkScore').textContent = `${pgkScore}/20`;
+            document.getElementById('bsScore').textContent = `${bsScore}/10`;
+            document.getElementById('matchScore').textContent = `${matchScore}/10`;
+            document.getElementById('totalScore').textContent = finalScore;
+            
+            document.getElementById('scoreDisplay').classList.add('show');
+            document.getElementById('scoreDisplay').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            clearInterval(timerInterval); // Stop timer on submission
+            
+            let message = finalScore >= 85 ? '🎉 Excellent! Pertahankan prestasimu!' : 
+                          finalScore >= 70 ? '👍 Good job! Tingkatkan lagi belajarmu!' : 
+                          finalScore >= 60 ? '📚 Cukup baik. Ayo belajar lebih giat!' : '💪 Jangan menyerah! Pelajari kembali materinya.';
+            
+            setTimeout(() => alert(`Nilai Akhir Anda: ${finalScore}\n\n${message}`), 600);
+        }
+
+        function downloadScore() {
+            const nama = document.getElementById('nama').value || 'Nama tidak diisi';
+            const nis = document.getElementById('nis').value || 'NIS tidak diisi';
+            const kelas = document.getElementById('kelas').value || 'Kelas tidak diisi';
+            const tanggal = document.getElementById('tanggal').value || new Date().toISOString().split('T')[0];
+            const totalScore = document.getElementById('totalScore').textContent || 'Belum dinilai';
+            
+            const content = `
+=========================================
+HASIL UJIAN TENGAH SEMESTER (UTS)
+Bahasa Indonesia Kelas VIII (Kelas 8/1)
+MTsN 10 Agam
+=========================================
+
+IDENTITAS SISWA:
+Nama   : ${nama}
+NIS    : ${nis}
+Kelas  : ${kelas}
+Tanggal: ${tanggal}
+
+HASIL PENILAIAN:
+Nilai Akhir (Skala 100): ${totalScore}
+
+Rincian Skor Mentah (Maksimal 80):
+- Pilihan Ganda (20 soal)      : ${document.getElementById('pgScore').textContent}
+- PG Kompleks (10 soal)        : ${document.getElementById('pgkScore').textContent}
+- Benar/Salah (5 soal)         : ${document.getElementById('bsScore').textContent}
+- Menjodohkan (5 soal)         : ${document.getElementById('matchScore').textContent}
+
+Materi: Bab 1 (Teks LHO) & Bab 2 (Iklan, Slogan, Poster)
+
+© 2026 Yutika Sari, S.Pd. - MTsN 10 Agam
+Email: yutika.sari06@gmail.com
+            `.trim();
+            
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_UTS_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function resetTest() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mengulang ujian? Semua jawaban dan waktu akan direset.')) {
+                document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => el.checked = false);
+                document.querySelectorAll('select').forEach(el => el.selectedIndex = 0);
+                document.getElementById('scoreDisplay').classList.remove('show');
+                startTimer();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // --- TIMER LOGIC ---
+        let timeLeft = 60 * 60; // 60 minutes in seconds
+        let timerInterval;
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timeLeft = 60 * 60;
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert('⏰ Waktu habis! Jawaban akan dikumpulkan secara otomatis.');
+                    calculateScore();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft <= 300) { // Less than 5 minutes
+                document.getElementById('timerBox').classList.add('warning');
+            } else {
+                document.getElementById('timerBox').classList.remove('warning');
+            }
+        }
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPG();
+            renderPGK();
+            renderBS();
+            renderMatch();
+            document.getElementById('tanggal').value = new Date().toISOString().split('T')[0];
+            startTimer();
+        });
+    </script>
+</body>
+</html>
