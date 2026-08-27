@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 1.2: Mengenali Topik dan Gagasan Utama dalam Teks LHO | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Location Cards */
+        .location-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .location-card {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .location-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .location-card h5 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .location-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="index.html">← Daftar Isi</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="3.html">Sub Bab 1.3 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 1.2 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenali Topik dan Gagasan Utama dalam Teks Laporan Hasil Observasi</h1>
+            <p class="subtitle">
+                Memahami cara mengidentifikasi topik dan gagasan utama pada setiap paragraf dalam teks laporan hasil observasi. 
+                Kemampuan ini sangat penting untuk memahami inti informasi yang disampaikan dalam sebuah teks secara tepat dan cepat.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengertian Topik -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengertian Topik</h3>
+            </div>
+            <p><strong>Topik</strong> adalah pokok pembicaraan atau gagasan utama yang menjadi dasar pengembangan sebuah tulisan atau paragraf. Topik merupakan hal pertama yang harus ditentukan oleh penulis sebelum mulai menulis, karena topik akan menjadi arah dan fokus dari keseluruhan isi teks.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI TOPIK:</strong><br>
+                Topik adalah pokok pembicaraan, gagasan pokok, atau tema utama yang menjadi landasan dalam mengembangkan sebuah paragraf atau teks. Topik bersifat umum dan menjadi payung bagi seluruh informasi yang disajikan dalam teks.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat mengidentifikasi topik dan gagasan utama pada setiap paragraf dalam teks laporan hasil observasi.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Ciri-Ciri Topik yang Baik:</h4>
+            <ul class="feature-list">
+                <li><strong>Memiliki Keunikan:</strong> Topik yang menarik biasanya memiliki kekhasan atau sudut pandang yang berbeda dari topik serupa.</li>
+                <li><strong>Dikuasai oleh Penulis:</strong> Penulis harus memiliki pengetahuan yang cukup tentang topik yang dipilih agar dapat mengembangkannya dengan baik.</li>
+                <li><strong>Bersifat Spesifik namun Luas:</strong> Topik harus cukup spesifik untuk dibahas secara mendalam, namun juga cukup luas untuk dikembangkan menjadi beberapa paragraf.</li>
+                <li><strong>Relevan dan Menarik:</strong> Topik yang baik adalah topik yang menarik bagi penulis maupun pembaca, serta memiliki manfaat untuk dibahas.</li>
+                <li><strong>Bermanfaat:</strong> Topik yang dipilih sebaiknya memberikan kontribusi pengetahuan atau wawasan baru bagi pembaca.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>💡 Contoh Topik dalam Teks LHO</h5>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li>"Keanekaragaman Hayati di Hutan Mangrove"</li>
+                    <li>"Manfaat Lidah Buaya bagi Kesehatan"</li>
+                    <li>"Perpustakaan Sekolah sebagai Pusat Literasi"</li>
+                    <li>"Kucing Domestik (Felis catus) sebagai Hewan Peliharaan"</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content B: Pengertian Gagasan Utama -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Pengertian Gagasan Utama</h3>
+            </div>
+            <p><strong>Gagasan utama</strong> (disebut juga <em>ide pokok, gagasan pokok, pikiran utama, atau inti paragraf</em>) adalah gagasan yang menjadi dasar pengembangan sebuah paragraf. Gagasan utama merupakan inti sari dari seluruh informasi yang disampaikan dalam paragraf tersebut.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI GAGASAN UTAMA:</strong><br>
+                Gagasan utama adalah pikiran pokok atau inti permasalahan yang menjadi dasar pengembangan paragraf. Gagasan utama terdapat dalam kalimat utama dan menjadi payung bagi kalimat-kalimat penjelas lainnya.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Ciri-Ciri Gagasan Utama:</h4>
+            <ul class="feature-list">
+                <li><strong>Merupakan Inti Pembahasan:</strong> Gagasan utama menjadi pokok pembicaraan yang dikembangkan dalam paragraf.</li>
+                <li><strong>Tercantum dalam Kalimat Utama:</strong> Gagasan utama selalu dinyatakan dalam kalimat utama (bukan kalimat penjelas).</li>
+                <li><strong>Bersifat Umum:</strong> Gagasan utama bersifat umum dan mencakup seluruh isi paragraf.</li>
+                <li><strong>Dapat Berdiri Sendiri:</strong> Gagasan utama dapat dipahami tanpa harus membaca kalimat penjelasnya.</li>
+                <li><strong>Menjadi Dasar Pengembangan:</strong> Seluruh kalimat dalam paragraf berfungsi untuk menjelaskan atau mendukung gagasan utama.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>📌 Contoh Gagasan Utama</h5>
+                <div class="text-sample">
+                    <span class="highlight">Lidah buaya memiliki berbagai manfaat bagi kesehatan dan kecantikan manusia.</span> Gel lidah buaya dapat digunakan untuk mengobati luka bakar ringan, melembapkan kulit, dan menyuburkan rambut. Selain itu, lidah buaya juga dapat dikonsumsi sebagai minuman kesehatan yang membantu melancarkan pencernaan. Tanaman ini pun mudah dibudidayakan dan dapat dijadikan tanaman hias di pekarangan rumah.
+                </div>
+                <p style="margin-top: 1rem;"><strong>🎯 Gagasan Utama:</strong> <em>Lidah buaya memiliki berbagai manfaat bagi kesehatan dan kecantikan manusia.</em></p>
+            </div>
+        </div>
+
+        <!-- Content C: Perbedaan Topik dan Gagasan Utama -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Perbedaan Topik dan Gagasan Utama</h3>
+            </div>
+            <p>Meskipun keduanya berkaitan erat, topik dan gagasan utama memiliki perbedaan yang jelas. Memahami perbedaan ini akan membantu siswa dalam menganalisis teks dengan lebih tepat.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Topik</th>
+                        <th>Gagasan Utama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pengertian</strong></td>
+                        <td>Pokok pembicaraan secara keseluruhan</td>
+                        <td>Inti sari dari sebuah paragraf</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cakupan</strong></td>
+                        <td>Mencakup keseluruhan teks</td>
+                        <td>Mencakup satu paragraf saja</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jumlah</strong></td>
+                        <td>Satu topik untuk satu teks</td>
+                        <td>Setiap paragraf memiliki satu gagasan utama</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sifat</strong></td>
+                        <td>Umum dan menyeluruh</td>
+                        <td>Spesifik pada satu paragraf</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Letak</strong></td>
+                        <td>Tersirat dalam keseluruhan teks</td>
+                        <td>Tercantum dalam kalimat utama</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td>"Manfaat Lidah Buaya"</td>
+                        <td>"Lidah buaya bermanfaat bagi kesehatan kulit"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>🔑 Rumus Mudah Membedakan</h4>
+                <p><strong>TOPIK</strong> = "Tentang apa teks ini?" (Jawaban singkat, 2-5 kata)</p>
+                <p style="margin-top: 0.5rem;"><strong>GAGASAN UTAMA</strong> = "Apa yang dibahas dalam paragraf ini?" (Jawaban berupa kalimat lengkap)</p>
+            </div>
+        </div>
+
+        <!-- Content D: Kalimat Utama dan Kalimat Penjelas -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Kalimat Utama dan Kalimat Penjelas</h3>
+            </div>
+            <p>Untuk menemukan gagasan utama, kita harus mampu mengidentifikasi <strong>kalimat utama</strong> dalam sebuah paragraf. Kalimat utama adalah kalimat yang mengandung gagasan utama, sedangkan kalimat lainnya disebut <strong>kalimat penjelas</strong>.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Perbedaan Kalimat Utama dan Kalimat Penjelas:</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Kalimat Utama</th>
+                        <th>Kalimat Penjelas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Isi</strong></td>
+                        <td>Bersifat umum, memuat gagasan utama</td>
+                        <td>Bersifat khusus, berisi rincian/penjelasan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fungsi</strong></td>
+                        <td>Menjadi payung paragraf</td>
+                        <td>Menjelaskan/mendukung kalimat utama</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kata Penghubung</strong></td>
+                        <td>Tidak mengandung kata penghubung di awal</td>
+                        <td>Sering diawali kata penghubung (oleh karena itu, selain itu, misalnya)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kemandirian</strong></td>
+                        <td>Dapat berdiri sendiri</td>
+                        <td>Tidak dapat berdiri sendiri</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-box">
+                <h5>📝 Analisis Kalimat Utama dan Penjelas</h5>
+                <div class="text-sample">
+                    <span class="highlight">(1) Kucing domestik memiliki ciri-ciri fisik yang khas dan mudah dikenali.</span> (2) Kucing memiliki tubuh yang lentur dengan empat kaki yang dilengkapi cakar tajam untuk berburu. (3) Kepalanya berbentuk bulat dengan dua telinga runcing yang dapat bergerak bebas mengikuti arah suara. (4) Selain itu, kucing juga memiliki kumis (misai) yang berfungsi sebagai sensor untuk mendeteksi lingkungan sekitarnya. (5) Matanya besar dan dapat melihat dengan jelas dalam kondisi cahaya redup.
+                </div>
+                <p style="margin-top: 1rem;"><strong>🎯 Kalimat Utama:</strong> Kalimat (1) — <em>Kucing domestik memiliki ciri-ciri fisik yang khas dan mudah dikenali.</em></p>
+                <p><strong>📋 Kalimat Penjelas:</strong> Kalimat (2), (3), (4), dan (5) — berisi rincian ciri fisik kucing.</p>
+            </div>
+        </div>
+
+        <!-- Content E: Letak Gagasan Utama -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Letak Gagasan Utama dalam Paragraf</h3>
+            </div>
+            <p>Gagasan utama dapat terletak di berbagai posisi dalam paragraf. Berdasarkan letaknya, paragraf dibedakan menjadi tiga jenis:</p>
+
+            <div class="location-cards">
+                <div class="location-card">
+                    <div class="icon">📍</div>
+                    <h5>Di Awal Paragraf</h5>
+                    <p style="font-size: 0.9rem;"><strong>(Deduktif)</strong><br>Gagasan utama terletak di kalimat pertama, kemudian diikuti kalimat-kalimat penjelas.</p>
+                </div>
+                <div class="location-card">
+                    <div class="icon">📍</div>
+                    <h5>Di Akhir Paragraf</h5>
+                    <p style="font-size: 0.9rem;"><strong>(Induktif)</strong><br>Gagasan utama terletak di kalimat terakhir, biasanya diawali kata simpulan.</p>
+                </div>
+                <div class="location-card">
+                    <div class="icon">📍</div>
+                    <h5>Campuran</h5>
+                    <p style="font-size: 0.9rem;"><strong>(Deduktif-Induktif)</strong><br>Gagasan utama di awal dan ditegaskan kembali di akhir paragraf.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5>📌 Contoh Paragraf Deduktif (Gagasan Utama di Awal)</h5>
+                <div class="text-sample">
+                    <span class="highlight">Perpustakaan sekolah memiliki peran penting dalam mendukung proses pembelajaran.</span> Sebagai pusat sumber belajar, perpustakaan menyediakan berbagai buku, majalah, dan media informasi yang dapat diakses siswa. Selain itu, perpustakaan juga menjadi tempat yang nyaman untuk membaca dan berdiskusi. Dengan memanfaatkan perpustakaan secara optimal, siswa dapat meningkatkan minat baca dan kemampuan literasinya.
+                </div>
+                <p style="margin-top: 1rem;"><strong>🎯 Gagasan Utama:</strong> <em>Perpustakaan sekolah memiliki peran penting dalam mendukung proses pembelajaran.</em> (terletak di kalimat pertama)</p>
+            </div>
+
+            <div class="example-box">
+                <h5>📌 Contoh Paragraf Induktif (Gagasan Utama di Akhir)</h5>
+                <div class="text-sample">
+                    Lidah buaya dapat digunakan untuk mengobati luka bakar ringan. Tanaman ini juga efektif untuk melembapkan kulit dan menyuburkan rambut. Selain itu, lidah buaya dapat dikonsumsi sebagai minuman kesehatan. <span class="highlight">Dengan demikian, lidah buaya memiliki banyak manfaat bagi kesehatan dan kecantikan manusia.</span>
+                </div>
+                <p style="margin-top: 1rem;"><strong>🎯 Gagasan Utama:</strong> <em>Lidah buaya memiliki banyak manfaat bagi kesehatan dan kecantikan manusia.</em> (terletak di kalimat terakhir, ditandai dengan kata "<em>dengan demikian</em>")</p>
+            </div>
+
+            <div class="example-box">
+                <h5>📌 Contoh Paragraf Campuran (Awal-Akhir)</h5>
+                <div class="text-sample">
+                    <span class="highlight">Kucing merupakan hewan peliharaan yang populer di seluruh dunia.</span> Kucing memiliki tubuh yang lentur dengan bulu yang lembut dan mata yang indah. Hewan ini juga dikenal sebagai hewan yang mandiri dan mudah dirawat. <span class="highlight">Oleh karena itu, tidak mengherankan jika kucing menjadi salah satu hewan peliharaan favorit masyarakat.</span>
+                </div>
+                <p style="margin-top: 1rem;"><strong>🎯 Gagasan Utama:</strong> <em>Kucing merupakan hewan peliharaan yang populer di seluruh dunia.</em> (dinyatakan di awal dan ditegaskan di akhir)</p>
+            </div>
+        </div>
+
+        <!-- Content F: Langkah-langkah Menentukan Gagasan Utama -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Langkah-Langkah Menentukan Gagasan Utama</h3>
+            </div>
+            <p>Untuk menentukan gagasan utama dalam sebuah paragraf, ikuti langkah-langkah berikut:</p>
+
+            <div class="key-concept">
+                <h4>📋 5 Langkah Menentukan Gagasan Utama</h4>
+                <p><strong>1. Baca Paragraf secara Keseluruhan</strong><br>Bacalah seluruh paragraf dengan saksama untuk memahami gambaran umum isi paragraf.</p>
+                <p style="margin-top: 1rem;"><strong>2. Identifikasi Kalimat Utama</strong><br>Carilah kalimat yang bersifat umum dan menjadi payung bagi kalimat lainnya. Kalimat utama biasanya terletak di awal atau akhir paragraf.</p>
+                <p style="margin-top: 1rem;"><strong>3. Perhatikan Kata Kunci</strong><br>Tandai kata-kata yang sering muncul atau menjadi fokus pembahasan dalam paragraf.</p>
+                <p style="margin-top: 1rem;"><strong>4. Rumuskan Gagasan Utama</strong><br>Tuangkan inti kalimat utama ke dalam bentuk gagasan utama yang singkat dan padat (biasanya berupa frasa atau kalimat sederhana).</p>
+                <p style="margin-top: 1rem;"><strong>5. Verifikasi</strong><br>Pastikan gagasan utama yang dirumuskan benar-benar mencakup seluruh isi paragraf.</p>
+            </div>
+
+            <div class="example-box">
+                <h5>🔍 Contoh Penerapan Langkah-Langkah</h5>
+                <div class="text-sample">
+                    (1) Mangrove merupakan ekosistem khas yang terdapat di wilayah pesisir pantai tropis dan subtropis. (2) Tumbuhan ini memiliki akar yang unik, yaitu akar napas (pneumatofora) yang menjulang ke atas permukaan air. (3) Akar ini berfungsi untuk membantu tumbuhan bernapas di lingkungan yang miskin oksigen. (4) Selain itu, mangrove juga memiliki kemampuan untuk menahan abrasi pantai dan menjadi tempat berkembang biak berbagai jenis ikan dan udang.
+                </div>
+                <p style="margin-top: 1rem;"><strong>Langkah 1:</strong> Paragraf membahas tentang mangrove dan karakteristiknya.</p>
+                <p><strong>Langkah 2:</strong> Kalimat utama = kalimat (1) — <em>Mangrove merupakan ekosistem khas yang terdapat di wilayah pesisir pantai tropis dan subtropis.</em></p>
+                <p><strong>Langkah 3:</strong> Kata kunci: <em>mangrove, ekosistem, pesisir pantai</em></p>
+                <p><strong>Langkah 4:</strong> Gagasan utama = <em>Mangrove sebagai ekosistem khas pesisir pantai.</em></p>
+                <p><strong>Langkah 5:</strong> ✅ Verifikasi — gagasan utama mencakup seluruh isi paragraf.</p>
+            </div>
+        </div>
+
+        <!-- Content G: Contoh Analisis Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Contoh Analisis Teks LHO Lengkap</h3>
+            </div>
+            <p>Berikut adalah contoh analisis topik dan gagasan utama dalam sebuah teks laporan hasil observasi:</p>
+
+            <div class="example-box">
+                <h5>📖 Teks: Tanaman Lidah Buaya</h5>
+                <div class="text-sample">
+                    <strong>[Paragraf 1]</strong> Lidah buaya (Aloe vera) adalah tanaman sukulen yang berasal dari Afrika Utara dan telah dibudidayakan di berbagai belahan dunia. Tanaman ini termasuk dalam keluarga Liliaceae dan dikenal karena khasiatnya dalam pengobatan tradisional maupun modern.<br><br>
+                    <strong>[Paragraf 2]</strong> Lidah buaya memiliki daun yang tebal, berdaging, dan berwarna hijau dengan tepi bergerigi. Daunnya mengandung gel bening yang kaya akan vitamin, mineral, dan asam amino. Tanaman ini dapat tumbuh hingga 60-100 cm dan memiliki akar yang dangkal.<br><br>
+                    <strong>[Paragraf 3]</strong> Lidah buaya memiliki berbagai manfaat bagi kesehatan dan kecantikan. Gel lidah buaya dapat digunakan untuk mengobati luka bakar, melembapkan kulit, dan menyuburkan rambut. Tanaman ini juga dapat dikonsumsi sebagai minuman kesehatan yang membantu pencernaan.
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📊 Hasil Analisis</h4>
+                <p><strong>🎯 TOPIK TEKS:</strong> <em>Tanaman Lidah Buaya (Aloe vera)</em></p>
+                <p style="margin-top: 1rem;"><strong>📝 GAGASAN UTAMA PER PARAGRAF:</strong></p>
+                <p>• <strong>Paragraf 1:</strong> <em>Lidah buaya adalah tanaman sukulen yang berasal dari Afrika Utara.</em><br>
+                (Kalimat utama di awal — Paragraf Deduktif)</p>
+                <p style="margin-top: 0.5rem;">• <strong>Paragraf 2:</strong> <em>Lidah buaya memiliki ciri-ciri fisik yang khas.</em><br>
+                (Kalimat utama di awal — Paragraf Deduktif)</p>
+                <p style="margin-top: 0.5rem;">• <strong>Paragraf 3:</strong> <em>Lidah buaya memiliki berbagai manfaat bagi kesehatan dan kecantikan.</em><br>
+                (Kalimat utama di awal — Paragraf Deduktif)</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Topik</span>
+                <span class="keyword-tag">Gagasan Utama</span>
+                <span class="keyword-tag">Ide Pokok</span>
+                <span class="keyword-tag">Kalimat Utama</span>
+                <span class="keyword-tag">Kalimat Penjelas</span>
+                <span class="keyword-tag">Deduktif</span>
+                <span class="keyword-tag">Induktif</span>
+                <span class="keyword-tag">Paragraf Campuran</span>
+                <span class="keyword-tag">Pokok Pembicaraan</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">وَمَا أُوتِيتُم مِّنَ ٱلْعِلْمِ إِلَّا قَلِيلًا</p>
+            <p class="translation">"...Dan tidaklah kamu diberi pengetahuan melainkan sedikit."</p>
+            <p class="source">— QS. Al-Isra' [17]: 85</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini mengingatkan kita untuk senantiasa mencari ilmu dan memahami setiap informasi dengan saksama, termasuk dalam membaca dan menganalisis sebuah teks.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 1.2</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Topik, gagasan utama, kalimat utama, kalimat penjelas, dan letak gagasan utama dalam teks LHO.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Pokok pembicaraan yang menjadi dasar pengembangan sebuah paragraf atau teks disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Kalimat penjelas</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Topik</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Judul</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Kesimpulan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Gagasan utama dalam sebuah paragraf terdapat dalam...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Kalimat penjelas</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Kalimat utama</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Kata kunci</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Judul paragraf</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Paragraf yang gagasan utamanya terletak di awal paragraf disebut paragraf...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Induktif</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Campuran</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Deduktif</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Naratif</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Perhatikan paragraf berikut!<br><em>"Mangrove memiliki banyak manfaat bagi lingkungan pesisir. Akar mangrove mampu menahan abrasi pantai. Selain itu, mangrove juga menjadi tempat berkembang biak berbagai jenis ikan. Daun mangrove yang gugur menjadi sumber makanan bagi organisme laut."</em><br>Gagasan utama paragraf tersebut adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Mangrove memiliki banyak manfaat bagi lingkungan pesisir</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Akar mangrove mampu menahan abrasi pantai</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Mangrove menjadi tempat berkembang biak ikan</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Daun mangrove menjadi makanan organisme laut</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Ciri-ciri kalimat utama adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Bersifat khusus dan berisi rincian</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Bersifat umum dan menjadi payung paragraf</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Selalu diawali kata penghubung</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Tidak dapat berdiri sendiri</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Perbedaan utama antara topik dan gagasan utama adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Topik mencakup satu paragraf, gagasan utama mencakup seluruh teks</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Topik mencakup seluruh teks, gagasan utama mencakup satu paragraf</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Topik dan gagasan utama sama persis</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Topik berupa kalimat, gagasan utama berupa kata</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Paragraf yang gagasan utamanya terletak di akhir paragraf biasanya diawali dengan kata...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Oleh karena itu, dengan demikian, jadi</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Pertama, kedua, ketiga</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Misalnya, contohnya, seperti</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Namun, tetapi, akan tetapi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Fungsi kalimat penjelas dalam sebuah paragraf adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Menjadi pokok pembicaraan utama</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Menjelaskan dan mendukung kalimat utama</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Menjadi judul paragraf</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Mengakhiri paragraf</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Perhatikan paragraf berikut!<br><em>"Lidah buaya memiliki daun yang tebal dan berdaging. Daunnya mengandung gel bening yang kaya vitamin. Tanaman ini dapat tumbuh hingga 60-100 cm."</em><br>Topik paragraf tersebut adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Manfaat lidah buaya</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Ciri-ciri fisik lidah buaya</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Cara menanam lidah buaya</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Sejarah lidah buaya</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Paragraf campuran adalah paragraf yang gagasan utamanya terletak di...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Awal paragraf saja</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Akhir paragraf saja</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Awal dan ditegaskan kembali di akhir paragraf</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Tengah paragraf</label>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan perbedaan antara topik dan gagasan utama! Berikan masing-masing satu contoh!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Sebutkan dan jelaskan 3 (tiga) letak gagasan utama dalam sebuah paragraf beserta ciri-cirinya!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Jelaskan langkah-langkah menentukan gagasan utama dalam sebuah paragraf!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Bacalah paragraf berikut, kemudian tentukan (a) topik, (b) kalimat utama, dan (c) gagasan utamanya!<br><br><em>"Perpustakaan sekolah memiliki peran strategis dalam meningkatkan minat baca siswa. Perpustakaan menyediakan berbagai koleksi buku, mulai dari buku pelajaran, novel, hingga ensiklopedia. Selain itu, perpustakaan juga menjadi tempat yang nyaman untuk belajar dan berdiskusi. Dengan fasilitas yang memadai, perpustakaan dapat mendukung proses pembelajaran secara optimal."</em></p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Buatlah satu paragraf deduktif (gagasan utama di awal) tentang "Manfaat Olahraga bagi Kesehatan" yang terdiri dari minimal 4 kalimat!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- Hasil Ujian (Hidden by default) -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="3.html">Selanjutnya → Sub Bab 1.3</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Set tanggal hari ini secara otomatis
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'B', pg3: 'C', pg4: 'A', pg5: 'B',
+            pg6: 'B', pg7: 'A', pg8: 'B', pg9: 'B', pg10: 'C'
+        };
+
+        function hitungSkor() {
+            // Validasi identitas
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            // Hitung Pilihan Ganda
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            // Hitung Essay (Auto-grading sederhana berdasarkan panjang jawaban)
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10; // Nilai parsial jika jawaban terlalu pendek
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            // Tampilkan Hasil
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            // Scroll ke hasil
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            // Disable form setelah submit
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_1.2_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 1.2 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenali Topik dan Gagasan Utama dalam Teks LHO\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_1.2_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 1.2 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenali Topik dan Gagasan Utama dalam Teks LHO\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
