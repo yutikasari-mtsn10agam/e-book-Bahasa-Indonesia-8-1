@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 1.3: Mengenal Data dalam Teks Laporan Hasil Observasi | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        .data-highlight {
+            background: rgba(0, 184, 148, 0.15);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #00896e;
+            font-style: normal;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Data Type Cards */
+        .data-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .data-card {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+        .data-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .data-card h5 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .data-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .data-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .data-card ul li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed var(--border);
+        }
+        .data-card ul li:last-child { border-bottom: none; }
+
+        /* Source Cards */
+        .source-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .source-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .source-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(26, 26, 46, 0.3);
+        }
+        .source-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .source-card h5 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .source-card p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="index.html">← Daftar Isi</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="4.html">Sub Bab 1.4 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 1.3 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Data dalam Teks Laporan Hasil Observasi</h1>
+            <p class="subtitle">
+                Memahami pengertian data, jenis-jenis data, ciri-ciri data yang baik, serta cara mengidentifikasi data berbasis fakta dalam teks laporan hasil observasi. 
+                Data merupakan fondasi utama yang membuat teks LHO dapat dipertanggungjawabkan kebenarannya.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengertian Data -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengertian Data dalam Teks LHO</h3>
+            </div>
+            <p><strong>Data</strong> adalah kumpulan informasi atau keterangan yang diperoleh dari pengamatan (observasi), penelitian, atau survei terhadap suatu objek atau fenomena. Dalam teks laporan hasil observasi, data menjadi unsur utama yang membuat tulisan bersifat ilmiah, faktual, dan dapat dipertanggungjawabkan.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI DATA:</strong><br>
+                Data adalah fakta atau informasi yang dikumpulkan secara sistematis melalui pengamatan, pengukuran, atau penelitian, yang kemudian diolah menjadi keterangan yang bermakna untuk mendukung kebenaran suatu pernyataan dalam teks laporan hasil observasi.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat mengidentifikasi data berbasis fakta yang terdapat dalam teks laporan hasil observasi.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Mengapa Data Penting dalam Teks LHO?</h4>
+            <ul class="feature-list">
+                <li><strong>Sebagai Bukti Kebenaran:</strong> Data menjadi bukti konkret bahwa informasi yang disampaikan bukan sekadar opini atau khayalan.</li>
+                <li><strong>Meningkatkan Kredibilitas:</strong> Teks yang didukung data akan lebih dipercaya oleh pembaca karena bersifat objektif.</li>
+                <li><strong>Memperjelas Informasi:</strong> Data memberikan gambaran yang lebih rinci dan spesifik tentang objek yang diamati.</li>
+                <li><strong>Memudahkan Analisis:</strong> Dengan data, pembaca dapat menganalisis dan membandingkan informasi secara lebih mendalam.</li>
+                <li><strong>Menjadi Dasar Kesimpulan:</strong> Kesimpulan dalam teks LHO harus didasarkan pada data yang valid, bukan asumsi.</li>
+            </ul>
+        </div>
+
+        <!-- Content B: Jenis-jenis Data -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Jenis-Jenis Data dalam Teks LHO</h3>
+            </div>
+            <p>Data dalam teks laporan hasil observasi dapat dibedakan menjadi beberapa jenis berdasarkan bentuk dan sumbernya. Pemahaman terhadap jenis data akan membantu siswa dalam mengidentifikasi dan menyajikan informasi secara tepat.</p>
+
+            <h4 style="margin: 1.5rem 0 1rem 0;">📊 Berdasarkan Bentuknya</h4>
+            <div class="data-cards">
+                <div class="data-card">
+                    <div class="icon">🔢</div>
+                    <h5>Data Kuantitatif</h5>
+                    <p style="font-size: 0.9rem;">Data yang dinyatakan dalam bentuk <strong>angka atau bilangan</strong> dan dapat diukur secara matematis.</p>
+                    <ul>
+                        <li>✓ Jumlah populasi hewan</li>
+                        <li>✓ Ukuran panjang, berat, tinggi</li>
+                        <li>✓ Persentase dan statistik</li>
+                        <li>✓ Suhu, kecepatan, volume</li>
+                    </ul>
+                </div>
+                <div class="data-card">
+                    <div class="icon">📝</div>
+                    <h5>Data Kualitatif</h5>
+                    <p style="font-size: 0.9rem;">Data yang dinyatakan dalam bentuk <strong>kata-kata, deskripsi, atau gambaran</strong> yang tidak berupa angka.</p>
+                    <ul>
+                        <li>✓ Warna, bentuk, tekstur</li>
+                        <li>✓ Perilaku dan kebiasaan</li>
+                        <li>✓ Ciri-ciri fisik objek</li>
+                        <li>✓ Kondisi lingkungan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Perbandingan Data Kuantitatif dan Kualitatif</h5>
+                <p><strong>Data Kuantitatif:</strong><br>
+                <em>"Pohon mangrove di wilayah pesisir tersebut memiliki ketinggian rata-rata <span class="data-highlight">8-12 meter</span> dengan diameter batang <span class="data-highlight">20-30 cm</span>. Terdapat <span class="data-highlight">150 pohon</span> dalam area seluas <span class="data-highlight">2 hektar</span>."</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>Data Kualitatif:</strong><br>
+                <em>"Pohon mangrove memiliki akar napas (pneumatofora) yang <span class="data-highlight">menjulang ke atas permukaan air</span>. Daunnya <span class="data-highlight">berwarna hijau gelap</span> dengan tekstur <span class="data-highlight">tebal dan berlilin</span>. Batangnya <span class="data-highlight">berwarna cokelat kehitaman</span> dan tampak kokoh."</em></p>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">🔍 Berdasarkan Sumbernya</h4>
+            <div class="source-cards">
+                <div class="source-card">
+                    <div class="icon">👁️</div>
+                    <h5>Data Primer</h5>
+                    <p>Data yang diperoleh langsung dari hasil observasi atau pengamatan sendiri di lapangan.</p>
+                </div>
+                <div class="source-card">
+                    <div class="icon">📚</div>
+                    <h5>Data Sekunder</h5>
+                    <p>Data yang diperoleh dari sumber lain seperti buku, jurnal, artikel, atau dokumen resmi.</p>
+                </div>
+                <div class="source-card">
+                    <div class="icon">🎤</div>
+                    <h5>Data Wawancara</h5>
+                    <p>Data yang diperoleh melalui tanya jawab dengan narasumber atau ahli di bidangnya.</p>
+                </div>
+                <div class="source-card">
+                    <div class="icon">📋</div>
+                    <h5>Data Kuesioner</h5>
+                    <p>Data yang diperoleh melalui daftar pertanyaan tertulis yang diisi oleh responden.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content C: Ciri-ciri Data yang Baik -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Ciri-Ciri Data yang Baik dalam Teks LHO</h3>
+            </div>
+            <p>Tidak semua data dapat digunakan dalam teks laporan hasil observasi. Data yang baik harus memenuhi beberapa kriteria agar informasi yang disampaikan dapat dipertanggungjawabkan.</p>
+
+            <ul class="feature-list">
+                <li><strong>Bersifat Faktual (Berbasis Fakta):</strong> Data harus berdasarkan fakta yang benar-benar terjadi, bukan rekayasa, khayalan, atau opini pribadi penulis.</li>
+                <li><strong>Objektif:</strong> Data tidak dipengaruhi oleh perasaan, pendapat, atau kepentingan pribadi penulis. Data harus netral dan apa adanya.</li>
+                <li><strong>Valid (Sahih):</strong> Data harus akurat dan dapat dibuktikan kebenarannya melalui pengamatan ulang atau verifikasi dari sumber lain.</li>
+                <li><strong>Reliabel (Dapat Dipercaya):</strong> Data harus konsisten dan dapat diandalkan. Jika diukur atau diamati ulang, hasilnya tetap sama.</li>
+                <li><strong>Relevan:</strong> Data harus berkaitan langsung dengan topik atau objek yang sedang dibahas dalam teks.</li>
+                <li><strong>Up to Date (Terkini):</strong> Data sebaiknya merupakan data terbaru, bukan data yang sudah usang atau kadaluarsa.</li>
+                <li><strong>Lengkap:</strong> Data harus mencukupi untuk mendukung pernyataan atau kesimpulan dalam teks.</li>
+                <li><strong>Sistematis:</strong> Data disajikan secara teratur dan terstruktur, sehingga mudah dipahami oleh pembaca.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>🔑 Rumus Data yang Baik: FAVOR</h4>
+                <p><strong>F</strong> = Faktual (berdasarkan fakta)<br>
+                <strong>A</strong> = Akurat (tepat dan benar)<br>
+                <strong>V</strong> = Valid (dapat dipertanggungjawabkan)<br>
+                <strong>O</strong> = Objektif (tidak dipengaruhi subjektivitas)<br>
+                <strong>R</strong> = Relevan (berkaitan dengan topik)</p>
+            </div>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Data yang Baik vs Tidak Baik</h5>
+                <p><strong>✓ Data Baik (Faktual):</strong><br>
+                <em>"Menurut hasil observasi pada tanggal 15 Agustus 2026, terdapat 25 jenis burung di kawasan Hutan Lindung Gunung Merapi."</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>✗ Data Tidak Baik (Tidak Faktual):</strong><br>
+                <em>"Sepertinya ada banyak burung di hutan itu, mungkin sekitar ratusan ekor."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Menggunakan kata "sepertinya" dan "mungkin" yang bersifat subjektif dan tidak pasti)</span></p>
+            </div>
+        </div>
+
+        <!-- Content D: Perbedaan Data, Fakta, dan Opini -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Perbedaan Data, Fakta, dan Opini</h3>
+            </div>
+            <p>Dalam teks laporan hasil observasi, penting untuk membedakan antara <strong>data</strong>, <strong>fakta</strong>, dan <strong>opini</strong>. Ketiganya memiliki makna yang berbeda dan tidak boleh dicampuradukkan.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Data</th>
+                        <th>Fakta</th>
+                        <th>Opini</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pengertian</strong></td>
+                        <td>Kumpulan informasi mentah</td>
+                        <td>Keadaan yang terbukti benar</td>
+                        <td>Pendapat/pandangan pribadi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sifat</strong></td>
+                        <td>Netral, belum diolah</td>
+                        <td>Objektif, dapat dibuktikan</td>
+                        <td>Subjektif, bersifat pribadi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bentuk</strong></td>
+                        <td>Angka, catatan, gambar</td>
+                        <td>Pernyataan yang sudah pasti</td>
+                        <td>Kalimat pendapat/penilaian</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kebenaran</strong></td>
+                        <td>Perlu diolah untuk menjadi fakta</td>
+                        <td>Telah terbukti kebenarannya</td>
+                        <td>Belum tentu benar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td>"Suhu udara 32°C"</td>
+                        <td>"Air mendidih pada 100°C"</td>
+                        <td>"Cuaca hari ini sangat panas"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>💡 Hubungan Data, Fakta, dan Opini</h4>
+                <p><strong>Data → diolah → menjadi Fakta → digunakan untuk mendukung pernyataan → Opini yang baik adalah opini yang didukung fakta/data.</strong></p>
+                <p style="margin-top: 0.5rem;">Dalam teks LHO, <strong>opini tidak boleh muncul</strong>. Teks LHO hanya berisi data dan fakta.</p>
+            </div>
+
+            <div class="example-box">
+                <h5>📌 Contoh Perbedaan Data, Fakta, dan Opini</h5>
+                <p><strong>📊 DATA:</strong><br>
+                <em>"Hasil pengukuran menunjukkan tinggi badan siswa kelas VIII-A rata-rata 155 cm."</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>✓ FAKTA:</strong><br>
+                <em>"Rata-rata tinggi badan siswa kelas VIII-A adalah 155 cm berdasarkan pengukuran pada 10 Agustus 2026."</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>💭 OPINI (TIDAK BOLEH dalam LHO):</strong><br>
+                <em>"Siswa kelas VIII-A sepertinya sudah cukup tinggi untuk ukuran anak seusianya."</em></p>
+            </div>
+        </div>
+
+        <!-- Content E: Cara Mengidentifikasi Data dalam Teks LHO -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Cara Mengidentifikasi Data dalam Teks LHO</h3>
+            </div>
+            <p>Untuk dapat mengidentifikasi data berbasis fakta dalam teks laporan hasil observasi, ikuti langkah-langkah berikut:</p>
+
+            <div class="key-concept">
+                <h4>📋 5 Langkah Mengidentifikasi Data</h4>
+                <p><strong>1. Baca Teks secara Keseluruhan</strong><br>Bacalah teks dengan saksama untuk memahami gambaran umum objek yang diamati.</p>
+                <p style="margin-top: 1rem;"><strong>2. Tandai Informasi Berupa Angka</strong><br>Carilah informasi yang disajikan dalam bentuk angka, persentase, ukuran, atau statistik. Ini adalah data kuantitatif.</p>
+                <p style="margin-top: 1rem;"><strong>3. Identifikasi Deskripsi Spesifik</strong><br>Tandai informasi yang berupa deskripsi rinci tentang ciri-ciri, sifat, atau kondisi objek. Ini adalah data kualitatif.</p>
+                <p style="margin-top: 1rem;"><strong>4. Verifikasi Sumber Data</strong><br>Perhatikan apakah data tersebut disertai sumber yang jelas (misalnya: hasil pengukuran, hasil survei, referensi buku).</p>
+                <p style="margin-top: 1rem;"><strong>5. Pisahkan Data dari Opini</strong><br>Pastikan informasi yang diidentifikasi bersifat faktual, bukan merupakan pendapat atau penilaian pribadi penulis.</p>
+            </div>
+
+            <div class="example-box">
+                <h5>🔍 Contoh Penerapan Identifikasi Data</h5>
+                <div class="text-sample">
+                    "Komodo (Varanus komodoensis) adalah kadal terbesar di dunia yang hanya ditemukan di Indonesia. Hewan ini memiliki panjang tubuh mencapai <span class="data-highlight">3 meter</span> dengan berat badan <span class="data-highlight">70-90 kg</span>. Komodo memiliki kulit yang <span class="data-highlight">berwarna abu-abu hingga cokelat kemerahan</span> dengan tekstur <span class="data-highlight">bersisik kasar</span>. Berdasarkan data Taman Nasional Komodo tahun 2025, populasi komodo di alam liar mencapai <span class="data-highlight">3.000 ekor</span>. Komodo termasuk hewan karnivora yang memangsa rusa, babi hutan, dan bangkai binatang."
+                </div>
+                
+                <p style="margin-top: 1.5rem;"><strong>📊 Data Kuantitatif yang Teridentifikasi:</strong></p>
+                <ul class="feature-list">
+                    <li>Panjang tubuh: <strong>3 meter</strong></li>
+                    <li>Berat badan: <strong>70-90 kg</strong></li>
+                    <li>Populasi: <strong>3.000 ekor</strong> (sumber: TN Komodo 2025)</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>📝 Data Kualitatif yang Teridentifikasi:</strong></p>
+                <ul class="feature-list">
+                    <li>Warna kulit: <strong>abu-abu hingga cokelat kemerahan</strong></li>
+                    <li>Tekstur kulit: <strong>bersisik kasar</strong></li>
+                    <li>Jenis makanan: <strong>karnivora (rusa, babi hutan, bangkai)</strong></li>
+                    <li>Habitat: <strong>hanya di Indonesia</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content F: Contoh Analisis Data dalam Teks LHO -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Contoh Analisis Data dalam Teks LHO Lengkap</h3>
+            </div>
+            <p>Berikut adalah contoh analisis data dalam sebuah teks laporan hasil observasi yang utuh:</p>
+
+            <div class="example-box">
+                <h5>📖 Teks: Perpustakaan MTsN 10 Agam</h5>
+                <div class="text-sample">
+                    Perpustakaan MTsN 10 Agam merupakan pusat sumber belajar yang terletak di lantai dua gedung utama madrasah. Perpustakaan ini memiliki luas ruangan <span class="data-highlight">120 m²</span> dengan kapasitas <span class="data-highlight">50 pengunjung</span>. Koleksi perpustakaan terdiri dari <span class="data-highlight">5.000 eksemplar buku</span>, meliputi buku pelajaran, novel, ensiklopedia, dan majalah pendidikan. Selain itu, tersedia juga <span class="data-highlight">10 unit komputer</span> yang terhubung dengan internet untuk mendukung pencarian informasi digital. Perpustakaan buka setiap hari Senin-Kamis pukul <span class="data-highlight">07.30-15.00 WIB</span> dan Jumat pukul <span class="data-highlight">07.30-11.30 WIB</span>. Ruangan dilengkapi dengan AC sehingga suhu terjaga pada <span class="data-highlight">22-24°C</span>, serta pencahayaan yang cukup untuk kenyamanan membaca.
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📊 Hasil Analisis Data</h4>
+                <p><strong>🔢 Data Kuantitatif:</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• Luas ruangan: <strong>120 m²</strong></li>
+                    <li style="padding: 0.4rem 0;">• Kapasitas: <strong>50 pengunjung</strong></li>
+                    <li style="padding: 0.4rem 0;">• Jumlah koleksi: <strong>5.000 eksemplar buku</strong></li>
+                    <li style="padding: 0.4rem 0;">• Jumlah komputer: <strong>10 unit</strong></li>
+                    <li style="padding: 0.4rem 0;">• Jam operasional: <strong>07.30-15.00 WIB (Senin-Kamis)</strong></li>
+                    <li style="padding: 0.4rem 0;">• Suhu ruangan: <strong>22-24°C</strong></li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>📝 Data Kualitatif:</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• Lokasi: <strong>lantai dua gedung utama</strong></li>
+                    <li style="padding: 0.4rem 0;">• Jenis koleksi: <strong>buku pelajaran, novel, ensiklopedia, majalah</strong></li>
+                    <li style="padding: 0.4rem 0;">• Fasilitas: <strong>komputer dengan internet, AC</strong></li>
+                    <li style="padding: 0.4rem 0;">• Fungsi: <strong>pusat sumber belajar</strong></li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>🎯 Kesimpulan:</strong> Seluruh data dalam teks di atas bersifat <em>faktual dan objektif</em>, tidak mengandung opini atau penilaian pribadi penulis.</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Data</span>
+                <span class="keyword-tag">Fakta</span>
+                <span class="keyword-tag">Opini</span>
+                <span class="keyword-tag">Data Kuantitatif</span>
+                <span class="keyword-tag">Data Kualitatif</span>
+                <span class="keyword-tag">Data Primer</span>
+                <span class="keyword-tag">Data Sekunder</span>
+                <span class="keyword-tag">Objektif</span>
+                <span class="keyword-tag">Valid</span>
+                <span class="keyword-tag">Reliabel</span>
+                <span class="keyword-tag">Observasi</span>
+                <span class="keyword-tag">Statistik</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍ فَتَبَيَّنُوٓا۟</p>
+            <p class="translation">"Wahai orang-orang yang beriman, jika seseorang yang fasik datang kepadamu membawa berita, maka telitilah kebenarannya (tabayyun)..."</p>
+            <p class="source">— QS. Al-Hujurat [49]: 6</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini mengajarkan pentingnya memverifikasi kebenaran informasi (tabayyun) sebelum menyebarkannya. Prinsip ini sangat relevan dengan kegiatan observasi ilmiah, di mana data dan fakta harus dipastikan kebenarannya sebelum dijadikan dasar penyusunan teks laporan.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 1.3</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Pengertian data, jenis data, ciri data yang baik, perbedaan data-fakta-opini, dan cara mengidentifikasi data dalam teks LHO.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Kumpulan informasi yang diperoleh dari pengamatan atau penelitian terhadap suatu objek disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Opini</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Hipotesis</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Data</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Kesimpulan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Ciri utama data yang baik dalam teks laporan hasil observasi adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Bersifat subjektif dan imajinatif</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Bersifat faktual dan objektif</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Berisi pendapat pribadi penulis</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Menggunakan bahasa yang persuasif</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Data yang dinyatakan dalam bentuk angka atau bilangan dan dapat diukur secara matematis disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Data kuantitatif</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Data kualitatif</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Data primer</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Data sekunder</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Data yang dinyatakan dalam bentuk kata-kata, deskripsi, atau gambaran (tidak berupa angka) disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Data kuantitatif</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Data statistik</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Data numerik</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Data kualitatif</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Data yang diperoleh langsung dari hasil pengamatan sendiri di lapangan disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Data sekunder</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Data primer</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Data pustaka</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Data teori</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Perbedaan utama antara fakta dan opini adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Fakta bersifat subjektif, opini bersifat objektif</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Fakta dapat dibuktikan kebenarannya, opini belum tentu benar</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Fakta dan opini sama-sama bersifat pribadi</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Fakta berupa angka, opini berupa kata-kata</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Data yang akurat dan dapat dipertanggungjawabkan kebenarannya disebut data yang...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Valid</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Subjektif</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Imajinatif</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Persuasif</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Perhatikan kalimat berikut!<br><em>"Pohon kelapa di pantai tersebut memiliki tinggi rata-rata 15 meter dengan diameter batang 30 cm."</em><br>Kalimat tersebut mengandung data...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Kualitatif</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Kuantitatif</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Opini</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Hipotesis</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Perhatikan kalimat berikut!<br><em>"Daun mangrove berwarna hijau gelap dengan tekstur tebal dan berlilin."</em><br>Kalimat tersebut mengandung data...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Kuantitatif</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Numerik</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Kualitatif</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Statistik</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Langkah pertama dalam mengidentifikasi data dalam teks laporan hasil observasi adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Menulis kesimpulan</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Membuat opini pribadi</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Mengabaikan informasi</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Membaca teks secara keseluruhan</label>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan pengertian data dalam teks laporan hasil observasi! Mengapa data sangat penting dalam penyusunan teks LHO?</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Sebutkan dan jelaskan perbedaan antara data kuantitatif dan data kualitatif! Berikan masing-masing dua contoh!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Jelaskan ciri-ciri data yang baik dalam teks laporan hasil observasi! Sebutkan minimal 5 ciri!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Bacalah paragraf berikut, kemudian identifikasi data kuantitatif dan data kualitatif yang terdapat di dalamnya!<br><br><em>"Kebun Binatang Ragunan memiliki luas area 147 hektar dan mengoleksi lebih dari 2.000 ekor satwa dari 270 spesies berbeda. Kebun binatang ini terletak di kawasan Jakarta Selatan dengan suhu udara rata-rata 28-32°C. Sebagian besar kandang satwa dirancang menyerupai habitat aslinya dengan pepohonan rindang dan kolam buatan."</em></p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Jelaskan perbedaan antara data, fakta, dan opini! Berikan masing-masing satu contoh yang berkaitan dengan lingkungan sekolah!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- Hasil Ujian (Hidden by default) -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="4.html">Selanjutnya → Sub Bab 1.4</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Set tanggal hari ini secara otomatis
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawabanPG = {
+            pg1: 'C', pg2: 'B', pg3: 'A', pg4: 'D', pg5: 'B',
+            pg6: 'B', pg7: 'A', pg8: 'B', pg9: 'C', pg10: 'D'
+        };
+
+        function hitungSkor() {
+            // Validasi identitas
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            // Hitung Pilihan Ganda
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            // Hitung Essay (Auto-grading sederhana berdasarkan panjang jawaban)
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10; // Nilai parsial jika jawaban terlalu pendek
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            // Tampilkan Hasil
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            // Scroll ke hasil
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            // Disable form setelah submit
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_1.3_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 1.3 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Data dalam Teks Laporan Hasil Observasi\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_1.3_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 1.3 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Data dalam Teks Laporan Hasil Observasi\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
