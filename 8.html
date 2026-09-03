@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 2.1: Mengenal Teks Iklan | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --comm-color: #e17055;
+            --noncomm-color: #0984e3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Ad Type Cards */
+        .ad-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .ad-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .ad-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .ad-card.commercial {
+            background: linear-gradient(135deg, var(--comm-color), #fab1a0);
+        }
+        .ad-card.noncommercial {
+            background: linear-gradient(135deg, var(--noncomm-color), #74b9ff);
+        }
+        .ad-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .ad-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .ad-card h5 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .ad-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .ad-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .ad-card ul li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .ad-card ul li:last-child { border-bottom: none; }
+        .ad-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Media Cards */
+        .media-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .media-card {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .media-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .media-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .media-card h5 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .media-card p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        .comparison-table td.comm-col {
+            background: rgba(225, 112, 85, 0.05);
+        }
+        .comparison-table td.noncomm-col {
+            background: rgba(9, 132, 227, 0.05);
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="7.html">← Sub Bab 1.7</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="9.html">Sub Bab 2.2 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 2.1 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Teks Iklan</h1>
+            <p class="subtitle">
+                Memahami pengertian iklan, membedakan iklan komersial dan nonkomersial, serta mengidentifikasi informasi penting di dalamnya. 
+                Iklan merupakan salah satu teks persuasif yang banyak kita temui dalam kehidupan sehari-hari, baik di media cetak, elektronik, maupun digital.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengertian Iklan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengertian Iklan</h3>
+            </div>
+            <p><strong>Iklan</strong> adalah teks atau pesan yang bertujuan untuk <em>mempengaruhi, membujuk, atau mengajak</em> pembaca atau audiens agar melakukan sesuatu, seperti membeli produk, menggunakan jasa, atau mengikuti ajakan tertentu. Iklan disampaikan melalui berbagai media, baik cetak, elektronik, maupun digital.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI IKLAN:</strong><br>
+                Iklan adalah pesan yang disampaikan kepada khalayak melalui media massa dengan tujuan memberikan informasi, membujuk, atau mengingatkan khalayak tentang suatu produk, jasa, gagasan, atau layanan agar bersedia melakukan tindakan tertentu sesuai keinginan pemasang iklan.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat menjelaskan pengertian iklan, membedakan iklan komersial dan nonkomersial, serta mengidentifikasi informasi penting di dalamnya.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Kata Kunci dalam Pengertian Iklan:</h4>
+            <ul class="feature-list">
+                <li><strong>Persuasif:</strong> Iklan bersifat membujuk atau mempengaruhi pembaca.</li>
+                <li><strong>Informasi:</strong> Iklan memberikan informasi tentang produk, jasa, atau gagasan.</li>
+                <li><strong>Media:</strong> Iklan disampaikan melalui berbagai media (cetak, elektronik, digital).</li>
+                <li><strong>Tindakan:</strong> Iklan bertujuan agar pembaca melakukan tindakan tertentu.</li>
+                <li><strong>Khalayak:</strong> Iklan ditujukan kepada masyarakat luas atau target tertentu.</li>
+            </ul>
+        </div>
+
+        <!-- Content B: Tujuan dan Fungsi Iklan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Tujuan dan Fungsi Iklan</h3>
+            </div>
+            <p>Iklan memiliki beberapa tujuan dan fungsi utama yang berbeda-beda tergantung pada jenis iklannya. Secara umum, iklan berfungsi sebagai sarana komunikasi antara produsen/penyedia jasa dengan konsumen atau masyarakat.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">🎯 Tujuan Iklan:</h4>
+            <ul class="feature-list">
+                <li><strong>Memberi Informasi (To Inform):</strong> Memberikan informasi tentang produk, jasa, atau layanan baru kepada masyarakat.</li>
+                <li><strong>Membujuk (To Persuade):</strong> Membujuk konsumen untuk memilih produk tertentu dibandingkan produk pesaing.</li>
+                <li><strong>Mengingatkan (To Remind):</strong> Mengingatkan konsumen tentang produk yang sudah dikenal agar tetap loyal.</li>
+                <li><strong>Menambah Nilai (To Add Value):</strong> Memberikan nilai tambah pada produk melalui citra merek (brand image).</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">🔧 Fungsi Iklan:</h4>
+            <ul class="feature-list">
+                <li><strong>Fungsi Informasi:</strong> Memberikan pengetahuan tentang produk/jasa kepada konsumen.</li>
+                <li><strong>Fungsi Persuasif:</strong> Mempengaruhi sikap dan perilaku konsumen.</li>
+                <li><strong>Fungsi Pengingat:</strong> Menjaga agar merek tetap diingat konsumen.</li>
+                <li><strong>Fungsi Hiburan:</strong> Beberapa iklan juga berfungsi menghibur audiens.</li>
+                <li><strong>Fungsi Edukasi:</strong> Memberikan edukasi kepada masyarakat tentang isu-isu tertentu (khususnya iklan nonkomersial).</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Prinsip Dasar Iklan yang Efektif</h4>
+                <p>Iklan yang baik harus memenuhi prinsip <strong>AIDA</strong>:</p>
+                <p style="margin-top: 0.5rem;"><strong>A</strong> = <em>Attention</em> (Menarik perhatian)<br>
+                <strong>I</strong> = <em>Interest</em> (Membangkitkan minat)<br>
+                <strong>D</strong> = <em>Desire</em> (Menciptakan keinginan)<br>
+                <strong>A</strong> = <em>Action</em> (Mendorong tindakan)</p>
+            </div>
+        </div>
+
+        <!-- Content C: Jenis-jenis Iklan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Jenis-Jenis Iklan</h3>
+            </div>
+            <p>Berdasarkan tujuannya, iklan dapat dibedakan menjadi dua jenis utama, yaitu <strong>iklan komersial</strong> dan <strong>iklan nonkomersial</strong>. Keduanya memiliki karakteristik, tujuan, dan ciri yang berbeda.</p>
+
+            <div class="ad-cards">
+                <div class="ad-card commercial">
+                    <div class="number">1</div>
+                    <div class="icon">🛒</div>
+                    <h5>Iklan Komersial</h5>
+                    <p><strong>Tujuan:</strong> Mencari keuntungan ekonomi dengan menawarkan produk atau jasa kepada konsumen.</p>
+                    <ul>
+                        <li>Bertujuan komersial/ekonomi</li>
+                        <li>Menawarkan produk/jasa</li>
+                        <li>Bersifat persuasif untuk membeli</li>
+                        <li>Menggunakan bahasa promosi</li>
+                        <li>Contoh: iklan sabun, makanan, kendaraan</li>
+                    </ul>
+                </div>
+                <div class="ad-card noncommercial">
+                    <div class="number">2</div>
+                    <div class="icon">📢</div>
+                    <h5>Iklan Nonkomersial</h5>
+                    <p><strong>Tujuan:</strong> Memberikan informasi, edukasi, atau ajakan kepada masyarakat untuk kepentingan sosial.</p>
+                    <ul>
+                        <li>Bertujuan sosial/kemanusiaan</li>
+                        <li>Tidak mencari keuntungan ekonomi</li>
+                        <li>Mengajak kesadaran masyarakat</li>
+                        <li>Bersifat edukatif dan informatif</li>
+                        <li>Contoh: iklan layanan masyarakat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">📊 Tabel Perbandingan Lengkap</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th class="comm-col">Iklan Komersial</th>
+                        <th class="noncomm-col">Iklan Nonkomersial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tujuan Utama</strong></td>
+                        <td class="comm-col">Mencari keuntungan ekonomi</td>
+                        <td class="noncomm-col">Kepentingan sosial/masyarakat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Objek</strong></td>
+                        <td class="comm-col">Produk barang atau jasa</td>
+                        <td class="noncomm-col">Gagasan, layanan, atau isu sosial</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sifat</strong></td>
+                        <td class="comm-col">Persuasif untuk membeli</td>
+                        <td class="noncomm-col">Persuasif untuk bertindak sadar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pemasang</strong></td>
+                        <td class="comm-col">Perusahaan, pedagang, produsen</td>
+                        <td class="noncomm-col">Pemerintah, LSM, organisasi sosial</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bahasa</strong></td>
+                        <td class="comm-col">Promosional, menonjolkan keunggulan</td>
+                        <td class="noncomm-col">Edukatif, menyentuh emosi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td class="comm-col">Iklan sabun, makanan, HP, kendaraan</td>
+                        <td class="noncomm-col">Iklan anti-narkoba, donasi darah, vaksinasi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Target</strong></td>
+                        <td class="comm-col">Konsumen potensial</td>
+                        <td class="noncomm-col">Masyarakat luas</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="margin: 2rem 0 1rem 0;">🔍 Sub-Jenis Iklan Komersial</h4>
+            <ul class="feature-list">
+                <li><strong>Iklan Produk Barang:</strong> Menawarkan barang fisik (makanan, minuman, pakaian, elektronik).</li>
+                <li><strong>Iklan Jasa:</strong> Menawarkan layanan (jasa perbankan, pendidikan, transportasi).</li>
+                <li><strong>Iklan Merek (Brand):</strong> Membangun citra perusahaan/merek secara keseluruhan.</li>
+                <li><strong>Iklan Klasen:</strong> Iklan kecil di kolom surat kabar (lowongan kerja, jual-beli).</li>
+                <li><strong>Iklan Baris:</strong> Iklan singkat yang dihitung per baris di media cetak.</li>
+            </ul>
+
+            <h4 style="margin: 2rem 0 1rem 0;">🔍 Sub-Jenis Iklan Nonkomersial</h4>
+            <ul class="feature-list">
+                <li><strong>Iklan Layanan Masyarakat (ILM):</strong> Iklan yang memberikan pelayanan kepada masyarakat (contoh: pentingnya imunisasi).</li>
+                <li><strong>Iklan Pengumuman:</strong> Memberitahukan suatu kegiatan atau peristiwa (contoh: pengumuman lelang).</li>
+                <li><strong>Iklan Duka Cita:</strong> Memberitahukan kabar duka atas meninggalnya seseorang.</li>
+                <li><strong>Iklan Keluarga:</strong> Ucapan selamat atau belasungkawa dari keluarga.</li>
+            </ul>
+        </div>
+
+        <!-- Content D: Ciri-ciri Iklan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Ciri-Ciri Iklan yang Baik</h3>
+            </div>
+            <p>Iklan yang efektif dan baik harus memenuhi beberapa ciri berikut agar pesan dapat tersampaikan dengan baik kepada audiens:</p>
+
+            <ul class="feature-list">
+                <li><strong>Singkat, Padat, dan Jelas:</strong> Pesan iklan harus mudah dipahami dalam waktu singkat. Tidak bertele-tele dan langsung pada inti pesan.</li>
+                <li><strong>Menarik Perhatian:</strong> Menggunakan bahasa, gambar, atau warna yang mencolok agar audiens tertarik untuk melihat/membaca.</li>
+                <li><strong>Persuasif:</strong> Menggunakan bahasa yang mampu membujuk atau mempengaruhi pembaca untuk melakukan tindakan.</li>
+                <li><strong>Jujur dan Tidak Menyesatkan:</strong> Informasi yang disampaikan harus sesuai dengan kenyataan, tidak overclaim atau bohong.</li>
+                <li><strong>Menonjolkan Keunggulan:</strong> Menunjukkan kelebihan produk/jasa/gagasan yang ditawarkan dibandingkan yang lain.</li>
+                <li><strong>Sesuai Target Audiens:</strong> Bahasa dan gaya disesuaikan dengan target pembaca (anak-anak, remaja, dewasa, profesional).</li>
+                <li><strong>Menggunakan Media yang Tepat:</strong> Dipasang pada media yang sesuai dengan target pasar.</li>
+                <li><strong>Memiliki Call to Action (CTA):</strong> Ada ajakan jelas untuk melakukan tindakan (misalnya: "Beli sekarang!", "Hubungi kami!").</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>💡 Contoh Iklan Komersial</h5>
+                <div class="text-sample">
+                    "🌟 <strong>SUSU SEHAT PLUS!</strong> 🌟<br><br>
+                    Susu berkualitas tinggi dengan kandungan kalsium dan vitamin D yang dibutuhkan tubuh Anda. Diperkaya dengan omega-3 untuk kecerdasan otak.<br><br>
+                    ✅ 100% susu sapi asli<br>
+                    ✅ Tanpa pengawet<br>
+                    ✅ Tersedia rasa cokelat, stroberi, dan original<br><br>
+                    💰 Hanya <strong>Rp15.000/kotak</strong><br>
+                    🛒 Tersedia di semua minimarket terdekat!<br><br>
+                    <em>SUSU SEHAT PLUS — Sehatnya Terasa, Manfaatnya Nyata!</em>"
+                </div>
+                <p style="margin-top: 1rem;"><strong>🔍 Analisis:</strong> Iklan di atas adalah <em>iklan komersial</em> karena menawarkan produk (susu), menggunakan bahasa persuasif, menonjolkan keunggulan, dan ada ajakan untuk membeli.</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Iklan Nonkomersial</h5>
+                <div class="text-sample">
+                    "🩸 <strong>MARI DONOR DARAH!</strong> 🩸<br><br>
+                    Setetes darah Anda sangat berarti bagi sesama. Donor darah tidak hanya membantu menyelamatkan nyawa, tetapi juga baik untuk kesehatan Anda.<br><br>
+                    📅 Hari/Tanggal: Minggu, 15 September 2026<br>
+                    🕐 Pukul: 08.00 - 14.00 WIB<br>
+                    📍 Tempat: Aula MTsN 10 Agam<br><br>
+                    <em>Satu donor, sejuta harapan. Jadilah pahlawan bagi sesama!</em><br><br>
+                    Hubungi: Panitia PMI 0812-3456-7890"
+                </div>
+                <p style="margin-top: 1rem;"><strong>🔍 Analisis:</strong> Iklan di atas adalah <em>iklan nonkomersial (layanan masyarakat)</em> karena mengajak masyarakat untuk donor darah, tidak mencari keuntungan ekonomi, dan bertujuan untuk kepentingan sosial.</p>
+            </div>
+        </div>
+
+        <!-- Content E: Struktur Teks Iklan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Struktur Teks Iklan</h3>
+            </div>
+            <p>Teks iklan umumnya memiliki struktur yang terdiri dari beberapa bagian penting. Meskipun tidak seformal teks laporan hasil observasi, struktur iklan tetap penting untuk menyampaikan pesan secara efektif.</p>
+
+            <div class="key-concept">
+                <h4>📝 4 Bagian Utama Struktur Iklan</h4>
+                
+                <p style="margin-top: 1.5rem;"><strong>1. JUDUL / HEADLINE</strong></p>
+                <p>Bagian paling mencolok yang berfungsi menarik perhatian pembaca. Biasanya menggunakan kalimat singkat, padat, dan menarik. Bisa berupa pertanyaan, pernyataan, atau slogan.</p>
+                <div class="text-sample" style="margin-top: 0.5rem;">
+                    <em>Contoh: "SUSU SEHAT PLUS — Sehatnya Terasa, Manfaatnya Nyata!"</em>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>2. ISI / BODY COPY</strong></p>
+                <p>Berisi informasi detail tentang produk/jasa/gagasan yang ditawarkan. Bagian ini menjelaskan keunggulan, manfaat, dan fitur yang ditawarkan.</p>
+                <div class="text-sample" style="margin-top: 0.5rem;">
+                    <em>Contoh: "Susu berkualitas tinggi dengan kandungan kalsium dan vitamin D yang dibutuhkan tubuh Anda. Diperkaya dengan omega-3 untuk kecerdasan otak."</em>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>3. VISUAL / GAMBAR</strong></p>
+                <p>Elemen visual seperti gambar, foto, ilustrasi, atau logo yang mendukung pesan iklan. Visual yang baik dapat meningkatkan daya tarik dan pemahaman audiens.</p>
+
+                <p style="margin-top: 1.5rem;"><strong>4. CALL TO ACTION (CTA) / AJAKAN BERTINDAK</strong></p>
+                <p>Bagian yang mengajak pembaca untuk melakukan tindakan tertentu, seperti membeli, menghubungi, atau mengunjungi.</p>
+                <div class="text-sample" style="margin-top: 0.5rem;">
+                    <em>Contoh: "Beli sekarang di minimarket terdekat!" atau "Hubungi: 0812-3456-7890"</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content F: Media Penyampaian Iklan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Media Penyampaian Iklan</h3>
+            </div>
+            <p>Iklan dapat disampaikan melalui berbagai media, baik media tradisional maupun media modern. Pemilihan media yang tepat sangat penting agar pesan iklan sampai kepada target audiens yang dituju.</p>
+
+            <div class="media-cards">
+                <div class="media-card">
+                    <div class="icon">📺</div>
+                    <h5>Televisi</h5>
+                    <p>Iklan audiovisual yang menjangkau banyak orang</p>
+                </div>
+                <div class="media-card">
+                    <div class="icon">📻</div>
+                    <h5>Radio</h5>
+                    <p>Iklan audio yang menjangkau pendengar</p>
+                </div>
+                <div class="media-card">
+                    <div class="icon">📰</div>
+                    <h5>Koran/Majalah</h5>
+                    <p>Iklan cetak dengan gambar dan teks</p>
+                </div>
+                <div class="media-card">
+                    <div class="icon">📱</div>
+                    <h5>Media Sosial</h5>
+                    <p>Iklan digital di Instagram, Facebook, TikTok</p>
+                </div>
+                <div class="media-card">
+                    <div class="icon">🌐</div>
+                    <h5>Website</h5>
+                    <p>Iklan banner di situs web</p>
+                </div>
+                <div class="media-card">
+                    <div class="icon">🪧</div>
+                    <h5>Baliho/Spanduk</h5>
+                    <p>Iklan luar ruang berukuran besar</p>
+                </div>
+                <div class="media-card">
+                    <div class="icon">🚌</div>
+                    <h5>Transportasi</h5>
+                    <p>Iklan di bus, kereta, taksi</p>
+                </div>
+                <div class="media-card">
+                    <div class="icon">📧</div>
+                    <h5>Email</h5>
+                    <p>Iklan melalui surat elektronik</p>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tips Memilih Media Iklan</h4>
+                <p>1. Sesuaikan dengan <strong>target audiens</strong> (remaja → media sosial, orang tua → TV/koran)<br>
+                2. Pertimbangkan <strong>anggaran</strong> (media digital biasanya lebih murah)<br>
+                3. Sesuaikan dengan <strong>jenis produk</strong> (makanan → visual menarik di Instagram)<br>
+                4. Pertimbangkan <strong>jangkauan</strong> (lokal → spanduk, nasional → TV)</p>
+            </div>
+        </div>
+
+        <!-- Content G: Mengidentifikasi Informasi Penting -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Mengidentifikasi Informasi Penting dalam Iklan</h3>
+            </div>
+            <p>Dalam membaca iklan, kita harus mampu mengidentifikasi informasi penting yang terkandung di dalamnya. Informasi ini berbeda antara iklan komersial dan nonkomersial.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">📋 Informasi Penting dalam Iklan Komersial:</h4>
+            <ul class="feature-list">
+                <li><strong>Nama Produk/Merek:</strong> Apa nama produk yang ditawarkan?</li>
+                <li><strong>Jenis Produk:</strong> Barang atau jasa apa yang dijual?</li>
+                <li><strong>Keunggulan Produk:</strong> Apa yang membuat produk ini istimewa?</li>
+                <li><strong>Harga:</strong> Berapa harga produk tersebut?</li>
+                <li><strong>Tempat Pembelian:</strong> Di mana produk dapat dibeli?</li>
+                <li><strong>Kontak:</strong> Nomor telepon atau media sosial untuk informasi lebih lanjut.</li>
+                <li><strong>Promo/Diskon:</strong> Apakah ada penawaran khusus?</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">📋 Informasi Penting dalam Iklan Nonkomersial:</h4>
+            <ul class="feature-list">
+                <li><strong>Tujuan Iklan:</strong> Apa yang ingin dicapai oleh iklan ini?</li>
+                <li><strong>Isu yang Diangkat:</strong> Masalah sosial apa yang diangkat?</li>
+                <li><strong>Ajakan:</strong> Apa yang diajakkan kepada masyarakat?</li>
+                <li><strong>Manfaat:</strong> Apa manfaat bagi masyarakat jika mengikuti ajakan?</li>
+                <li><strong>Waktu dan Tempat:</strong> Kapan dan di mana kegiatan dilaksanakan (jika ada)?</li>
+                <li><strong>Penyelenggara:</strong> Siapa yang menyelenggarakan kegiatan?</li>
+                <li><strong>Kontak:</strong> Bagaimana cara menghubungi penyelenggara?</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>🔍 Contoh Analisis Informasi Penting</h5>
+                <div class="text-sample">
+                    "🎓 <strong>BIMBEL PRESTASI JAYA!</strong><br><br>
+                    Raih prestasi gemilang bersama Bimbel Prestasi Jaya! Kami menyediakan bimbingan belajar untuk SD, SMP, dan SMA dengan pengajar berpengalaman.<br><br>
+                    ✅ Materi lengkap sesuai kurikulum<br>
+                    ✅ Kelas kecil (maksimal 10 siswa)<br>
+                    ✅ Try out rutin setiap bulan<br>
+                    ✅ Garansi lulus PTN<br><br>
+                    💰 Biaya: mulai Rp300.000/bulan<br>
+                    📍 Jl. Pendidikan No. 10, Agam<br>
+                    📞 Hubungi: 0812-9876-5432<br><br>
+                    <em>Prestasi Jaya — Kunci Sukses Masa Depan!</em>"
+                </div>
+                <p style="margin-top: 1rem;"><strong>📋 Informasi Penting yang Teridentifikasi:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><strong>Nama produk:</strong> Bimbel Prestasi Jaya</li>
+                    <li><strong>Jenis jasa:</strong> Bimbingan belajar (SD, SMP, SMA)</li>
+                    <li><strong>Keunggulan:</strong> Pengajar berpengalaman, kelas kecil, try out rutin, garansi lulus PTN</li>
+                    <li><strong>Harga:</strong> Mulai Rp300.000/bulan</li>
+                    <li><strong>Alamat:</strong> Jl. Pendidikan No. 10, Agam</li>
+                    <li><strong>Kontak:</strong> 0812-9876-5432</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content H: Pengantar Perbedaan Iklan, Slogan, Poster -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Pengantar: Perbedaan Iklan, Slogan, dan Poster</h3>
+            </div>
+            <p>Dalam Bab 2 ini, kita akan mempelajari tiga jenis teks persuasif yang saling berkaitan, yaitu <strong>iklan, slogan, dan poster</strong>. Meskipun ketiganya memiliki tujuan yang sama (mempengaruhi pembaca), masing-masing memiliki ciri khas yang berbeda.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Iklan</th>
+                        <th>Slogan</th>
+                        <th>Poster</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pengertian</strong></td>
+                        <td>Pesan persuasif tentang produk/jasa</td>
+                        <td>Slogan/kata-kata singkat yang mudah diingat</td>
+                        <td>Paduan gambar dan kata-kata di media visual</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bentuk</strong></td>
+                        <td>Teks + visual + audio (bisa di berbagai media)</td>
+                        <td>Kalimat/frasa singkat dan catchy</td>
+                        <td>Gambar dominan + teks pendukung</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ukuran Pesan</strong></td>
+                        <td>Bisa panjang dan detail</td>
+                        <td>Sangat singkat (1-2 kalimat)</td>
+                        <td>Sedang, visual dominan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Media</strong></td>
+                        <td>TV, radio, koran, internet, baliho</td>
+                        <td>Bisa berdiri sendiri atau bagian iklan</td>
+                        <td>Ditempel di tempat umum</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td>Iklan sabun di TV</td>
+                        <td>"Sekali minum, langsung ketagihan!"</td>
+                        <td>Poster "Stop Bullying" di mading</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>💡 Hubungan Ketiganya</h4>
+                <p>Dalam sebuah iklan, sering terdapat <strong>slogan</strong> sebagai bagian dari pesan. Sementara itu, <strong>poster</strong> bisa menjadi salah satu bentuk visual dalam iklan. Ketiganya saling melengkapi dalam menyampaikan pesan persuasif.</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Iklan</span>
+                <span class="keyword-tag">Persuasif</span>
+                <span class="keyword-tag">Komersial</span>
+                <span class="keyword-tag">Nonkomersial</span>
+                <span class="keyword-tag">Iklan Layanan Masyarakat</span>
+                <span class="keyword-tag">AIDA</span>
+                <span class="keyword-tag">Headline</span>
+                <span class="keyword-tag">Body Copy</span>
+                <span class="keyword-tag">Call to Action</span>
+                <span class="keyword-tag">Media Iklan</span>
+                <span class="keyword-tag">Informasi Penting</span>
+                <span class="keyword-tag">Slogan</span>
+                <span class="keyword-tag">Poster</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَأْكُلُوٓا۟ أَمْوَٰلَكُم بَيْنَكُم بِٱلْبَٰطِلِ إِلَّآ أَن تَكُونَ تِجَٰرَةً عَن تَرَاضٍ مِّنكُمْ</p>
+            <p class="translation">"Wahai orang-orang yang beriman! Janganlah kamu saling memakan harta sesamamu dengan jalan yang batil, kecuali dalam perdagangan yang berlaku atas dasar suka sama suka di antara kamu..."</p>
+            <p class="source">— QS. An-Nisa' [4]: 29</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini mengingatkan pentingnya kejujuran dalam perdagangan dan bisnis. Dalam membuat iklan, kita harus menyampaikan informasi yang jujur dan tidak menyesatkan, karena iklan yang baik adalah iklan yang amanah dan bertanggung jawab.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 2.1</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Pengertian iklan, tujuan dan fungsi iklan, jenis iklan (komersial & nonkomersial), ciri-ciri iklan, struktur iklan, media penyampaian, dan identifikasi informasi penting.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Iklan yang bertujuan untuk mencari keuntungan ekonomi dengan menawarkan produk atau jasa disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Iklan nonkomersial</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Iklan layanan masyarakat</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Iklan komersial</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Iklan duka cita</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Tujuan utama iklan nonkomersial adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Mencari keuntungan ekonomi</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Menawarkan produk kepada konsumen</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Memberikan informasi, edukasi, atau ajakan untuk kepentingan sosial</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Membangun citra merek perusahaan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Prinsip AIDA dalam iklan merupakan singkatan dari...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Attention, Interest, Desire, Action</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Advertising, Information, Design, Art</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Audience, Idea, Delivery, Appeal</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Analysis, Interest, Data, Action</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Berikut ini yang merupakan contoh iklan nonkomersial adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Iklan sabun mandi di televisi</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Iklan ajakan donor darah dari PMI</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Iklan penjualan mobil di koran</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Iklan makanan cepat saji di media sosial</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Bagian iklan yang berfungsi menarik perhatian pembaca dengan kalimat singkat dan mencolok disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Body copy</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Call to action</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Headline</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Visual</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Ciri utama bahasa yang digunakan dalam iklan adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Panjang dan bertele-tele</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Singkat, padat, jelas, dan persuasif</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Menggunakan bahasa ilmiah yang rumit</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Hanya menggunakan bahasa daerah</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. "Beli sekarang di minimarket terdekat!" merupakan bagian struktur iklan yang disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Headline</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Body copy</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Visual</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Call to action</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Perbedaan utama antara iklan komersial dan nonkomersial terletak pada...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Jenis media yang digunakan</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Tujuan (ekonomi vs sosial)</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Bahasa yang digunakan</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Ukuran iklan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Iklan yang dipasang di baliho, spanduk, atau media luar ruang lainnya termasuk jenis iklan berdasarkan...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Tujuan iklannya</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Media penyampaiannya</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Jenis produknya</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Target audiensnya</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Informasi penting yang harus ada dalam iklan komersial adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Nama produk, keunggulan, harga, dan tempat pembelian</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Nama pembuat iklan saja</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Hanya gambar tanpa informasi</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Opini pribadi pembuat iklan</label>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan pengertian iklan! Sebutkan dan jelaskan tujuan serta fungsi iklan secara lengkap!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Jelaskan perbedaan antara iklan komersial dan iklan nonkomersial! Berikan masing-masing dua contoh dalam kehidupan sehari-hari!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Sebutkan dan jelaskan 4 (empat) bagian utama struktur teks iklan! Berikan contoh masing-masing bagian!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Bacalah iklan berikut, kemudian identifikasi: (a) jenis iklan (komersial/nonkomersial), (b) informasi penting yang terdapat dalam iklan, dan (c) jelaskan alasan Anda!<br><br><em>"🌿 JAGALAH HUTAN KITA! 🌿<br>Hutan adalah paru-paru dunia. Setiap tahun, ribuan hektar hutan di Indonesia hilang akibat penebangan liar dan kebakaran. Mari kita bersama-sama menjaga kelestarian hutan untuk generasi mendatang. Tanam satu pohon, selamatkan masa depan!<br>📞 Hubungi: Dinas Kehutanan 021-1234567<br>🌐 www.hutanlestari.go.id"</em></p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Buatlah sebuah iklan komersial sederhana tentang produk makanan khas daerah Anda! Pastikan iklan tersebut memenuhi prinsip AIDA dan memiliki struktur yang lengkap (headline, body copy, visual deskripsi, call to action)!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- Hasil Ujian (Hidden by default) -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="9.html">Selanjutnya → Sub Bab 2.2</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Set tanggal hari ini secara otomatis
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawabanPG = {
+            pg1: 'C', pg2: 'C', pg3: 'A', pg4: 'B', pg5: 'C',
+            pg6: 'B', pg7: 'D', pg8: 'B', pg9: 'B', pg10: 'A'
+        };
+
+        function hitungSkor() {
+            // Validasi identitas
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            // Hitung Pilihan Ganda
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            // Hitung Essay (Auto-grading sederhana berdasarkan panjang jawaban)
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10; // Nilai parsial jika jawaban terlalu pendek
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            // Tampilkan Hasil
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            // Scroll ke hasil
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            // Disable form setelah submit
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_2.1_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 2.1 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Teks Iklan\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_2.1_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 2.1 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Teks Iklan\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

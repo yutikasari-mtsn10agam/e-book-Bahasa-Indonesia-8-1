@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 1.7: Mengenal Langkah-Langkah Penulisan Teks LHO | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --step-1: #0984e3;
+            --step-2: #00b894;
+            --step-3: #e17055;
+            --step-4: #6c5ce7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Writing Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        .process-step {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 2px solid var(--border);
+        }
+        .process-step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .process-step.step-1 { border-top: 4px solid var(--step-1); }
+        .process-step.step-2 { border-top: 4px solid var(--step-2); }
+        .process-step.step-3 { border-top: 4px solid var(--step-3); }
+        .process-step.step-4 { border-top: 4px solid var(--step-4); }
+        .process-step .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+        .process-step.step-1 .step-number { background: var(--step-1); }
+        .process-step.step-2 .step-number { background: var(--step-2); }
+        .process-step.step-3 .step-number { background: var(--step-3); }
+        .process-step.step-4 .step-number { background: var(--step-4); }
+        .process-step h5 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+        }
+        .process-step p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        .process-step .step-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--step-1), var(--step-2), var(--step-3), var(--step-4));
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 1.8rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-item h5 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .timeline-item ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+        .timeline-item ul li {
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Checklist */
+        .checklist {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed var(--border);
+        }
+        .checklist-item:last-child { border-bottom: none; }
+        .checklist-item .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--success);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+        .checklist-item p {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="6.html">← Sub Bab 1.6</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="8.html">Sub Bab 2.1 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 1.7 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Langkah-Langkah Penulisan Teks LHO</h1>
+            <p class="subtitle">
+                Mempelajari tahapan sistematis dalam merancang dan menulis teks laporan hasil observasi, mulai dari persiapan, penulisan draf, revisi, hingga publikasi. 
+                Dengan mengikuti langkah-langkah ini, siswa mampu menghasilkan teks LHO yang logis, sistematis, dan berkualitas.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengantar -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Mengapa Perlu Langkah Sistematis dalam Menulis?</h3>
+            </div>
+            <p>Menulis teks laporan hasil observasi bukan sekadar menuangkan ide ke dalam kertas. Proses menulis yang baik memerlukan <strong>langkah-langkah sistematis</strong> agar tulisan yang dihasilkan terstruktur, logis, faktual, dan mudah dipahami pembaca. Tanpa tahapan yang jelas, tulisan bisa menjadi tidak fokus, tidak lengkap, atau bahkan menyimpang dari objek yang diamati.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI PROSES MENULIS:</strong><br>
+                Proses menulis adalah serangkaian tahapan yang dilalui penulis untuk menghasilkan karya tulis yang berkualitas, mulai dari perencanaan, penulisan draf, revisi, penyuntingan, hingga publikasi. Setiap tahapan memiliki peran penting dalam menghasilkan tulisan yang baik.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat merancang dan menulis sebuah teks laporan hasil observasi sederhana secara logis dan sistematis.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Manfaat Mengikuti Langkah Penulisan yang Sistematis:</h4>
+            <ul class="feature-list">
+                <li><strong>Tulisan Lebih Terstruktur:</strong> Setiap bagian teks memiliki fungsi yang jelas dan saling berkaitan.</li>
+                <li><strong>Informasi Lebih Lengkap:</strong> Tidak ada aspek penting yang terlewatkan dari objek yang diamati.</li>
+                <li><strong>Bahasa Lebih Baku:</strong> Melalui tahap revisi dan penyuntingan, kesalahan bahasa dapat diperbaiki.</li>
+                <li><strong>Hemat Waktu dan Tenaga:</strong> Dengan perencanaan yang matang, proses menulis menjadi lebih efisien.</li>
+                <li><strong>Meningkatkan Kualitas:</strong> Tulisan yang melalui proses revisi akan jauh lebih baik daripada tulisan yang langsung jadi.</li>
+            </ul>
+        </div>
+
+        <!-- Content B: 4 Tahapan Utama -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Empat Tahapan Utama dalam Menulis Teks LHO</h3>
+            </div>
+            <p>Secara umum, proses menulis teks laporan hasil observasi terdiri dari empat tahapan utama yang saling berkaitan. Setiap tahapan memiliki tujuan dan kegiatan spesifik yang harus dilakukan.</p>
+
+            <div class="process-steps">
+                <div class="process-step step-1">
+                    <div class="step-icon">📋</div>
+                    <div class="step-number">1</div>
+                    <h5>Pra-Penulisan</h5>
+                    <p>Tahap perencanaan: menentukan topik, melakukan observasi, mengumpulkan data, dan menyusun kerangka karangan.</p>
+                </div>
+                <div class="process-step step-2">
+                    <div class="step-icon">✍️</div>
+                    <div class="step-number">2</div>
+                    <h5>Penulisan Draf</h5>
+                    <p>Tahap pengembangan: menuangkan ide ke dalam bentuk tulisan berdasarkan kerangka yang telah dibuat.</p>
+                </div>
+                <div class="process-step step-3">
+                    <div class="step-icon">🔍</div>
+                    <div class="step-number">3</div>
+                    <h5>Revisi & Penyuntingan</h5>
+                    <p>Tahap perbaikan: memperbaiki isi, struktur, bahasa, ejaan, dan tanda baca agar tulisan lebih baik.</p>
+                </div>
+                <div class="process-step step-4">
+                    <div class="step-icon">📢</div>
+                    <div class="step-number">4</div>
+                    <h5>Publikasi/Presentasi</h5>
+                    <p>Tahap akhir: mempresentasikan atau mempublikasikan teks LHO kepada pembaca atau audiens.</p>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Prinsip Penting</h4>
+                <p>Keempat tahapan ini <strong>tidak harus dilakukan secara kaku dan berurutan</strong>. Penulis boleh kembali ke tahapan sebelumnya jika menemukan masalah. Proses menulis bersifat <em>rekursif</em> (bolak-balik) untuk menghasilkan tulisan terbaik.</p>
+            </div>
+        </div>
+
+        <!-- Content C: Tahap 1 - Pra-Penulisan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--step-1); color: white;">1</div>
+                <h3>Tahap 1: Pra-Penulisan (Perencanaan)</h3>
+            </div>
+            <p>Tahap pra-penulisan adalah fondasi dari seluruh proses menulis. Pada tahap ini, penulis mempersiapkan segala sesuatu yang dibutuhkan sebelum mulai menulis. Tahap ini meliputi beberapa kegiatan penting:</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>🎯 1.1 Menentukan Topik dan Tujuan</h5>
+                    <p>Langkah pertama adalah menentukan <strong>topik</strong> yang akan ditulis. Topik yang baik untuk teks LHO harus:</p>
+                    <ul>
+                        <li>Berupa objek nyata yang dapat diamati (hewan, tumbuhan, tempat, fenomena alam, budaya)</li>
+                        <li>Menarik untuk dibahas dan memiliki nilai informasi</li>
+                        <li>Dapat diakses untuk keperluan observasi</li>
+                        <li>Sesuai dengan minat dan kemampuan penulis</li>
+                    </ul>
+                    <p style="margin-top: 0.75rem;"><strong>Tujuan penulisan</strong> juga harus ditetapkan: apakah untuk memberikan informasi umum, menjelaskan ciri-ciri objek, atau memaparkan manfaat objek?</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h5>👁️ 1.2 Melakukan Observasi</h5>
+                    <p>Observasi adalah kegiatan <strong>mengamati objek secara langsung</strong> dengan menggunakan panca indra. Dalam observasi, penulis harus:</p>
+                    <ul>
+                        <li>Mengamati objek secara detail dan menyeluruh</li>
+                        <li>Mencatat semua informasi penting yang ditemukan</li>
+                        <li>Menggunakan alat bantu seperti kamera, alat ukur, atau buku catatan</li>
+                        <li>Melakukan observasi berulang untuk memastikan keakuratan data</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h5>📊 1.3 Mengumpulkan Data</h5>
+                    <p>Data yang dikumpulkan harus berupa <strong>fakta yang dapat dipertanggungjawabkan</strong>. Sumber data bisa berasal dari:</p>
+                    <ul>
+                        <li><strong>Data Primer:</strong> Hasil observasi langsung di lapangan</li>
+                        <li><strong>Data Sekunder:</strong> Buku, jurnal, artikel ilmiah, atau sumber terpercaya lainnya</li>
+                        <li><strong>Data Wawancara:</strong> Tanya jawab dengan narasumber ahli</li>
+                    </ul>
+                    <p style="margin-top: 0.75rem;">Data harus dicatat secara sistematis agar mudah diolah pada tahap berikutnya.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h5>📝 1.4 Menyusun Kerangka Karangan</h5>
+                    <p>Kerangka karangan adalah <strong>garis besar isi teks</strong> yang akan ditulis. Kerangka yang baik untuk teks LHO mengikuti struktur:</p>
+                    <ul>
+                        <li><strong>Pernyataan Umum:</strong> Definisi, klasifikasi, asal-usul objek</li>
+                        <li><strong>Deskripsi Bagian:</strong> Ciri fisik, karakteristik, bagian-bagian objek</li>
+                        <li><strong>Deskripsi Manfaat:</strong> Fungsi, kegunaan, peran objek</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5>📋 Contoh Kerangka Karangan: "Tanaman Lidah Buaya"</h5>
+                <div class="text-sample" style="font-style: normal;">
+                    <strong>I. Pernyataan Umum</strong><br>
+                    &nbsp;&nbsp;&nbsp;A. Definisi lidah buaya (Aloe vera)<br>
+                    &nbsp;&nbsp;&nbsp;B. Asal-usul dan klasifikasi<br>
+                    &nbsp;&nbsp;&nbsp;C. Penyebaran di berbagai daerah<br><br>
+                    <strong>II. Deskripsi Bagian</strong><br>
+                    &nbsp;&nbsp;&nbsp;A. Ciri-ciri fisik (daun, batang, akar, bunga)<br>
+                    &nbsp;&nbsp;&nbsp;B. Kandungan zat (gel, vitamin, mineral)<br>
+                    &nbsp;&nbsp;&nbsp;C. Cara tumbuh dan habitat<br><br>
+                    <strong>III. Deskripsi Manfaat</strong><br>
+                    &nbsp;&nbsp;&nbsp;A. Manfaat bagi kesehatan<br>
+                    &nbsp;&nbsp;&nbsp;B. Manfaat bagi kecantikan<br>
+                    &nbsp;&nbsp;&nbsp;C. Manfaat sebagai tanaman hias
+                </div>
+            </div>
+        </div>
+
+        <!-- Content D: Tahap 2 - Penulisan Draf -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--step-2); color: white;">2</div>
+                <h3>Tahap 2: Penulisan Draf</h3>
+            </div>
+            <p>Setelah kerangka karangan tersusun, tahap selanjutnya adalah <strong>mengembangkan kerangka menjadi tulisan utuh</strong>. Pada tahap ini, penulis menuangkan semua ide dan data ke dalam bentuk paragraf-paragraf yang saling berkaitan.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Prinsip Penulisan Draf yang Baik:</h4>
+            <ul class="feature-list">
+                <li><strong>Ikuti Kerangka:</strong> Kembangkan setiap poin dalam kerangka menjadi satu atau beberapa paragraf.</li>
+                <li><strong>Gunakan Bahasa Baku:</strong> Gunakan bahasa Indonesia yang baku sesuai PUEBI/EYD.</li>
+                <li><strong>Sertakan Data dan Fakta:</strong> Setiap pernyataan harus didukung data hasil observasi.</li>
+                <li><strong>Perhatikan Struktur:</strong> Pastikan teks memiliki tiga bagian utama (pernyataan umum, deskripsi bagian, deskripsi manfaat).</li>
+                <li><strong>Gunakan Paragraf Deskripsi dan Eksposisi:</strong> Kombinasikan keduanya untuk menyajikan informasi yang lengkap.</li>
+                <li><strong>Tulis dengan Lancar:</strong> Jangan terlalu fokus pada kesempurnaan di tahap ini. Yang penting ide tertuang semua.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>✍️ Tips Menulis Draf</h4>
+                <p>1. Mulailah dengan bagian yang paling mudah (biasanya pernyataan umum)<br>
+                2. Gunakan kalimat definisi untuk paragraf pembuka (menggunakan kata "adalah", "merupakan")<br>
+                3. Gunakan kalimat deskripsi untuk bagian rincian objek<br>
+                4. Sertakan data kuantitatif (angka) dan kualitatif (deskripsi) secara seimbang<br>
+                5. Akhiri dengan paragraf yang menjelaskan manfaat objek</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Pengembangan dari Kerangka ke Draf</h5>
+                <p><strong>Dari kerangka:</strong> <em>"I. Pernyataan Umum → A. Definisi lidah buaya"</em></p>
+                <p style="margin-top: 0.75rem;"><strong>Menjadi draf paragraf:</strong></p>
+                <div class="text-sample">
+                    "Lidah buaya (<em>Aloe vera</em>) adalah tanaman sukulen yang berasal dari Afrika Utara dan telah dibudidayakan di berbagai belahan dunia selama ribuan tahun. Tanaman ini termasuk dalam keluarga Liliaceae dan dikenal luas karena khasiatnya dalam pengobatan tradisional maupun modern."
+                </div>
+            </div>
+        </div>
+
+        <!-- Content E: Tahap 3 - Revisi & Penyuntingan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--step-3); color: white;">3</div>
+                <h3>Tahap 3: Revisi dan Penyuntingan</h3>
+            </div>
+            <p>Tahap revisi dan penyuntingan adalah <strong>tahap paling krusial</strong> dalam proses menulis. Pada tahap ini, penulis membaca kembali tulisannya secara kritis dan melakukan perbaikan di berbagai aspek. Banyak penulis profesional yang mengatakan bahwa "menulis adalah menulis ulang".</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Aspek yang Direvisi dan Disunting:</h4>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Yang Diperiksa</th>
+                        <th>Pertanyaan Kunci</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Isi</strong></td>
+                        <td>Kelengkapan, kedalaman, relevansi informasi</td>
+                        <td>Apakah semua aspek objek telah dibahas? Apakah informasi cukup mendalam?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Struktur</strong></td>
+                        <td>Kelengkapan struktur (pernyataan umum, deskripsi bagian, manfaat)</td>
+                        <td>Apakah struktur teks sudah lengkap dan sistematis?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Koherensi</strong></td>
+                        <td>Keterkaitan antarparagraf dan antarkalimat</td>
+                        <td>Apakah alur tulisan mengalir dengan baik?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kebahasaan</strong></td>
+                        <td>Kebakuan bahasa, pilihan kata, variasi kalimat</td>
+                        <td>Apakah bahasa sudah baku dan sesuai PUEBI?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ejaan & Tanda Baca</strong></td>
+                        <td>Penulisan kata, tanda baca, huruf kapital</td>
+                        <td>Apakah ejaan dan tanda baca sudah benar?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data & Fakta</strong></td>
+                        <td>Keakuratan dan sumber data</td>
+                        <td>Apakah semua data faktual dan dapat dipertanggungjawabkan?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Objektivitas</strong></td>
+                        <td>Bebas dari opini subjektif</td>
+                        <td>Apakah teks sudah objektif dan tidak mengandung opini pribadi?</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>🔍 Perbedaan Revisi dan Penyuntingan</h4>
+                <p><strong>Revisi:</strong> Perbaikan terhadap <em>isi dan struktur</em> tulisan (skala besar). Contoh: menambah paragraf, mengubah urutan, menghapus bagian yang tidak relevan.</p>
+                <p style="margin-top: 0.5rem;"><strong>Penyuntingan:</strong> Perbaikan terhadap <em>bahasa, ejaan, dan tanda baca</em> (skala kecil). Contoh: memperbaiki typo, mengganti kata yang kurang tepat, memperbaiki tanda baca.</p>
+            </div>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Revisi dan Penyuntingan</h5>
+                <p><strong>Sebelum Revisi:</strong><br>
+                <em>"Kucing adalah hewan yang sangat lucu. Kucing punya empat kaki. Dia suka makan ikan."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Mengandung opini subjektif "lucu", bahasa tidak baku "punya", struktur tidak lengkap)</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>Setelah Revisi & Penyuntingan:</strong><br>
+                <em>"Kucing (<em>Felis catus</em>) adalah hewan mamalia karnivora dari keluarga Felidae. Kucing memiliki empat kaki yang dilengkapi cakar tajam. Makanan utama kucing adalah daging, termasuk ikan, yang menjadi sumber protein penting bagi pertumbuhannya."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Objektif, bahasa baku, menggunakan nama ilmiah, lebih informatif)</span></p>
+            </div>
+        </div>
+
+        <!-- Content F: Tahap 4 - Publikasi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--step-4); color: white;">4</div>
+                <h3>Tahap 4: Publikasi dan Presentasi</h3>
+            </div>
+            <p>Setelah teks LHO selesai direvisi dan disunting, tahap terakhir adalah <strong>mempublikasikan atau mempresentasikan</strong> tulisan kepada pembaca atau audiens. Tahap ini penting karena tulisan yang baik akan sia-sia jika tidak dibaca oleh orang lain.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Bentuk Publikasi Teks LHO:</h4>
+            <ul class="feature-list">
+                <li><strong>Presentasi di Kelas:</strong> Membacakan atau memaparkan teks LHO di depan teman-teman dan guru.</li>
+                <li><strong>Majalah Dinding (Mading):</strong> Menampilkan teks LHO dalam bentuk poster atau artikel di mading sekolah.</li>
+                <li><strong>Majalah Sekolah:</strong> Menerbitkan teks LHO di majalah atau buletin sekolah.</li>
+                <li><strong>Blog atau Website:</strong> Memublikasikan teks LHO di blog pribadi atau website sekolah.</li>
+                <li><strong>Media Sosial:</strong> Membagikan teks LHO dalam bentuk infografis atau artikel di media sosial.</li>
+                <li><strong>Kompilasi Buku:</strong> Mengumpulkan teks LHO bersama karya teman sekelas menjadi sebuah buku antologi.</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Tips Presentasi Teks LHO yang Efektif:</h4>
+            <div class="checklist">
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Siapkan Visual:</strong> Gunakan gambar, foto, atau diagram yang mendukung isi teks.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Latihan Berbicara:</strong> Latih cara membaca teks dengan intonasi yang baik dan jelas.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Kuasai Materi:</strong> Pahami betul isi teks agar dapat menjawab pertanyaan audiens.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Gunakan Bahasa yang Jelas:</strong> Hindari membaca terlalu cepat, berikan jeda untuk pemahaman.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">✓</div>
+                    <p><strong>Siapkan Kesimpulan:</strong> Akhiri presentasi dengan kesimpulan yang kuat dan menarik.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content G: Contoh Proses Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Contoh Proses Lengkap Menulis Teks LHO</h3>
+            </div>
+            <p>Berikut adalah contoh lengkap proses menulis teks LHO tentang "Perpustakaan MTsN 10 Agam" dari awal hingga akhir:</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>📋 TAHAP 1: Pra-Penulisan</h5>
+                    <p><strong>Topik:</strong> Perpustakaan MTsN 10 Agam</p>
+                    <p><strong>Observasi:</strong> Mengunjungi perpustakaan, mencatat ukuran ruangan, jumlah koleksi, fasilitas, jam operasional.</p>
+                    <p><strong>Data yang dikumpulkan:</strong> Luas 120 m², koleksi 5.000 buku, 10 unit komputer, buka Senin-Jumat.</p>
+                    <p><strong>Kerangka:</strong> (1) Pernyataan umum tentang perpustakaan, (2) Deskripsi bagian (ruangan, koleksi, fasilitas), (3) Deskripsi manfaat bagi siswa.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h5>✍️ TAHAP 2: Penulisan Draf</h5>
+                    <p>Menulis draf awal berdasarkan kerangka, menuangkan semua data dan informasi yang telah dikumpulkan ke dalam paragraf-paragraf.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h5>🔍 TAHAP 3: Revisi & Penyuntingan</h5>
+                    <p><strong>Revisi:</strong> Menambahkan data tentang suhu ruangan dan jenis koleksi buku.</p>
+                    <p><strong>Penyuntingan:</strong> Memperbaiki ejaan nama ilmiah, menambahkan tanda koma dalam pemerincian, memastikan penggunaan kata asing sudah benar.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h5>📢 TAHAP 4: Publikasi</h5>
+                    <p>Mempresentasikan teks LHO di depan kelas dan memublikasikannya di mading sekolah sebagai contoh tulisan informatif.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5>📖 Hasil Akhir: Teks LHO "Perpustakaan MTsN 10 Agam"</h5>
+                <div class="text-sample">
+                    <strong>[Pernyataan Umum]</strong><br>
+                    Perpustakaan MTsN 10 Agam merupakan pusat sumber belajar yang terletak di lantai dua gedung utama madrasah. Perpustakaan ini berfungsi sebagai wahana literasi bagi siswa, guru, dan staf dalam mendukung proses pembelajaran.<br><br>
+
+                    <strong>[Deskripsi Bagian]</strong><br>
+                    Perpustakaan memiliki luas ruangan 120 m² dengan kapasitas 50 pengunjung. Koleksi perpustakaan terdiri dari 5.000 eksemplar buku, meliputi buku pelajaran, novel, ensiklopedia, dan majalah pendidikan. Selain itu, tersedia juga 10 unit komputer yang terhubung dengan internet untuk mendukung pencarian informasi digital. Ruangan dilengkapi dengan pendingin udara sehingga suhu terjaga pada 22-24°C, serta pencahayaan yang cukup untuk kenyamanan membaca. Perpustakaan buka setiap hari Senin-Kamis pukul 07.30-15.00 WIB dan Jumat pukul 07.30-11.30 WIB.<br><br>
+
+                    <strong>[Deskripsi Manfaat]</strong><br>
+                    Perpustakaan MTsN 10 Agam memiliki banyak manfaat bagi warga madrasah. Siswa dapat memanfaatkan perpustakaan untuk menambah pengetahuan di luar materi pelajaran, mengembangkan minat baca, dan melatih kemandirian dalam belajar. Guru dapat menggunakan perpustakaan sebagai referensi dalam menyusun bahan ajar. Dengan fasilitas yang memadai, perpustakaan menjadi tempat yang nyaman untuk belajar, berdiskusi, dan meneliti.
+                </div>
+            </div>
+        </div>
+
+        <!-- Content H: Kesalahan Umum & Tips -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Kesalahan Umum dan Tips Sukses Menulis Teks LHO</h3>
+            </div>
+
+            <h4 style="margin-top: 1rem; margin-bottom: 1rem;">⚠️ Kesalahan Umum yang Sering Dilakukan:</h4>
+            <ul class="feature-list">
+                <li><strong>Tidak Melakukan Observasi:</strong> Langsung menulis tanpa mengamati objek, sehingga data tidak faktual.</li>
+                <li><strong>Tidak Menyusun Kerangka:</strong> Menulis tanpa rencana, sehingga tulisan tidak terstruktur.</li>
+                <li><strong>Mencampuradukkan Fakta dan Opini:</strong> Memasukkan pendapat pribadi dalam teks LHO.</li>
+                <li><strong>Melewatkan Tahap Revisi:</strong> Menganggap draf pertama sudah final, sehingga banyak kesalahan yang tidak diperbaiki.</li>
+                <li><strong>Data Tidak Lengkap:</strong> Hanya menyajikan data kualitatif atau kuantitatif saja, tidak seimbang.</li>
+                <li><strong>Bahasa Tidak Baku:</strong> Menggunakan bahasa percakapan atau slang dalam teks ilmiah.</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">✅ Tips Sukses Menulis Teks LHO:</h4>
+            <div class="checklist">
+                <div class="checklist-item">
+                    <div class="check-icon">1</div>
+                    <p><strong>Pilih Topik yang Dikuasai:</strong> Pilih objek yang familiar dan mudah diakses untuk observasi.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">2</div>
+                    <p><strong>Catat Semua Data:</strong> Bawa buku catatan saat observasi, catat setiap detail yang ditemukan.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">3</div>
+                    <p><strong>Susun Kerangka Dulu:</strong> Jangan langsung menulis, susun kerangka terlebih dahulu.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">4</div>
+                    <p><strong>Gunakan Data Berimbang:</strong> Kombinasikan data kuantitatif (angka) dan kualitatif (deskripsi).</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">5</div>
+                    <p><strong>Baca Ulang Tulisan:</strong> Selalu baca ulang tulisan minimal 2 kali sebelum dianggap selesai.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">6</div>
+                    <p><strong>Minta Masukan:</strong> Mintalah teman atau guru untuk membaca dan memberi masukan.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">7</div>
+                    <p><strong>Perhatikan Ejaan:</strong> Gunakan PUEBI sebagai acuan dalam penulisan.</p>
+                </div>
+                <div class="checklist-item">
+                    <div class="check-icon">8</div>
+                    <p><strong>Jangan Menunda:</strong> Mulailah menulis segera setelah data terkumpul, jangan menunda-nunda.</p>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>🏆 Checklist Akhir Sebelum Publikasi</h4>
+                <p>✅ Topik jelas dan fokus<br>
+                ✅ Struktur lengkap (pernyataan umum, deskripsi bagian, deskripsi manfaat)<br>
+                ✅ Data faktual dan dapat dipertanggungjawabkan<br>
+                ✅ Bahasa baku sesuai PUEBI<br>
+                ✅ Tanda baca dan ejaan benar<br>
+                ✅ Bebas dari opini subjektif<br>
+                ✅ Koherensi antarparagraf terjaga<br>
+                ✅ Sudah melalui tahap revisi dan penyuntingan</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Proses Menulis</span>
+                <span class="keyword-tag">Pra-Penulisan</span>
+                <span class="keyword-tag">Observasi</span>
+                <span class="keyword-tag">Kerangka Karangan</span>
+                <span class="keyword-tag">Draf</span>
+                <span class="keyword-tag">Revisi</span>
+                <span class="keyword-tag">Penyuntingan</span>
+                <span class="keyword-tag">Publikasi</span>
+                <span class="keyword-tag">Presentasi</span>
+                <span class="keyword-tag">Data</span>
+                <span class="keyword-tag">Fakta</span>
+                <span class="keyword-tag">Sistematis</span>
+                <span class="keyword-tag">Logis</span>
+                <span class="keyword-tag">PUEBI</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">نِ ۭ وَٱلْقَلَمِ وَمَا يَسْطُرُونَ</p>
+            <p class="translation">"Nun. Demi pena dan apa yang mereka tuliskan."</p>
+            <p class="source">— QS. Al-Qalam [68]: 1</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini menegaskan kemuliaan pena dan aktivitas menulis. Dalam menulis teks laporan hasil observasi, kita sedang menjalankan aktivitas mulia yaitu mendokumentasikan ilmu dan fakta untuk disampaikan kepada orang lain. Maka, lakukanlah dengan sebaik-baiknya melalui proses yang sistematis dan penuh kesungguhan.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 1.7</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Langkah-langkah penulisan teks LHO (pra-penulisan, penulisan draf, revisi & penyuntingan, publikasi), kerangka karangan, dan tips menulis.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Langkah pertama dalam proses menulis teks laporan hasil observasi adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Menentukan topik dan melakukan observasi</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Langsung menulis paragraf pembuka</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Melakukan revisi dan penyuntingan</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Mempublikasikan tulisan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Tujuan utama melakukan observasi sebelum menulis teks LHO adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Menghibur diri sendiri</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Mengumpulkan data dan fakta yang akurat tentang objek</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Menulis opini pribadi tentang objek</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Mencari inspirasi untuk menulis cerita fiksi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Kerangka karangan dalam penulisan teks LHO berfungsi untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Menghias tulisan agar terlihat menarik</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Menambah jumlah halaman tulisan</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Menjadi garis besar isi tulisan agar sistematis</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Menggantikan isi tulisan yang sebenarnya</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Urutan struktur teks LHO yang benar dalam kerangka karangan adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Deskripsi bagian → Pernyataan umum → Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Pernyataan umum → Deskripsi manfaat → Deskripsi bagian</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Deskripsi manfaat → Pernyataan umum → Deskripsi bagian</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Pernyataan umum → Deskripsi bagian → Deskripsi manfaat</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Tahap revisi dalam proses menulis teks LHO bertujuan untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Menulis ulang seluruh teks dari awal</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Memperbaiki isi, struktur, dan alur tulisan</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Menghapus seluruh tulisan yang sudah dibuat</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Menambah opini pribadi ke dalam teks</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Perbedaan antara revisi dan penyuntingan adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Revisi memperbaiki isi & struktur, penyuntingan memperbaiki bahasa & ejaan</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Revisi memperbaiki bahasa, penyuntingan memperbaiki isi</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Keduanya sama, tidak ada perbedaan</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Revisi dilakukan setelah publikasi, penyuntingan sebelum publikasi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Data yang digunakan dalam teks LHO harus berasal dari...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Imajinasi dan khayalan penulis</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Opini pribadi penulis</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Fakta hasil observasi dan sumber terpercaya</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Cerita yang didengar dari teman</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Berikut ini yang BUKAN merupakan bentuk publikasi teks LHO adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Presentasi di kelas</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Dimuat di majalah sekolah</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Disimpan di laci meja tanpa dibaca orang lain</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Dipublikasikan di blog sekolah</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Pada tahap penulisan draf, hal yang PALING PENTING untuk dilakukan adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Memastikan setiap kalimat sempurna tanpa kesalahan</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Menuangkan semua ide dan data ke dalam tulisan</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Menghafal teks sebelum menulis</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Menulis tanpa mengikuti kerangka</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Proses menulis yang baik bersifat...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Kaku dan harus berurutan tanpa boleh kembali</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Rekursif (boleh bolak-balik antar tahapan)</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Singkat dan langsung selesai dalam satu tahap</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Tidak perlu melalui tahap revisi</label>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan empat tahapan utama dalam proses menulis teks laporan hasil observasi! Apa fungsi masing-masing tahapan?</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Mengapa tahap pra-penulisan (perencanaan) sangat penting dalam proses menulis teks LHO? Jelaskan minimal 3 alasan!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Apa yang dimaksud dengan kerangka karangan? Sebutkan dan jelaskan isi kerangka karangan untuk teks LHO yang baik!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Jelaskan perbedaan antara tahap revisi dan penyuntingan! Berikan masing-masing dua contoh kegiatan yang dilakukan pada setiap tahap!</p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Buatlah sebuah kerangka karangan untuk teks laporan hasil observasi tentang "Kantin Sekolah MTsN 10 Agam" yang terdiri dari 3 bagian utama (pernyataan umum, deskripsi bagian, deskripsi manfaat)! Setiap bagian minimal memiliki 3 sub-poin!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- Hasil Ujian (Hidden by default) -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Penutup Bab 1 -->
+        <div class="section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center;">
+            <h3 style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;">🎉 Selamat! Anda Telah Menyelesaikan Bab 1</h3>
+            <p style="opacity: 0.9; margin-bottom: 1.5rem;">Anda telah mempelajari seluruh materi Bab 1: Menulis Teks Laporan Hasil Observasi. Lanjutkan ke Bab 2 untuk mempelajari materi tentang Iklan, Slogan, dan Poster!</p>
+            <a href="8.html" class="btn btn-primary" style="display: inline-flex;">Lanjut ke Bab 2 →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="8.html">Selanjutnya → Sub Bab 2.1</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Set tanggal hari ini secara otomatis
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawabanPG = {
+            pg1: 'A', pg2: 'B', pg3: 'C', pg4: 'D', pg5: 'B',
+            pg6: 'A', pg7: 'C', pg8: 'C', pg9: 'B', pg10: 'B'
+       

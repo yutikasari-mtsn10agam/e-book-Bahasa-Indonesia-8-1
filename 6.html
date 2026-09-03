@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 1.6: Mengenal Tanda Baca dan Penulisan Kata Asing/Daerah | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Punctuation Cards */
+        .punct-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .punct-card {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+        .punct-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .punct-card .symbol {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.5rem;
+        }
+        .punct-card h5 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .punct-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        .punct-card .example {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed var(--border);
+            font-size: 0.85rem;
+            color: var(--text);
+            font-style: italic;
+        }
+
+        /* Foreign/Local Word Cards */
+        .word-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .word-card {
+            border-radius: 12px;
+            padding: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .word-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .word-card.foreign {
+            background: linear-gradient(135deg, #0984e3, #74b9ff);
+        }
+        .word-card.local {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+        }
+        .word-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .word-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .word-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .word-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .word-card ul li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .word-card ul li:last-child { border-bottom: none; }
+        .word-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="5.html">← Sub Bab 1.5</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="7.html">Sub Bab 1.7 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 1.6 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Tanda Baca dan Penulisan Kata Asing/Daerah</h1>
+            <p class="subtitle">
+                Memahami dan menerapkan penggunaan tanda baca yang benar serta aturan penulisan kata dari bahasa asing dan bahasa daerah dalam teks laporan hasil observasi. 
+                Ketepatan dalam penggunaan tanda baca dan penulisan kata sangat penting untuk menghasilkan tulisan yang baku, jelas, dan mudah dipahami.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pentingnya Tanda Baca -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pentingnya Tanda Baca dalam Teks LHO</h3>
+            </div>
+            <p><strong>Tanda baca</strong> adalah simbol-simbol yang digunakan dalam tulisan untuk menunjukkan struktur, intonasi, dan jeda dalam kalimat. Dalam teks laporan hasil observasi, penggunaan tanda baca yang tepat sangat penting karena teks ini bersifat ilmiah dan harus menyampaikan informasi secara jelas dan tidak ambigu.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI TANDA BACA:</strong><br>
+                Tanda baca adalah tanda-tanda yang digunakan dalam sistem ejaan bahasa tulis untuk memperjelas makna kalimat, menunjukkan jeda, intonasi, serta struktur gramatikal dalam sebuah tulisan.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat mengenali dan menerapkan penggunaan tanda baca serta penulisan kata dari bahasa asing/daerah dengan benar.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Mengapa Tanda Baca Penting dalam Teks LHO?</h4>
+            <ul class="feature-list">
+                <li><strong>Memperjelas Makna:</strong> Tanda baca yang tepat mencegah kesalahpahaman dalam membaca informasi ilmiah.</li>
+                <li><strong>Menunjukkan Struktur Kalimat:</strong> Membantu pembaca memahami hubungan antarbagian dalam kalimat yang kompleks.</li>
+                <li><strong>Menunjukkan Jeda dan Intonasi:</strong> Memberikan petunjuk bagaimana kalimat harus dibaca.</li>
+                <li><strong>Menjaga Kebakuan Bahasa:</strong> Teks ilmiah harus mengikuti kaidah ejaan yang berlaku (PUEBI/EYD).</li>
+                <li><strong>Meningkatkan Kredibilitas:</strong> Tulisan yang menggunakan tanda baca dengan benar menunjukkan keseriusan dan profesionalisme penulis.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Dampak Kesalahan Tanda Baca</h5>
+                <p><strong>✗ Tanpa tanda baca:</strong><br>
+                <em>"Kucing memiliki empat kaki dua telinga dan ekor yang panjang"</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>✓ Dengan tanda baca:</strong><br>
+                <em>"Kucing memiliki empat kaki, dua telinga, dan ekor yang panjang."</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>✗ Ambigu:</strong><br>
+                <em>"Ibu guru mengatakan murid-murid itu pandai"</em> (Siapa yang pandai?)</p>
+                
+                <p style="margin-top: 0.5rem;"><strong>✓ Jelas:</strong><br>
+                <em>"Ibu guru mengatakan, 'Murid-murid itu pandai.'"</em> (Murid yang pandai)<br>
+                <em>"'Ibu guru,' mengatakan murid-murid, 'itu pandai.'"</em> (Ibu guru yang pandai)</p>
+            </div>
+        </div>
+
+        <!-- Content B: Jenis-jenis Tanda Baca -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Jenis-Jenis Tanda Baca dan Penggunaannya</h3>
+            </div>
+            <p>Berikut adalah tanda baca yang sering digunakan dalam teks laporan hasil observasi beserta aturan penggunaannya berdasarkan Pedoman Umum Ejaan Bahasa Indonesia (PUEBI):</p>
+
+            <div class="punct-cards">
+                <div class="punct-card">
+                    <div class="symbol">.</div>
+                    <h5>Tanda Titik</h5>
+                    <p>Digunakan pada akhir kalimat pernyataan, di belakang angka atau huruf dalam daftar, dan untuk memisahkan angka jam, menit, dan detik.</p>
+                    <div class="example">Contoh: "Kucing termasuk hewan mamalia."</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">,</div>
+                    <h5>Tanda Koma</h5>
+                    <p>Digunakan untuk memisahkan unsur-unsur dalam pemerincian, memisahkan anak kalimat dari induk kalimat, dan sebelum kata penghubung seperti "tetapi", "melainkan".</p>
+                    <div class="example">Contoh: "Kucing memiliki empat kaki, dua telinga, dan ekor."</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">:</div>
+                    <h5>Tanda Titik Dua</h5>
+                    <p>Digunakan pada akhir pernyataan lengkap yang diikuti pemerincian atau penjelasan, serta dalam naskah drama sesudah kata yang menunjukkan pelaku.</p>
+                    <div class="example">Contoh: "Kucing memiliki ciri-ciri: tubuh lentur, cakar tajam, dan mata besar."</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">;</div>
+                    <h5>Tanda Titik Koma</h5>
+                    <p>Digunakan sebagai pengganti kata penghubung untuk memisahkan kalimat setara yang satu dari kalimat setara yang lain di dalam kalimat majemuk.</p>
+                    <div class="example">Contoh: "Hari sudah malam; anak-anak masih belajar."</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">-</div>
+                    <h5>Tanda Hubung</h5>
+                    <p>Digunakan untuk menyambung suku-suku kata yang terpisah oleh pergantian baris, menyambung unsur kata ulang, dan merangkaikan unsur bahasa Indonesia dengan unsur bahasa asing.</p>
+                    <div class="example">Contoh: "anak-anak", "berjalan-jalan", "di-smash"</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">—</div>
+                    <h5>Tanda Pisah</h5>
+                    <p>Digunakan untuk membatasi penyisipan kata atau kalimat yang memberi penjelasan di luar bangun kalimat, serta menegaskan keterangan aposisi.</p>
+                    <div class="example">Contoh: "Kucing — hewan mamalia karnivora — memiliki cakar tajam."</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">( )</div>
+                    <h5>Tanda Kurung</h5>
+                    <p>Digunakan untuk mengapit keterangan atau penjelasan tambahan, mengapit keterangan yang bukan bagian utama kalimat, dan mengapit huruf atau kata yang keberadaannya dapat dihilangkan.</p>
+                    <div class="example">Contoh: "Kucing (Felis catus) adalah hewan mamalia."</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">" "</div>
+                    <h5>Tanda Petik</h5>
+                    <p>Digunakan untuk mengapit petikan langsung yang berasal dari pembicaraan, naskah, atau bahan tertulis lain, serta mengapit judul syair, karangan, atau bab buku.</p>
+                    <div class="example">Contoh: Menurut ahli, "Kucing telah didomestikasi sejak 9.500 tahun lalu."</div>
+                </div>
+
+                <div class="punct-card">
+                    <div class="symbol">/</div>
+                    <h5>Tanda Garis Miring</h5>
+                    <p>Digunakan dalam nomor surat, nomor pada alamat, penandaan masa satu tahun yang terbagi dalam dua tahun takwim, dan sebagai pengganti kata "atau", "setiap", "per".</p>
+                    <div class="example">Contoh: "harga/kg", "tahun ajaran 2025/2026"</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content C: Penulisan Kata Asing -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Penulisan Kata Asing dalam Teks LHO</h3>
+            </div>
+            <p>Dalam teks laporan hasil observasi, banyak ditemukan istilah-istilah ilmiah yang berasal dari bahasa asing, terutama bahasa Latin, Inggris, dan Yunani. Penulisan kata asing memiliki aturan khusus yang harus diikuti.</p>
+
+            <div class="word-cards">
+                <div class="word-card foreign">
+                    <div class="icon">🌍</div>
+                    <h5>Kata Asing (Bahasa Asing)</h5>
+                    <p>Kata-kata yang berasal dari bahasa lain (Inggris, Latin, Yunani, Arab, dll.) yang belum diserap secara resmi ke dalam bahasa Indonesia.</p>
+                    <ul>
+                        <li>Ditulis dengan <em>cetak miring</em> (italic)</li>
+                        <li>Tidak menggunakan tanda petik</li>
+                        <li>Penulisan mengikuti ejaan bahasa aslinya</li>
+                        <li>Jika sudah diserap, ditulis tegak (bukan miring)</li>
+                    </ul>
+                </div>
+                <div class="word-card local">
+                    <div class="icon">🏝️</div>
+                    <h5>Kata Daerah (Bahasa Daerah)</h5>
+                    <p>Kata-kata yang berasal dari bahasa daerah di Indonesia (Jawa, Sunda, Minang, Batak, dll.) yang belum menjadi kosakata umum bahasa Indonesia.</p>
+                    <ul>
+                        <li>Ditulis dengan <em>cetak miring</em> (italic)</li>
+                        <li>Tidak menggunakan tanda petik</li>
+                        <li>Penulisan mengikuti ejaan bahasa daerahnya</li>
+                        <li>Jika sudah diserap, ditulis tegak (bukan miring)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="definition-box">
+                 <strong>ATURAN PUEBI:</strong><br>
+                Huruf miring digunakan untuk menuliskan kata atau ungkapan dalam bahasa daerah atau bahasa asing. Kata, ungkapan, atau kalimat bahasa daerah atau bahasa asing yang sudah diserap ke dalam bahasa Indonesia tidak ditulis dengan huruf miring.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Contoh Penulisan Kata Asing dalam Teks LHO:</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Kata Asing</th>
+                        <th>Asal Bahasa</th>
+                        <th>Penulisan yang Benar</th>
+                        <th>Contoh dalam Kalimat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>Felis catus</em></td>
+                        <td>Latin</td>
+                        <td>Cetak miring</td>
+                        <td>"Kucing (<em>Felis catus</em>) adalah hewan mamalia."</td>
+                    </tr>
+                    <tr>
+                        <td><em>Aloe vera</em></td>
+                        <td>Latin</td>
+                        <td>Cetak miring</td>
+                        <td>"Lidah buaya (<em>Aloe vera</em>) berasal dari Afrika."</td>
+                    </tr>
+                    <tr>
+                        <td><em>habitat</em></td>
+                        <td>Latin</td>
+                        <td>Cetak miring</td>
+                        <td>"<em>Habitat</em> alami komodo adalah pulau kering."</td>
+                    </tr>
+                    <tr>
+                        <td><em>ekosistem</em></td>
+                        <td>Yunani</td>
+                        <td>Tegak (sudah diserap)</td>
+                        <td>"Ekosistem mangrove sangat penting."</td>
+                    </tr>
+                    <tr>
+                        <td><em>fotosintesis</em></td>
+                        <td>Yunani</td>
+                        <td>Tegak (sudah diserap)</td>
+                        <td>"Proses fotosintesis terjadi di daun."</td>
+                    </tr>
+                    <tr>
+                        <td><em>online</em></td>
+                        <td>Inggris</td>
+                        <td>Cetak miring</td>
+                        <td>"Katalog perpustakaan dapat diakses secara <em>online</em>."</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>🔑 Rumus Mudah</h4>
+                <p><strong>Belum diserap</strong> → Tulis <em>miring</em> (contoh: <em>Felis catus</em>, <em>online</em>, <em>download</em>)</p>
+                <p style="margin-top: 0.5rem;"><strong>Sudah diserap</strong> → Tulis <strong>tegak</strong> (contoh: ekosistem, fotosintesis, komputer, internet)</p>
+                <p style="margin-top: 0.5rem;"><strong>Cara cek:</strong> Cari kata tersebut di KBBI (Kamus Besar Bahasa Indonesia). Jika ada → sudah diserap → tulis tegak.</p>
+            </div>
+        </div>
+
+        <!-- Content D: Penulisan Kata Daerah -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Penulisan Kata Daerah dalam Teks LHO</h3>
+            </div>
+            <p>Dalam teks laporan hasil observasi tentang budaya, kuliner, atau fenomena lokal, sering ditemukan kata-kata dari bahasa daerah. Penulisan kata daerah mengikuti aturan yang sama dengan kata asing.</p>
+
+            <h4 style="margin-top: 1rem; margin-bottom: 1rem;">Contoh Penulisan Kata Daerah:</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Kata Daerah</th>
+                        <th>Asal Daerah</th>
+                        <th>Arti</th>
+                        <th>Penulisan yang Benar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><em>randang</em></td>
+                        <td>Minangkabau</td>
+                        <td>Makanan khas dari daging</td>
+                        <td>"<em>Randang</em> adalah masakan khas Minangkabau."</td>
+                    </tr>
+                    <tr>
+                        <td><em>surau</em></td>
+                        <td>Minangkabau</td>
+                        <td>Tempat ibadah kecil</td>
+                        <td>"<em>Surau</em> berfungsi sebagai tempat mengaji."</td>
+                    </tr>
+                    <tr>
+                        <td><em>batik</em></td>
+                        <td>Jawa</td>
+                        <td>Kain bermotif</td>
+                        <td>"Batik telah diakui UNESCO." (sudah diserap)</td>
+                    </tr>
+                    <tr>
+                        <td><em>gotong royong</em></td>
+                        <td>Jawa</td>
+                        <td>Kerja bersama</td>
+                        <td>"Gotong royong sudah menjadi budaya." (sudah diserap)</td>
+                    </tr>
+                    <tr>
+                        <td><em>lapau</em></td>
+                        <td>Minangkabau</td>
+                        <td>Warung/kedai</td>
+                        <td>"<em>Lapau</em> adalah tempat berkumpul masyarakat."</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-box">
+                <h5>💡 Contoh Penerapan dalam Teks LHO</h5>
+                <div class="text-sample">
+                    "Rumah gadang (<em>rumah gadang</em>) adalah rumah adat Minangkabau yang memiliki atap berbentuk tanduk kerbau. Bangunan ini biasanya terdiri dari beberapa ruangan yang disebut <em>bilik</em>. Di halaman rumah gadang, terdapat bangunan kecil yang disebut <em>rangkiang</em> yang berfungsi sebagai lumbung padi."
+                </div>
+                <p style="margin-top: 1rem;"><strong>📝 Catatan:</strong> Kata <em>rumah gadang</em>, <em>bilik</em>, dan <em>rangkiang</em> ditulis miring karena merupakan kata dari bahasa Minangkabau yang belum diserap secara resmi ke dalam bahasa Indonesia.</p>
+            </div>
+        </div>
+
+        <!-- Content E: Kesalahan Umum -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Kesalahan Umum dalam Penggunaan Tanda Baca dan Penulisan Kata</h3>
+            </div>
+            <p>Berikut adalah kesalahan yang sering dilakukan oleh siswa dalam menulis teks laporan hasil observasi:</p>
+
+            <ul class="feature-list">
+                <li><strong>Tidak Menggunakan Koma dalam Pemerincian:</strong><br>
+                ✗ "Kucing memiliki empat kaki dua telinga dan ekor."<br>
+                ✓ "Kucing memiliki empat kaki, dua telinga, dan ekor."</li>
+                <li><strong>Salah Menggunakan Tanda Titik Dua:</strong><br>
+                ✗ "Ciri-ciri kucing adalah: hewan mamalia, berkaki empat."<br>
+                ✓ "Ciri-ciri kucing adalah hewan mamalia dan berkaki empat." (tanpa titik dua karena bukan pemerincian setelah pernyataan lengkap)</li>
+                <li><strong>Tidak Mencetak Miring Kata Asing:</strong><br>
+                ✗ "Nama ilmiah kucing adalah Felis catus."<br>
+                ✓ "Nama ilmiah kucing adalah <em>Felis catus</em>."</li>
+                <li><strong>Mencetak Miring Kata yang Sudah Diserap:</strong><br>
+                ✗ "Proses <em>fotosintesis</em> terjadi di daun."<br>
+                ✓ "Proses fotosintesis terjadi di daun."</li>
+                <li><strong>Menggunakan Tanda Petik untuk Kata Asing:</strong><br>
+                ✗ "Kucing dikenal sebagai 'predator' kecil."<br>
+                ✓ "Kucing dikenal sebagai <em>predator</em> kecil." (jika belum diserap) atau "Kucing dikenal sebagai predator kecil." (jika sudah diserap)</li>
+                <li><strong>Tidak Menggunakan Tanda Kurung untuk Nama Ilmiah:</strong><br>
+                ✗ "Kucing Felis catus adalah hewan mamalia."<br>
+                ✓ "Kucing (<em>Felis catus</em>) adalah hewan mamalia."</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>📋 Checklist Penulisan yang Benar</h4>
+                <p>✅ Setiap kalimat diakhiri tanda titik<br>
+                ✅ Unsur pemerincian dipisahkan tanda koma<br>
+                ✅ Nama ilmiah ditulis miring dan diapit tanda kurung<br>
+                ✅ Kata asing yang belum diserap ditulis miring<br>
+                ✅ Kata daerah yang belum diserap ditulis miring<br>
+                ✅ Kata yang sudah ada di KBBI ditulis tegak<br>
+                ✅ Tidak menggunakan tanda petik untuk kata asing/daerah</p>
+            </div>
+        </div>
+
+        <!-- Content F: Contoh Penerapan Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Contoh Penerapan dalam Teks LHO Lengkap</h3>
+            </div>
+            <p>Berikut adalah contoh teks laporan hasil observasi yang menggunakan tanda baca dan penulisan kata asing/daerah dengan benar:</p>
+
+            <div class="example-box">
+                <h5>📖 Teks: Komodo (<em>Varanus komodoensis</em>)</h5>
+                <div class="text-sample">
+                    Komodo (<em>Varanus komodoensis</em>) adalah kadal terbesar di dunia yang hanya ditemukan di Indonesia, tepatnya di Pulau Komodo, Rinca, Flores, dan Gili Motang. Hewan ini termasuk dalam famili Varanidae dan ordo Squamata. Berdasarkan data Taman Nasional Komodo tahun 2025, populasi komodo di alam liar mencapai 3.000 ekor.
+                </div>
+                <div class="text-sample">
+                    Komodo memiliki tubuh yang besar dengan panjang mencapai 3 meter dan berat 70–90 kg. Kulitnya berwarna abu-abu hingga cokelat kemerahan dengan tekstur bersisik kasar. Hewan ini memiliki lidah yang panjang, bercabang, dan berwarna kuning yang berfungsi sebagai alat penciuman. Komodo juga memiliki kelenjar racun (<em>venom gland</em>) di rahang bawahnya yang menghasilkan racun untuk melumpuhkan mangsa.
+                </div>
+                <div class="text-sample">
+                    Komodo memiliki banyak manfaat bagi ekosistem dan manusia. Sebagai predator puncak (<em>apex predator</em>), komodo berperan penting dalam menjaga keseimbangan rantai makanan di habitatnya. Selain itu, komodo menjadi daya tarik wisata utama di Taman Nasional Komodo yang memberikan dampak ekonomi bagi masyarakat lokal. Dalam budaya masyarakat setempat, komodo disebut <em>ora</em> dan dianggap sebagai saudara tua manusia.
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📊 Analisis Tanda Baca dan Penulisan Kata</h4>
+                <p><strong>🔤 Kata Asing (cetak miring):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• <em>Varanus komodoensis</em> — nama ilmiah (Latin)</li>
+                    <li style="padding: 0.4rem 0;">• <em>venom gland</em> — istilah biologi (Inggris)</li>
+                    <li style="padding: 0.4rem 0;">• <em>apex predator</em> — istilah ekologi (Inggris)</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>🏝️ Kata Daerah (cetak miring):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• <em>ora</em> — sebutan komodo dalam bahasa daerah setempat</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>✅ Kata yang Sudah Diserap (tegak):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• famili, ordo, habitat, ekosistem, predator, populasi</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>📌 Tanda Baca yang Digunakan:</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• Tanda titik (.) — akhir kalimat</li>
+                    <li style="padding: 0.4rem 0;">• Tanda koma (,) — pemerincian: "Pulau Komodo, Rinca, Flores, dan Gili Motang"</li>
+                    <li style="padding: 0.4rem 0;">• Tanda kurung ( ) — nama ilmiah dan istilah asing</li>
+                    <li style="padding: 0.4rem 0;">• Tanda hubung (–) — rentang angka: "70–90 kg"</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Tanda Baca</span>
+                <span class="keyword-tag">PUEBI</span>
+                <span class="keyword-tag">EYD</span>
+                <span class="keyword-tag">Tanda Titik</span>
+                <span class="keyword-tag">Tanda Koma</span>
+                <span class="keyword-tag">Tanda Titik Dua</span>
+                <span class="keyword-tag">Tanda Kurung</span>
+                <span class="keyword-tag">Tanda Hubung</span>
+                <span class="keyword-tag">Kata Asing</span>
+                <span class="keyword-tag">Kata Daerah</span>
+                <span class="keyword-tag">Cetak Miring</span>
+                <span class="keyword-tag">Nama Ilmiah</span>
+                <span class="keyword-tag">KBBI</span>
+                <span class="keyword-tag">Ejaan</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ عَلَّمَ ٱلْإِنسَٰنَ مَا لَمْ يَعْلَمْ</p>
+            <p class="translation">"Bacalah, dan Tuhanmulah Yang Mahamulia, yang mengajar (manusia) dengan pena. Dia mengajarkan manusia apa yang tidak diketahuinya."</p>
+            <p class="source">— QS. Al-'Alaq [96]: 3-5</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini menekankan pentingnya membaca dan menulis sebagai sarana memperoleh ilmu. Dalam menulis, penggunaan tanda baca dan ejaan yang benar merupakan bagian dari adab dan kesempurnaan dalam menyampaikan ilmu pengetahuan.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 1.6</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Penggunaan tanda baca, penulisan kata asing, dan penulisan kata daerah dalam teks laporan hasil observasi.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Tanda baca yang digunakan untuk memisahkan unsur-unsur dalam pemerincian adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Tanda titik</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Tanda koma</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Tanda titik dua</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Tanda titik koma</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Penulisan nama ilmiah hewan dalam teks LHO yang benar adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Ditulis tegak dan diapit tanda petik</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Ditulis miring dan diapit tanda kurung</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Ditulis tegak dan diapit tanda kurung</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Ditulis miring dan diapit tanda petik</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Kata asing yang belum diserap ke dalam bahasa Indonesia harus ditulis dengan...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Huruf kapital</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Huruf tebal</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Huruf miring</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Tanda petik</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Manakah penulisan yang benar?</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Kucing (Felis catus) adalah mamalia.</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Kucing (<em>Felis catus</em>) adalah mamalia.</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Kucing "Felis catus" adalah mamalia.</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Kucing Felis catus adalah mamalia.</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Tanda baca yang digunakan pada akhir pernyataan lengkap yang diikuti pemerincian adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Tanda koma</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Tanda titik</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Tanda titik dua</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Tanda titik koma</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Kata "fotosintesis" dalam teks LHO ditulis dengan...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Huruf miring karena berasal dari bahasa Yunani</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Huruf tegak karena sudah diserap ke dalam bahasa Indonesia</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Diapit tanda petik</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Huruf kapital semua</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Tanda kurung dalam teks LHO sering digunakan untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Mengapit kalimat langsung</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Mengapit nama ilmiah atau keterangan tambahan</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Mengakhiri kalimat</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Memisahkan unsur pemerincian</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Penulisan kata daerah yang belum diserap ke dalam bahasa Indonesia yang benar adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Ditulis tegak biasa</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Ditulis dengan huruf kapital</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Ditulis miring</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Ditulis tebal</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Pedoman ejaan bahasa Indonesia yang berlaku saat ini disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. EYD (Ejaan Yang Disempurnakan)</label>
+                        <label><input type="radio" name="pg9" value="B"> B. PUEBI (Pedoman Umum Ejaan Bahasa Indonesia)</label>
+                        <label><input type="radio" name="pg9" value="C"> C. KBBI (Kamus Besar Bahasa Indonesia)</label>
+                        <label><input type="radio" name="pg9" value="D"> D. TBBBI (Tata Bahasa Baku Bahasa Indonesia)</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Manakah kalimat yang menggunakan tanda baca dengan benar?</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Kucing memiliki empat kaki, dua telinga, dan ekor.</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Kucing memiliki empat kaki dua telinga dan ekor.</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Kucing, memiliki empat kaki, dua telinga dan ekor.</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Kucing memiliki: empat kaki, dua telinga, dan ekor.</label>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan mengapa penggunaan tanda baca yang benar sangat penting dalam teks laporan hasil observasi! Berikan minimal dua contoh dampak kesalahan tanda baca!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Sebutkan dan jelaskan fungsi dari 5 (lima) jenis tanda baca yang sering digunakan dalam teks laporan hasil observasi! Berikan contoh masing-masing!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Jelaskan aturan penulisan kata asing dan kata daerah dalam teks laporan hasil observasi! Kapan kata tersebut harus ditulis miring dan kapan ditulis tegak?</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Perbaiki kesalahan tanda baca dan penulisan kata dalam paragraf berikut!<br><br><em>"Komodo Varanus komodoensis adalah kadal terbesar di dunia, Hewan ini memiliki panjang tubuh mencapai 3 meter dengan berat 70-90 kg. Komodo memiliki kelenjar racun venom gland di rahang bawahnya. Dalam bahasa daerah komodo disebut ora."</em></p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Buatlah satu paragraf teks laporan hasil observasi tentang "Mangrove" yang menggunakan minimal 3 tanda baca yang berbeda dan 2 kata asing/daerah yang ditulis dengan benar!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- Hasil Ujian (Hidden by default) -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="7.html">Selanjutnya → Sub Bab 1.7</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Set tanggal hari ini secara otomatis
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'B', pg3: 'C', pg4: 'B', pg5: 'C',
+            pg6: 'B', pg7: 'B', pg8: 'C', pg9: 'B', pg10: 'A'
+        };
+
+        function hitungSkor() {
+            // Validasi identitas
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            // Hitung Pilihan Ganda
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            // Hitung Essay (Auto-grading sederhana berdasarkan panjang jawaban)
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10; // Nilai parsial jika jawaban terlalu pendek
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            // Tampilkan Hasil
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            // Scroll ke hasil
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            // Disable form setelah submit
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_1.6_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 1.6 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Tanda Baca dan Penulisan Kata Asing/Daerah\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_1.6_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 1.6 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Tanda Baca dan Penulisan Kata Asing/Daerah\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

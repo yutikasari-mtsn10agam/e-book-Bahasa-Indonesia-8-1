@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 1.4: Mengenal Struktur Teks Laporan Hasil Observasi | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Structure Cards */
+        .structure-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .structure-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .structure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(26, 26, 46, 0.3);
+        }
+        .structure-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+        .structure-card .number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            opacity: 0.3;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .structure-card h5 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .structure-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .structure-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="3.html">← Sub Bab 1.3</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="5.html">Sub Bab 1.5 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 1.4 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Struktur Teks Laporan Hasil Observasi</h1>
+            <p class="subtitle">
+                Memahami dan mengidentifikasi struktur teks laporan hasil observasi yang terdiri dari tiga bagian utama: pembuka (pernyataan umum), isi (deskripsi bagian), dan penutup (deskripsi manfaat). 
+                Pemahaman terhadap struktur ini sangat penting untuk menyusun teks LHO yang sistematis dan terorganisir.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengertian Struktur -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengertian Struktur Teks LHO</h3>
+            </div>
+            <p><strong>Struktur teks</strong> adalah susunan atau organisasi isi teks yang terdiri dari bagian-bagian yang saling berkaitan dan membentuk kesatuan yang utuh. Dalam teks laporan hasil observasi, struktur merupakan kerangka yang mengatur bagaimana informasi disajikan secara sistematis dan logis.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI STRUKTUR TEKS LHO:</strong><br>
+                Struktur teks laporan hasil observasi adalah susunan sistematis yang terdiri dari tiga bagian utama, yaitu pernyataan umum (pembuka), deskripsi bagian (isi), dan deskripsi manfaat (penutup). Struktur ini memastikan informasi disajikan secara teratur, logis, dan mudah dipahami oleh pembaca.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat mengidentifikasi dan menjelaskan struktur teks laporan hasil observasi (pembuka, isi, penutup).</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Mengapa Struktur Penting dalam Teks LHO?</h4>
+            <ul class="feature-list">
+                <li><strong>Memberikan Kerangka yang Jelas:</strong> Struktur membantu penulis mengorganisir informasi secara sistematis dan tidak melompat-lompat.</li>
+                <li><strong>Memudahkan Pembaca:</strong> Dengan struktur yang jelas, pembaca dapat mengikuti alur informasi dengan mudah dan memahami isi teks secara utuh.</li>
+                <li><strong>Menjaga Koherensi:</strong> Struktur memastikan setiap bagian teks saling berkaitan dan membentuk kesatuan yang padu.</li>
+                <li><strong>Menjamin Kelengkapan Informasi:</strong> Struktur yang baik memastikan semua aspek penting dari objek yang diamati telah dibahas.</li>
+                <li><strong>Meningkatkan Kredibilitas:</strong> Teks yang terstruktur dengan baik menunjukkan keseriusan dan profesionalisme penulis.</li>
+            </ul>
+        </div>
+
+        <!-- Content B: Tiga Bagian Utama Struktur -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Tiga Bagian Utama Struktur Teks LHO</h3>
+            </div>
+            <p>Teks laporan hasil observasi memiliki tiga bagian utama yang saling melengkapi. Setiap bagian memiliki fungsi dan karakteristik yang berbeda.</p>
+
+            <div class="structure-cards">
+                <div class="structure-card">
+                    <div class="number">1</div>
+                    <div class="icon">📖</div>
+                    <h5>Pernyataan Umum (Pembuka)</h5>
+                    <p>Berisi definisi, klasifikasi, atau penjelasan umum tentang objek yang diamati. Bagian ini menjawab pertanyaan "Apa itu?" dan memberikan gambaran awal kepada pembaca.</p>
+                </div>
+                <div class="structure-card">
+                    <div class="number">2</div>
+                    <div class="icon">🔍</div>
+                    <h5>Deskripsi Bagian (Isi)</h5>
+                    <p>Berisi rincian atau penjelasan mendalam mengenai bagian-bagian objek yang diamati. Bagian ini menjelaskan ciri-ciri fisik, sifat, perilaku, atau karakteristik khusus objek.</p>
+                </div>
+                <div class="structure-card">
+                    <div class="number">3</div>
+                    <div class="icon">💡</div>
+                    <h5>Deskripsi Manfaat (Penutup)</h5>
+                    <p>Berisi penjelasan tentang manfaat, fungsi, atau kegunaan objek yang diamati bagi kehidupan manusia, lingkungan, atau ekosistem.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content C: Penjelasan Detail Setiap Bagian -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Penjelasan Detail Setiap Bagian Struktur</h3>
+            </div>
+
+            <div class="example-box">
+                <h5>📖 1. PERNYATAAN UMUM (PEMBUKA)</h5>
+                <p><strong>Fungsi:</strong> Memberikan gambaran umum tentang objek yang akan dibahas.</p>
+                <p style="margin-top: 1rem;"><strong>Isi:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><strong>Definisi objek:</strong> Penjelasan tentang apa itu objek yang diamati</li>
+                    <li><strong>Klasifikasi:</strong> Pengelompokan objek ke dalam kategori tertentu</li>
+                    <li><strong>Asal-usul:</strong> Informasi tentang asal atau latar belakang objek</li>
+                    <li><strong>Gambaran umum:</strong> Penjelasan singkat tentang karakteristik utama objek</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Ciri-ciri:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li>Bersifat umum dan menyeluruh</li>
+                    <li>Berisi informasi dasar yang menjadi fondasi pembahasan</li>
+                    <li>Biasanya terletak di paragraf pertama</li>
+                    <li>Menggunakan kalimat definisi (menggunakan kata "adalah", "merupakan", "yaitu")</li>
+                </ul>
+                <div class="text-sample" style="margin-top: 1rem;">
+                    <strong>Contoh:</strong><br>
+                    "Kucing (Felis catus) adalah hewan mamalia karnivora dari keluarga Felidae. Kucing merupakan hewan peliharaan yang populer di seluruh dunia dan telah hidup bersama manusia selama ribuan tahun. Hewan ini dikenal karena kemampuannya beradaptasi dengan berbagai lingkungan."
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5>🔍 2. DESKRIPSI BAGIAN (ISI)</h5>
+                <p><strong>Fungsi:</strong> Menjelaskan secara rinci bagian-bagian atau aspek-aspek dari objek yang diamati.</p>
+                <p style="margin-top: 1rem;"><strong>Isi:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><strong>Ciri-ciri fisik:</strong> Bentuk, warna, ukuran, tekstur</li>
+                    <li><strong>Karakteristik khusus:</strong> Sifat, perilaku, kebiasaan</li>
+                    <li><strong>Bagian-bagian objek:</strong> Komponen-komponen yang membentuk objek</li>
+                    <li><strong>Fungsi bagian:</strong> Kegunaan setiap bagian dari objek</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Ciri-ciri:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li>Bersifat spesifik dan mendetail</li>
+                    <li>Merupakan bagian terpanjang dalam teks</li>
+                    <li>Bisa terdiri dari beberapa paragraf</li>
+                    <li>Menggunakan kalimat deskripsi yang rinci</li>
+                </ul>
+                <div class="text-sample" style="margin-top: 1rem;">
+                    <strong>Contoh:</strong><br>
+                    "Kucing memiliki tubuh yang lentur dengan empat kaki yang dilengkapi cakar tajam untuk berburu. Kepalanya berbentuk bulat dengan dua telinga runcing yang dapat bergerak bebas mengikuti arah suara. Matanya besar dan dapat melihat dengan jelas dalam kondisi cahaya redup. Kucing juga memiliki kumis (misai) yang berfungsi sebagai sensor untuk mendeteksi lingkungan sekitarnya."
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 3. DESKRIPSI MANFAAT (PENUTUP)</h5>
+                <p><strong>Fungsi:</strong> Menjelaskan manfaat, fungsi, atau kegunaan objek yang diamati.</p>
+                <p style="margin-top: 1rem;"><strong>Isi:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><strong>Manfaat bagi manusia:</strong> Kegunaan objek untuk kehidupan sehari-hari</li>
+                    <li><strong>Manfaat bagi lingkungan:</strong> Peran objek dalam ekosistem</li>
+                    <li><strong>Manfaat ekonomi:</strong> Nilai ekonomis objek</li>
+                    <li><strong>Manfaat sosial:</strong> Kontribusi objek terhadap masyarakat</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Ciri-ciri:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li>Berisi informasi tentang nilai guna objek</li>
+                    <li>Biasanya terletak di bagian akhir teks</li>
+                    <li>Menggunakan kata-kata yang menunjukkan manfaat (bermanfaat, berguna, berperan)</li>
+                </ul>
+                <div class="text-sample" style="margin-top: 1rem;">
+                    <strong>Contoh:</strong><br>
+                    "Kucing memiliki banyak manfaat bagi manusia. Sebagai hewan peliharaan, kucing dapat menjadi teman yang menghibur dan mengurangi stres. Kucing juga membantu mengendalikan populasi tikus di rumah. Bulu kucing yang lembut dapat memberikan rasa nyaman saat dibelai. Selain itu, kucing juga dapat dilatih untuk melakukan trik-trik tertentu yang menghibur pemiliknya."
+                </div>
+            </div>
+        </div>
+
+        <!-- Content D: Perbedaan dengan Struktur Teks Lain -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Perbedaan Struktur Teks LHO dengan Teks Lainnya</h3>
+            </div>
+            <p>Setiap jenis teks memiliki struktur yang berbeda sesuai dengan tujuan dan fungsinya. Berikut adalah perbandingan struktur teks LHO dengan beberapa jenis teks lainnya:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Jenis Teks</th>
+                        <th>Struktur</th>
+                        <th>Tujuan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Teks LHO</strong></td>
+                        <td>1. Pernyataan Umum<br>2. Deskripsi Bagian<br>3. Deskripsi Manfaat</td>
+                        <td>Memberikan informasi faktual berdasarkan observasi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teks Deskripsi</strong></td>
+                        <td>1. Identifikasi<br>2. Deskripsi Bagian<br>3. Penutup (kesan)</td>
+                        <td>Menggambarkan objek secara subjektif dan detail</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teks Prosedur</strong></td>
+                        <td>1. Tujuan<br>2. Alat dan Bahan<br>3. Langkah-langkah</td>
+                        <td>Memberikan panduan cara melakukan sesuatu</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teks Eksplanasi</strong></td>
+                        <td>1. Pernyataan Umum<br>2. Deret Penjelas<br>3. Interpretasi/Simpulan</td>
+                        <td>Menjelaskan proses terjadinya fenomena</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>🔑 Perbedaan Utama</h4>
+                <p><strong>Teks LHO</strong> bersifat <em>umum dan objektif</em> (membahas objek secara menyeluruh berdasarkan fakta), sedangkan <strong>Teks Deskripsi</strong> bersifat <em>khusus dan subjektif</em> (menggambarkan objek tertentu dengan kesan pribadi).</p>
+            </div>
+        </div>
+
+        <!-- Content E: Langkah-langkah Mengidentifikasi Struktur -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Langkah-Langkah Mengidentifikasi Struktur Teks LHO</h3>
+            </div>
+            <p>Untuk dapat mengidentifikasi struktur dalam teks laporan hasil observasi, ikuti langkah-langkah berikut:</p>
+
+            <div class="key-concept">
+                <h4>📋 5 Langkah Mengidentifikasi Struktur</h4>
+                <p><strong>1. Baca Teks secara Keseluruhan</strong><br>Bacalah teks dari awal hingga akhir untuk memahami gambaran umum isi teks.</p>
+                <p style="margin-top: 1rem;"><strong>2. Identifikasi Paragraf Pembuka</strong><br>Carilah paragraf yang berisi definisi atau penjelasan umum tentang objek. Ini adalah bagian <em>Pernyataan Umum</em>.</p>
+                <p style="margin-top: 1rem;"><strong>3. Identifikasi Paragraf Isi</strong><br>Carilah paragraf-paragraf yang berisi rincian atau deskripsi detail tentang bagian-bagian objek. Ini adalah bagian <em>Deskripsi Bagian</em>.</p>
+                <p style="margin-top: 1rem;"><strong>4. Identifikasi Paragraf Penutup</strong><br>Carilah paragraf yang berisi penjelasan tentang manfaat atau kegunaan objek. Ini adalah bagian <em>Deskripsi Manfaat</em>.</p>
+                <p style="margin-top: 1rem;"><strong>5. Verifikasi Struktur</strong><br>Pastikan bahwa ketiga bagian tersebut telah teridentifikasi dengan benar dan saling berkaitan.</p>
+            </div>
+
+            <div class="example-box">
+                <h5>🔍 Tips Mengidentifikasi Setiap Bagian</h5>
+                <p><strong>📖 Pernyataan Umum:</strong> Cari kata-kata kunci seperti "adalah", "merupakan", "yaitu", "didefinisikan sebagai"</p>
+                <p style="margin-top: 0.5rem;"><strong>🔍 Deskripsi Bagian:</strong> Cari kata-kata yang menunjukkan rincian seperti "memiliki", "terdiri dari", "terdiri atas", "bagian-bagiannya"</p>
+                <p style="margin-top: 0.5rem;"><strong>💡 Deskripsi Manfaat:</strong> Cari kata-kata yang menunjukkan kegunaan seperti "bermanfaat", "berguna", "dapat digunakan untuk", "berperan dalam"</p>
+            </div>
+        </div>
+
+        <!-- Content F: Contoh Analisis Struktur Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Contoh Analisis Struktur Teks LHO Lengkap</h3>
+            </div>
+            <p>Berikut adalah contoh analisis struktur dalam sebuah teks laporan hasil observasi yang utuh:</p>
+
+            <div class="example-box">
+                <h5>📖 Teks: Tanaman Lidah Buaya</h5>
+                <div class="text-sample">
+                    <strong>[Paragraf 1 - Pernyataan Umum]</strong><br>
+                    Lidah buaya (Aloe vera) adalah tanaman sukulen yang berasal dari Afrika Utara dan telah dibudidayakan di berbagai belahan dunia. Tanaman ini termasuk dalam keluarga Liliaceae dan dikenal karena khasiatnya dalam pengobatan tradisional maupun modern. Lidah buaya memiliki nama ilmiah Aloe vera dan merupakan salah satu dari sekitar 400 spesies Aloe.<br><br>
+
+                    <strong>[Paragraf 2 - Deskripsi Bagian]</strong><br>
+                    Lidah buaya memiliki daun yang tebal, berdaging, dan berwarna hijau dengan tepi bergerigi. Daunnya mengandung gel bening yang kaya akan vitamin, mineral, dan asam amino. Tanaman ini dapat tumbuh hingga 60-100 cm dan memiliki akar yang dangkal. Lidah buaya dapat bertahan di daerah kering karena kemampuannya menyimpan air dalam daunnya.<br><br>
+
+                    <strong>[Paragraf 3 - Deskripsi Bagian]</strong><br>
+                    Selain daunnya yang khas, lidah buaya juga memiliki bunga yang tumbuh pada tangkai panjang. Bunganya berwarna kuning atau oranye dan berbentuk tabung. Namun, tanaman ini lebih sering dibudidayakan untuk daunnya daripada bunganya.<br><br>
+
+                    <strong>[Paragraf 4 - Deskripsi Manfaat]</strong><br>
+                    Lidah buaya memiliki berbagai manfaat bagi kesehatan dan kecantikan. Gel lidah buaya dapat digunakan untuk mengobati luka bakar, melembapkan kulit, dan menyuburkan rambut. Tanaman ini juga dapat dikonsumsi sebagai minuman kesehatan yang membantu pencernaan. Selain itu, lidah buaya mudah dibudidayakan dan dapat dijadikan tanaman hias di pekarangan rumah.
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📊 Hasil Analisis Struktur</h4>
+                <p><strong>📖 PERNYATAAN UMUM (Paragraf 1):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• Berisi definisi lidah buaya sebagai tanaman sukulen</li>
+                    <li style="padding: 0.4rem 0;">• Menjelaskan asal-usul (Afrika Utara)</li>
+                    <li style="padding: 0.4rem 0;">• Menyebutkan klasifikasi (keluarga Liliaceae)</li>
+                    <li style="padding: 0.4rem 0;">• Memberikan gambaran umum tentang khasiatnya</li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>🔍 DESKRIPSI BAGIAN (Paragraf 2 & 3):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• Paragraf 2: Menjelaskan ciri-ciri fisik daun (tebal, berdaging, hijau, bergerigi)</li>
+                    <li style="padding: 0.4rem 0;">• Paragraf 2: Menjelaskan kandungan (gel, vitamin, mineral)</li>
+                    <li style="padding: 0.4rem 0;">• Paragraf 2: Menjelaskan ukuran dan akar</li>
+                    <li style="padding: 0.4rem 0;">• Paragraf 3: Menjelaskan ciri-ciri bunga</li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>💡 DESKRIPSI MANFAAT (Paragraf 4):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">• Menjelaskan manfaat untuk kesehatan (mengobati luka bakar)</li>
+                    <li style="padding: 0.4rem 0;">• Menjelaskan manfaat untuk kecantikan (melembapkan kulit)</li>
+                    <li style="padding: 0.4rem 0;">• Menjelaskan manfaat sebagai minuman kesehatan</li>
+                    <li style="padding: 0.4rem 0;">• Menjelaskan manfaat sebagai tanaman hias</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content G: Kesalahan Umum dalam Menyusun Struktur -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Kesalahan Umum dalam Menyusun Struktur Teks LHO</h3>
+            </div>
+            <p>Dalam menyusun teks laporan hasil observasi, ada beberapa kesalahan umum yang sering dilakukan oleh penulis pemula. Berikut adalah kesalahan-kesalahan tersebut beserta cara menghindarinya:</p>
+
+            <ul class="feature-list">
+                <li><strong>Tidak Ada Pernyataan Umum:</strong> Langsung masuk ke deskripsi detail tanpa memberikan gambaran awal tentang objek. <em>Solusi:</em> Selalu mulai dengan paragraf yang berisi definisi atau penjelasan umum.</li>
+                <li><strong>Mencampuradukkan Deskripsi dan Opini:</strong> Memasukkan pendapat pribadi dalam bagian deskripsi. <em>Solusi:</em> Pastikan deskripsi hanya berisi fakta hasil observasi, bukan opini.</li>
+                <li><strong>Tidak Ada Deskripsi Manfaat:</strong> Teks berakhir begitu saja tanpa menjelaskan manfaat objek. <em>Solusi:</em> Selalu akhiri dengan paragraf yang menjelaskan manfaat atau kegunaan objek.</li>
+                <li><strong>Struktur Tidak Sistematis:</strong> Urutan bagian tidak logis atau melompat-lompat. <em>Solusi:</em> Ikuti urutan: pernyataan umum → deskripsi bagian → deskripsi manfaat.</li>
+                <li><strong>Deskripsi Bagian Tidak Rinci:</strong> Penjelasan tentang bagian-bagian objek terlalu umum. <em>Solusi:</em> Berikan detail yang spesifik dan mendalam tentang setiap aspek objek.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Kesalahan vs Perbaikan</h5>
+                <p><strong>✗ Kesalahan:</strong><br>
+                <em>"Kucing adalah hewan yang sangat lucu dan menggemaskan. Bulunya sangat lembut dan indah. Kucing sangat baik untuk teman bermain."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Mengandung opini subjektif: "lucu", "menggemaskan", "indah", "baik")</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✓ Perbaikan:</strong><br>
+                <em>"Kucing (Felis catus) adalah hewan mamalia karnivora. Kucing memiliki bulu yang bervariasi dalam tekstur dan warna, mulai dari pendek hingga panjang, dengan warna solid atau pola tertentu. Sebagai hewan peliharaan, kucing dapat berinteraksi dengan manusia dan merespons sentuhan."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Objektif dan faktual)</span></p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Struktur Teks</span>
+                <span class="keyword-tag">Pernyataan Umum</span>
+                <span class="keyword-tag">Deskripsi Bagian</span>
+                <span class="keyword-tag">Deskripsi Manfaat</span>
+                <span class="keyword-tag">Pembuka</span>
+                <span class="keyword-tag">Isi</span>
+                <span class="keyword-tag">Penutup</span>
+                <span class="keyword-tag">Definisi</span>
+                <span class="keyword-tag">Klasifikasi</span>
+                <span class="keyword-tag">Rincian</span>
+                <span class="keyword-tag">Sistematis</span>
+                <span class="keyword-tag">Organisasi Teks</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">إِنَّ ٱللَّهَ يُحِبُّ إِذَا عَمِلَ أَحَدُكُمْ عَمَلًا أَن يُتْقِنَهُ</p>
+            <p class="translation">"Sesungguhnya Allah mencintai apabila salah seorang dari kalian melakukan suatu pekerjaan, ia melakukannya dengan sempurna (itqan)."</p>
+            <p class="source">— HR. Baihaqi</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Hadis ini mengajarkan pentingnya melakukan segala sesuatu dengan sempurna dan terstruktur. Dalam menyusun teks laporan hasil observasi, kita harus mengikuti struktur yang baik agar informasi disampaikan dengan sempurna dan mudah dipahami.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 1.4</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Struktur teks laporan hasil observasi (pernyataan umum, deskripsi bagian, deskripsi manfaat), cara mengidentifikasi struktur, dan analisis teks.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Struktur teks laporan hasil observasi terdiri dari tiga bagian utama, yaitu...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Orientasi, komplikasi, resolusi</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Pernyataan umum, deskripsi bagian, deskripsi manfaat</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Tesis, argumen, penegasan ulang</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Identifikasi, deskripsi, simpulan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Bagian struktur teks LHO yang berisi definisi atau penjelasan umum tentang objek yang diamati disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Deskripsi bagian</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Pernyataan umum</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Orientasi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Bagian struktur teks LHO yang berisi rincian atau penjelasan mendalam tentang bagian-bagian objek disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Pernyataan umum</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Deskripsi bagian</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Interpretasi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Bagian struktur teks LHO yang berisi penjelasan tentang manfaat atau kegunaan objek disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Pernyataan umum</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Deskripsi bagian</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Penutup</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Perhatikan paragraf berikut!<br><em>"Kucing (Felis catus) adalah hewan mamalia karnivora dari keluarga Felidae. Kucing merupakan hewan peliharaan yang populer di seluruh dunia."</em><br>Paragraf tersebut merupakan bagian struktur...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Deskripsi bagian</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Pernyataan umum</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Orientasi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Perhatikan paragraf berikut!<br><em>"Lidah buaya memiliki daun yang tebal, berdaging, dan berwarna hijau dengan tepi bergerigi. Daunnya mengandung gel bening yang kaya akan vitamin."</em><br>Paragraf tersebut merupakan bagian struktur...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Pernyataan umum</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Deskripsi bagian</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Simpulan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Perhatikan paragraf berikut!<br><em>"Lidah buaya memiliki berbagai manfaat bagi kesehatan dan kecantikan. Gel lidah buaya dapat digunakan untuk mengobati luka bakar dan melembapkan kulit."</em><br>Paragraf tersebut merupakan bagian struktur...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Pernyataan umum</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Deskripsi bagian</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Orientasi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Perbedaan utama struktur teks LHO dengan teks deskripsi adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Teks LHO bersifat subjektif, teks deskripsi bersifat objektif</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Teks LHO bersifat umum dan objektif, teks deskripsi bersifat khusus dan subjektif</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Teks LHO tidak memiliki struktur, teks deskripsi memiliki struktur</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Tidak ada perbedaan, keduanya sama</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Kata kunci yang sering muncul dalam bagian pernyataan umum adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. memiliki, terdiri dari, meliputi</label>
+                        <label><input type="radio" name="pg9" value="B"> B. bermanfaat, berguna, berperan</label>
+                        <label><input type="radio" name="pg9" value="C"> C. adalah, merupakan, yaitu, didefinisikan sebagai</label>
+                        <label><input type="radio" name="pg9" value="D"> D. pertama, kedua, ketiga, selanjutnya</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Urutan struktur teks laporan hasil observasi yang benar adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Deskripsi bagian → Pernyataan umum → Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Pernyataan umum → Deskripsi bagian → Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Deskripsi manfaat → Pernyataan umum → Deskripsi bagian</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Pernyataan umum → Deskripsi manfaat → Deskripsi bagian</label>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan tiga bagian utama struktur teks laporan hasil observasi beserta fungsi masing-masing bagian!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Sebutkan dan jelaskan ciri-ciri dari masing-masing bagian struktur teks laporan hasil observasi (pernyataan umum, deskripsi bagian, deskripsi manfaat)!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Jelaskan perbedaan struktur teks laporan hasil observasi dengan struktur teks deskripsi! Berikan contoh masing-masing!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Bacalah teks berikut, kemudian identifikasi bagian pernyataan umum, deskripsi bagian, dan deskripsi manfaat!<br><br><em>"Mangrove (Rhizophora sp.) adalah ekosistem khas yang terdapat di wilayah pesisir pantai tropis dan subtropis. Tumbuhan ini memiliki akar napas (pneumatofora) yang menjulang ke atas permukaan air. Akar ini berfungsi untuk membantu tumbuhan bernapas di lingkungan yang miskin oksigen. Batang mangrove berwarna cokelat kehitaman dengan tekstur kasar. Daunnya berwarna hijau gelap dan berbentuk lonjong. Mangrove memiliki banyak manfaat bagi lingkungan pesisir. Akar mangrove mampu menahan abrasi pantai. Selain itu, mangrove juga menjadi tempat berkembang biak berbagai jenis ikan dan udang."</em></p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Buatlah satu contoh teks laporan hasil observasi sederhana tentang "Perpustakaan Sekolah" yang terdiri dari minimal 3 paragraf (pernyataan umum, deskripsi bagian, deskripsi manfaat)!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- Hasil Ujian (Hidden by default) -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="5.html">Selanjutnya → Sub Bab 1.5</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Set tanggal hari ini secara otomatis
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'C', pg3: 'B', pg4: 'C', pg5: 'C',
+            pg6: 'B', pg7: 'C', pg8: 'B', pg9: 'C', pg10: 'B'
+        };
+
+        function hitungSkor() {
+            // Validasi identitas
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            // Hitung Pilihan Ganda
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            // Hitung Essay (Auto-grading sederhana berdasarkan panjang jawaban)
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10; // Nilai parsial jika jawaban terlalu pendek
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            // Tampilkan Hasil
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            // Scroll ke hasil
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            // Disable form setelah submit
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_1.4_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 1.4 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Struktur Teks Laporan Hasil Observasi\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_1.4_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 1.4 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Struktur Teks Laporan Hasil Observasi\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
