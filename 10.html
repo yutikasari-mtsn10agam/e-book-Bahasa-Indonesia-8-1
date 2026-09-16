@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 2.3: Mengenal Pesan dalam Iklan Nonkomersial | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --social-color: #00b894;
+            --edu-color: #0984e3;
+            --awareness-color: #6c5ce7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Message Type Cards */
+        .message-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .message-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .message-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .message-card.social { background: linear-gradient(135deg, var(--social-color), #55efc4); }
+        .message-card.edu { background: linear-gradient(135deg, var(--edu-color), #74b9ff); }
+        .message-card.awareness { background: linear-gradient(135deg, var(--awareness-color), #a29bfe); }
+        .message-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .message-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .message-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .message-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .message-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .message-card ul li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .message-card ul li:last-child { border-bottom: none; }
+        .message-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Sub-type Cards */
+        .subtype-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .subtype-card {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .subtype-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .subtype-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .subtype-card h5 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .subtype-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        .comparison-table td.comm-col {
+            background: rgba(225, 112, 85, 0.05);
+        }
+        .comparison-table td.noncomm-col {
+            background: rgba(0, 184, 148, 0.05);
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="9.html">← Sub Bab 2.2</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="11.html">Sub Bab 2.4 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 2.3 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Pesan dalam Iklan Nonkomersial</h1>
+            <p class="subtitle">
+                Memahami cara mengidentifikasi pesan dalam iklan nonkomersial (layanan masyarakat) dan menganalisis efektivitasnya. 
+                Iklan jenis ini memiliki peran penting dalam membangun kesadaran sosial, mengedukasi masyarakat, dan mengajak masyarakat untuk melakukan hal-hal positif demi kepentingan bersama.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengertian Iklan Nonkomersial -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengertian Iklan Nonkomersial</h3>
+            </div>
+            <p><strong>Iklan nonkomersial</strong> adalah jenis iklan yang tidak bertujuan untuk mencari keuntungan ekonomi, melainkan untuk memberikan informasi, edukasi, atau ajakan kepada masyarakat demi kepentingan sosial, kemanusiaan, atau pelayanan masyarakat. Iklan ini sering disebut juga sebagai <strong>Iklan Layanan Masyarakat (ILM)</strong>.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI IKLAN NONKOMERSIAL:</strong><br>
+                Iklan nonkomersial adalah pesan yang disampaikan kepada khalayak melalui berbagai media dengan tujuan memberikan pelayanan, edukasi, atau ajakan kepada masyarakat untuk melakukan tindakan yang bermanfaat bagi kepentingan sosial, kemanusiaan, atau kesejahteraan bersama, tanpa mengharapkan keuntungan ekonomi.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat mengidentifikasi pesan dalam iklan nonkomersial (layanan masyarakat) dan menganalisis efektivitasnya.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Kata Kunci dalam Iklan Nonkomersial:</h4>
+            <ul class="feature-list">
+                <li><strong>Sosial:</strong> Ditujukan untuk kepentingan masyarakat luas.</li>
+                <li><strong>Edukatif:</strong> Memberikan edukasi atau pengetahuan baru.</li>
+                <li><strong>Non-profit:</strong> Tidak mencari keuntungan ekonomi.</li>
+                <li><strong>Ajakan:</strong> Mengajak masyarakat untuk bertindak positif.</li>
+                <li><strong>Kesadaran:</strong> Membangun kesadaran terhadap isu-isu tertentu.</li>
+                <li><strong>Pelayanan:</strong> Memberikan pelayanan informasi kepada masyarakat.</li>
+            </ul>
+        </div>
+
+        <!-- Content B: Tujuan dan Fungsi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Tujuan dan Fungsi Iklan Nonkomersial</h3>
+            </div>
+            <p>Iklan nonkomersial memiliki tujuan dan fungsi yang berbeda dengan iklan komersial. Jika iklan komersial berfokus pada keuntungan ekonomi, iklan nonkomersial berfokus pada <strong>kesejahteraan masyarakat</strong> dan <strong>perubahan perilaku positif</strong>.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">🎯 Tujuan Iklan Nonkomersial:</h4>
+            <ul class="feature-list">
+                <li><strong>Membangun Kesadaran Sosial:</strong> Meningkatkan kesadaran masyarakat terhadap isu-isu penting seperti kesehatan, lingkungan, pendidikan, dan keselamatan.</li>
+                <li><strong>Mengedukasi Masyarakat:</strong> Memberikan pengetahuan dan informasi yang bermanfaat bagi kehidupan masyarakat.</li>
+                <li><strong>Mengajak Perubahan Perilaku:</strong> Mendorong masyarakat untuk melakukan tindakan positif (contoh: donor darah, vaksinasi, hemat energi).</li>
+                <li><strong>Mencegah Perilaku Negatif:</strong> Mengingatkan masyarakat untuk menghindari perilaku berbahaya (contoh: narkoba, bullying, korupsi).</li>
+                <li><strong>Melayani Kepentingan Umum:</strong> Memberikan informasi penting yang dibutuhkan masyarakat (contoh: pengumuman, layanan pemerintah).</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">🔧 Fungsi Iklan Nonkomersial:</h4>
+            <ul class="feature-list">
+                <li><strong>Fungsi Edukatif:</strong> Memberikan edukasi kepada masyarakat tentang berbagai isu penting.</li>
+                <li><strong>Fungsi Sosial:</strong> Membangun kepedulian sosial dan solidaritas dalam masyarakat.</li>
+                <li><strong>Fungsi Preventif:</strong> Mencegah terjadinya perilaku atau masalah sosial yang merugikan.</li>
+                <li><strong>Fungsi Informatif:</strong> Menyampaikan informasi penting yang dibutuhkan masyarakat.</li>
+                <li><strong>Fungsi Persuasif:</strong> Membujuk masyarakat untuk melakukan tindakan positif.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Prinsip Dasar Iklan Nonkomersial yang Efektif</h4>
+                <p>Iklan nonkomersial yang baik harus memenuhi prinsip <strong>3E</strong>:</p>
+                <p style="margin-top: 0.5rem;"><strong>E</strong> = <em>Educational</em> (Edukatif — memberikan pengetahuan)<br>
+                <strong>E</strong> = <em>Emotional</em> (Emosional — menyentuh perasaan)<br>
+                <strong>E</strong> = <em>Engaging</em> (Melibatkan — mengajak masyarakat berpartisipasi)</p>
+            </div>
+        </div>
+
+        <!-- Content C: Jenis-Jenis Pesan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Jenis-Jenis Pesan dalam Iklan Nonkomersial</h3>
+            </div>
+            <p>Berdasarkan tujuan dan isinya, pesan dalam iklan nonkomersial dapat dibedakan menjadi tiga jenis utama. Setiap jenis memiliki karakteristik dan strategi penyampaian yang berbeda.</p>
+
+            <div class="message-cards">
+                <div class="message-card social">
+                    <div class="number">1</div>
+                    <div class="icon">🤝</div>
+                    <h5>Pesan Sosial</h5>
+                    <p><strong>Tujuan:</strong> Membangun kepedulian dan solidaritas terhadap isu-isu sosial di masyarakat.</p>
+                    <ul>
+                        <li>Mengangkat isu sosial</li>
+                        <li>Menyentuh empati masyarakat</li>
+                        <li>Mengajak bantuan sosial</li>
+                        <li>Membangun solidaritas</li>
+                        <li>Contoh: iklan donasi bencana alam</li>
+                    </ul>
+                </div>
+                <div class="message-card edu">
+                    <div class="number">2</div>
+                    <div class="icon">📚</div>
+                    <h5>Pesan Edukatif</h5>
+                    <p><strong>Tujuan:</strong> Memberikan edukasi dan pengetahuan baru kepada masyarakat tentang isu tertentu.</p>
+                    <ul>
+                        <li>Memberikan informasi penting</li>
+                        <li>Meningkatkan literasi</li>
+                        <li>Mengubah pola pikir</li>
+                        <li>Berbasis data dan fakta</li>
+                        <li>Contoh: iklan pentingnya imunisasi</li>
+                    </ul>
+                </div>
+                <div class="message-card awareness">
+                    <div class="number">3</div>
+                    <div class="icon">⚠️</div>
+                    <h5>Pesan Kesadaran (Awareness)</h5>
+                    <p><strong>Tujuan:</strong> Meningkatkan kesadaran masyarakat terhadap bahaya atau isu tertentu.</p>
+                    <ul>
+                        <li>Mengingatkan akan bahaya</li>
+                        <li>Mencegah perilaku negatif</li>
+                        <li>Menggunakan fear appeal</li>
+                        <li>Mendorong tindakan preventif</li>
+                        <li>Contoh: iklan bahaya narkoba</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">🔍 Sub-Jenis Iklan Nonkomersial</h4>
+            <div class="subtype-cards">
+                <div class="subtype-card">
+                    <div class="icon">📢</div>
+                    <h5>Iklan Layanan Masyarakat</h5>
+                    <p>Iklan yang memberikan pelayanan informasi kepada masyarakat tentang isu-isu penting.</p>
+                </div>
+                <div class="subtype-card">
+                    <div class="icon">📋</div>
+                    <h5>Iklan Pengumuman</h5>
+                    <p>Memberitahukan suatu kegiatan, acara, atau informasi penting kepada masyarakat.</p>
+                </div>
+                <div class="subtype-card">
+                    <div class="icon">🕊️</div>
+                    <h5>Iklan Duka Cita</h5>
+                    <p>Memberitahukan kabar duka atas meninggalnya seseorang kepada masyarakat luas.</p>
+                </div>
+                <div class="subtype-card">
+                    <div class="icon">❤️</div>
+                    <h5>Iklan Keluarga</h5>
+                    <p>Ucapan selamat, belasungkawa, atau ungkapan perasaan dari keluarga.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content D: Perbedaan dengan Iklan Komersial -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Perbedaan Iklan Komersial dan Nonkomersial</h3>
+            </div>
+            <p>Memahami perbedaan antara iklan komersial dan nonkomersial sangat penting agar kita dapat mengidentifikasi jenis pesan yang disampaikan dan meresponsnya dengan tepat.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th class="comm-col">Iklan Komersial</th>
+                        <th class="noncomm-col">Iklan Nonkomersial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tujuan Utama</strong></td>
+                        <td class="comm-col">Mencari keuntungan ekonomi</td>
+                        <td class="noncomm-col">Kepentingan sosial/masyarakat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Objek</strong></td>
+                        <td class="comm-col">Produk barang atau jasa</td>
+                        <td class="noncomm-col">Gagasan, layanan, isu sosial</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pemasang</strong></td>
+                        <td class="comm-col">Perusahaan, pedagang, produsen</td>
+                        <td class="noncomm-col">Pemerintah, LSM, organisasi sosial</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bahasa</strong></td>
+                        <td class="comm-col">Promosional, menonjolkan keunggulan produk</td>
+                        <td class="noncomm-col">Edukatif, menyentuh emosi, persuasif</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teknik Persuasi</strong></td>
+                        <td class="comm-col">Testimonial, humor, price appeal</td>
+                        <td class="noncomm-col">Fear appeal, emotional appeal, social proof</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Target Audiens</strong></td>
+                        <td class="comm-col">Konsumen potensial</td>
+                        <td class="noncomm-col">Masyarakat luas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Call to Action</strong></td>
+                        <td class="comm-col">"Beli sekarang!", "Hubungi kami!"</td>
+                        <td class="noncomm-col">"Mari bersama...", "Jagalah...", "Ayo..."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td class="comm-col">Iklan sabun, makanan, HP</td>
+                        <td class="noncomm-col">Iklan donor darah, anti-narkoba, vaksinasi</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>🔑 Rumus Mudah Membedakan</h4>
+                <p><strong>KOMERSIAL</strong> = "Beli/gunakan produk ini!" → Tujuan: <em>keuntungan ekonomi</em></p>
+                <p style="margin-top: 0.5rem;"><strong>NONKOMERSIAL</strong> = "Mari lakukan hal baik ini!" → Tujuan: <em>kebaikan bersama</em></p>
+            </div>
+        </div>
+
+        <!-- Content E: Ciri-Ciri Pesan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Ciri-Ciri Pesan dalam Iklan Nonkomersial</h3>
+            </div>
+            <p>Pesan dalam iklan nonkomersial memiliki ciri khas yang membedakannya dengan iklan komersial. Memahami ciri-ciri ini akan membantu kita dalam mengidentifikasi dan menganalisis pesan iklan.</p>
+
+            <ul class="feature-list">
+                <li><strong>Bersifat Edukatif:</strong> Pesan mengandung informasi atau pengetahuan yang bermanfaat bagi masyarakat.</li>
+                <li><strong>Menyentuh Emosi:</strong> Sering menggunakan pendekatan emosional untuk menggugah hati pembaca (kasih sayang, empati, rasa takut, harapan).</li>
+                <li><strong>Mengajak, Bukan Menjual:</strong> Menggunakan kata-kata ajakan seperti "mari", "ayo", "bersama-sama", bukan "beli", "diskon", "promo".</li>
+                <li><strong>Berbasis Fakta dan Data:</strong> Disertai data, statistik, atau fakta yang mendukung pesan agar lebih meyakinkan.</li>
+                <li><strong>Menonjolkan Manfaat Sosial:</strong> Fokus pada manfaat bagi masyarakat luas, bukan keuntungan individu.</li>
+                <li><strong>Menggunakan Bahasa yang Menyentuh:</strong> Bahasa yang digunakan sering kali puitis, inspiratif, atau menggugah kesadaran.</li>
+                <li><strong>Memiliki Pesan Moral:</strong> Mengandung nilai-nilai moral atau etika yang ingin ditanamkan kepada masyarakat.</li>
+                <li><strong>Tidak Mencantumkan Harga:</strong> Tidak ada informasi harga, diskon, atau promo karena tidak bertujuan komersial.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>💡 Contoh Iklan Nonkomersial</h5>
+                <div class="text-sample">
+                    "🩸 <strong>MARI DONOR DARAH!</strong> 🩸<br><br>
+                    Setetes darah Anda sangat berarti bagi sesama. Setiap hari, ribuan pasien di Indonesia membutuhkan transfusi darah untuk menyelamatkan nyawa. Donor darah tidak hanya membantu menyelamatkan nyawa, tetapi juga baik untuk kesehatan Anda.<br><br>
+                    📊 <strong>Fakta:</strong> 1 kantong darah dapat menyelamatkan hingga 3 nyawa!<br><br>
+                    📅 Hari/Tanggal: Minggu, 15 September 2026<br>
+                    🕐 Pukul: 08.00 - 14.00 WIB<br>
+                    📍 Tempat: Aula MTsN 10 Agam<br><br>
+                    <em>Satu donor, sejuta harapan. Jadilah pahlawan bagi sesama!</em><br><br>
+                    Hubungi: Panitia PMI 0812-3456-7890"
+                </div>
+                <p style="margin-top: 1rem;"><strong>🔍 Analisis Pesan:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><strong>Jenis pesan:</strong> Sosial dan Edukatif</li>
+                    <li><strong>Teknik persuasi:</strong> Emotional appeal + Fakta</li>
+                    <li><strong>Kata ajakan:</strong> "Mari", "Jadilah pahlawan"</li>
+                    <li><strong>Manfaat sosial:</strong> Menyelamatkan nyawa sesama</li>
+                    <li><strong>Call to action:</strong> Menghadiri acara donor darah</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content F: Cara Mengidentifikasi Pesan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Cara Mengidentifikasi Pesan dalam Iklan Nonkomersial</h3>
+            </div>
+            <p>Untuk dapat mengidentifikasi pesan dalam iklan nonkomersial, kita perlu menggunakan pendekatan sistematis. Berikut adalah langkah-langkah yang dapat dilakukan:</p>
+
+            <div class="key-concept">
+                <h4>📋 6 Langkah Mengidentifikasi Pesan</h4>
+                <p><strong>1. Tentukan Jenis Iklan</strong><br>Apakah iklan ini komersial atau nonkomersial? Lihat apakah ada produk yang dijual atau tidak.</p>
+                <p style="margin-top: 1rem;"><strong>2. Identifikasi Tujuan Iklan</strong><br>Apa yang ingin dicapai oleh iklan ini? Edukasi, kesadaran, atau ajakan sosial?</p>
+                <p style="margin-top: 1rem;"><strong>3. Analisis Isi Pesan</strong><br>Informasi apa yang disampaikan? Isu apa yang diangkat? Apa pesan utamanya?</p>
+                <p style="margin-top: 1rem;"><strong>4. Identifikasi Teknik Persuasi</strong><br>Teknik apa yang digunakan? Fear appeal, emotional appeal, atau social proof?</p>
+                <p style="margin-top: 1rem;"><strong>5. Cek Kelengkapan Informasi</strong><br>Apakah informasi yang disampaikan lengkap (tujuan, waktu, tempat, kontak)?</p>
+                <p style="margin-top: 1rem;"><strong>6. Evaluasi Efektivitas</strong><br>Apakah pesan sudah efektif dalam mengajak masyarakat? Apakah menyentuh emosi dan logika?</p>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">📋 Informasi Penting dalam Iklan Nonkomersial:</h4>
+            <ul class="feature-list">
+                <li><strong>1. Tujuan Iklan:</strong> Apa yang ingin dicapai oleh iklan ini?</li>
+                <li><strong>2. Isu yang Diangkat:</strong> Masalah sosial apa yang diangkat?</li>
+                <li><strong>3. Pesan Utama:</strong> Apa pesan inti yang ingin disampaikan?</li>
+                <li><strong>4. Ajakan:</strong> Apa yang diajakkan kepada masyarakat?</li>
+                <li><strong>5. Manfaat:</strong> Apa manfaat bagi masyarakat jika mengikuti ajakan?</li>
+                <li><strong>6. Data/Fakta Pendukung:</strong> Apakah ada data atau fakta yang mendukung pesan?</li>
+                <li><strong>7. Waktu dan Tempat:</strong> Kapan dan di mana kegiatan dilaksanakan (jika ada)?</li>
+                <li><strong>8. Penyelenggara:</strong> Siapa yang menyelenggarakan kegiatan?</li>
+                <li><strong>9. Kontak:</strong> Bagaimana cara menghubungi penyelenggara?</li>
+            </ul>
+        </div>
+
+        <!-- Content G: Analisis Efektivitas -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Cara Menganalisis Efektivitas Iklan Nonkomersial</h3>
+            </div>
+            <p>Efektivitas iklan nonkomersial diukur dari kemampuannya dalam menyampaikan pesan dan mengajak masyarakat untuk bertindak. Berikut adalah indikator efektivitasnya:</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">📊 Indikator Efektivitas Iklan Nonkomersial:</h4>
+            <ul class="feature-list">
+                <li><strong>Pesan Jelas dan Mudah Dipahami:</strong> Pesan utama dapat dipahami dengan cepat oleh masyarakat.</li>
+                <li><strong>Menyentuh Emosi:</strong> Mampu menggugah perasaan pembaca (empati, kasih sayang, keprihatinan).</li>
+                <li><strong>Didukung Data/Fakta:</strong> Informasi yang disampaikan didukung oleh data yang valid dan dapat dipertanggungjawabkan.</li>
+                <li><strong>Ajakan yang Kuat:</strong> Call to action yang jelas dan mudah diikuti oleh masyarakat.</li>
+                <li><strong>Informasi Lengkap:</strong> Memuat informasi penting seperti tujuan, waktu, tempat, dan kontak.</li>
+                <li><strong>Visual yang Mendukung:</strong> Gambar atau visual yang memperkuat pesan (jika ada).</li>
+                <li><strong>Sesuai Target Audiens:</strong> Bahasa dan gaya disesuaikan dengan masyarakat yang dituju.</li>
+                <li><strong>Memiliki Nilai Moral:</strong> Mengandung pesan moral yang positif dan membangun.</li>
+            </ul>
+
+            <h4 style="margin: 2rem 0 1rem 0;">📊 Rubrik Penilaian Efektivitas</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Sangat Efektif (4)</th>
+                        <th>Efektif (3)</th>
+                        <th>Cukup Efektif (2)</th>
+                        <th>Kurang Efektif (1)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Kelarasan Pesan</strong></td>
+                        <td>Pesan sangat jelas & menyentuh</td>
+                        <td>Pesan jelas & cukup menyentuh</td>
+                        <td>Pesan cukup jelas</td>
+                        <td>Pesan membingungkan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kelengkapan Info</strong></td>
+                        <td>Semua info penting ada</td>
+                        <td>Sebagian besar info ada</td>
+                        <td>Beberapa info ada</td>
+                        <td>Info sangat minim</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teknik Persuasi</strong></td>
+                        <td>Sangat menyentuh & meyakinkan</td>
+                        <td>Menyentuh & meyakinkan</td>
+                        <td>Cukup meyakinkan</td>
+                        <td>Kurang meyakinkan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Call to Action</strong></td>
+                        <td>Sangat kuat & jelas</td>
+                        <td>Kuat & jelas</td>
+                        <td>Cukup jelas</td>
+                        <td>Tidak jelas</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-box">
+                <h5>⚠️ Iklan Efektif vs Kurang Efektif</h5>
+                <p><strong>✗ IKLAN KURANG EFEKTIF:</strong><br>
+                <em>"Jagalah lingkungan!"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Pesan terlalu umum, tidak ada ajakan konkret, tidak ada data pendukung)</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✓ IKLAN EFEKTIF:</strong><br>
+                <em>"🌿 SATU POHON, SERIBU MANFAAT!<br>
+                Setiap tahun, 680.000 hektar hutan Indonesia hilang akibat penebangan liar. Mari kita bersama-sama menanam minimal 1 pohon di lingkungan rumah. Satu pohon dapat menghasilkan oksigen untuk 2 orang dan menyerap 22 kg CO2 per tahun.<br>
+                📅 Aksi Tanam Pohon: Minggu, 20 September 2026<br>
+                📍 Lokasi: Halaman MTsN 10 Agam<br>
+                📞 Info: Panitia Lingkungan 0812-9876-5432<br>
+                <em>Bumi kita, tanggung jawab kita!</em>"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Pesan jelas, didukung data, ajakan konkret, informasi lengkap)</span></p>
+            </div>
+        </div>
+
+        <!-- Content H: Contoh Analisis Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Contoh Analisis Iklan Nonkomersial Lengkap</h3>
+            </div>
+            <p>Berikut adalah contoh analisis lengkap sebuah iklan nonkomersial menggunakan langkah-langkah yang telah dipelajari:</p>
+
+            <div class="example-box">
+                <h5>📖 Contoh Iklan: "STOP BULLYING!"</h5>
+                <div class="text-sample" style="font-style: normal;">
+                    🛑 <strong>STOP BULLYING!</strong> 🛑<br><br>
+                    Bullying adalah tindakan perundungan yang dapat berupa kekerasan fisik, verbal, maupun sosial. Dampak bullying sangat serius bagi korban, mulai dari trauma, depresi, hingga keinginan untuk mengakhiri hidup.<br><br>
+                    📊 <strong>Fakta:</strong> Menurut data KPAI, 2 dari 3 anak Indonesia pernah mengalami bullying!<br><br>
+                    Mari kita bersama-sama menciptakan lingkungan yang aman dan nyaman untuk semua. Jadilah teman, bukan lawan. Laporkan jika melihat tindakan bullying!<br><br>
+                    📞 Hotline Anti-Bullying: 112<br>
+                    🌐 www.stopbullying.id<br><br>
+                    <em>Berani bicara, berani bertindak. Stop bullying sekarang juga!</em>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📊 Hasil Analisis</h4>
+                
+                <p><strong>1. 🏷️ Jenis Iklan:</strong> <em>Iklan Nonkomersial (Layanan Masyarakat)</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>2. 🎯 Jenis Pesan:</strong> <em>Pesan Kesadaran (Awareness) dan Edukatif</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>3. 📋 Kelengkapan Informasi:</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">✅ Tujuan: Mencegah bullying</li>
+                    <li style="padding: 0.4rem 0;">✅ Isu: Bullying di kalangan anak</li>
+                    <li style="padding: 0.4rem 0;">✅ Pesan utama: Stop bullying, ciptakan lingkungan aman</li>
+                    <li style="padding: 0.4rem 0;">✅ Ajakan: "Mari bersama...", "Laporkan jika melihat..."</li>
+                    <li style="padding: 0.4rem 0;">✅ Data pendukung: 2 dari 3 anak Indonesia pernah dibully</li>
+                    <li style="padding: 0.4rem 0;">✅ Kontak: Hotline 112, website</li>
+                </ul>
+                <p style="margin-top: 0.5rem;"><strong>Skor Kelengkapan: 6/6 (LENGKAP)</strong></p>
+
+                <p style="margin-top: 1rem;"><strong>4. 🎯 Teknik Persuasi yang Digunakan:</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">✅ <strong>Fear Appeal:</strong> Menyebutkan dampak serius bullying (trauma, depresi)</li>
+                    <li style="padding: 0.4rem 0;">✅ <strong>Emotional Appeal:</strong> "Jadilah teman, bukan lawan"</li>
+                    <li style="padding: 0.4rem 0;">✅ <strong>Expert Appeal:</strong> Data dari KPAI</li>
+                    <li style="padding: 0.4rem 0;">✅ <strong>Slogan:</strong> "Berani bicara, berani bertindak"</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>5. 🏆 Evaluasi Efektivitas:</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">✅ Pesan sangat jelas dan mudah dipahami</li>
+                    <li style="padding: 0.4rem 0;">✅ Menyentuh emosi (empati terhadap korban)</li>
+                    <li style="padding: 0.4rem 0;">✅ Didukung data yang valid (KPAI)</li>
+                    <li style="padding: 0.4rem 0;">✅ Call to action kuat dan konkret</li>
+                    <li style="padding: 0.4rem 0;">✅ Informasi kontak lengkap</li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>🏆 PENILAIAN AKHIR:</strong></p>
+                <p>Iklan ini <strong>SANGAT EFEKTIF</strong> karena:</p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">✅ Informasi sangat lengkap (6/6)</li>
+                    <li style="padding: 0.4rem 0;">✅ Menggunakan berbagai teknik persuasi</li>
+                    <li style="padding: 0.4rem 0;">✅ Pesan menyentuh emosi dan logika</li>
+                    <li style="padding: 0.4rem 0;">✅ Call to action kuat dan konkret</li>
+                    <li style="padding: 0.4rem 0;">✅ Mengandung nilai moral yang positif</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content I: Kesalahan Umum -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">I</div>
+                <h3>Kesalahan Umum dalam Menganalisis Iklan Nonkomersial</h3>
+            </div>
+            <p>Berikut adalah kesalahan yang sering dilakukan siswa saat menganalisis iklan nonkomersial:</p>
+
+            <ul class="feature-list">
+                <li><strong>Menyamakan dengan Iklan Komersial:</strong> Menganalisis iklan nonkomersial dengan kriteria iklan komersial (misalnya mencari harga, diskon, keunggulan produk).</li>
+                <li><strong>Tidak Memperhatikan Tujuan Sosial:</strong> Fokus hanya pada bahasa persuasif tanpa memahami tujuan sosial di balik iklan.</li>
+                <li><strong>Mengabaikan Data Pendukung:</strong> Tidak memperhatikan data atau fakta yang disertakan dalam iklan sebagai penguat pesan.</li>
+                <li><strong>Tidak Mengevaluasi Efektivitas:</strong> Hanya mengidentifikasi pesan tanpa menilai apakah iklan tersebut efektif atau tidak.</li>
+                <li><strong>Tidak Memperhatikan Nilai Moral:</strong> Mengabaikan pesan moral atau nilai positif yang ingin disampaikan oleh iklan.</li>
+                <li><strong>Terlalu Fokus pada Visual:</strong> Menilai iklan hanya dari gambar/warna tanpa menganalisis pesan teksnya secara mendalam.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Tips Menjadi Pembaca Kritis Iklan Nonkomersial</h4>
+                <p>1. <strong>Pahami Tujuan:</strong> Apa yang ingin dicapai oleh iklan ini?<br>
+                2. <strong>Cek Data:</strong> Apakah data yang disampaikan valid dan dapat dipercaya?<br>
+                3. <strong>Analisis Pesan:</strong> Apa pesan moral yang ingin disampaikan?<br>
+                4. <strong>Evaluasi Ajakan:</strong> Apakah ajakan dalam iklan realistis dan bermanfaat?<br>
+                5. <strong>Renungkan Dampak:</strong> Jika semua orang mengikuti ajakan ini, apa dampaknya bagi masyarakat?<br>
+                6. <strong>Ambil Tindakan Positif:</strong> Jika iklan mengajak hal baik, mari kita ikut berpartisipasi!</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Iklan Nonkomersial</span>
+                <span class="keyword-tag">Iklan Layanan Masyarakat</span>
+                <span class="keyword-tag">Pesan Sosial</span>
+                <span class="keyword-tag">Pesan Edukatif</span>
+                <span class="keyword-tag">Pesan Kesadaran</span>
+                <span class="keyword-tag">Fear Appeal</span>
+                <span class="keyword-tag">Emotional Appeal</span>
+                <span class="keyword-tag">Kepedulian Sosial</span>
+                <span class="keyword-tag">Solidaritas</span>
+                <span class="keyword-tag">Edukasi</span>
+                <span class="keyword-tag">Kesadaran</span>
+                <span class="keyword-tag">Nilai Moral</span>
+                <span class="keyword-tag">Efektivitas Iklan</span>
+                <span class="keyword-tag">Call to Action</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">وَٱلْعَصْرِ إِنَّ ٱلْإِنسَٰنَ لَفِى خُسْرٍ إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ</p>
+            <p class="translation">"Demi masa, sesungguhnya manusia itu benar-benar dalam kerugian, kecuali orang-orang yang beriman dan mengerjakan kebajikan serta saling menasihati untuk kebenaran dan saling menasihati untuk kesabaran."</p>
+            <p class="source">— QS. Al-'Asr [103]: 1-3</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini mengingatkan pentingnya saling menasihati dalam kebenaran dan kesabaran. Iklan nonkomersial merupakan salah satu sarana modern untuk saling menasihati dan mengajak masyarakat kepada kebaikan. Maka, mari kita dukung dan ikuti ajakan-ajakan positif yang disampaikan melalui iklan jenis ini.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 2.3</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Pengertian iklan nonkomersial, tujuan dan fungsi, jenis pesan (sosial, edukatif, kesadaran), ciri-ciri pesan, cara mengidentifikasi pesan, dan analisis efektivitas iklan nonkomersial.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Iklan yang bertujuan untuk memberikan pelayanan, edukasi, atau ajakan kepada masyarakat demi kepentingan sosial disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Iklan komersial</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Iklan nonkomersial</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Iklan produk</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Iklan promosi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Tujuan utama iklan nonkomersial adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Mencari keuntungan ekonomi</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Menjual produk kepada konsumen</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Memberikan informasi, edukasi, atau ajakan untuk kepentingan sosial</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Membangun citra merek perusahaan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Berikut ini yang merupakan contoh iklan nonkomersial adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Iklan sabun mandi di televisi</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Iklan ajakan donor darah dari PMI</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Iklan penjualan mobil di koran</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Iklan makanan cepat saji di media sosial</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Prinsip 3E dalam iklan nonkomersial merupakan singkatan dari...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Educational, Emotional, Engaging</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Economic, Effective, Efficient</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Entertainment, Education, Emotion</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Evaluation, Execution, Expansion</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Ciri utama bahasa yang digunakan dalam iklan nonkomersial adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Promosional dan menonjolkan keunggulan produk</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Edukatif, menyentuh emosi, dan mengajak</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Menggunakan bahasa ilmiah yang rumit</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Hanya menggunakan bahasa daerah</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Perhatikan iklan berikut!<br><em>"🛑 STOP BULLYING! Mari ciptakan lingkungan yang aman untuk semua. Laporkan jika melihat tindakan bullying!"</em><br>Iklan tersebut termasuk jenis pesan...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Pesan komersial</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Pesan pengingat</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Pesan kesadaran (awareness)</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Pesan informatif produk</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Teknik persuasi yang sering digunakan dalam iklan nonkomersial untuk mengajak masyarakat menghindari perilaku berbahaya adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Humor</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Price appeal</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Fear appeal</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Comparative</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Perbedaan utama antara iklan komersial dan nonkomersial terletak pada...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Jenis media yang digunakan</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Tujuan (ekonomi vs sosial)</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Bahasa yang digunakan</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Ukuran iklan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Informasi penting yang harus ada dalam iklan nonkomersial adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Harga produk dan diskon</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Nama produk dan merek</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Tujuan, ajakan, manfaat sosial, dan kontak</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Keunggulan produk dibanding pesaing</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Iklan nonkomersial yang efektif harus memenuhi kriteria berikut, KECUALI...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Pesan jelas dan mudah dipahami</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Menyentuh emosi masyarakat</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Mencantumkan harga dan promo</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Memiliki call to action yang kuat</label>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan pengertian iklan nonkomersial! Sebutkan dan jelaskan tujuan serta fungsi iklan nonkomersial secara lengkap!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Jelaskan perbedaan antara iklan komersial dan iklan nonkomersial! Berikan masing-masing dua contoh dalam kehidupan sehari-hari!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Sebutkan dan jelaskan 3 (tiga) jenis pesan dalam iklan nonkomersial (sosial, edukatif, kesadaran)! Berikan masing-masing satu contoh!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Bacalah iklan berikut, kemudian analisislah berdasarkan: (a) jenis iklan, (b) jenis pesan, (c) teknik persuasi yang digunakan, (d) kelengkapan informasi, dan (e) efektivitas iklan!<br><br><em>"🌿 JAGALAH HUTAN KITA! 🌿<br>Hutan adalah paru-paru dunia. Setiap tahun, 680.000 hektar hutan di Indonesia hilang akibat penebangan liar dan kebakaran. Mari kita bersama-sama menjaga kelestarian hutan untuk generasi mendatang.<br>📅 Aksi Tanam Pohon: Minggu, 20 September 2026<br>📍 Lokasi: Halaman MTsN 10 Agam<br>📞 Info: Panitia Lingkungan 0812-9876-5432<br><em>Bumi kita, tanggung jawab kita!</em>"</em></p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Buatlah sebuah iklan nonkomersial sederhana tentang "Pentingnya Menjaga Kebersihan Lingkungan Sekolah"! Pastikan iklan tersebut memiliki pesan yang jelas, menyentuh emosi, dan memiliki call to action yang kuat!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- Hasil Ujian (Hidden by default) -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="11.html">Selanjutnya → Sub Bab 2.4</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Set tanggal hari ini secara otomatis
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'C', pg3: 'B', pg4: 'A', pg5: 'B',
+            pg6: 'C', pg7: 'C', pg8: 'B', pg9: 'C', pg10: 'C'
+        };
+
+        function hitungSkor() {
+            // Validasi identitas
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            // Hitung Pilihan Ganda
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            // Hitung Essay (Auto-grading sederhana berdasarkan panjang jawaban)
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10; // Nilai parsial jika jawaban terlalu pendek
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            // Tampilkan Hasil
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            // Scroll ke hasil
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            // Disable form setelah submit
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_2.3_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 2.3 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Pesan dalam Iklan Nonkomersial\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_2.3_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 2.3 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Pesan dalam Iklan Nonkomersial\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

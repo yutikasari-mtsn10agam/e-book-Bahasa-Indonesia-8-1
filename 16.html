@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 3.1: Mengenal Artikel Ilmiah Populer | Bahasa Indonesia Kelas VIII</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --ilmu-color: #6c5ce7;
+            --populer-color: #00b894;
+            --formal-color: #0984e3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '📰';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -2rem;
+            right: -2rem;
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Type Cards */
+        .type-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .type-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .type-card.ilmu { background: linear-gradient(135deg, var(--ilmu-color), #a29bfe); }
+        .type-card.populer { background: linear-gradient(135deg, var(--populer-color), #55efc4); }
+        .type-card.formal { background: linear-gradient(135deg, var(--formal-color), #74b9ff); }
+        .type-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .type-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .type-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .type-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .type-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .type-card ul li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .type-card ul li:last-child { border-bottom: none; }
+        .type-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="15.html">← UTS (Sub Bab 2.8)</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="17.html">Sub Bab 3.2 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 3.1 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Artikel Ilmiah Populer</h1>
+            <p class="subtitle">
+                Memahami pengertian artikel ilmiah populer, ciri-ciri, struktur, dan cara mengidentifikasi informasi penting di dalamnya. 
+                Artikel ilmiah populer merupakan jembatan antara dunia akademik yang kompleks dengan masyarakat umum, sehingga ilmu pengetahuan dapat dinikmati oleh semua kalangan.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengertian -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengertian Artikel Ilmiah Populer</h3>
+            </div>
+            <p><strong>Artikel ilmiah populer</strong> adalah tulisan yang menyajikan gagasan, fakta, atau hasil penelitian ilmiah dengan bahasa yang mudah dipahami oleh masyarakat umum. Artikel ini memadukan <em>ketepatan ilmiah</em> dengan <em>gaya bahasa populer</em> sehingga dapat dinikmati oleh pembaca dari berbagai latar belakang.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI ARTIKEL ILMIAH POPULER:</strong><br>
+                Artikel ilmiah populer adalah karya tulis yang membahas topik ilmiah (sains, teknologi, sosial, budaya, dll.) dengan menggunakan bahasa yang ringan, mudah dipahami, dan menarik bagi masyarakat umum, tanpa menghilangkan ketepatan fakta dan data ilmiah yang menjadi dasarnya.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat menjelaskan pengertian artikel ilmiah populer dan mengidentifikasi informasi penting di dalamnya.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Kata Kunci dalam Pengertian:</h4>
+            <ul class="feature-list">
+                <li><strong>Ilmiah:</strong> Berdasarkan fakta, data, dan penelitian yang dapat dipertanggungjawabkan.</li>
+                <li><strong>Populer:</strong> Menggunakan bahasa yang mudah dipahami masyarakat umum.</li>
+                <li><strong>Artikel:</strong> Karya tulis yang dimuat di media massa (koran, majalah, website, blog).</li>
+                <li><strong>Jembatan:</strong> Menghubungkan dunia akademik dengan masyarakat luas.</li>
+                <li><strong>Edukatif:</strong> Memberikan pengetahuan baru kepada pembaca.</li>
+                <li><strong>Ringan:</strong> Tidak menggunakan istilah teknis yang rumit tanpa penjelasan.</li>
+            </ul>
+        </div>
+
+        <!-- Content B: Perbedaan dengan Teks Lain -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Perbedaan Artikel Ilmiah Populer dengan Teks Lain</h3>
+            </div>
+            <p>Artikel ilmiah populer memiliki karakteristik yang berbeda dengan jenis teks ilmiah lainnya. Memahami perbedaan ini akan membantu kita dalam mengidentifikasi dan menulis artikel ilmiah populer dengan tepat.</p>
+
+            <div class="type-cards">
+                <div class="type-card ilmu">
+                    <div class="number">1</div>
+                    <div class="icon">🔬</div>
+                    <h5>Artikel Ilmiah (Akademik)</h5>
+                    <p><strong>Ciri:</strong> Bahasa formal, istilah teknis, ditujukan untuk kalangan akademisi.</p>
+                    <ul>
+                        <li>Bahasa baku dan formal</li>
+                        <li>Banyak istilah teknis</li>
+                        <li>Struktur ketat (abstrak, pendahuluan, metode, hasil, pembahasan)</li>
+                        <li>Dimuat di jurnal ilmiah</li>
+                        <li>Contoh: Skripsi, tesis, jurnal</li>
+                    </ul>
+                </div>
+                <div class="type-card populer">
+                    <div class="number">2</div>
+                    <div class="icon">📰</div>
+                    <h5>Artikel Ilmiah Populer</h5>
+                    <p><strong>Ciri:</strong> Bahasa ringan, mudah dipahami, ditujukan untuk masyarakat umum.</p>
+                    <ul>
+                        <li>Bahasa populer dan santai</li>
+                        <li>Istilah teknis dijelaskan</li>
+                        <li>Struktur fleksibel</li>
+                        <li>Dimuat di koran, majalah, blog</li>
+                        <li>Contoh: Artikel kesehatan di media</li>
+                    </ul>
+                </div>
+                <div class="type-card formal">
+                    <div class="number">3</div>
+                    <div class="icon">📝</div>
+                    <h5>Teks Laporan Hasil Observasi</h5>
+                    <p><strong>Ciri:</strong> Berdasarkan pengamatan langsung, objektif, dan faktual.</p>
+                    <ul>
+                        <li>Berdasarkan observasi</li>
+                        <li>Objektif dan faktual</li>
+                        <li>Struktur: pernyataan umum, deskripsi bagian, manfaat</li>
+                        <li>Fokus pada satu objek</li>
+                        <li>Contoh: laporan tentang kucing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">📊 Tabel Perbandingan Lengkap</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Artikel Ilmiah Populer</th>
+                        <th>Artikel Ilmiah Akademik</th>
+                        <th>Teks LHO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tujuan</strong></td>
+                        <td>Edukasi masyarakat umum</td>
+                        <td>Kontribusi ilmu pengetahuan</td>
+                        <td>Melaporkan hasil observasi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bahasa</strong></td>
+                        <td>Ringan, populer, mudah dipahami</td>
+                        <td>Formal, teknis, baku</td>
+                        <td>Objektif, faktual</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pembaca</strong></td>
+                        <td>Masyarakat umum</td>
+                        <td>Akademisi, peneliti</td>
+                        <td>Guru, siswa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Media</strong></td>
+                        <td>Koran, majalah, blog, website</td>
+                        <td>Jurnal ilmiah</td>
+                        <td>Buku pelajaran</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Struktur</strong></td>
+                        <td>Fleksibel (judul, pembuka, isi, penutup)</td>
+                        <td>Ketat (abstrak s.d. daftar pustaka)</td>
+                        <td>Pernyataan umum, deskripsi, manfaat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data</strong></td>
+                        <td>Bisa dari berbagai sumber</td>
+                        <td>Harus dari penelitian sendiri</td>
+                        <td>Dari observasi langsung</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pendapat Penulis</strong></td>
+                        <td>Boleh ada (argumentatif)</td>
+                        <td>Objektif, berbasis data</td>
+                        <td>Tidak boleh (harus objektif)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>💡 Rumus Mudah Membedakan</h4>
+                <p><strong>ARTIKEL ILMIAH POPULER</strong> = "Ilmu + Bahasa Santai" → untuk masyarakat umum<br>
+                <strong>ARTIKEL ILMIAH AKADEMIK</strong> = "Ilmu + Bahasa Formal" → untuk akademisi<br>
+                <strong>TEKS LHO</strong> = "Hasil Pengamatan + Fakta" → untuk melaporkan objek</p>
+            </div>
+        </div>
+
+        <!-- Content C: Ciri-Ciri -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Ciri-Ciri Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Artikel ilmiah populer memiliki ciri khas yang membedakannya dengan jenis tulisan lainnya. Berikut adalah ciri-ciri utama yang harus ada:</p>
+
+            <ul class="feature-list">
+                <li><strong>Berbasis Fakta dan Data Ilmiah:</strong> Meskipun menggunakan bahasa populer, artikel ini tetap didasarkan pada fakta, data, dan penelitian ilmiah yang dapat dipertanggungjawabkan.</li>
+                <li><strong>Menggunakan Bahasa Populer:</strong> Bahasa yang digunakan ringan, santai, dan mudah dipahami oleh masyarakat umum. Istilah teknis dijelaskan dengan sederhana.</li>
+                <li><strong>Memiliki Opini atau Pendapat Penulis:</strong> Berbeda dengan teks LHO yang objektif, artikel ilmiah populer boleh mengandung pendapat, analisis, atau argumentasi penulis.</li>
+                <li><strong>Disertai Bukti dan Alasan:</strong> Setiap pendapat atau klaim harus didukung oleh bukti (data, penelitian, contoh) dan alasan yang logis.</li>
+                <li><strong>Topik Aktual dan Menarik:</strong> Membahas topik yang sedang hangat dibicarakan atau relevan dengan kehidupan sehari-hari.</li>
+                <li><strong>Struktur Fleksibel:</strong> Tidak terikat struktur baku seperti artikel ilmiah akademik. Biasanya terdiri dari judul menarik, pembuka, isi, dan penutup.</li>
+                <li><strong>Menyajikan Masalah dan Solusi:</strong> Seringkali mengangkat suatu masalah dan menawarkan solusi berdasarkan kajian ilmiah.</li>
+                <li><strong>Memiliki Judul yang Menarik:</strong> Judul dirancang untuk memikat pembaca agar tertarik membaca isi artikel.</li>
+                <li><strong>Relatif Singkat:</strong> Biasanya terdiri dari 500-2000 kata, tidak sepanjang artikel ilmiah akademik.</li>
+                <li><strong>Edukatif dan Menghibur:</strong> Memberikan pengetahuan baru dengan cara yang menyenangkan untuk dibaca.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>🔑 Rumus Artikel Ilmiah Populer: FOP</h4>
+                <p><strong>F</strong> = <em>Fakta</em> (berbasis data dan penelitian ilmiah)<br>
+                <strong>O</strong> = <em>Opini</em> (pendapat dan analisis penulis)<br>
+                <strong>P</strong> = <em>Populer</em> (bahasa mudah dipahami masyarakat umum)</p>
+            </div>
+        </div>
+
+        <!-- Content D: Struktur -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Struktur Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Struktur artikel ilmiah populer lebih fleksibel dibandingkan artikel ilmiah akademik, namun tetap memiliki bagian-bagian penting yang harus ada:</p>
+
+            <div class="key-concept">
+                <h4>📝 4 Bagian Utama Struktur Artikel Ilmiah Populer</h4>
+                
+                <p style="margin-top: 1.5rem;"><strong>1. JUDUL (HEADLINE)</strong></p>
+                <p>Bagian paling penting yang berfungsi menarik perhatian pembaca. Judul harus singkat, menarik, dan mencerminkan isi artikel. Bisa menggunakan pertanyaan, angka, atau kata-kata yang memancing rasa ingin tahu.</p>
+                <div class="text-sample" style="margin-top: 0.5rem;">
+                    <em>Contoh: "7 Manfaat Tidur Cukup yang Jarang Diketahui" atau "Mengapa Kita Mudah Lupa? Ini Penjelasan Ilmiahnya!"</em>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>2. PEMBUKA (LEAD/INTRO)</strong></p>
+                <p>Paragraf pembuka yang berfungsi mengenalkan topik dan memancing minat pembaca. Biasanya berisi fakta mengejutkan, pertanyaan retoris, kutipan, atau cerita singkat yang relevan.</p>
+                <div class="text-sample" style="margin-top: 0.5rem;">
+                    <em>Contoh: "Tahukah Anda bahwa otak manusia menyimpan sekitar 2,5 petabyte data? Jumlah ini setara dengan 3 juta jam acara TV! Namun, mengapa kita sering lupa di mana meletakkan kunci?"</em>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>3. ISI (BODY)</strong></p>
+                <p>Bagian utama artikel yang memaparkan gagasan, fakta, data, pendapat, dan argumentasi penulis. Bagian ini biasanya terdiri dari beberapa paragraf yang saling berkaitan.</p>
+                <div class="text-sample" style="margin-top: 0.5rem;">
+                    <em>Berisi: penjelasan topik, data/fakta pendukung, pendapat penulis, analisis, contoh, dan solusi (jika ada).</em>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>4. PENUTUP (KESIMPULAN)</strong></p>
+                <p>Bagian akhir yang berisi simpulan, saran, atau ajakan kepada pembaca. Bisa juga berisi pertanyaan reflektif atau ajakan untuk bertindak.</p>
+                <div class="text-sample" style="margin-top: 0.5rem;">
+                    <em>Contoh: "Dengan demikian, tidur yang cukup bukan sekadar gaya hidup, tetapi kebutuhan biologis yang tidak bisa ditawar. Mulailah dari malam ini, tidur 7-8 jam setiap hari untuk otak yang lebih sehat!"</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content E: Jenis-Jenis -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Jenis-Jenis Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Berdasarkan topik dan tujuannya, artikel ilmiah populer dapat dibedakan menjadi beberapa jenis:</p>
+
+            <ul class="feature-list">
+                <li><strong>Artikel Sains:</strong> Membahas topik sains seperti biologi, fisika, kimia, astronomi dengan bahasa populer.<br>
+                <em>Contoh: "Bagaimana Fotosintesis Bekerja?" atau "Mengapa Langit Berwarna Biru?"</em></li>
+                <li><strong>Artikel Kesehatan:</strong> Membahas topik kesehatan, medis, dan gaya hidup sehat.<br>
+                <em>Contoh: "10 Makanan yang Meningkatkan Daya Tahan Tubuh" atau "Bahaya Begadang bagi Kesehatan Jantung".</em></li>
+                <li><strong>Artikel Teknologi:</strong> Membahas perkembangan teknologi dan dampaknya bagi kehidupan.<br>
+                <em>Contoh: "Kecerdasan Buatan: Teman atau Ancaman?" atau "Bagaimana Cara Kerja Mobil Listrik?"</em></li>
+                <li><strong>Artikel Lingkungan:</strong> Membahas isu lingkungan dan solusi yang ditawarkan.<br>
+                <em>Contoh: "Mengapa Pemanasan Global Semakin Parah?" atau "Solusi Plastik Sekali Pakai".</em></li>
+                <li><strong>Artikel Sosial-Budaya:</strong> Membahas fenomena sosial dan budaya dari sudut pandang ilmiah.<br>
+                <em>Contoh: "Mengapa Generasi Z Kecanduan Media Sosial?" atau "Dampak Globalisasi terhadap Budaya Lokal".</em></li>
+                <li><strong>Artikel Pendidikan:</strong> Membahas topik pendidikan dan pembelajaran.<br>
+                <em>Contoh: "Metode Belajar Efektif Berdasarkan Neurosains" atau "Pentingnya Literasi Digital di Era Modern".</em></li>
+            </ul>
+
+            <div class="example-box">
+                <h5>💡 Contoh Artikel Ilmiah Populer Singkat</h5>
+                <div class="text-sample">
+                    <strong>"Mengapa Kita Mengantuk Setelah Makan Siang?"</strong><br><br>
+                    Pernahkah Anda merasa sangat mengantuk setelah makan siang? Fenomena yang dikenal dengan istilah <em>postprandial somnolence</em> ini ternyata memiliki penjelasan ilmiah yang menarik.<br><br>
+                    Menurut Dr. Michael Breus, seorang ahli tidur dari Amerika Serikat, rasa kantuk setelah makan disebabkan oleh beberapa faktor. Pertama, tubuh mengalihkan energi untuk mencerna makanan, terutama makanan yang kaya karbohidrat dan protein. Kedua, hormon serotonin dan melatonin meningkat setelah makan, yang memicu rasa kantuk. Ketiga, kadar gula darah yang naik-turun juga mempengaruhi tingkat energi kita.<br><br>
+                    Untuk mengatasi masalah ini, para ahli menyarankan beberapa tips: (1) makan dalam porsi kecil namun sering, (2) perbanyak sayur dan buah, (3) hindari makanan berat di siang hari, dan (4) lakukan jalan kaki ringan setelah makan selama 10-15 menit.<br><br>
+                    Dengan memahami mekanisme tubuh ini, kita dapat mengatur pola makan yang lebih sehat dan produktif. Jadi, jangan salahkan makanan—kelola saja dengan bijak!
+                </div>
+                <p style="margin-top: 1rem;"><strong>🔍 Analisis:</strong> Artikel di atas merupakan artikel ilmiah populer karena: (1) berbasis fakta ilmiah, (2) menggunakan bahasa populer, (3) memiliki opini penulis, (4) disertai bukti (pendapat ahli), (5) topik relevan dengan kehidupan sehari-hari.</p>
+            </div>
+        </div>
+
+        <!-- Content F: Informasi Penting -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Mengidentifikasi Informasi Penting</h3>
+            </div>
+            <p>Dalam membaca artikel ilmiah populer, kita harus mampu mengidentifikasi informasi penting yang terkandung di dalamnya. Informasi ini menjadi kunci untuk memahami isi artikel secara utuh.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">📋 Informasi Penting yang Harus Diidentifikasi:</h4>
+            <ul class="feature-list">
+                <li><strong>Topik Utama:</strong> Apa yang dibahas dalam artikel? (misalnya: kesehatan, teknologi, lingkungan)</li>
+                <li><strong>Gagasan Utama:</strong> Apa pesan inti yang ingin disampaikan penulis?</li>
+                <li><strong>Fakta dan Data:</strong> Data, angka, statistik, atau hasil penelitian yang mendukung artikel.</li>
+                <li><strong>Opini Penulis:</strong> Pendapat, analisis, atau argumentasi penulis terhadap topik.</li>
+                <li><strong>Bukti Pendukung:</strong> Kutipan ahli, hasil penelitian, atau contoh yang memperkuat pendapat penulis.</li>
+                <li><strong>Alasan/Argumentasi:</strong> Alasan logis yang mendasari pendapat penulis.</li>
+                <li><strong>Masalah yang Diangkat:</strong> Isu atau permasalahan yang menjadi fokus artikel.</li>
+                <li><strong>Solusi yang Ditawarkan:</strong> Saran atau solusi yang diberikan penulis.</li>
+                <li><strong>Istilah Ilmiah:</strong> Kata-kata teknis yang digunakan dan maknanya.</li>
+                <li><strong>Sumber Referensi:</strong> Dari mana penulis mendapatkan data/informasi.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>📋 5 Langkah Mengidentifikasi Informasi Penting</h4>
+                <p><strong>1. Baca Judul dan Pembuka</strong><br>Untuk mendapatkan gambaran umum topik dan tujuan artikel.</p>
+                <p style="margin-top: 1rem;"><strong>2. Identifikasi Topik dan Gagasan Utama</strong><br>Tentukan apa yang dibahas dan pesan inti yang ingin disampaikan.</p>
+                <p style="margin-top: 1rem;"><strong>3. Tandai Fakta dan Data</strong><br>Catat angka, statistik, hasil penelitian, atau kutipan ahli yang muncul.</p>
+                <p style="margin-top: 1rem;"><strong>4. Pisahkan Fakta dan Opini</strong><br>Bedakan mana yang merupakan fakta (dapat dibuktikan) dan mana yang merupakan opini penulis.</p>
+                <p style="margin-top: 1rem;"><strong>5. Identifikasi Masalah dan Solusi</strong><br>Tentukan masalah yang diangkat dan solusi yang ditawarkan penulis.</p>
+            </div>
+
+            <div class="example-box">
+                <h5>🔍 Contoh Analisis Informasi Penting</h5>
+                <div class="text-sample">
+                    <strong>"Bahaya Dehidrasi bagi Pelajar"</strong><br><br>
+                    Tahukah Anda bahwa 60% tubuh manusia terdiri dari air? Menurut penelitian dari University of Connecticut (2015), dehidrasi ringan saja—kehilangan cairan 1-2% dari berat tubuh—dapat menurunkan konsentrasi hingga 20%. Bagi pelajar, hal ini tentu sangat merugikan.<br><br>
+                    Dr. Lawrence Armstrong, ahli fisiologi, menjelaskan bahwa otak membutuhkan air yang cukup untuk berfungsi optimal. Ketika tubuh kekurangan cairan, aliran darah ke otak berkurang, sehingga kemampuan berpikir, mengingat, dan berkonsentrasi menurun. Gejala dehidrasi ringan meliputi: sakit kepala, lelah, sulit fokus, dan mood yang buruk.<br><br>
+                    Untuk mencegah dehidrasi, para ahli merekomendasikan minum minimal 8 gelas (2 liter) air per hari. Bawalah botol minum ke sekolah dan minumlah secara rutin, jangan menunggu haus. Hindari minuman bersoda dan berkafein berlebihan karena justru dapat memicu dehidrasi.<br><br>
+                    Jadi, air bukan sekadar pelepas dahaga—ia adalah bahan bakar utama otak kita. Mulailah kebiasaan minum air yang cukup dari sekarang!
+                </div>
+                <p style="margin-top: 1rem;"><strong>📋 Informasi Penting yang Teridentifikasi:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><strong>Topik:</strong> Dehidrasi dan dampaknya bagi pelajar</li>
+                    <li><strong>Gagasan utama:</strong> Dehidrasi mengganggu konsentrasi belajar, sehingga pelajar harus cukup minum air</li>
+                    <li><strong>Fakta/Data:</strong> 60% tubuh = air; dehidrasi 1-2% menurunkan konsentrasi 20% (University of Connecticut, 2015)</li>
+                    <li><strong>Opini penulis:</strong> Air adalah bahan bakar utama otak; mulailah kebiasaan minum dari sekarang</li>
+                    <li><strong>Bukti:</strong> Penjelasan Dr. Lawrence Armstrong (ahli fisiologi)</li>
+                    <li><strong>Masalah:</strong> Pelajar sering mengalami dehidrasi yang mengganggu konsentrasi</li>
+                    <li><strong>Solusi:</strong> Minum 8 gelas/hari, bawa botol minum, hindari soda/kafein berlebihan</li>
+                    <li><strong>Istilah ilmiah:</strong> Dehidrasi, fisiologi, konsentrasi</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content G: Fakta vs Opini -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Membedakan Fakta dan Opini dalam Artikel</h3>
+            </div>
+            <p>Salah satu keterampilan penting dalam membaca artikel ilmiah populer adalah mampu membedakan antara <strong>fakta</strong> dan <strong>opini</strong>. Kedua hal ini sering muncul bersamaan dalam sebuah artikel.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Fakta</th>
+                        <th>Opini</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pengertian</strong></td>
+                        <td>Keadaan yang benar-benar terjadi dan dapat dibuktikan</td>
+                        <td>Pendapat, pandangan, atau penilaian seseorang</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sifat</strong></td>
+                        <td>Objektif, universal</td>
+                        <td>Subjektif, personal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kebenaran</strong></td>
+                        <td>Dapat diverifikasi dengan data/bukti</td>
+                        <td>Belum tentu benar, tergantung sudut pandang</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kata Kunci</strong></td>
+                        <td>Menurut penelitian, data menunjukkan, tercatat, terbukti</td>
+                        <td>Menurut saya, seharusnya, sebaiknya, mungkin, sepertinya</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td>"60% tubuh manusia terdiri dari air."</td>
+                        <td>"Air adalah bahan bakar utama otak kita."</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-box">
+                <h5>🔍 Latihan Membedakan Fakta dan Opini</h5>
+                <p><strong>✓ FAKTA:</strong><br>
+                <em>"Menurut WHO, setiap tahun sekitar 7 juta orang meninggal akibat polusi udara."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Dapat dibuktikan dengan data WHO)</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>💭 OPINI:</strong><br>
+                <em>"Seharusnya pemerintah lebih tegas dalam menanggulangi polusi udara."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Pendapat penulis, menggunakan kata "seharusnya")</span></p>
+
+                <p style="margin-top: 1rem;"><strong>✓ FAKTA:</strong><br>
+                <em>"Tidur 7-8 jam per hari direkomendasikan oleh National Sleep Foundation."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Rekomendasi resmi dari lembaga terpercaya)</span></p>
+
+                <p style="margin-top: 1rem;"><strong>💭 OPINI:</strong><br>
+                <em>"Tidur malam lebih baik daripada tidur siang."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Penilaian subjektif penulis)</span></p>
+            </div>
+        </div>
+
+        <!-- Content H: Sumber Artikel -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Sumber-Sumber Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Artikel ilmiah populer dapat ditemukan di berbagai media. Mengenali sumber-sumber ini akan membantu kita dalam menemukan artikel yang berkualitas dan kredibel.</p>
+
+            <ul class="feature-list">
+                <li><strong>Koran/Majalah:</strong> Rubrik sains, kesehatan, teknologi di koran nasional (Kompas, Tempo) atau majalah (National Geographic Indonesia, Populer).</li>
+                <li><strong>Website Berita:</strong> Portal berita online yang memiliki rubrik sains/kesehatan (kompas.com, detik.com, tirto.id).</li>
+                <li><strong>Blog Ilmiah:</strong> Blog yang ditulis oleh akademisi atau peneliti (sainspopuler.com, sains.kompas.com).</li>
+                <li><strong>Media Sosial:</strong> Akun edukatif di Instagram, YouTube, atau TikTok yang membahas topik ilmiah.</li>
+                <li><strong>Majalah Populer:</strong> Majalah seperti National Geographic, Scientific American Indonesia, Pop Science.</li>
+                <li><strong>Portal Pemerintah/Lembaga:</strong> Website lembaga penelitian (LIPI, BRIN, BPOM, Kemenkes).</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>⚠️ Tips Memilih Artikel Ilmiah Populer yang Kredibel</h4>
+                <p>1. <strong>Cek sumber penulis</strong> — apakah penulis memiliki latar belakang yang relevan?<br>
+                2. <strong>Periksa referensi</strong> — apakah ada data, penelitian, atau kutipan ahli?<br>
+                3. <strong>Lihat media penerbit</strong> — apakah media tersebut kredibel?<br>
+                4. <strong>Cek tanggal terbit</strong> — apakah informasinya masih relevan (up to date)?<br>
+                5. <strong>Bandingkan dengan sumber lain</strong> — apakah informasi konsisten di berbagai sumber?</p>
+            </div>
+        </div>
+
+        <!-- Content I: Kesalahan Umum -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">I</div>
+                <h3>Kesalahan Umum dalam Membaca Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Berikut adalah kesalahan yang sering dilakukan siswa saat membaca artikel ilmiah populer:</p>
+
+            <ul class="feature-list">
+                <li><strong>Tidak Membedakan Fakta dan Opini:</strong> Menganggap semua informasi dalam artikel sebagai fakta, padahal banyak yang merupakan opini penulis.</li>
+                <li><strong>Tidak Mengecek Sumber:</strong> Menerima informasi mentah-mentah tanpa memverifikasi sumbernya.</li>
+                <li><strong>Hanya Membaca Judul:</strong> Menyimpulkan isi artikel hanya dari judul tanpa membaca keseluruhan isi.</li>
+                <li><strong>Tidak Mengidentifikasi Gagasan Utama:</strong> Kehilangan fokus pada pesan inti artikel karena terjebak pada detail.</li>
+                <li><strong>Terpengaruh Bahasa Emosional:</strong> Langsung percaya pada artikel yang menggunakan bahasa emosional tanpa analisis kritis.</li>
+                <li><strong>Tidak Mencatat Informasi Penting:</strong> Membaca tanpa mencatat poin-poin penting, sehingga cepat lupa.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Tips Membaca Artikel Ilmiah Populer secara Kritis</h4>
+                <p>1. <strong>Baca keseluruhan artikel</strong> — jangan hanya judul<br>
+                2. <strong>Tandai fakta dan opini</strong> — gunakan simbol berbeda<br>
+                3. <strong>Catat informasi penting</strong> — topik, gagasan utama, data, solusi<br>
+                4. <strong>Tanyakan pada diri sendiri</strong>: Apakah ini fakta atau opini? Apakah ada buktinya?<br>
+                5. <strong>Bandingkan dengan sumber lain</strong> — untuk memastikan validitas informasi<br>
+                6. <strong>Renungkan relevansinya</strong> — bagaimana informasi ini bermanfaat bagi kehidupan saya?</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Artikel Ilmiah Populer</span>
+                <span class="keyword-tag">Artikel Ilmiah</span>
+                <span class="keyword-tag">Bahasa Populer</span>
+                <span class="keyword-tag">Fakta</span>
+                <span class="keyword-tag">Opini</span>
+                <span class="keyword-tag">Argumentasi</span>
+                <span class="keyword-tag">Data Ilmiah</span>
+                <span class="keyword-tag">Struktur Artikel</span>
+                <span class="keyword-tag">Judul</span>
+                <span class="keyword-tag">Pembuka</span>
+                <span class="keyword-tag">Isi</span>
+                <span class="keyword-tag">Penutup</span>
+                <span class="keyword-tag">Gagasan Utama</span>
+                <span class="keyword-tag">Topik</span>
+                <span class="keyword-tag">Bukti</span>
+                <span class="keyword-tag">Alasan</span>
+                <span class="keyword-tag">Kritis</span>
+                <span class="keyword-tag">Kredibel</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَٰتٍ</p>
+            <p class="translation">"...Allah akan mengangkat derajat orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu beberapa derajat..."</p>
+            <p class="source">— QS. Al-Mujadilah [58]: 11</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini menegaskan kemuliaan orang yang berilmu. Artikel ilmiah populer merupakan salah satu sarana untuk menyebarkan ilmu pengetahuan kepada masyarakat luas. Dengan membaca artikel ilmiah populer, kita sedang mengangkat derajat diri sendiri melalui ilmu yang diperoleh.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 3.1</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Pengertian artikel ilmiah populer, perbedaan dengan teks lain, ciri-ciri, struktur, jenis-jenis, identifikasi informasi penting, fakta vs opini.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Artikel ilmiah populer adalah tulisan yang...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Menggunakan bahasa formal dan ditujukan untuk akademisi</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Membahas topik ilmiah dengan bahasa yang mudah dipahami masyarakat umum</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Hanya berisi opini pribadi tanpa fakta</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Merupakan laporan hasil observasi langsung</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Perbedaan utama artikel ilmiah populer dengan artikel ilmiah akademik adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Artikel populer menggunakan bahasa ringan untuk masyarakat umum</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Artikel populer tidak berdasarkan fakta</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Artikel populer lebih panjang dari artikel akademik</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Tidak ada perbedaan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Berikut ini yang merupakan ciri-ciri artikel ilmiah populer, KECUALI...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Berbasis fakta dan data ilmiah</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Menggunakan bahasa populer</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Tidak boleh mengandung opini penulis</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Disertai bukti dan alasan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Struktur artikel ilmiah populer yang benar adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Abstrak - Pendahuluan - Metode - Hasil - Pembahasan</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Judul - Pembuka - Isi - Penutup</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Pernyataan umum - Deskripsi bagian - Deskripsi manfaat</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Orientasi - Komplikasi - Resolusi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Manakah yang merupakan contoh kalimat FAKTA dalam artikel ilmiah populer?</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. "Menurut saya, tidur malam lebih baik daripada tidur siang."</label>
+                        <label><input type="radio" name="pg5" value="B"> B. "Seharusnya pemerintah lebih tegas menanggulangi polusi."</label>
+                        <label><input type="radio" name="pg5" value="C"> C. "Menurut WHO, 7 juta orang meninggal akibat polusi udara setiap tahun."</label>
+                        <label><input type="radio" name="pg5" value="D"> D. "Mungkin olahraga pagi lebih menyegarkan."</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Manakah yang merupakan contoh kalimat OPINI dalam artikel ilmiah populer?</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. "60% tubuh manusia terdiri dari air."</label>
+                        <label><input type="radio" name="pg6" value="B"> B. "Air adalah bahan bakar utama otak kita."</label>
+                        <label><input type="radio" name="pg6" value="C"> C. "Penelitian menunjukkan dehidrasi menurunkan konsentrasi 20%."</label>
+                        <label><input type="radio" name="pg6" value="D"> D. "National Sleep Foundation merekomendasikan tidur 7-8 jam."</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Bagian pembuka artikel ilmiah populer biasanya berisi...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Simpulan dan saran</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Fakta mengejutkan, pertanyaan retoris, atau cerita singkat untuk menarik minat</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Daftar pustaka</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Metode penelitian</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Artikel yang membahas "Mengapa Langit Berwarna Biru?" termasuk jenis artikel ilmiah populer bidang...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Kesehatan</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Teknologi</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Sains</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Sosial-budaya</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Langkah pertama dalam mengidentifikasi informasi penting dalam artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Langsung membaca kesimpulan</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Membaca judul dan pembuka untuk mendapatkan gambaran umum</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Menghitung jumlah kata</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Mencari gambar yang menarik</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Tips membaca artikel ilmiah populer secara kritis adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Hanya membaca judul</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Menerima semua informasi tanpa verifikasi</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Membedakan fakta dan opini, mengecek sumber, dan memverifikasi informasi</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Langsung percaya pada artikel yang menggunakan bahasa emosional</label>
+                    </div>
+                </div>
+
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan pengertian artikel ilmiah populer! Sebutkan dan jelaskan minimal 5 (lima) ciri-ciri artikel ilmiah populer!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Jelaskan perbedaan antara artikel ilmiah populer dengan artikel ilmiah akademik! Berikan masing-masing satu contoh!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Sebutkan dan jelaskan 4 (empat) bagian utama struktur artikel ilmiah populer! Berikan contoh isi dari masing-masing bagian!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Jelaskan perbedaan antara fakta dan opini dalam artikel ilmiah populer! Berikan masing-masing dua contoh kalimat!</p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Bacalah artikel berikut, kemudian identifikasi: (a) topik utama, (b) gagasan utama, (c) 2 fakta, (d) 1 opini penulis, (e) solusi yang ditawarkan!<br><br><em>"Generasi Z dan Media Sosial: Antara Koneksi dan Kecanduan"<br>
+                    Tahukah Anda bahwa remaja Indonesia menghabiskan rata-rata 7 jam per hari di media sosial? Menurut penelitian dari Common Sense Media (2023), angka ini meningkat 30% dibandingkan 5 tahun lalu. Dr. Jean Twenge, psikolog dari San Diego State University, menjelaskan bahwa penggunaan media sosial berlebihan dapat meningkatkan risiko kecemasan dan depresi pada remaja. Algoritma media sosial dirancang untuk membuat pengguna terus-menerus scrolling tanpa sadar waktu.<br><br>
+                    Menurut saya, media sosial bagaikan pisau bermata dua. Di satu sisi, ia menghubungkan kita dengan teman dan keluarga. Di sisi lain, ia dapat menjebak kita dalam kecanduan yang merugikan. Solusinya, terapkan 'digital detox' minimal 1 hari per minggu. Matikan notifikasi saat belajar, dan batasi penggunaan media sosial maksimal 2 jam per hari. Dengan bijak menggunakan media sosial, kita bisa menikmati manfaatnya tanpa terjebak dampak negatifnya."</em></p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="17.html">Selanjutnya → Sub Bab 3.2</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'A', pg3: 'C', pg4: 'B', pg5: 'C',
+            pg6: 'B', pg7: 'B', pg8: 'C', pg9: 'B', pg10: 'C'
+        };
+
+        function hitungSkor() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10;
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_3.1_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 3.1 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Artikel Ilmiah Populer\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_3.1_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 3.1 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Artikel Ilmiah Populer\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

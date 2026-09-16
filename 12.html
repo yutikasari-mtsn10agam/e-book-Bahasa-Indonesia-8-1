@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 2.5: Menggunakan Kalimat Imperatif dan Persuasif dalam Iklan | Bahasa Indonesia Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- HTML2PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --imp-color: #e17055;
+            --pers-color: #0984e3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        /* Navigation */
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        /* Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        /* Content Sections */
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Sentence Type Cards */
+        .sentence-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .sentence-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .sentence-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .sentence-card.imperative { background: linear-gradient(135deg, var(--imp-color), #fab1a0); }
+        .sentence-card.persuasive { background: linear-gradient(135deg, var(--pers-color), #74b9ff); }
+        .sentence-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .sentence-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .sentence-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .sentence-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .sentence-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .sentence-card ul li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .sentence-card ul li:last-child { border-bottom: none; }
+        .sentence-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        .comparison-table td.imp-col {
+            background: rgba(225, 112, 85, 0.05);
+        }
+        .comparison-table td.pers-col {
+            background: rgba(9, 132, 227, 0.05);
+        }
+
+        /* Example Sentences */
+        .sentence-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .sentence-example {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 1.25rem;
+            border-left: 4px solid var(--accent);
+            transition: 0.3s;
+        }
+        .sentence-example:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .sentence-example.imp {
+            border-left-color: var(--imp-color);
+        }
+        .sentence-example.pers {
+            border-left-color: var(--pers-color);
+        }
+        .sentence-example .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .sentence-example.imp .label { color: var(--imp-color); }
+        .sentence-example.pers .label { color: var(--pers-color); }
+        .sentence-example .sentence {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            color: var(--primary);
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .sentence-example .context {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Keywords & Quote */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        /* Form & Quiz Styles */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Result Section */
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="11.html">← Sub Bab 2.4</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="13.html">Sub Bab 2.6 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 2.5 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Menggunakan Kalimat Imperatif dan Persuasif dalam Iklan</h1>
+            <p class="subtitle">
+                Memahami ciri-ciri kalimat imperatif dan persuasif, serta mampu mengidentifikasi dan membuat kedua jenis kalimat tersebut yang umum digunakan dalam iklan. 
+                Kedua jenis kalimat ini merupakan unsur penting dalam iklan untuk mengajak dan mempengaruhi pembaca.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengertian -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengantar: Kalimat dalam Iklan</h3>
+            </div>
+            <p>Dalam iklan, terdapat dua jenis kalimat yang sangat dominan dan berperan penting dalam menyampaikan pesan, yaitu <strong>kalimat imperatif</strong> dan <strong>kalimat persuasif</strong>. Kedua jenis kalimat ini memiliki fungsi yang berbeda namun saling melengkapi dalam menciptakan iklan yang efektif.</p>
+            
+            <div class="definition-box">
+                 <strong>MENGAPA PENTING MEMPELAJARI KEDUANYA?</strong><br>
+                Kalimat imperatif berfungsi untuk memberikan perintah, larangan, atau ajakan langsung kepada pembaca. Sedangkan kalimat persuasif berfungsi untuk membujuk atau mempengaruhi pembaca agar melakukan sesuatu. Dalam iklan, keduanya sering digunakan secara bersamaan untuk menciptakan pesan yang kuat dan efektif.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat mengidentifikasi dan membuat kalimat imperatif serta persuasif yang umum digunakan dalam iklan.</p>
+            </div>
+        </div>
+
+        <!-- Content B: Kalimat Imperatif -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Kalimat Imperatif</h3>
+            </div>
+            <p><strong>Kalimat imperatif</strong> adalah kalimat yang berfungsi untuk memberikan <em>perintah, permintaan, larangan, atau ajakan</em> kepada orang lain untuk melakukan atau tidak melakukan sesuatu. Dalam iklan, kalimat imperatif digunakan untuk mengajak pembaca agar segera bertindak.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI KALIMAT IMPERATIF:</strong><br>
+                Kalimat imperatif adalah kalimat yang mengandung makna perintah, permintaan, atau ajakan kepada pembaca/pendengar untuk melakukan suatu tindakan. Kalimat ini biasanya diakhiri dengan tanda seru (!) dan menggunakan kata kerja imperatif.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Ciri-Ciri Kalimat Imperatif:</h4>
+            <ul class="feature-list">
+                <li><strong>Menggunakan Kata Kerja Imperatif:</strong> Seperti "belilah", "gunakanlah", "jagalah", "hindarilah", "marilah", "ayo".</li>
+                <li><strong>Berakhiran Tanda Seru (!):</strong> Karena bersifat perintah atau ajakan kuat.</li>
+                <li><strong>Intonasi Menurun atau Naik:</strong> Dalam bentuk lisan, intonasi bisa menurun (perintah) atau naik (ajakan).</li>
+                <li><strong>Subjek Sering Dihapus:</strong> Subjek "kamu" atau "anda" sering tidak disebutkan karena sudah dipahami.</li>
+                <li><strong>Bersifat Langsung:</strong> Langsung menunjuk kepada pembaca untuk melakukan sesuatu.</li>
+                <li><strong>Dapat Berupa Perintah, Larangan, atau Ajakan:</strong> Tidak hanya perintah keras, tapi juga larangan dan ajakan halus.</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Jenis-Jenis Kalimat Imperatif dalam Iklan:</h4>
+            <div class="sentence-examples">
+                <div class="sentence-example imp">
+                    <div class="label">📢 Perintah Langsung</div>
+                    <div class="sentence">"Beli sekarang juga!"</div>
+                    <div class="context">Mengajak pembaca untuk segera membeli produk.</div>
+                </div>
+                <div class="sentence-example imp">
+                    <div class="label">🙏 Permintaan Halus</div>
+                    <div class="sentence">"Mohon hubungi nomor berikut."</div>
+                    <div class="context">Meminta pembaca untuk melakukan tindakan dengan sopan.</div>
+                </div>
+                <div class="sentence-example imp">
+                    <div class="label">🚫 Larangan</div>
+                    <div class="sentence">"Jangan lewatkan kesempatan ini!"</div>
+                    <div class="context">Melarang pembaca untuk melewatkan peluang.</div>
+                </div>
+                <div class="sentence-example imp">
+                    <div class="label">🤝 Ajakan</div>
+                    <div class="sentence">"Mari kita jaga kebersihan lingkungan!"</div>
+                    <div class="context">Mengajak pembaca untuk melakukan sesuatu bersama.</div>
+                </div>
+                <div class="sentence-example imp">
+                    <div class="label">⚠️ Peringatan</div>
+                    <div class="sentence">"Hati-hati terhadap penipuan!"</div>
+                    <div class="context">Memberikan peringatan kepada pembaca.</div>
+                </div>
+                <div class="sentence-example imp">
+                    <div class="label">💡 Saran</div>
+                    <div class="sentence">"Gunakanlah produk ini untuk hasil maksimal!"</div>
+                    <div class="context">Memberikan saran kepada pembaca.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content C: Kalimat Persuasif -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Kalimat Persuasif</h3>
+            </div>
+            <p><strong>Kalimat persuasif</strong> adalah kalimat yang berfungsi untuk <em>membujuk, mempengaruhi, atau mengajak</em> pembaca agar melakukan sesuatu berdasarkan alasan atau pertimbangan yang logis. Berbeda dengan imperatif yang bersifat perintah langsung, persuasif lebih halus dan disertai alasan.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI KALIMAT PERSUASIF:</strong><br>
+                Kalimat persuasif adalah kalimat yang bertujuan untuk membujuk atau mempengaruhi pembaca agar bersedia melakukan sesuatu berdasarkan alasan, bukti, atau pertimbangan yang disampaikan. Kalimat ini bersifat halus namun meyakinkan.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Ciri-Ciri Kalimat Persuasif:</h4>
+            <ul class="feature-list">
+                <li><strong>Menggunakan Kata-Kata Pembujuk:</strong> Seperti "sebaiknya", "hendaknya", "akan lebih baik", "dapat", "bisa", "membantu".</li>
+                <li><strong>Disertai Alasan atau Bukti:</strong> Memberikan alasan mengapa pembaca harus melakukan sesuatu.</li>
+                <li><strong>Bersifat Halus dan Tidak Memaksa:</strong> Tidak seperti perintah langsung, persuasif lebih lembut.</li>
+                <li><strong>Menonjolkan Manfaat:</strong> Menjelaskan keuntungan yang akan diperoleh pembaca.</li>
+                <li><strong>Menggunakan Data atau Fakta:</strong> Sering disertai data untuk memperkuat bujukan.</li>
+                <li><strong>Menyentuh Emosi atau Logika:</strong> Bisa appeals ke emosi (kasih sayang, ketakutan) atau logika (manfaat, efisiensi).</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Contoh Kalimat Persuasif dalam Iklan:</h4>
+            <div class="sentence-examples">
+                <div class="sentence-example pers">
+                    <div class="label">💡 Dengan Alasan</div>
+                    <div class="sentence">"Dengan produk ini, kulit Anda akan lebih sehat dan bercahaya."</div>
+                    <div class="context">Membujuk dengan menjelaskan manfaat yang akan diperoleh.</div>
+                </div>
+                <div class="sentence-example pers">
+                    <div class="label">📊 Dengan Data</div>
+                    <div class="sentence">"9 dari 10 dokter merekomendasikan pasta gigi ini."</div>
+                    <div class="context">Membujuk dengan data statistik yang meyakinkan.</div>
+                </div>
+                <div class="sentence-example pers">
+                    <div class="label">❤️ Menyentuh Emosi</div>
+                    <div class="sentence">"Berikan yang terbaik untuk keluarga tercinta."</div>
+                    <div class="context">Membujuk dengan menyentuh emosi kasih sayang.</div>
+                </div>
+                <div class="sentence-example pers">
+                    <div class="label">🎯 Menawarkan Solusi</div>
+                    <div class="sentence">"Atasi masalah rambut rontok Anda dengan formula khusus kami."</div>
+                    <div class="context">Membujuk dengan menawarkan solusi atas masalah.</div>
+                </div>
+                <div class="sentence-example pers">
+                    <div class="label">⭐ Testimonial</div>
+                    <div class="sentence">"Ribuan pelanggan telah merasakan manfaatnya."</div>
+                    <div class="context">Membujuk dengan testimonial pelanggan lain.</div>
+                </div>
+                <div class="sentence-example pers">
+                    <div class="label">💰 Menekankan Nilai</div>
+                    <div class="sentence">"Investasi kecil untuk kesehatan jangka panjang."</div>
+                    <div class="context">Membujuk dengan menekankan nilai investasi.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content D: Perbedaan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Perbedaan Kalimat Imperatif dan Persuasif</h3>
+            </div>
+            <p>Meskipun keduanya bertujuan untuk mengajak pembaca bertindak, kalimat imperatif dan persuasif memiliki perbedaan mendasar dalam cara penyampaian dan sifatnya.</p>
+
+            <div class="sentence-cards">
+                <div class="sentence-card imperative">
+                    <div class="number">I</div>
+                    <div class="icon">📢</div>
+                    <h5>Kalimat Imperatif</h5>
+                    <p><strong>Sifat:</strong> Langsung, tegas, bersifat perintah/ajakan.</p>
+                    <ul>
+                        <li>Bersifat langsung dan tegas</li>
+                        <li>Tanpa alasan panjang</li>
+                        <li>Menggunakan kata perintah</li>
+                        <li>Berakhiran tanda seru (!)</li>
+                        <li>Contoh: "Beli sekarang!"</li>
+                    </ul>
+                </div>
+                <div class="sentence-card persuasive">
+                    <div class="number">P</div>
+                    <div class="icon">💡</div>
+                    <h5>Kalimat Persuasif</h5>
+                    <p><strong>Sifat:</strong> Halus, meyakinkan, disertai alasan.</p>
+                    <ul>
+                        <li>Bersifat halus dan tidak memaksa</li>
+                        <li>Disertai alasan atau bukti</li>
+                        <li>Menggunakan kata pembujuk</li>
+                        <li>Menonjolkan manfaat</li>
+                        <li>Contoh: "Produk ini akan membuat..."</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">📊 Tabel Perbandingan Lengkap</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th class="imp-col">Kalimat Imperatif</th>
+                        <th class="pers-col">Kalimat Persuasif</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Fungsi Utama</strong></td>
+                        <td class="imp-col">Memberikan perintah/ajakan langsung</td>
+                        <td class="pers-col">Membujuk dengan alasan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sifat</strong></td>
+                        <td class="imp-col">Tegas, langsung, memaksa</td>
+                        <td class="pers-col">Halus, meyakinkan, tidak memaksa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kata Kunci</strong></td>
+                        <td class="imp-col">Belilah, gunakanlah, marilah, ayo, jangan</td>
+                        <td class="pers-col">Sebaiknya, akan lebih baik, dapat membantu</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alasan</strong></td>
+                        <td class="imp-col">Tidak selalu disertai alasan</td>
+                        <td class="pers-col">Selalu disertai alasan/bukti</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tanda Baca</strong></td>
+                        <td class="imp-col">Berakhiran tanda seru (!)</td>
+                        <td class="pers-col">Berakhiran tanda titik (.)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pendekatan</strong></td>
+                        <td class="imp-col">Otoritas/perintah</td>
+                        <td class="pers-col">Logika/emosi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td class="imp-col">"Minumlah susu ini setiap pagi!"</td>
+                        <td class="pers-col">"Susu ini akan membuat tulang Anda lebih kuat."</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>🔑 Rumus Mudah Membedakan</h4>
+                <p><strong>IMPERATIF</strong> = "Lakukan!" → Langsung, tegas, tanpa alasan panjang</p>
+                <p style="margin-top: 0.5rem;"><strong>PERSUASIF</strong> = "Lakukanlah karena..." → Halus, disertai alasan/me

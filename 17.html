@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 3.2: Mengenal Ciri-Ciri Artikel Ilmiah Populer | Bahasa Indonesia Kelas VIII</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --pendapat: #6c5ce7;
+            --bukti: #e17055;
+            --alasan: #00b894;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '🔍';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -2rem;
+            right: -2rem;
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: rgba(212, 175, 55, 0.2);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* 3 Unsur Cards */
+        .unsur-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .unsur-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .unsur-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .unsur-card.pendapat { background: linear-gradient(135deg, var(--pendapat), #a29bfe); }
+        .unsur-card.bukti { background: linear-gradient(135deg, var(--bukti), #fab1a0); }
+        .unsur-card.alasan { background: linear-gradient(135deg, var(--alasan), #55efc4); }
+        .unsur-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .unsur-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .unsur-card h5 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .unsur-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+        .unsur-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .unsur-card ul li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .unsur-card ul li:last-child { border-bottom: none; }
+        .unsur-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Keyword Cards */
+        .keyword-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .keyword-card {
+            background: var(--bg);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+        .keyword-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .keyword-card.pendapat { border-left: 4px solid var(--pendapat); }
+        .keyword-card.bukti { border-left: 4px solid var(--bukti); }
+        .keyword-card.alasan { border-left: 4px solid var(--alasan); }
+        .keyword-card h5 {
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .keyword-card .tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin: 0.2rem;
+            color: white;
+        }
+        .keyword-card.pendapat .tag { background: var(--pendapat); }
+        .keyword-card.bukti .tag { background: var(--bukti); }
+        .keyword-card.alasan .tag { background: var(--alasan); }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        .comparison-table td.pendapat-col { background: rgba(108, 92, 231, 0.05); }
+        .comparison-table td.bukti-col { background: rgba(225, 112, 85, 0.05); }
+        .comparison-table td.alasan-col { background: rgba(0, 184, 148, 0.05); }
+
+        /* Color Tags */
+        .tag-pendapat { background: var(--pendapat); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+        .tag-bukti { background: var(--bukti); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+        .tag-alasan { background: var(--alasan); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="16.html">← Sub Bab 3.1</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="18.html">Sub Bab 3.3 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 3.2 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Ciri-Ciri Artikel Ilmiah Populer</h1>
+            <p class="subtitle">
+                Mengidentifikasi ciri-ciri artikel ilmiah populer secara mendalam, terutama tiga unsur utama yang menjadi fondasi: <strong>pendapat, bukti, dan alasan</strong>. 
+                Ketiga unsur inilah yang membedakan artikel ilmiah populer dengan tulisan populer biasa, sekaligus menjadikannya sumber informasi yang kredibel dan dapat dipertanggungjawabkan.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengantar -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengantar: Mengapa Ciri-Ciri Artikel Penting?</h3>
+            </div>
+            <p>Setiap jenis tulisan memiliki ciri khas yang membedakannya dari jenis tulisan lain. Mengenali ciri-ciri artikel ilmiah populer akan membantu kita dalam <strong>membedakan</strong> artikel ilmiah populer dengan jenis tulisan lainnya, serta <strong>menilai kualitas</strong> sebuah artikel sebelum mempercayai informasinya.</p>
+            
+            <div class="definition-box">
+                 <strong>MENGAPA PENTING?</strong><br>
+                Di era digital saat ini, kita dibanjiri oleh berbagai jenis informasi — dari berita hoaks, opini pribadi, hingga artikel ilmiah populer yang kredibel. Kemampuan mengidentifikasi ciri-ciri artikel ilmiah populer akan membantu kita menjadi pembaca yang kritis dan tidak mudah tertipu informasi palsu.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat mengidentifikasi ciri-ciri artikel ilmiah populer, meliputi adanya <strong>pendapat, bukti, dan alasan</strong> yang mendukung.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Tiga Pilar Utama Artikel Ilmiah Populer:</h4>
+            <p>Artikel ilmiah populer yang berkualitas harus berdiri di atas tiga pilar utama yang saling menopang:</p>
+            <ul class="feature-list">
+                <li><strong>Pendapat (Opini):</strong> Gagasan, pandangan, atau argumen penulis terhadap suatu topik.</li>
+                <li><strong>Bukti (Evidence):</strong> Data, fakta, hasil penelitian, atau kutipan ahli yang mendukung pendapat.</li>
+                <li><strong>Alasan (Reasoning):</strong> Penjelasan logis yang menghubungkan bukti dengan pendapat.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Rumus PBA — Pilar Artikel Ilmiah Populer</h4>
+                <p><strong>P</strong> = <em>Pendapat</em> (apa yang diyakini penulis?)<br>
+                <strong>B</strong> = <em>Bukti</em> (apa yang mendukung keyakinan tersebut?)<br>
+                <strong>A</strong> = <em>Alasan</em> (mengapa bukti itu mendukung pendapat?)</p>
+                <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">Tanpa salah satu dari ketiga pilar ini, artikel ilmiah populer kehilangan kredibilitasnya.</p>
+            </div>
+        </div>
+
+        <!-- Content B: 10 Ciri-Ciri Artikel Ilmiah Populer -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>10 Ciri-Ciri Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Berikut adalah sepuluh ciri utama yang membedakan artikel ilmiah populer dengan jenis tulisan lainnya:</p>
+
+            <ul class="feature-list">
+                <li><strong>1. Berbasis Fakta dan Data Ilmiah:</strong> Artikel harus didasarkan pada fakta, data, atau hasil penelitian yang dapat dipertanggungjawabkan kebenarannya. Tidak boleh berdasarkan asumsi atau khayalan.</li>
+                <li><strong>2. Mengandung Pendapat/Argumentasi Penulis:</strong> Berbeda dengan teks LHO yang murni objektif, artikel ilmiah populer boleh (bahkan harus) memuat pendapat, analisis, atau argumentasi penulis terhadap topik yang dibahas.</li>
+                <li><strong>3. Disertai Bukti yang Kuat:</strong> Setiap pendapat harus didukung oleh bukti berupa data statistik, hasil penelitian, kutipan ahli, atau contoh konkret.</li>
+                <li><strong>4. Memiliki Alasan yang Logis:</strong> Penulis harus memberikan alasan yang masuk akal mengapa pendapatnya benar dan mengapa bukti-bukti yang disajikan relevan.</li>
+                <li><strong>5. Menggunakan Bahasa Populer:</strong> Bahasa yang digunakan ringan, santai, dan mudah dipahami masyarakat umum. Istilah teknis dijelaskan dengan sederhana.</li>
+                <li><strong>6. Topik Aktual dan Relevan:</strong> Membahas topik yang sedang hangat dibicarakan atau relevan dengan kehidupan sehari-hari pembaca.</li>
+                <li><strong>7. Struktur Fleksibel namun Sistematis:</strong> Tidak terikat struktur baku seperti artikel akademik, tetapi tetap memiliki alur yang logis (pembuka, isi, penutup).</li>
+                <li><strong>8. Judul Menarik dan Memancing Rasa Ingin Tahu:</strong> Judul dirancang untuk menarik perhatian pembaca, bisa menggunakan pertanyaan, angka, atau kata-kata yang memancing.</li>
+                <li><strong>9. Menyajikan Masalah dan Solusi:</strong> Seringkali mengangkat suatu masalah dan menawarkan solusi berdasarkan kajian ilmiah.</li>
+                <li><strong>10. Bersifat Edukatif dan Menghibur:</strong> Memberikan pengetahuan baru dengan cara yang menyenangkan untuk dibaca, tidak membosankan seperti jurnal akademik.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>🔑 Tiga Ciri Paling Khas (PBA)</h4>
+                <p>Di antara sepuluh ciri di atas, tiga ciri yang paling membedakan artikel ilmiah populer dengan tulisan populer biasa adalah:</p>
+                <p style="margin-top: 0.5rem;"><strong>✦ Adanya PENDAPAT</strong> — penulis berani mengemukakan pandangannya<br>
+                <strong>✦ Adanya BUKTI</strong> — pendapat didukung data/fakta yang valid<br>
+                <strong>✦ Adanya ALASAN</strong> — penjelasan logis yang menghubungkan keduanya</p>
+            </div>
+        </div>
+
+        <!-- Content C: 3 Unsur Utama - Pendapat, Bukti, Alasan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">C</div>
+                <h3>Tiga Unsur Utama: Pendapat, Bukti, dan Alasan</h3>
+            </div>
+            <p>Mari kita bahas secara mendalam ketiga unsur utama yang menjadi fondasi artikel ilmiah populer:</p>
+
+            <div class="unsur-cards">
+                <div class="unsur-card pendapat">
+                    <div class="number">1</div>
+                    <div class="icon">💭</div>
+                    <h5>PENDAPAT (Opini)</h5>
+                    <p><strong>Pengertian:</strong> Gagasan, pandangan, penilaian, atau argumen penulis terhadap suatu topik. Pendapat bersifat subjektif namun harus didasarkan pada kajian yang mendalam.</p>
+                    <ul>
+                        <li>Bersifat subjektif (sudut pandang penulis)</li>
+                        <li>Dapat berupa klaim, tesis, atau argumen</li>
+                        <li>Harus didukung bukti dan alasan</li>
+                        <li>Menggunakan kata: "menurut saya", "sebaiknya", "dapat disimpulkan"</li>
+                        <li>Contoh: "Media sosial berdampak negatif bagi remaja"</li>
+                    </ul>
+                </div>
+                <div class="unsur-card bukti">
+                    <div class="number">2</div>
+                    <div class="icon">📊</div>
+                    <h5>BUKTI (Evidence)</h5>
+                    <p><strong>Pengertian:</strong> Data, fakta, hasil penelitian, statistik, atau kutipan ahli yang digunakan untuk mendukung pendapat penulis. Bukti bersifat objektif dan dapat diverifikasi.</p>
+                    <ul>
+                        <li>Bersifat objektif (dapat diverifikasi)</li>
+                        <li>Berupa data, angka, fakta, hasil penelitian</li>
+                        <li>Berasal dari sumber terpercaya</li>
+                        <li>Menggunakan kata: "menurut penelitian", "data menunjukkan", "tercatat"</li>
+                        <li>Contoh: "70% remaja mengalami kecemasan akibat media sosial"</li>
+                    </ul>
+                </div>
+                <div class="unsur-card alasan">
+                    <div class="number">3</div>
+                    <div class="icon">🧠</div>
+                    <h5>ALASAN (Reasoning)</h5>
+                    <p><strong>Pengertian:</strong> Penjelasan logis yang menghubungkan bukti dengan pendapat. Alasan menjawab pertanyaan "mengapa bukti ini mendukung pendapat penulis?"</p>
+                    <ul>
+                        <li>Bersifat logis dan rasional</li>
+                        <li>Menjelaskan hubungan sebab-akibat</li>
+                        <li>Menjembatani bukti dengan pendapat</li>
+                        <li>Menggunakan kata: "karena", "oleh sebab itu", "hal ini disebabkan"</li>
+                        <li>Contoh: "Hal ini karena algoritma media sosial dirancang membuat pengguna terus-menerus scrolling"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">📊 Perbandingan Tiga Unsur Utama</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th class="pendapat-col">Pendapat</th>
+                        <th class="bukti-col">Bukti</th>
+                        <th class="alasan-col">Alasan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pengertian</strong></td>
+                        <td class="pendapat-col">Pandangan/argumen penulis</td>
+                        <td class="bukti-col">Data/fakta pendukung</td>
+                        <td class="alasan-col">Penjelasan logis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sifat</strong></td>
+                        <td class="pendapat-col">Subjektif</td>
+                        <td class="bukti-col">Objektif</td>
+                        <td class="alasan-col">Logis-rasional</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fungsi</strong></td>
+                        <td class="pendapat-col">Menyatakan posisi penulis</td>
+                        <td class="bukti-col">Mendukung pendapat</td>
+                        <td class="alasan-col">Menghubungkan keduanya</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kata Kunci</strong></td>
+                        <td class="pendapat-col">Menurut saya, sebaiknya, dapat disimpulkan</td>
+                        <td class="bukti-col">Data menunjukkan, menurut penelitian, tercatat</td>
+                        <td class="alasan-col">Karena, oleh sebab itu, hal ini disebabkan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td class="pendapat-col">"Tidur 8 jam penting untuk kesehatan otak"</td>
+                        <td class="bukti-col">"Penelitian Harvard (2023): kurang tidur meningkatkan risiko demensia 30%"</td>
+                        <td class="alasan-col">"Karena saat tidur, otak membersihkan racun yang menumpuk seharian"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>💡 Hubungan Segitiga PBA</h4>
+                <p>Tiga unsur ini membentuk <strong>segitiga emas</strong> artikel ilmiah populer:</p>
+                <p style="margin-top: 0.5rem;">📌 <strong>PENDAPAT</strong> tanpa BUKTI = opini kosong (tidak kredibel)<br>
+                📌 <strong>BUKTI</strong> tanpa PENDAPAT = data mentah (tidak ada arah)<br>
+                📌 <strong>ALASAN</strong> tanpa keduanya = penjelasan tanpa dasar<br>
+                📌 <strong>PBA lengkap</strong> = artikel ilmiah populer yang KUAT dan KREDIBEL</p>
+            </div>
+        </div>
+
+        <!-- Content D: Cara Mengidentifikasi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">D</div>
+                <h3>Cara Mengidentifikasi Pendapat, Bukti, dan Alasan</h3>
+            </div>
+            <p>Untuk dapat mengidentifikasi ketiga unsur ini dalam artikel ilmiah populer, kita perlu mengenali kata kunci dan pola kalimat yang digunakan:</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">🔍 Kata Kunci untuk Setiap Unsur:</h4>
+            <div class="keyword-cards">
+                <div class="keyword-card pendapat">
+                    <h5>💭 Kata Kunci PENDAPAT</h5>
+                    <div>
+                        <span class="tag">menurut saya</span>
+                        <span class="tag">sebaiknya</span>
+                        <span class="tag">hendaknya</span>
+                        <span class="tag">dapat disimpulkan</span>
+                        <span class="tag">sangat penting</span>
+                        <span class="tag">perlu diperhatikan</span>
+                        <span class="tag">idealnya</span>
+                        <span class="tag">sudah seharusnya</span>
+                        <span class="tag">menurut pendapat saya</span>
+                        <span class="tag">sepertinya</span>
+                        <span class="tag">mungkin</span>
+                        <span class="tag">akan lebih baik</span>
+                    </div>
+                </div>
+                <div class="keyword-card bukti">
+                    <h5>📊 Kata Kunci BUKTI</h5>
+                    <div>
+                        <span class="tag">menurut penelitian</span>
+                        <span class="tag">data menunjukkan</span>
+                        <span class="tag">tercatat</span>
+                        <span class="tag">dibuktikan</span>
+                        <span class="tag">berdasarkan survei</span>
+                        <span class="tag">statistik</span>
+                        <span class="tag">persentase</span>
+                        <span class="tag">angka</span>
+                        <span class="tag">hasil studi</span>
+                        <span class="tag">menurut ahli</span>
+                        <span class="tag">fakta</span>
+                        <span class="tag">sumber resmi</span>
+                    </div>
+                </div>
+                <div class="keyword-card alasan">
+                    <h5>🧠 Kata Kunci ALASAN</h5>
+                    <div>
+                        <span class="tag">karena</span>
+                        <span class="tag">sebab</span>
+                        <span class="tag">oleh sebab itu</span>
+                        <span class="tag">oleh karena itu</span>
+                        <span class="tag">hal ini disebabkan</span>
+                        <span class="tag">dengan demikian</span>
+                        <span class="tag">akibatnya</span>
+                        <span class="tag">sebagai akibat</span>
+                        <span class="tag">hal ini terjadi karena</span>
+                        <span class="tag">mekanismenya adalah</span>
+                        <span class="tag">penjelasannya</span>
+                        <span class="tag">logikanya</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📋 5 Langkah Mengidentifikasi PBA</h4>
+                <p><strong>1. Baca Keseluruhan Artikel</strong><br>Untuk memahami topik dan alur tulisan secara utuh.</p>
+                <p style="margin-top: 1rem;"><strong>2. Cari PENDAPAT Penulis</strong><br>Tandai kalimat yang berisi pandangan/argumen penulis (biasanya menggunakan kata kunci pendapat).</p>
+                <p style="margin-top: 1rem;"><strong>3. Cari BUKTI Pendukung</strong><br>Tandai kalimat yang berisi data, angka, hasil penelitian, atau kutipan ahli.</p>
+                <p style="margin-top: 1rem;"><strong>4. Cari ALASAN Logis</strong><br>Tandai kalimat yang menjelaskan mengapa bukti mendukung pendapat (biasanya menggunakan kata "karena", "oleh sebab itu").</p>
+                <p style="margin-top: 1rem;"><strong>5. Verifikasi Kelengkapan</strong><br>Pastikan setiap pendapat memiliki bukti dan alasan yang mendukungnya.</p>
+            </div>
+        </div>
+
+        <!-- Content E: Contoh Analisis Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">E</div>
+                <h3>Contoh Analisis PBA dalam Artikel</h3>
+            </div>
+            <p>Berikut adalah contoh analisis lengkap tiga unsur utama (Pendapat, Bukti, Alasan) dalam sebuah artikel ilmiah populer:</p>
+
+            <div class="example-box">
+                <h5>📖 Artikel: "Bahaya Begadang bagi Pelajar"</h5>
+                <div class="text-sample" style="font-style: normal;">
+                    <strong>[Paragraf 1]</strong>
+                    <span class="tag-bukti">BUKTI</span> Menurut penelitian dari National Sleep Foundation (2024), remaja yang tidur kurang dari 7 jam per hari memiliki risiko mengalami penurunan konsentrasi hingga 40%. Data ini berdasarkan survei terhadap 10.000 pelajar di Asia Tenggara.<br><br>
+
+                    <strong>[Paragraf 2]</strong>
+                    <span class="tag-alasan">ALASAN</span> Hal ini disebabkan karena saat tidur, otak melakukan proses konsolidasi memori — yaitu memindahkan informasi dari memori jangka pendek ke memori jangka panjang. Ketika tidur terganggu, proses ini tidak berjalan optimal, sehingga informasi yang dipelajari siang hari mudah terlupakan.<br><br>
+
+                    <strong>[Paragraf 3]</strong>
+                    <span class="tag-pendapat">PENDAPAT</span> Oleh karena itu, menurut saya, pelajar seharusnya memprioritaskan tidur minimal 8 jam per hari demi kesehatan otak dan prestasi akademik. Begadang untuk belajar justru kontraproduktif — alias merugikan diri sendiri.<br><br>
+
+                    <strong>[Paragraf 4]</strong>
+                    <span class="tag-bukti">BUKTI</span> Dr. Matthew Walker, ahli neurosains dari UC Berkeley, dalam bukunya "Why We Sleep" (2017) menyatakan bahwa pelajar yang tidur cukup memiliki nilai ujian 20-30% lebih tinggi dibandingkan yang kurang tidur.<br><br>
+
+                    <strong>[Paragraf 5]</strong>
+                    <span class="tag-alasan">ALASAN</span> Hal ini terjadi karena otak yang cukup tidur mampu berkonsentrasi lebih baik, mengingat informasi lebih akurat, dan memecahkan masalah lebih cepat. Sebaliknya, otak yang kurang tidur bekerja seperti komputer yang kehabisan RAM — lambat dan sering error.<br><br>
+
+                    <strong>[Paragraf 6]</strong>
+                    <span class="tag-pendapat">PENDAPAT</span> Jadi, sudah seharusnya kita mengubah mindset: "belajar giat" bukan berarti "begadang sampai pagi", melainkan "belajar cerdas dengan tidur cukup". Mulailah dari malam ini — matikan gadget jam 9 malam, dan tidur nyenyak 8 jam!
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📊 Hasil Analisis PBA</h4>
+                
+                <p><strong>💭 PENDAPAT Penulis (2 pendapat utama):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">1. "Pelajar seharusnya memprioritaskan tidur minimal 8 jam per hari demi kesehatan otak dan prestasi akademik."</li>
+                    <li style="padding: 0.4rem 0;">2. "Belajar giat bukan berarti begadang, melainkan belajar cerdas dengan tidur cukup."</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>📊 BUKTI Pendukung (2 bukti):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">1. Penelitian National Sleep Foundation (2024): kurang tidur &lt;7 jam → konsentrasi turun 40% (survei 10.000 pelajar Asia Tenggara).</li>
+                    <li style="padding: 0.4rem 0;">2. Pernyataan Dr. Matthew Walker (UC Berkeley): pelajar tidur cukup → nilai ujian 20-30% lebih tinggi.</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>🧠 ALASAN Logis (2 alasan):</strong></p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.4rem 0;">1. Saat tidur, otak melakukan konsolidasi memori — jika tidur terganggu, proses ini tidak optimal.</li>
+                    <li style="padding: 0.4rem 0;">2. Otak cukup tidur mampu berkonsentrasi lebih baik, mengingat lebih akurat, memecahkan masalah lebih cepat (analogi: komputer dengan RAM cukup).</li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>🏆 PENILAIAN:</strong></p>
+                <p>Artikel ini <strong>SANGAT KUAT</strong> karena memiliki struktur PBA yang lengkap: setiap pendapat didukung bukti konkret (penelitian resmi + kutipan ahli) dan dijelaskan dengan alasan logis yang mudah dipahami.</p>
+            </div>
+        </div>
+
+        <!-- Content F: Perbedaan dengan Teks Lain -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Perbedaan Ciri dengan Teks Lain</h3>
+            </div>
+            <p>Untuk lebih memahami ciri khas artikel ilmiah populer, mari bandingkan dengan jenis teks lain yang sering kita temui:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Artikel Ilmiah Populer</th>
+                        <th>Teks LHO</th>
+                        <th>Opini/Editorial</th>
+                        <th>Berita</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pendapat</strong></td>
+                        <td>✓ Ada, didukung bukti</td>
+                        <td>✗ Tidak ada (objektif)</td>
+                        <td>✓ Ada, dominan</td>
+                        <td>✗ Tidak ada (faktual)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bukti</strong></td>
+                        <td>✓ Data + kutipan ahli</td>
+                        <td>✓ Hasil observasi</td>
+                        <td>△ Kadang ada</td>
+                        <td>✓ Fakta lapangan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alasan Logis</strong></td>
+                        <td>✓ Ada, sistematis</td>
+                        <td>✗ Tidak ada</td>
+                        <td>✓ Ada</td>
+                        <td>✗ Tidak ada</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bahasa</strong></td>
+                        <td>Populer, ringan</td>
+                        <td>Objektif, formal</td>
+                        <td>Persuasif, emosional</td>
+                        <td>Informatif, netral</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tujuan</strong></td>
+                        <td>Edukasi + argumentasi</td>
+                        <td>Melaporkan objek</td>
+                        <td>Mempengaruhi pembaca</td>
+                        <td>Memberi informasi</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>🔑 Rumus Membedakan</h4>
+                <p><strong>ARTIKEL ILMIAH POPULER</strong> = P + B + A + Bahasa Populer<br>
+                <strong>TEKS LHO</strong> = Fakta + Observasi + Bahasa Objektif<br>
+                <strong>OPINI/EDITORIAL</strong> = Pendapat + (kadang) Bukti + Bahasa Persuasif<br>
+                <strong>BERITA</strong> = Fakta + 5W+1H + Bahasa Netral</p>
+            </div>
+        </div>
+
+        <!-- Content G: Kesalahan Umum -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Kesalahan Umum dalam Mengidentifikasi Ciri Artikel</h3>
+            </div>
+            <p>Berikut adalah kesalahan yang sering dilakukan siswa saat mengidentifikasi ciri-ciri artikel ilmiah populer:</p>
+
+            <ul class="feature-list">
+                <li><strong>Menyamakan Semua Informasi sebagai Fakta:</strong> Menganggap semua kalimat dalam artikel sebagai fakta, padahal banyak yang merupakan pendapat penulis.</li>
+                <li><strong>Tidak Membedakan Bukti dan Opini:</strong> Tidak mampu membedakan mana yang merupakan data/fakta (bukti) dan mana yang merupakan pandangan penulis (pendapat).</li>
+                <li><strong>Mengabaikan Alasan:</strong> Hanya mencari pendapat dan bukti, tetapi melewatkan alasan logis yang menghubungkan keduanya.</li>
+                <li><strong>Terpengaruh Bahasa Emosional:</strong> Langsung percaya pada artikel yang menggunakan bahasa emosional tanpa mengecek apakah ada bukti yang mendukung.</li>
+                <li><strong>Tidak Mengecek Sumber Bukti:</strong> Menerima data/angka tanpa memverifikasi sumbernya (apakah dari lembaga terpercaya atau tidak).</li>
+                <li><strong>Menilai Artikel dari Panjangnya:</strong> Menganggap artikel panjang otomatis berkualitas, padahal kualitas ditentukan oleh kelengkapan PBA, bukan panjangnya.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Kesalahan vs Perbaikan</h5>
+                <p><strong>✗ KALIMAT:</strong> <em>"Menurut saya, kopi sangat baik untuk kesehatan karena rasanya enak."</em></p>
+                <p style="margin-top: 0.5rem;"><strong>❌ Analisis Salah:</strong> "Kalimat ini memiliki pendapat (kopi baik untuk kesehatan) dan bukti (rasanya enak)."</p>
+                <p style="margin-top: 0.5rem;"><strong>✅ Analisis Benar:</strong> "Kalimat ini hanya memiliki PENDAPAT ('kopi baik untuk kesehatan'). 'Rasanya enak' BUKAN bukti ilmiah, melainkan preferensi subjektif. TIDAK ADA alasan logis yang menghubungkan. Artikel seperti ini TIDAK KREDIBEL."</p>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Tips Mengidentifikasi dengan Benar</h4>
+                <p>1. <strong>Tanyakan pada diri sendiri</strong>: "Apakah ini fakta atau pendapat?"<br>
+                2. <strong>Cek sumbernya</strong>: "Dari mana data/angka ini berasal?"<br>
+                3. <strong>Cari kata kunci</strong>: Gunakan daftar kata kunci PBA yang telah dipelajari<br>
+                4. <strong>Verifikasi logika</strong>: "Apakah alasan ini masuk akal?"<br>
+                5. <strong>Bandingkan dengan sumber lain</strong>: "Apakah informasi ini konsisten di sumber lain?"</p>
+            </div>
+        </div>
+
+        <!-- Content H: Checklist Artikel Berkualitas -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Checklist: Artikel Ilmiah Populer Berkualitas</h3>
+            </div>
+            <p>Gunakan checklist berikut untuk menilai apakah sebuah artikel ilmiah populer berkualitas atau tidak:</p>
+
+            <ul class="feature-list">
+                <li><strong>✓ Memiliki PENDAPAT yang jelas</strong> — penulis mengemukakan pandangannya secara eksplisit</li>
+                <li><strong>✓ PENDAPAT didukung BUKTI konkret</strong> — berupa data, penelitian, atau kutipan ahli</li>
+                <li><strong>✓ BUKTI berasal dari sumber terpercaya</strong> — lembaga resmi, jurnal ilmiah, ahli di bidangnya</li>
+                <li><strong>✓ Terdapat ALASAN logis</strong> — penjelasan yang menghubungkan bukti dengan pendapat</li>
+                <li><strong>✓ ALASAN masuk akal</strong> — tidak mengandung kesesatan berpikir (logical fallacy)</li>
+                <li><strong>✓ Bahasa populer dan mudah dipahami</strong> — istilah teknis dijelaskan dengan sederhana</li>
+                <li><strong>✓ Topik aktual dan relevan</strong> — berkaitan dengan kehidupan pembaca</li>
+                <li><strong>✓ Struktur sistematis</strong> — alur tulisan logis dari pembuka hingga penutup</li>
+                <li><strong>✓ Judul menarik namun tidak menyesatkan</strong> — sesuai dengan isi artikel</li>
+                <li><strong>✓ Tidak mengandung hoaks atau informasi palsu</strong> — dapat diverifikasi kebenarannya</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>🏆 Kriteria Artikel Berkualitas Tinggi</h4>
+                <p>Artikel ilmiah populer dikatakan <strong>BERKUALITAS TINGGI</strong> jika:</p>
+                <p style="margin-top: 0.5rem;">✅ Memenuhi minimal 8 dari 10 checklist di atas<br>
+                ✅ Memiliki struktur PBA yang LENGKAP dan KUAT<br>
+                ✅ Bukti berasal dari sumber yang KREDIBEL dan TERKINI<br>
+                ✅ Alasan logis dan bebas dari kesesatan berpikir<br>
+                ✅ Mampu mengedukasi pembaca tanpa menggurui</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Ciri-Ciri Artikel</span>
+                <span class="keyword-tag">Pendapat</span>
+                <span class="keyword-tag">Bukti</span>
+                <span class="keyword-tag">Alasan</span>
+                <span class="keyword-tag">PBA</span>
+                <span class="keyword-tag">Argumentasi</span>
+                <span class="keyword-tag">Data Ilmiah</span>
+                <span class="keyword-tag">Fakta</span>
+                <span class="keyword-tag">Opini</span>
+                <span class="keyword-tag">Kata Kunci</span>
+                <span class="keyword-tag">Kredibilitas</span>
+                <span class="keyword-tag">Logika</span>
+                <span class="keyword-tag">Sumber Terpercaya</span>
+                <span class="keyword-tag">Verifikasi</span>
+                <span class="keyword-tag">Artikel Berkualitas</span>
+                <span class="keyword-tag">Checklist</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍ فَتَبَيَّنُوٓا۟</p>
+            <p class="translation">"Wahai orang-orang yang beriman! Jika seseorang yang fasik datang kepadamu membawa suatu berita, maka telitilah kebenarannya (tabayyun)..."</p>
+            <p class="source">— QS. Al-Hujurat [49]: 6</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini mengajarkan prinsip <em>tabayyun</em> (verifikasi) dalam menerima informasi. Dalam konteks artikel ilmiah populer, kita harus meneliti apakah artikel tersebut memiliki pendapat yang jelas, bukti yang valid, dan alasan yang logis — sebelum mempercayai dan menyebarkannya.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 3.2</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Ciri-ciri artikel ilmiah populer, tiga unsur utama (pendapat, bukti, alasan), cara mengidentifikasi, contoh analisis, dan checklist artikel berkualitas.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Tiga unsur utama yang menjadi fondasi artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Judul, isi, penutup</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Pendapat, bukti, alasan</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Pembuka, isi, simpulan</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Fakta, data, angka</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Kalimat berikut yang merupakan PENDAPAT penulis adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. "Menurut WHO, 7 juta orang meninggal akibat polusi udara setiap tahun."</label>
+                        <label><input type="radio" name="pg2" value="B"> B. "Data menunjukkan 70% remaja mengalami kecemasan akibat media sosial."</label>
+                        <label><input type="radio" name="pg2" value="C"> C. "Menurut saya, pemerintah seharusnya lebih tegas menanggulangi polusi."</label>
+                        <label><input type="radio" name="pg2" value="D"> D. "Penelitian Harvard (2023) mencatat kurang tidur meningkatkan risiko demensia 30%."</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Kalimat berikut yang merupakan BUKTI dalam artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. "Sebaiknya pelajar tidur 8 jam per hari."</label>
+                        <label><input type="radio" name="pg3" value="B"> B. "Oleh karena itu, kita harus menjaga lingkungan."</label>
+                        <label><input type="radio" name="pg3" value="C"> C. "Menurut penelitian National Sleep Foundation (2024), kurang tidur menurunkan konsentrasi 40%."</label>
+                        <label><input type="radio" name="pg3" value="D"> D. "Hal ini disebabkan karena otak melakukan konsolidasi memori saat tidur."</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Fungsi ALASAN dalam artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Menyatakan pandangan penulis</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Menyajikan data dan angka</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Menghubungkan bukti dengan pendapat secara logis</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Menarik perhatian pembaca</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Kata kunci yang sering digunakan dalam kalimat BUKTI adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Menurut saya, sebaiknya, hendaknya</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Karena, oleh sebab itu, akibatnya</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Menurut penelitian, data menunjukkan, tercatat</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Sepertinya, mungkin, idealnya</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Berikut ini yang merupakan ciri-ciri artikel ilmiah populer, KECUALI...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Berbasis fakta dan data ilmiah</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Mengandung pendapat penulis yang didukung bukti</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Menggunakan bahasa formal dan teknis untuk akademisi</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Memiliki alasan logis yang menghubungkan bukti dan pendapat</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Artikel ilmiah populer berbeda dengan teks LHO karena artikel ilmiah populer...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Tidak boleh mengandung pendapat penulis</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Boleh mengandung pendapat, bukti, dan alasan</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Hanya berisi fakta hasil observasi</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Tidak memerlukan bukti</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Perhatikan kalimat: "Hal ini disebabkan karena algoritma media sosial dirancang membuat pengguna terus-menerus scrolling tanpa sadar waktu." Kalimat ini merupakan unsur...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Pendapat</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Bukti</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Alasan</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Judul</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Artikel ilmiah populer yang berkualitas harus memenuhi kriteria berikut, KECUALI...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Memiliki pendapat yang jelas</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Disertai bukti dari sumber terpercaya</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Menggunakan bahasa yang sangat teknis dan rumit</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Memiliki alasan logis</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Prinsip tabayyun dalam QS. Al-Hujurat [49]: 6 relevan dengan membaca artikel ilmiah populer karena...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Kita harus percaya semua informasi dalam artikel</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Kita harus meneliti kebenaran informasi sebelum mempercayainya</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Kita tidak perlu membaca artikel ilmiah</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Kita harus menyebarkan semua artikel tanpa verifikasi</label>
+                    </div>
+                </div>
+
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Sebutkan dan jelaskan 10 (sepuluh) ciri-ciri artikel ilmiah populer! Manakah tiga ciri yang paling khas?</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Jelaskan perbedaan antara pendapat, bukti, dan alasan dalam artikel ilmiah populer! Berikan masing-masing satu contoh kalimat dan kata kunci yang digunakan!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Jelaskan mengapa tiga unsur PBA (Pendapat, Bukti, Alasan) disebut sebagai "segitiga emas" artikel ilmiah populer! Apa yang terjadi jika salah satu unsur tidak ada?</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Bacalah artikel berikut, kemudian identifikasi: (a) 1 pendapat penulis, (b) 1 bukti yang mendukung, (c) 1 alasan logis, dan (d) jelaskan bagaimana ketiganya saling berkaitan!<br><br><em>"Bahaya Junk Food bagi Pelajar"<br>
+                    Menurut penelitian dari Harvard School of Public Health (2023), remaja yang mengonsumsi junk food lebih dari 3 kali seminggu memiliki risiko obesitas 50% lebih tinggi dibandingkan yang jarang mengonsumsinya. Hal ini terjadi karena junk food tinggi kalori, lemak jenuh, dan gula, namun rendah serat dan nutrisi penting. Oleh karena itu, menurut saya, sekolah seharusnya melarang penjualan junk food di kantin dan menggantinya dengan makanan sehat. Langkah ini akan membantu pelajar membentuk pola makan sehat sejak dini."</em></p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Tulislah satu paragraf artikel ilmiah populer bertema "Pentingnya Sarapan bagi Pelajar" yang mengandung struktur PBA lengkap: (1) satu pendapat, (2) satu bukti, dan (3) satu alasan! Tandai masing-masing unsur dengan jelas!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="18.html">Selanjutnya → Sub Bab 3.3</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'C', pg3: 'C', pg4: 'C', pg5: 'C',
+            pg6: 'C', pg7: 'B', pg8: 'C', pg9: 'C', pg10: 'B'
+        };
+
+        function hitungSkor() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10;
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_3.2_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 3.2 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Ciri-Ciri Artikel Ilmiah Populer\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_3.2_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 3.2 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Ciri-Ciri Artikel Ilmiah Populer\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Bahasa Indonesia Kelas VIII Semester 1 | 50 Soal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        :root{--primary:#1a1a2e;--secondary:#16213e;--accent:#d4af37;--accent-light:#f3e5ab;--bg:#f8f9fa;--text:#2d3436;--text-light:#636e72;--success:#00b894;--card-bg:#fff;--border:#e0e0e0;--bab1:#0984e3;--bab2:#e17055;--hots:#6c5ce7;--complex:#00b894;--tf:#fdcb6e;--match:#a29bfe}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+        h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--primary)}
+        .arabic{font-family:'Amiri',serif;font-size:1.4rem;line-height:2;color:var(--primary)}
+        a{text-decoration:none;color:var(--accent);font-weight:600;transition:.3s}
+        a:hover{color:var(--primary)}
+        .nav-bar{background:var(--primary);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+        .nav-bar a{color:var(--accent-light);font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+        .nav-bar a:hover{color:#fff}
+        .container{max-width:1000px;margin:0 auto;padding:2rem 1.5rem}
+        .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:3rem 2rem;border-radius:12px;margin-bottom:2.5rem;text-align:center;border-bottom:4px solid var(--accent);position:relative;overflow:hidden}
+        .hero::before{content:'📝';position:absolute;font-size:15rem;opacity:.05;top:-2rem;right:-2rem}
+        .hero h1{color:var(--accent-light);font-size:2rem;margin-bottom:.5rem}
+        .hero .subtitle{font-size:1.05rem;opacity:.9;margin-bottom:1.5rem;font-weight:300}
+        .hero .meta{display:inline-flex;gap:1.5rem;background:rgba(255,255,255,.1);padding:.75rem 1.5rem;border-radius:50px;font-size:.9rem;border:1px solid rgba(212,175,55,.3)}
+        .hero .meta strong{color:var(--accent)}
+        .section{background:var(--card-bg);padding:2.5rem;border-radius:10px;margin-bottom:2rem;box-shadow:0 4px 6px rgba(0,0,0,.02);border:1px solid var(--border)}
+        .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:2px solid var(--bg)}
+        .section-icon{width:45px;height:45px;background:var(--accent);color:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem}
+        .section h3{font-size:1.5rem;margin:0}
+        .key-concept{background:var(--primary);color:#fff;padding:1.5rem;border-radius:8px;margin:1.5rem 0}
+        .key-concept h4{color:var(--accent);margin-bottom:.5rem;font-family:'Inter',sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:1px}
+        ul.feature-list{list-style:none;padding-left:0}
+        ul.feature-list li{padding:.75rem 0 .75rem 2.5rem;position:relative;border-bottom:1px solid var(--bg)}
+        ul.feature-list li::before{content:'✦';position:absolute;left:0;color:var(--accent);font-weight:bold}
+        .badge{display:inline-block;padding:.35rem .9rem;border-radius:50px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:.75rem}
+        .badge-pg{background:var(--bab1);color:#fff}
+        .badge-complex{background:var(--complex);color:#fff}
+        .badge-tf{background:var(--tf);color:var(--primary)}
+        .badge-match{background:var(--match);color:#fff}
+        .badge-hots{background:var(--hots);color:#fff}
+        .badge-bab1{background:var(--bab1);color:#fff}
+        .badge-bab2{background:var(--bab2);color:#fff}
+        .hots-tag{display:inline-block;background:var(--hots);color:#fff;font-size:.65rem;padding:.15rem .5rem;border-radius:3px;margin-left:.5rem;vertical-align:middle;font-weight:700;letter-spacing:.5px}
+        .question-block{background:var(--bg);padding:1.25rem 1.5rem;border-radius:8px;margin-bottom:1rem;border-left:4px solid var(--accent);transition:.3s}
+        .question-block:hover{box-shadow:0 4px 12px rgba(0,0,0,.05)}
+        .question-block.b1{border-left-color:var(--bab1)}
+        .question-block.b2{border-left-color:var(--bab2)}
+        .question-block.hots{border-left-color:var(--hots);background:linear-gradient(to right,rgba(108,92,231,.04),transparent)}
+        .question-text{font-weight:600;margin-bottom:.75rem;color:var(--primary);line-height:1.6}
+        .text-passage{background:#fff;border-left:3px solid var(--accent);padding:1rem 1.25rem;margin-bottom:.75rem;font-style:italic;color:var(--text);line-height:1.8;border-radius:0 6px 6px 0;font-size:.95rem}
+        .options label{display:flex;align-items:center;gap:.75rem;padding:.5rem .6rem;border-radius:6px;cursor:pointer;transition:.2s}
+        .options label:hover{background:rgba(212,175,55,.1)}
+        .options input[type="radio"],.options input[type="checkbox"]{accent-color:var(--accent);transform:scale(1.2)}
+        .tf-row{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.75rem 1rem;background:var(--bg);border-radius:8px;margin-bottom:.5rem;align-items:center;border-left:4px solid var(--tf)}
+        .tf-row p{font-weight:500;font-size:.95rem}
+        .tf-options{display:flex;gap:.5rem}
+        .tf-options label{padding:.35rem 1rem;border-radius:6px;cursor:pointer;border:2px solid var(--border);font-weight:600;font-size:.85rem;transition:.2s;display:flex;align-items:center;gap:.4rem}
+        .tf-options label:hover{border-color:var(--accent)}
+        .tf-options label:has(input:checked){background:var(--accent);color:var(--primary);border-color:var(--accent)}
+        .tf-options input[type="radio"]{display:none}
+        .match-container{display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;align-items:center;padding:.5rem 0}
+        .match-left{background:var(--bg);padding:.75rem 1rem;border-radius:8px;border-left:3px solid var(--match);font-weight:500;font-size:.9rem}
+        .match-arrow{color:var(--match);font-weight:bold;font-size:1.2rem}
+        .match-right select{width:100%;padding:.6rem;border:1px solid var(--border);border-radius:6px;font-family:'Inter',sans-serif;font-size:.85rem;background:#fff;cursor:pointer}
+        .match-right select:focus{outline:none;border-color:var(--accent)}
+        .form-group{margin-bottom:1.5rem}
+        .form-group label{display:block;font-weight:600;margin-bottom:.5rem;color:var(--primary)}
+        .form-control{width:100%;padding:.85rem;border:1px solid var(--border);border-radius:6px;font-family:'Inter',sans-serif;font-size:1rem;transition:.3s}
+        .form-control:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(212,175,55,.1)}
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.5rem;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:.3s;font-size:1rem}
+        .btn-primary{background:var(--accent);color:var(--primary)}
+        .btn-primary:hover{background:#c4a030;transform:translateY(-2px)}
+        .btn-secondary{background:var(--primary);color:#fff}
+        .btn-secondary:hover{background:#252545}
+        .btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+        .btn-outline:hover{background:var(--primary);color:#fff}
+        .btn-group{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+        #hasil-ujian{display:none;background:#fff;padding:2rem;border-radius:12px;border:2px solid var(--success);margin-top:2rem;text-align:center}
+        .score-display{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:2rem 0}
+        .score-box{background:var(--bg);padding:1.25rem;border-radius:8px}
+        .score-box h4{font-size:.8rem;color:var(--text-light);margin-bottom:.5rem;font-family:'Inter',sans-serif}
+        .score-box .value{font-size:1.8rem;font-weight:700;color:var(--primary)}
+        .score-box .value.gold{color:var(--accent)}
+        .quote-box{text-align:center;padding:2.5rem 2rem;background:linear-gradient(to bottom,#fff,var(--bg));border-radius:12px;margin:2rem 0;border:1px solid var(--border)}
+        .quote-box .arabic{margin-bottom:1rem;color:var(--primary)}
+        .quote-box .translation{font-style:italic;color:var(--text-light);margin-bottom:.5rem}
+        .quote-box .source{font-size:.9rem;font-weight:600;color:var(--accent)}
+        footer{background:var(--primary);color:rgba(255,255,255,.7);text-align:center;padding:3rem 1.5rem;margin-top:4rem;font-size:.9rem}
+        footer a{color:var(--accent)}
+        footer .footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap}
+        @media(max-width:768px){.score-display{grid-template-columns:repeat(2,1fr)}.hero .meta{flex-direction:column;gap:.5rem}.btn-group{flex-direction:column}.btn{width:100%}.section{padding:1.5rem}.tf-row{grid-template-columns:1fr}.match-container{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<nav class="nav-bar">
+    <a href="14.html">← Sub Bab 2.7</a>
+    <span style="color:rgba(255,255,255,.5);font-size:.9rem">Bahasa Indonesia Kelas VIII</span>
+    <a href="16.html">Sub Bab 3.1 →</a>
+</nav>
+<div class="container">
+
+<div class="hero">
+    <h1>— Ujian Tengah Semester —</h1>
+    <h1 style="font-size:2.2rem;margin-bottom:1rem">Evaluasi Komprehensif Bab 1 & Bab 2</h1>
+    <p class="subtitle">50 soal yang mencakup Bab 1 (Menulis Teks Laporan Hasil Observasi) dan Bab 2 (Membuat Iklan, Slogan, dan Poster). Soal terdiri dari Pilihan Ganda, PG Kompleks, Benar/Salah, dan Menjodohkan dengan soal-soal HOTS.</p>
+    <div class="meta"><span><strong>Yutika Sari, S.Pd.</strong></span><span>|</span><span>MTsN 10 Agam</span></div>
+</div>
+
+<div class="section">
+    <div class="section-header"><div class="section-icon">📊</div><h3>Struktur Ujian (Total 100 Poin)</h3></div>
+    <div class="key-concept">
+        <h4>📋 Rincian Soal</h4>
+        <p>📌 <strong>Bagian A: Pilihan Ganda</strong> — 35 soal × 2 poin = <strong>70 poin</strong><br>
+        ✅ <strong>Bagian B: PG Kompleks</strong> — 5 soal × 2 poin = <strong>10 poin</strong><br>
+        ✔️ <strong>Bagian C: Benar/Salah</strong> — 5 soal × 2 poin = <strong>10 poin</strong><br>
+        🔗 <strong>Bagian D: Menjodohkan</strong> — 5 soal × 2 poin = <strong>10 poin</strong><br>
+        🏆 <strong>TOTAL = 50 soal = 100 poin</strong></p>
+    </div>
+</div>
+
+<div class="section" id="uji-formatif">
+    <div class="section-header"><div class="section-icon" style="background:var(--primary);color:var(--accent)">📝</div><h3>Ujian Tengah Semester (UTS)</h3></div>
+
+    <form id="quizForm" onsubmit="event.preventDefault();hitungSkor()">
+    <div style="background:var(--bg);padding:1.5rem;border-radius:8px;margin-bottom:2rem">
+        <h4 style="margin-bottom:1rem">📋 Identitas Siswa</h4>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
+            <div class="form-group" style="margin-bottom:0"><label>Nama Lengkap *</label><input type="text" id="nama" class="form-control" required placeholder="Nama lengkap"></div>
+            <div class="form-group" style="margin-bottom:0"><label>NIS *</label><input type="text" id="nis" class="form-control" required placeholder="12345"></div>
+            <div class="form-group" style="margin-bottom:0"><label>📅 Tanggal</label><input type="date" id="tanggal" class="form-control" required></div>
+            <div class="form-group" style="margin-bottom:0"><label>Kelas *</label><select id="kelas" class="form-control" required><option value="">Pilih</option><option>VIII-A</option><option>VIII-B</option><option>VIII-C</option><option>VIII-D</option></select></div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- BAGIAN A: PILIHAN GANDA (35 soal × 2 = 70) -->
+    <!-- ============================================ -->
+    <h3 style="margin:2rem 0 1rem;color:var(--primary)">📋 BAGIAN A: PILIHAN GANDA (35 Soal × 2 Poin = 70 Poin)</h3>
+    <p style="color:var(--text-light);margin-bottom:1.5rem"><span class="badge badge-pg">Pilih SATU jawaban paling tepat</span></p>
+
+    <h4 style="margin:1.5rem 0 .75rem;color:var(--bab1)">📘 Bab 1: Teks Laporan Hasil Observasi (Soal 1–18)</h4>
+
+    <div class="question-block b1"><p class="question-text">1. Teks yang berisi penjabaran umum mengenai sesuatu berdasarkan hasil pengamatan secara sistematis dan objektif disebut...</p><div class="options"><label><input type="radio" name="q1" value="A"> A. Teks Deskripsi</label><label><input type="radio" name="q1" value="B"> B. Teks Laporan Hasil Observasi</label><label><input type="radio" name="q1" value="C"> C. Teks Prosedur</label><label><input type="radio" name="q1" value="D"> D. Teks Eksplanasi</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">2. Ciri utama teks laporan hasil observasi adalah...</p><div class="options"><label><input type="radio" name="q2" value="A"> A. Bersifat subjektif dan imajinatif</label><label><input type="radio" name="q2" value="B"> B. Bersifat objektif dan faktual</label><label><input type="radio" name="q2" value="C"> C. Berisi langkah-langkah kerja</label><label><input type="radio" name="q2" value="D"> D. Mengandung unsur persuasif</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">3. Gagasan utama dalam paragraf terdapat dalam...</p><div class="options"><label><input type="radio" name="q3" value="A"> A. Kalimat penjelas</label><label><input type="radio" name="q3" value="B"> B. Kalimat utama</label><label><input type="radio" name="q3" value="C"> C. Judul paragraf</label><label><input type="radio" name="q3" value="D"> D. Kata kunci</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">4. Data yang dinyatakan dalam bentuk angka dan dapat diukur secara matematis disebut data...</p><div class="options"><label><input type="radio" name="q4" value="A"> A. Kualitatif</label><label><input type="radio" name="q4" value="B"> B. Kuantitatif</label><label><input type="radio" name="q4" value="C"> C. Primer</label><label><input type="radio" name="q4" value="D"> D. Sekunder</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">5. Urutan struktur teks LHO yang benar adalah...</p><div class="options"><label><input type="radio" name="q5" value="A"> A. Deskripsi bagian – Pernyataan umum – Deskripsi manfaat</label><label><input type="radio" name="q5" value="B"> B. Pernyataan umum – Deskripsi manfaat – Deskripsi bagian</label><label><input type="radio" name="q5" value="C"> C. Pernyataan umum – Deskripsi bagian – Deskripsi manfaat</label><label><input type="radio" name="q5" value="D"> D. Deskripsi manfaat – Pernyataan umum – Deskripsi bagian</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">6. Paragraf yang bertujuan menggambarkan objek secara rinci sehingga pembaca seolah-olah melihatnya disebut paragraf...</p><div class="options"><label><input type="radio" name="q6" value="A"> A. Narasi</label><label><input type="radio" name="q6" value="B"> B. Eksposisi</label><label><input type="radio" name="q6" value="C"> C. Deskripsi</label><label><input type="radio" name="q6" value="D"> D. Argumentasi</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">7. Paragraf yang bertujuan menjelaskan atau memaparkan informasi agar pembaca memperoleh pengetahuan baru disebut paragraf...</p><div class="options"><label><input type="radio" name="q7" value="A"> A. Deskripsi</label><label><input type="radio" name="q7" value="B"> B. Eksposisi</label><label><input type="radio" name="q7" value="C"> C. Narasi</label><label><input type="radio" name="q7" value="D"> D. Persuasi</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">8. Tanda baca yang digunakan untuk memisahkan unsur-unsur dalam pemerincian adalah...</p><div class="options"><label><input type="radio" name="q8" value="A"> A. Tanda titik</label><label><input type="radio" name="q8" value="B"> B. Tanda koma</label><label><input type="radio" name="q8" value="C"> C. Tanda titik dua</label><label><input type="radio" name="q8" value="D"> D. Tanda hubung</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">9. Penulisan nama ilmiah yang benar dalam teks LHO adalah...</p><div class="options"><label><input type="radio" name="q9" value="A"> A. Kucing "Felis catus" adalah mamalia.</label><label><input type="radio" name="q9" value="B"> B. Kucing (Felis catus) adalah mamalia.</label><label><input type="radio" name="q9" value="C"> C. Kucing (<em>Felis catus</em>) adalah mamalia.</label><label><input type="radio" name="q9" value="D"> D. Kucing FELIS CATUS adalah mamalia.</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">10. Langkah pertama dalam menulis teks LHO adalah...</p><div class="options"><label><input type="radio" name="q10" value="A"> A. Menentukan topik dan melakukan observasi</label><label><input type="radio" name="q10" value="B"> B. Langsung menulis draf</label><label><input type="radio" name="q10" value="C"> C. Melakukan revisi</label><label><input type="radio" name="q10" value="D"> D. Mempublikasikan tulisan</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">11. Kerangka karangan dalam penulisan teks LHO berfungsi untuk...</p><div class="options"><label><input type="radio" name="q11" value="A"> A. Menghias tulisan</label><label><input type="radio" name="q11" value="B"> B. Menambah halaman</label><label><input type="radio" name="q11" value="C"> C. Menjadi garis besar isi agar sistematis</label><label><input type="radio" name="q11" value="D"> D. Menggantikan isi tulisan</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">12. Paragraf deduktif adalah paragraf yang gagasan utamanya terletak di...</p><div class="options"><label><input type="radio" name="q12" value="A"> A. Akhir paragraf</label><label><input type="radio" name="q12" value="B"> B. Awal paragraf</label><label><input type="radio" name="q12" value="C"> C. Tengah paragraf</label><label><input type="radio" name="q12" value="D"> D. Awal dan akhir paragraf</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">13. Kata "fotosintesis" dalam teks LHO ditulis dengan...</p><div class="options"><label><input type="radio" name="q13" value="A"> A. Huruf miring karena bahasa Yunani</label><label><input type="radio" name="q13" value="B"> B. Huruf tegak karena sudah diserap</label><label><input type="radio" name="q13" value="C"> C. Diapit tanda petik</label><label><input type="radio" name="q13" value="D"> D. Huruf kapital semua</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">14. Data yang diperoleh langsung dari hasil pengamatan sendiri di lapangan disebut data...</p><div class="options"><label><input type="radio" name="q14" value="A"> A. Sekunder</label><label><input type="radio" name="q14" value="B"> B. Kualitatif</label><label><input type="radio" name="q14" value="C"> C. Primer</label><label><input type="radio" name="q14" value="D"> D. Kuantitatif</label></div></div>
+
+    <div class="question-block b1 hots"><p class="question-text">15. <span class="hots-tag">HOTS</span> Bacalah paragraf berikut!<br><div class="text-passage">"Lidah buaya (Aloe vera) memiliki daun tebal, berdaging, berwarna hijau dengan tepi bergerigi. Daunnya mengandung gel bening yang kaya vitamin. Tanaman ini dapat tumbuh hingga 60-100 cm."</div>Paragraf tersebut merupakan bagian struktur teks LHO yaitu...</p><div class="options"><label><input type="radio" name="q15" value="A"> A. Pernyataan umum</label><label><input type="radio" name="q15" value="B"> B. Deskripsi bagian</label><label><input type="radio" name="q15" value="C"> C. Deskripsi manfaat</label><label><input type="radio" name="q15" value="D"> D. Simpulan</label></div></div>
+
+    <div class="question-block b1 hots"><p class="question-text">16. <span class="hots-tag">HOTS</span> Perhatikan kalimat: <em>"Kucing memiliki tubuh lentur dengan panjang rata-rata 50-60 cm. Bulunya bervariasi dari pendek hingga panjang dengan warna beragam."</em> Jenis data yang dominan dalam kalimat tersebut adalah...</p><div class="options"><label><input type="radio" name="q16" value="A"> A. Kuantitatif saja</label><label><input type="radio" name="q16" value="B"> B. Kualitatif saja</label><label><input type="radio" name="q16" value="C"> C. Kombinasi kuantitatif dan kualitatif</label><label><input type="radio" name="q16" value="D"> D. Data opini</label></div></div>
+
+    <div class="question-block b1 hots"><p class="question-text">17. <span class="hots-tag">HOTS</span> Perhatikan dua paragraf!<br><em>P1: "Komodo (Varanus komodoensis) adalah kadal terbesar di dunia yang hanya ditemukan di Indonesia."</em><br><em>P2: "Komodo memiliki kulit berwarna abu-abu hingga cokelat kemerahan dengan tekstur bersisik kasar."</em><br>Pernyataan yang tepat adalah...</p><div class="options"><label><input type="radio" name="q17" value="A"> A. Keduanya eksposisi</label><label><input type="radio" name="q17" value="B"> B. P1 eksposisi, P2 deskripsi</label><label><input type="radio" name="q17" value="C"> C. P1 deskripsi, P2 eksposisi</label><label><input type="radio" name="q17" value="D"> D. Keduanya deskripsi</label></div></div>
+
+    <div class="question-block b1"><p class="question-text">18. Tahap revisi dalam proses menulis teks LHO bertujuan untuk...</p><div class="options"><label><input type="radio" name="q18" value="A"> A. Menulis ulang dari awal</label><label><input type="radio" name="q18" value="B"> B. Memperbaiki isi, struktur, dan alur tulisan</label><label><input type="radio" name="q18" value="C"> C. Menghapus seluruh tulisan</label><label><input type="radio" name="q18" value="D"> D. Menambah opini pribadi</label></div></div>
+
+    <h4 style="margin:2rem 0 .75rem;color:var(--bab2)">📙 Bab 2: Iklan, Slogan, dan Poster (Soal 19–35)</h4>
+
+    <div class="question-block b2"><p class="question-text">19. Iklan yang bertujuan mencari keuntungan ekonomi dengan menawarkan produk disebut...</p><div class="options"><label><input type="radio" name="q19" value="A"> A. Iklan nonkomersial</label><label><input type="radio" name="q19" value="B"> B. Iklan layanan masyarakat</label><label><input type="radio" name="q19" value="C"> C. Iklan komersial</label><label><input type="radio" name="q19" value="D"> D. Iklan duka cita</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">20. Tujuan utama iklan nonkomersial adalah...</p><div class="options"><label><input type="radio" name="q20" value="A"> A. Mencari keuntungan ekonomi</label><label><input type="radio" name="q20" value="B"> B. Menawarkan produk</label><label><input type="radio" name="q20" value="C"> C. Memberikan informasi, edukasi, atau ajakan sosial</label><label><input type="radio" name="q20" value="D"> D. Membangun citra merek</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">21. Prinsip AIDA dalam iklan merupakan singkatan dari...</p><div class="options"><label><input type="radio" name="q21" value="A"> A. Attention, Interest, Desire, Action</label><label><input type="radio" name="q21" value="B"> B. Advertising, Information, Design, Art</label><label><input type="radio" name="q21" value="C"> C. Audience, Idea, Delivery, Appeal</label><label><input type="radio" name="q21" value="D"> D. Analysis, Interest, Data, Action</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">22. Slogan adalah...</p><div class="options"><label><input type="radio" name="q22" value="A"> A. Kalimat panjang menjelaskan produk</label><label><input type="radio" name="q22" value="B"> B. Kelompok kata singkat yang menarik dan mudah diingat</label><label><input type="radio" name="q22" value="C"> C. Cerita pendek bermoral</label><label><input type="radio" name="q22" value="D"> D. Laporan hasil pengamatan</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">23. Kalimat imperatif adalah kalimat yang...</p><div class="options"><label><input type="radio" name="q23" value="A"> A. Memberikan informasi</label><label><input type="radio" name="q23" value="B"> B. Menggambarkan objek</label><label><input type="radio" name="q23" value="C"> C. Memberikan perintah, larangan, atau ajakan</label><label><input type="radio" name="q23" value="D"> D. Menjelaskan proses</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">24. Kalimat persuasif berbeda dari imperatif karena kalimat persuasif...</p><div class="options"><label><input type="radio" name="q24" value="A"> A. Bersifat langsung dan tegas</label><label><input type="radio" name="q24" value="B"> B. Selalu berakhiran tanda seru</label><label><input type="radio" name="q24" value="C"> C. Bersifat halus dan disertai alasan</label><label><input type="radio" name="q24" value="D"> D. Tidak mengandung ajakan</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">25. Poster adalah media komunikasi visual yang terdiri atas perpaduan...</p><div class="options"><label><input type="radio" name="q25" value="A"> A. Teks panjang dan audio</label><label><input type="radio" name="q25" value="B"> B. Gambar, warna, dan teks</label><label><input type="radio" name="q25" value="C"> C. Hanya gambar</label><label><input type="radio" name="q25" value="D"> D. Hanya teks</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">26. Prinsip CRAP dalam desain poster adalah...</p><div class="options"><label><input type="radio" name="q26" value="A"> A. Contrast, Repetition, Alignment, Proximity</label><label><input type="radio" name="q26" value="B"> B. Color, Ratio, Art, Pattern</label><label><input type="radio" name="q26" value="C"> C. Creative, Real, Active, Professional</label><label><input type="radio" name="q26" value="D"> D. Composition, Rhythm, Aesthetic, Power</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">27. Tahapan pertama dalam proyek kampanye iklan adalah...</p><div class="options"><label><input type="radio" name="q27" value="A"> A. Produksi</label><label><input type="radio" name="q27" value="B"> B. Presentasi</label><label><input type="radio" name="q27" value="C"> C. Pra-produksi</label><label><input type="radio" name="q27" value="D"> D. Pasca-produksi</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">28. Anggota kelompok yang bertugas menulis naskah iklan dan slogan disebut...</p><div class="options"><label><input type="radio" name="q28" value="A"> A. Desainer visual</label><label><input type="radio" name="q28" value="B"> B. Presenter</label><label><input type="radio" name="q28" value="C"> C. Copywriter</label><label><input type="radio" name="q28" value="D"> D. Editor</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">29. Teknik persuasi yang menggunakan pernyataan tokoh terkenal untuk mendukung produk disebut...</p><div class="options"><label><input type="radio" name="q29" value="A"> A. Bandwagon</label><label><input type="radio" name="q29" value="B"> B. Fear appeal</label><label><input type="radio" name="q29" value="C"> C. Testimonial</label><label><input type="radio" name="q29" value="D"> D. Humor</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">30. Warna yang paling tepat untuk poster bertema lingkungan adalah...</p><div class="options"><label><input type="radio" name="q30" value="A"> A. Merah dan hitam</label><label><input type="radio" name="q30" value="B"> B. Hijau dan biru</label><label><input type="radio" name="q30" value="C"> C. Ungu dan pink</label><label><input type="radio" name="q30" value="D"> D. Oranye dan kuning</label></div></div>
+
+    <div class="question-block b2 hots"><p class="question-text">31. <span class="hots-tag">HOTS</span> "Buku adalah Jendela Dunia" menggunakan unsur kebahasaan...</p><div class="options"><label><input type="radio" name="q31" value="A"> A. Rima</label><label><input type="radio" name="q31" value="B"> B. Repetisi</label><label><input type="radio" name="q31" value="C"> C. Metafora</label><label><input type="radio" name="q31" value="D"> D. Imperatif</label></div></div>
+
+    <div class="question-block b2 hots"><p class="question-text">32. <span class="hots-tag">HOTS</span> "Satu Nusa, Satu Bangsa, Satu Bahasa" menggunakan unsur...</p><div class="options"><label><input type="radio" name="q32" value="A"> A. Metafora dan aliterasi</label><label><input type="radio" name="q32" value="B"> B. Repetisi dan paralelisme</label><label><input type="radio" name="q32" value="C"> C. Antonim dan imperatif</label><label><input type="radio" name="q32" value="D"> D. Rima dan metafora</label></div></div>
+
+    <div class="question-block b2 hots"><p class="question-text">33. <span class="hots-tag">HOTS</span> Perhatikan iklan: <em>"🩸 DONOR DARAH SELAMATKAN NYAWA! 1 kantong darah dapat menyelamatkan 3 nyawa. Ayo donor di PMI terdekat!"</em> Iklan ini termasuk jenis...</p><div class="options"><label><input type="radio" name="q33" value="A"> A. Komersial</label><label><input type="radio" name="q33" value="B"> B. Nonkomersial</label><label><input type="radio" name="q33" value="C"> C. Niaga</label><label><input type="radio" name="q33" value="D"> D. Baris</label></div></div>
+
+    <div class="question-block b2 hots"><p class="question-text">34. <span class="hots-tag">HOTS</span> Sebuah poster memiliki latar hitam dengan teks hitam, 5 jenis font, teks sangat panjang, tanpa gambar, tanpa CTA. Kesalahan utama poster tersebut adalah...</p><div class="options"><label><input type="radio" name="q34" value="A"> A. Warna kontras dan teks singkat</label><label><input type="radio" name="q34" value="B"> B. Tidak ada hierarki visual, warna tidak kontras, terlalu banyak teks</label><label><input type="radio" name="q34" value="C"> C. Terlalu sedikit font</label><label><input type="radio" name="q34" value="D"> D. Gambar terlalu besar</label></div></div>
+
+    <div class="question-block b2"><p class="question-text">35. Bagian iklan yang berfungsi menarik perhatian pembaca dengan kalimat singkat dan mencolok disebut...</p><div class="options"><label><input type="radio" name="q35" value="A"> A. Body copy</label><label><input type="radio" name="q35" value="B"> B. Call to action</label><label><input type="radio" name="q35" value="C"> C. Headline</label><label><input type="radio" name="q35" value="D"> D. Visual</label></div></div>
+
+    <!-- ============================================ -->
+    <!-- BAGIAN B: PG KOMPLEKS (5 soal × 2 = 10) -->
+    <!-- ============================================ -->
+    <h3 style="margin:2.5rem 0 1rem;color:var(--primary)">✅ BAGIAN B: PILIHAN GANDA KOMPLEKS (5 Soal × 2 Poin = 10 Poin)</h3>
+    <p style="color:var(--text-light);margin-bottom:1.5rem"><span class="badge badge-complex">Pilih LEBIH DARI SATU jawaban benar!</span></p>
+
+    <div class="question-block complex b1"><p class="question-text">36. Berikut yang merupakan ciri-ciri teks LHO adalah... (pilih semua yang benar)</p><div class="options"><label><input type="checkbox" name="q36" value="A"> A. Bersifat objektif dan faktual</label><label><input type="checkbox" name="q36" value="B"> B. Disusun secara sistematis</label><label><input type="checkbox" name="q36" value="C"> C. Menggunakan istilah ilmiah</label><label><input type="checkbox" name="q36" value="D"> D. Mengandung unsur persuasif kuat</label><label><input type="checkbox" name="q36" value="E"> E. Berdasarkan hasil pengamatan</label></div></div>
+
+    <div class="question-block complex b1"><p class="question-text">37. Berikut yang merupakan bagian struktur teks LHO adalah... (pilih semua yang benar)</p><div class="options"><label><input type="checkbox" name="q37" value="A"> A. Pernyataan umum</label><label><input type="checkbox" name="q37" value="B"> B. Orientasi</label><label><input type="checkbox" name="q37" value="C"> C. Deskripsi bagian</label><label><input type="checkbox" name="q37" value="D"> D. Komplikasi</label><label><input type="checkbox" name="q37" value="E"> E. Deskripsi manfaat</label></div></div>
+
+    <div class="question-block complex b2"><p class="question-text">38. Berikut yang merupakan unsur-unsur poster adalah... (pilih semua yang benar)</p><div class="options"><label><input type="checkbox" name="q38" value="A"> A. Gambar/Ilustrasi</label><label><input type="checkbox" name="q38" value="B"> B. Warna</label><label><input type="checkbox" name="q38" value="C"> C. Tipografi</label><label><input type="checkbox" name="q38" value="D"> D. Dialog antar karakter</label><label><input type="checkbox" name="q38" value="E"> E. Pesan utama</label></div></div>
+
+    <div class="question-block complex b2"><p class="question-text">39. Ciri-ciri slogan yang efektif adalah... (pilih semua yang benar)</p><div class="options"><label><input type="checkbox" name="q39" value="A"> A. Singkat dan padat</label><label><input type="checkbox" name="q39" value="B"> B. Mudah diingat</label><label><input type="checkbox" name="q39" value="C"> C. Panjang dan detail</label><label><input type="checkbox" name="q39" value="D"> D. Persuasif</label><label><input type="checkbox" name="q39" value="E"> E. Bermakna dalam</label></div></div>
+
+    <div class="question-block complex b2 hots"><p class="question-text">40. <span class="hots-tag">HOTS</span> Kampanye "Hemat Air, Selamatkan Bumi" efektif karena... (pilih semua yang benar)</p><div class="options"><label><input type="checkbox" name="q40" value="A"> A. Slogan singkat dan berima</label><label><input type="checkbox" name="q40" value="B"> B. Visual mendukung pesan</label><label><input type="checkbox" name="q40" value="C"> C. Menggunakan banyak teks panjang</label><label><input type="checkbox" name="q40" value="D"> D. Pesan relevan dengan isu lingkungan</label><label><input type="checkbox" name="q40" value="E"> E. Mengandung ajakan bertindak</label></div></div>
+
+    <!-- ============================================ -->
+    <!-- BAGIAN C: BENAR/SALAH (5 soal × 2 = 10) -->
+    <!-- ============================================ -->
+    <h3 style="margin:2.5rem 0 1rem;color:var(--primary)">✔️ BAGIAN C: BENAR / SALAH (5 Soal × 2 Poin = 10 Poin)</h3>
+    <p style="color:var(--text-light);margin-bottom:1.5rem"><span class="badge badge-tf">Tentukan BENAR atau SALAH!</span></p>
+
+    <div class="tf-row"><p><strong>41.</strong> Teks laporan hasil observasi bersifat subjektif dan berdasarkan imajinasi penulis.</p><div class="tf-options"><label><input type="radio" name="q41" value="B"><span>Benar</span></label><label><input type="radio" name="q41" value="S"><span>Salah</span></label></div></div>
+
+    <div class="tf-row"><p><strong>42.</strong> Paragraf deduktif adalah paragraf yang gagasan utamanya terletak di awal paragraf.</p><div class="tf-options"><label><input type="radio" name="q42" value="B"><span>Benar</span></label><label><input type="radio" name="q42" value="S"><span>Salah</span></label></div></div>
+
+    <div class="tf-row"><p><strong>43.</strong> Iklan nonkomersial bertujuan untuk mencari keuntungan ekonomi.</p><div class="tf-options"><label><input type="radio" name="q43" value="B"><span>Benar</span></label><label><input type="radio" name="q43" value="S"><span>Salah</span></label></div></div>
+
+    <div class="tf-row"><p><strong>44.</strong> Slogan "Bersih Pangkal Sehat" menggunakan teknik rima untuk memudahkan pembaca mengingatnya.</p><div class="tf-options"><label><input type="radio" name="q44" value="B"><span>Benar</span></label><label><input type="radio" name="q44" value="S"><span>Salah</span></label></div></div>
+
+    <div class="tf-row"><p><strong>45.</strong> Prinsip CRAP dalam desain poster adalah Color, Ratio, Art, dan Pattern.</p><div class="tf-options"><label><input type="radio" name="q45" value="B"><span>Benar</span></label><label><input type="radio" name="q45" value="S"><span>Salah</span></label></div></div>
+
+    <!-- ============================================ -->
+    <!-- BAGIAN D: MENJODOHKAN (5 soal × 2 = 10) -->
+    <!-- ============================================ -->
+    <h3 style="margin:2.5rem 0 1rem;color:var(--primary)">🔗 BAGIAN D: MENJODOHKAN (5 Soal × 2 Poin = 10 Poin)</h3>
+    <p style="color:var(--text-light);margin-bottom:1.5rem"><span class="badge badge-match">Pasangkan pernyataan kiri dengan jawaban kanan!</span></p>
+
+    <div class="question-block match">
+        <div class="match-container"><div class="match-left"><strong>46.</strong> Observasi</div><div class="match-arrow">→</div><div class="match-right"><select id="m46"><option value="">-- Pilih --</option><option value="A">A. Kalimat mengandung gagasan utama</option><option value="B">B. Pengamatan langsung terhadap objek</option><option value="C">C. Struktur LHO bagian pembuka</option><option value="D">D. Paragraf menggambarkan objek</option><option value="E">E. Pengumpulan data via daftar pertanyaan</option></select></div></div>
+        <div class="match-container"><div class="match-left"><strong>47.</strong> Kuesioner</div><div class="match-arrow">→</div><div class="match-right"><select id="m47"><option value="">-- Pilih --</option><option value="A">A. Kalimat mengandung gagasan utama</option><option value="B">B. Pengamatan langsung terhadap objek</option><option value="C">C. Struktur LHO bagian pembuka</option><option value="D">D. Paragraf menggambarkan objek</option><option value="E">E. Pengumpulan data via daftar pertanyaan</option></select></div></div>
+        <div class="match-container"><div class="match-left"><strong>48.</strong> Paragraf Deskripsi</div><div class="match-arrow">→</div><div class="match-right"><select id="m48"><option value="">-- Pilih --</option><option value="A">A. Kalimat mengandung gagasan utama</option><option value="B">B. Pengamatan langsung terhadap objek</option><option value="C">C. Struktur LHO bagian pembuka</option><option value="D">D. Paragraf menggambarkan objek</option><option value="E">E. Pengumpulan data via daftar pertanyaan</option></select></div></div>
+        <div class="match-container"><div class="match-left"><strong>49.</strong> Kalimat Utama</div><div class="match-arrow">→</div><div class="match-right"><select id="m49"><option value="">-- Pilih --</option><option value="A">A. Kalimat mengandung gagasan utama</option><option value="B">B. Pengamatan langsung terhadap objek</option><option value="C">C. Struktur LHO bagian pembuka</option><option value="D">D. Paragraf menggambarkan objek</option><option value="E">E. Pengumpulan data via daftar pertanyaan</option></select></div></div>
+        <div class="match-container"><div class="match-left"><strong>50.</strong> Pernyataan Umum</div><div class="match-arrow">→</div><div class="match-right"><select id="m50"><option value="">-- Pilih --</option><option value="A">A. Kalimat mengandung gagasan utama</option><option value="B">B. Pengamatan langsung terhadap objek</option><option value="C">C. Struktur LHO bagian pembuka</option><option value="D">D. Paragraf menggambarkan objek</option><option value="E">E. Pengumpulan data via daftar pertanyaan</option></select></div></div>
+    </div>
+
+    <div class="btn-group"><button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button></div>
+    </form>
+
+    <!-- HASIL -->
+    <div id="hasil-ujian">
+        <h3 style="color:var(--success);margin-bottom:.5rem">✅ Ujian Tengah Semester Selesai!</h3>
+        <p style="color:var(--text-light);margin-bottom:2rem">Berikut hasil penilaian otomatis Anda.</p>
+        <div class="score-display">
+            <div class="score-box"><h4>📋 PG</h4><div class="value" id="skor-pg">0</div><div style="font-size:.8rem;color:var(--text-light)">/ 70</div></div>
+            <div class="score-box"><h4>✅ PG Kompleks</h4><div class="value" id="skor-complex">0</div><div style="font-size:.8rem;color:var(--text-light)">/ 10</div></div>
+            <div class="score-box"><h4>✔️ B/S</h4><div class="value" id="skor-tf">0</div><div style="font-size:.8rem;color:var(--text-light)">/ 10</div></div>
+            <div class="score-box"><h4>🔗 Menjodohkan</h4><div class="value" id="skor-match">0</div><div style="font-size:.8rem;color:var(--text-light)">/ 10</div></div>
+            <div class="score-box" style="border:2px solid var(--accent)"><h4>🏆 TOTAL</h4><div class="value gold" id="skor-akhir">0</div><div style="font-size:.8rem;color:var(--text-light)">/ 100</div></div>
+        </div>
+        <div class="btn-group" style="justify-content:center">
+            <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF</button>
+            <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH TXT</button>
+            <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM EMAIL</button>
+            <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color:#e74c3c;color:#e74c3c">🔄 ULANG</button>
+        </div>
+    </div>
+</div>
+
+<div class="quote-box">
+    <p class="arabic">وَقُل رَّبِّ زِدْنِي عِلْمًا</p>
+    <p class="translation">"Dan katakanlah: 'Ya Tuhanku, tambahkanlah ilmu kepadaku'."</p>
+    <p class="source">— QS. Thaha [20]: 114</p>
+</div>
+
+<div class="section" style="background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;text-align:center">
+    <h3 style="color:var(--accent);font-size:2rem;margin-bottom:1rem">🎉 Selamat! UTS Selesai</h3>
+    <p style="opacity:.9;margin-bottom:1.5rem">Anda telah menyelesaikan 50 soal UTS Bab 1 & Bab 2. Lanjutkan ke Bab 3!</p>
+    <a href="16.html" class="btn btn-primary" style="display:inline-flex">Lanjut ke Bab 3 →</a>
+</div>
+</div>
+
+<footer>
+    <div class="footer-links"><a href="index.html">📖 Daftar Isi</a><a href="mailto:yutika.sari06@gmail.com">📧 Email</a><a href="16.html">Selanjutnya →</a></div>
+    <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+    <p style="margin-top:.5rem">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+</footer>
+
+<script>
+document.getElementById('tanggal').valueAsDate=new Date();
+
+const kPG={q1:'B',q2:'B',q3:'B',q4:'B',q5:'C',q6:'C',q7:'B',q8:'B',q9:'C',q10:'A',q11:'C',q12:'B',q13:'B',q14:'C',q15:'B',q16:'C',q17:'B',q18:'B',q19:'C',q20:'C',q21:'A',q22:'B',q23:'C',q24:'C',q25:'B',q26:'A',q27:'C',q28:'C',q29:'C',q30:'B',q31:'C',q32:'B',q33:'B',q34:'B',q35:'C'};
+const kCX={q36:['A','B','C','E'],q37:['A','C','E'],q38:['A','B','C','E'],q39:['A','B','D','E'],q40:['A','B','D','E']};
+const kTF={q41:'S',q42:'B',q43:'S',q44:'B',q45:'S'};
+const kMT={m46:'B',m47:'E',m48:'D',m49:'A',m50:'C'};
+
+function hitungSkor(){
+    const n=document.getElementById('nama').value,ni=document.getElementById('nis').value,k=document.getElementById('kelas').value;
+    if(!n||!ni||!k){alert('Lengkapi identitas!');return}
+    let sPG=0,sCX=0,sTF=0,sMT=0;
+    for(let i=1;i<=35;i++){const s=document.querySelector(`input[name="q${i}"]:checked`);if(s&&s.value===kPG[`q${i}`])sPG+=2}
+    for(let i=36;i<=40;i++){const s=document.querySelectorAll(`input[name="q${i}"]:checked`),sv=Array.from(s).map(x=>x.value).sort(),kv=kCX[`q${i}`].sort();if(JSON.stringify(sv)===JSON.stringify(kv))sCX+=2;else{const c=sv.filter(v=>kv.includes(v)).length,w=sv.filter(v=>!kv.includes(v)).length;if(c>0&&w===0)sCX+=1}}
+    for(let i=41;i<=45;i++){const s=document.querySelector(`input[name="q${i}"]:checked`);if(s&&s.value===kTF[`q${i}`])sTF+=2}
+    for(let i=46;i<=50;i++){const s=document.getElementById(`m${i}`).value;if(s===kMT[`m${i}`])sMT+=2}
+    const total=sPG+sCX+sTF+sMT;
+    document.getElementById('skor-pg').innerText=sPG;
+    document.getElementById('skor-complex').innerText=sCX;
+    document.getElementById('skor-tf').innerText=sTF;
+    document.getElementById('skor-match').innerText=sMT;
+    document.getElementById('skor-akhir').innerText=total;
+    document.getElementById('hasil-ujian').style.display='block';
+    document.getElementById('hasil-ujian').scrollIntoView({behavior:'smooth'});
+    document.querySelectorAll('#quizForm input,#quizForm select').forEach(x=>x.disabled=true);
+}
+function unduhPDF(){const e=document.getElementById('hasil-ujian'),n=document.getElementById('nama').value;html2pdf().set({margin:10,filename:`UTS_BI_${n.replace(/\s+/g,'_')}.pdf`,image:{type:'jpeg',quality:.98},html2canvas:{scale:2},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}}).from(e).save()}
+function unduhTXT(){const n=document.getElementById('nama').value,ni=document.getElementById('nis').value,k=document.getElementById('kelas').value,t=document.getElementById('tanggal').value;let d=`=== HASIL UTS BAHASA INDONESIA ===\nNama: ${n}\nNIS: ${ni}\nKelas: ${k}\nTanggal: ${t}\n---\nPG: ${document.getElementById('skor-pg').innerText}/70\nPG Kompleks: ${document.getElementById('skor-complex').innerText}/10\nB/S: ${document.getElementById('skor-tf').innerText}/10\nMenjodohkan: ${document.getElementById('skor-match').innerText}/10\nTOTAL: ${document.getElementById('skor-akhir').innerText}/100\n`;const b=new Blob([d],{type:'text/plain'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=`UTS_BI_${n.replace(/\s+/g,'_')}.txt`;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u)}
+function kirimEmail(){const n=document.getElementById('nama').value,k=document.getElementById('kelas').value,t=document.getElementById('skor-akhir').innerText;window.location.href=`mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(`UTS BI - ${n} (${k})`)}&body=${encodeURIComponent(`Yth. Ibu Yutika Sari,\n\nHasil UTS:\nNama: ${n}\nKelas: ${k}\nTotal: ${t}/100\n\nTerima kasih.`)}`}
+function mulaiUlang(){if(confirm('Yakin mengulang?')){document.getElementById('quizForm').reset();document.getElementById('tanggal').valueAsDate=new Date();document.getElementById('hasil-ujian').style.display='none';document.querySelectorAll('#quizForm input,#quizForm select').forEach(x=>x.disabled=false);window.scrollTo({top:0,behavior:'smooth'})}}
+</script>
+</body>
+</html>
