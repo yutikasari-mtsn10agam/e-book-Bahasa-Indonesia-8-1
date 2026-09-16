@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Tengah Semester (PTS) - 3 BAB | Bahasa Indonesia Kelas VIII</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --bab1: #0984e3;
+            --bab2: #e17055;
+            --bab3: #6c5ce7;
+            --hots: #fd79a8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '🏆';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -2rem;
+            right: -2rem;
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.05rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.5rem; margin: 0; }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Bab Coverage Cards */
+        .bab-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .bab-card {
+            border-radius: 12px;
+            padding: 1.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .bab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .bab-card.bab1 { background: linear-gradient(135deg, var(--bab1), #74b9ff); }
+        .bab-card.bab2 { background: linear-gradient(135deg, var(--bab2), #fab1a0); }
+        .bab-card.bab3 { background: linear-gradient(135deg, var(--bab3), #a29bfe); }
+        .bab-card .number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .bab-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .bab-card h5 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .bab-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+        .bab-card ul li {
+            padding: 0.25rem 0;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .bab-card ul li:last-child { border-bottom: none; }
+        .bab-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+        .badge-pg { background: var(--bab1); color: white; }
+        .badge-complex { background: var(--success); color: white; }
+        .badge-tf { background: #fdcb6e; color: var(--primary); }
+        .badge-match { background: var(--bab2); color: white; }
+        .hots-tag {
+            display: inline-block;
+            background: var(--hots);
+            color: white;
+            font-size: 0.65rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Stimulus Box */
+        .stimulus-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.08), transparent);
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .stimulus-box .stimulus-label {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+        .stimulus-box .stimulus-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .stimulus-box .stimulus-source {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        .stimulus-box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .stimulus-box table th {
+            background: var(--primary);
+            color: white;
+            padding: 0.4rem;
+            text-align: left;
+        }
+        .stimulus-box table td {
+            padding: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.25rem;
+            border-left: 4px solid var(--accent);
+            transition: 0.3s;
+        }
+        .question-block:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .question-block.bab1 { border-left-color: var(--bab1); }
+        .question-block.bab2 { border-left-color: var(--bab2); }
+        .question-block.bab3 { border-left-color: var(--bab3); }
+        .question-block.hots { 
+            border-left-color: var(--hots); 
+            background: linear-gradient(to right, rgba(253, 121, 168, 0.05), transparent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); line-height: 1.6; }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"],
+        .options input[type="checkbox"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        /* True/False */
+        .tf-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            align-items: center;
+            border-left: 4px solid #fdcb6e;
+        }
+        .tf-row p { font-weight: 500; }
+        .tf-options {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .tf-options label {
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .tf-options label:hover { border-color: var(--accent); }
+        .tf-options input[type="radio"] { display: none; }
+        .tf-options label:has(input:checked) {
+            background: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
+        }
+
+        /* Matching */
+        .match-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0.75rem;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: var(--bg);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--bab2);
+        }
+        .match-left {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .match-arrow {
+            color: var(--bab2);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .match-right select {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            background: white;
+            cursor: pointer;
+        }
+        .match-right select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.25rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: repeat(2, 1fr); }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+            .match-container { grid-template-columns: 1fr; }
+            .tf-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="21.html">← Sub Bab 3.6</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="index.html">📖 Daftar Isi</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Penilaian Tengah Semester —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">PTS Komprehensif: 3 BAB</h1>
+            <p class="subtitle">
+                Evaluasi komprehensif terhadap <strong>seluruh materi Semester 1</strong> yang mencakup Bab 1 (Teks Laporan Hasil Observasi), Bab 2 (Iklan, Slogan, dan Poster), dan Bab 3 (Artikel Ilmiah Populer). 50 soal berbasis stimulus dengan soal HOTS tersebar di ketiga bab.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Cakupan Materi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h3>Cakupan & Struktur PTS</h3>
+            </div>
+            <p>PTS ini mencakup <strong>seluruh materi Semester 1</strong> dari 3 BAB (20 sub bab) dengan berbagai jenis soal berbasis stimulus untuk mengukur berbagai tingkat kognitif siswa.</p>
+
+            <div class="bab-cards">
+                <div class="bab-card bab1">
+                    <div class="number">1</div>
+                    <div class="icon">📝</div>
+                    <h5>Bab 1: Teks Laporan Hasil Observasi</h5>
+                    <ul>
+                        <li>Mengenal Teks LHO</li>
+                        <li>Topik & gagasan utama</li>
+                        <li>Data dalam Teks LHO</li>
+                        <li>Struktur Teks LHO</li>
+                        <li>Paragraf deskripsi & eksposisi</li>
+                        <li>Tanda baca & kata asing</li>
+                        <li>Langkah penulisan Teks LHO</li>
+                    </ul>
+                </div>
+                <div class="bab-card bab2">
+                    <div class="number">2</div>
+                    <div class="icon">📢</div>
+                    <h5>Bab 2: Iklan, Slogan, dan Poster</h5>
+                    <ul>
+                        <li>Mengenal Teks Iklan</li>
+                        <li>Iklan komersial & nonkomersial</li>
+                        <li>Menulis slogan efektif</li>
+                        <li>Kalimat imperatif & persuasif</li>
+                        <li>Merancang poster menarik</li>
+                        <li>Proyek kampanye iklan</li>
+                    </ul>
+                </div>
+                <div class="bab-card bab3">
+                    <div class="number">3</div>
+                    <div class="icon">📰</div>
+                    <h5>Bab 3: Artikel Ilmiah Populer</h5>
+                    <ul>
+                        <li>Mengenal artikel ilmiah populer</li>
+                        <li>Ciri-ciri artikel (PBA)</li>
+                        <li>Fakta dan opini</li>
+                        <li>Mengumpulkan data</li>
+                        <li>Langkah penulisan artikel</li>
+                        <li>Gaya bahasa (perbandingan, analogi, antonim, sinonim)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📋 Struktur Ujian (Total 100 Poin)</h4>
+                <p>📌 <strong>Bagian A: Pilihan Ganda</strong> — 35 soal × 2 poin = <strong>70 poin</strong> (dengan stimulus & soal HOTS)<br>
+                ✅ <strong>Bagian B: PG Kompleks</strong> — 5 soal × 2 poin = <strong>10 poin</strong><br>
+                ✔️ <strong>Bagian C: Benar/Salah</strong> — 5 soal × 2 poin = <strong>10 poin</strong><br>
+                🔗 <strong>Bagian D: Menjodohkan</strong> — 5 soal × 2 poin = <strong>10 poin</strong><br>
+                🏆 <strong>TOTAL = 50 soal = 100 poin</strong></p>
+                <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;"><strong>Distribusi Bab:</strong> Bab 1 ≈ 34% | Bab 2 ≈ 34% | Bab 3 ≈ 32%</p>
+            </div>
+        </div>
+
+        <!-- Tips Mengerjakan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">💡</div>
+                <h3>Tips Mengerjakan PTS</h3>
+            </div>
+            <ul class="feature-list">
+                <li><strong>Baca Stimulus dengan Teliti:</strong> Setiap soal PG diawali dengan stimulus (teks/data). Baca stimulus sebelum menjawab pertanyaan.</li>
+                <li><strong>Identifikasi Kata Kunci:</strong> Tandai kata kunci dalam stimulus yang relevan dengan pertanyaan.</li>
+                <li><strong>PG Kompleks:</strong> Baca semua pilihan jawaban. Bisa lebih dari satu jawaban benar.</li>
+                <li><strong>Manajemen Waktu:</strong> Alokasikan waktu dengan baik. Jangan terlalu lama pada satu soal.</li>
+                <li><strong>Periksa Kembali:</strong> Sisihkan waktu 10 menit di akhir untuk memeriksa jawaban.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>⏱️ Alokasi Waktu yang Disarankan</h4>
+                <p><strong>Bagian A (PG + Stimulus):</strong> 50 menit<br>
+                <strong>Bagian B (PG Kompleks):</strong> 15 menit<br>
+                <strong>Bagian C (B/S):</strong> 10 menit<br>
+                <strong>Bagian D (Menjodohkan):</strong> 10 menit<br>
+                <strong>Review:</strong> 10 menit<br>
+                <strong>Total:</strong> 95 menit (1 jam 35 menit)</p>
+            </div>
+        </div>
+
+        <!-- FORM UJIAN -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Penilaian Tengah Semester (PTS)</h3>
+            </div>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <!-- Identitas -->
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih</option>
+                                <option>VIII-A</option>
+                                <option>VIII-B</option>
+                                <option>VIII-C</option>
+                                <option>VIII-D</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- BAGIAN A: PILIHAN GANDA (35 soal × 2 = 70) -->
+                <!-- ============================================ -->
+                <h3 style="margin: 2rem 0 1rem; color: var(--primary);">📋 BAGIAN A: PILIHAN GANDA (35 Soal × 2 Poin = 70 Poin)</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;"><span class="badge badge-pg">Baca stimulus dengan teliti, lalu pilih SATU jawaban paling tepat</span></p>
+
+                <!-- ===== SOAL 1-12: BAB 1 ===== -->
+                <h4 style="margin: 1.5rem 0 0.75rem; color: var(--bab1);">📘 BAB 1: Teks Laporan Hasil Observasi (Soal 1-12)</h4>
+
+                <!-- SOAL 1 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 1</span>
+                        <div class="stimulus-title">Teks: Kucing Domestik</div>
+                        <p>Kucing (<em>Felis catus</em>) adalah hewan mamalia karnivora dari keluarga Felidae. Kucing memiliki tubuh yang lentur dengan empat kaki yang dilengkapi cakar tajam. Kepalanya berbentuk bulat dengan dua telinga runcing yang dapat bergerak bebas. Matanya besar dan dapat melihat dengan jelas dalam kondisi cahaya redup.</p>
+                    </div>
+                    <p class="question-text">1. Berdasarkan stimulus di atas, teks tersebut termasuk jenis teks...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="A"> A. Teks Deskripsi</label>
+                        <label><input type="radio" name="q1" value="B"> B. Teks Laporan Hasil Observasi</label>
+                        <label><input type="radio" name="q1" value="C"> C. Teks Prosedur</label>
+                        <label><input type="radio" name="q1" value="D"> D. Teks Eksplanasi</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 2 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 2</span>
+                        <p>"Lidah buaya (Aloe vera) memiliki daun yang tebal, berdaging, dan berwarna hijau dengan tepi bergerigi. Daunnya mengandung gel bening yang kaya akan vitamin, mineral, dan asam amino. Tanaman ini dapat tumbuh hingga 60-100 cm dan memiliki akar yang dangkal."</p>
+                    </div>
+                    <p class="question-text">2. Berdasarkan stimulus di atas, paragraf tersebut merupakan bagian struktur teks LHO yaitu...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="A"> A. Pernyataan umum</label>
+                        <label><input type="radio" name="q2" value="B"> B. Deskripsi bagian</label>
+                        <label><input type="radio" name="q2" value="C"> C. Deskripsi manfaat</label>
+                        <label><input type="radio" name="q2" value="D"> D. Simpulan</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 3 -->
+                <div class="question-block bab1 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 3</span>
+                        <p>"Kucing memiliki tubuh lentur dengan panjang rata-rata 50-60 cm dari kepala hingga ekor. Bulunya bervariasi dari pendek hingga panjang dengan warna beragam."</p>
+                    </div>
+                    <p class="question-text">3. <span class="hots-tag">HOTS</span> Jenis data yang dominan dalam stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="A"> A. Kuantitatif saja</label>
+                        <label><input type="radio" name="q3" value="B"> B. Kualitatif saja</label>
+                        <label><input type="radio" name="q3" value="C"> C. Kombinasi kuantitatif dan kualitatif</label>
+                        <label><input type="radio" name="q3" value="D"> D. Data opini</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 4 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 4</span>
+                        <p>Perhatikan dua paragraf berikut:</p>
+                        <p><strong>Paragraf 1:</strong> "Komodo (Varanus komodoensis) adalah kadal terbesar di dunia yang hanya ditemukan di Indonesia."</p>
+                        <p><strong>Paragraf 2:</strong> "Komodo memiliki kulit berwarna abu-abu hingga cokelat kemerahan dengan tekstur bersisik kasar."</p>
+                    </div>
+                    <p class="question-text">4. Berdasarkan stimulus di atas, pernyataan yang tepat adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="A"> A. Keduanya merupakan paragraf eksposisi</label>
+                        <label><input type="radio" name="q4" value="B"> B. Paragraf 1 eksposisi, paragraf 2 deskripsi</label>
+                        <label><input type="radio" name="q4" value="C"> C. Paragraf 1 deskripsi, paragraf 2 eksposisi</label>
+                        <label><input type="radio" name="q4" value="D"> D. Keduanya merupakan paragraf deskripsi</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 5 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 5</span>
+                        <p>"Kucing (<em>Felis catus</em>) adalah mamalia karnivora. Kucing memiliki empat kaki, dua telinga, dan ekor yang panjang."</p>
+                    </div>
+                    <p class="question-text">5. Penulisan nama ilmiah dalam stimulus di atas sudah benar karena...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="A"> A. Ditulis tegak dan diapit tanda petik</label>
+                        <label><input type="radio" name="q5" value="B"> B. Ditulis miring dan diapit tanda kurung</label>
+                        <label><input type="radio" name="q5" value="C"> C. Ditulis tegak dan diapit tanda kurung</label>
+                        <label><input type="radio" name="q5" value="D"> D. Ditulis miring dan diapit tanda petik</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 6 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 6</span>
+                        <p>"Mangrove merupakan ekosistem khas yang terdapat di wilayah pesisir pantai tropis. Tumbuhan ini memiliki akar napas (pneumatofora) yang menjulang ke atas permukaan air. Akar ini berfungsi untuk membantu tumbuhan bernapas di lingkungan yang miskin oksigen."</p>
+                    </div>
+                    <p class="question-text">6. Gagasan utama paragraf pada stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="A"> A. Mangrove sebagai ekosistem khas pesisir pantai tropis</label>
+                        <label><input type="radio" name="q6" value="B"> B. Akar napas mangrove menjulang ke atas</label>
+                        <label><input type="radio" name="q6" value="C"> C. Fungsi akar napas mangrove</label>
+                        <label><input type="radio" name="q6" value="D"> D. Mangrove tumbuh di lingkungan miskin oksigen</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 7 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 7</span>
+                        <p>"Menurut penelitian National Sleep Foundation (2024), remaja yang tidur kurang dari 7 jam per hari memiliki risiko penurunan konsentrasi hingga 40%. Hal ini disebabkan karena saat tidur, otak melakukan proses konsolidasi memori."</p>
+                    </div>
+                    <p class="question-text">7. Data "remaja yang tidur kurang dari 7 jam per hari memiliki risiko penurunan konsentrasi hingga 40%" termasuk jenis data...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="A"> A. Kualitatif</label>
+                        <label><input type="radio" name="q7" value="B"> B. Kuantitatif</label>
+                        <label><input type="radio" name="q7" value="C"> C. Opini penulis</label>
+                        <label><input type="radio" name="q7" value="D"> D. Data imajinatif</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 8 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 8</span>
+                        <p>"Kucing memiliki empat kaki, dua telinga, dan ekor yang panjang."</p>
+                    </div>
+                    <p class="question-text">8. Tanda baca yang tepat untuk melengkapi stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="A"> A. "Kucing memiliki empat kaki dua telinga dan ekor yang panjang."</label>
+                        <label><input type="radio" name="q8" value="B"> B. "Kucing memiliki empat kaki, dua telinga, dan ekor yang panjang."</label>
+                        <label><input type="radio" name="q8" value="C"> C. "Kucing, memiliki empat kaki, dua telinga dan ekor yang panjang."</label>
+                        <label><input type="radio" name="q8" value="D"> D. "Kucing memiliki: empat kaki, dua telinga, dan ekor yang panjang."</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 9 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 9</span>
+                        <p>"Fotosintesis adalah proses pembuatan makanan oleh tumbuhan dengan bantuan cahaya matahari."</p>
+                    </div>
+                    <p class="question-text">9. Penulisan kata "fotosintesis" pada stimulus di atas sudah benar karena...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="A"> A. Ditulis miring karena berasal dari bahasa Yunani</label>
+                        <label><input type="radio" name="q9" value="B"> B. Ditulis tegak karena sudah diserap ke dalam bahasa Indonesia</label>
+                        <label><input type="radio" name="q9" value="C"> C. Diapit tanda petik</label>
+                        <label><input type="radio" name="q9" value="D"> D. Ditulis kapital semua</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 10 -->
+                <div class="question-block bab1 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 10</span>
+                        <p>Perhatikan langkah-langkah menulis teks LHO berikut:</p>
+                        <p>1) Menulis draf teks<br>
+                        2) Menentukan topik<br>
+                        3) Melakukan observasi<br>
+                        4) Menyusun kerangka<br>
+                        5) Mengumpulkan data</p>
+                    </div>
+                    <p class="question-text">10. <span class="hots-tag">HOTS</span> Urutan yang benar dalam menulis teks LHO berdasarkan stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="A"> A. 1-2-3-4-5</label>
+                        <label><input type="radio" name="q10" value="B"> B. 2-3-5-4-1</label>
+                        <label><input type="radio" name="q10" value="C"> C. 2-5-3-4-1</label>
+                        <label><input type="radio" name="q10" value="D"> D. 5-2-3-1-4</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 11 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 11</span>
+                        <p>"Paragraf yang menggambarkan objek secara rinci sehingga pembaca seolah-olah melihatnya disebut paragraf..."</p>
+                    </div>
+                    <p class="question-text">11. Berdasarkan stimulus di atas, paragraf yang dimaksud adalah paragraf...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="A"> A. Narasi</label>
+                        <label><input type="radio" name="q11" value="B"> B. Eksposisi</label>
+                        <label><input type="radio" name="q11" value="C"> C. Deskripsi</label>
+                        <label><input type="radio" name="q11" value="D"> D. Persuasi</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 12 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 12</span>
+                        <p>Struktur teks LHO:</p>
+                        <p>1) Deskripsi manfaat<br>
+                        2) Pernyataan umum<br>
+                        3) Deskripsi bagian</p>
+                    </div>
+                    <p class="question-text">12. Urutan struktur teks LHO yang benar berdasarkan stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="A"> A. 1-2-3</label>
+                        <label><input type="radio" name="q12" value="B"> B. 2-3-1</label>
+                        <label><input type="radio" name="q12" value="C"> C. 3-2-1</label>
+                        <label><input type="radio" name="q12" value="D"> D. 2-1-3</label>
+                    </div>
+                </div>
+
+                <!-- ===== SOAL 13-24: BAB 2 ===== -->
+                <h4 style="margin: 2rem 0 0.75rem; color: var(--bab2);">📙 BAB 2: Iklan, Slogan, dan Poster (Soal 13-24)</h4>
+
+                <!-- SOAL 13 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 13</span>
+                        <div class="stimulus-title">Iklan: "🩸 DONOR DARAH SELAMATKAN NYAWA!"</div>
+                        <p>Setetes darah Anda sangat berarti bagi sesama. 1 kantong darah dapat menyelamatkan hingga 3 nyawa. Ayo donor darah di PMI terdekat!</p>
+                    </div>
+                    <p class="question-text">13. Berdasarkan stimulus di atas, iklan tersebut termasuk jenis iklan...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="A"> A. Komersial</label>
+                        <label><input type="radio" name="q13" value="B"> B. Nonkomersial (layanan masyarakat)</label>
+                        <label><input type="radio" name="q13" value="C"> C. Niaga</label>
+                        <label><input type="radio" name="q13" value="D"> D. Baris</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 14 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 14</span>
+                        <p>Prinsip AIDA dalam iklan merupakan singkatan dari Attention, Interest, Desire, Action.</p>
+                    </div>
+                    <p class="question-text">14. Berdasarkan stimulus di atas, prinsip AIDA berfungsi untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="A"> A. Menentukan harga produk</label>
+                        <label><input type="radio" name="q14" value="B"> B. Memastikan iklan efektif menarik perhatian hingga mendorong tindakan</label>
+                        <label><input type="radio" name="q14" value="C"> C. Menghitung biaya produksi</label>
+                        <label><input type="radio" name="q14" value="D"> D. Menentukan target pasar</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 15 -->
+                <div class="question-block bab2 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 15</span>
+                        <p>"Buku adalah Jendela Dunia"</p>
+                    </div>
+                    <p class="question-text">15. <span class="hots-tag">HOTS</span> Slogan pada stimulus di atas menggunakan gaya bahasa...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="A"> A. Rima</label>
+                        <label><input type="radio" name="q15" value="B"> B. Repetisi</label>
+                        <label><input type="radio" name="q15" value="C"> C. Metafora</label>
+                        <label><input type="radio" name="q15" value="D"> D. Imperatif</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 16 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 16</span>
+                        <p>"Beli sekarang juga!"<br>"Jangan lewatkan kesempatan ini!"<br>"Mari kita jaga kebersihan lingkungan!"</p>
+                    </div>
+                    <p class="question-text">16. Kalimat-kalimat pada stimulus di atas termasuk jenis kalimat...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="A"> A. Deskriptif</label>
+                        <label><input type="radio" name="q16" value="B"> B. Imperatif</label>
+                        <label><input type="radio" name="q16" value="C"> C. Interogatif</label>
+                        <label><input type="radio" name="q16" value="D"> D. Ekspositoris</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 17 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 17</span>
+                        <p>Poster adalah media komunikasi visual yang terdiri atas perpaduan antara gambar, warna, dan teks yang dipasang di tempat umum.</p>
+                    </div>
+                    <p class="question-text">17. Berdasarkan stimulus di atas, unsur utama poster adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="A"> A. Teks panjang dan audio</label>
+                        <label><input type="radio" name="q17" value="B"> B. Gambar, warna, dan teks</label>
+                        <label><input type="radio" name="q17" value="C"> C. Hanya gambar saja</label>
+                        <label><input type="radio" name="q17" value="D"> D. Hanya teks saja</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 18 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 18</span>
+                        <p>Prinsip CRAP dalam desain poster: Contrast, Repetition, Alignment, Proximity.</p>
+                    </div>
+                    <p class="question-text">18. Berdasarkan stimulus di atas, prinsip CRAP berfungsi untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="A"> A. Menentukan harga poster</label>
+                        <label><input type="radio" name="q18" value="B"> B. Menciptakan desain poster yang efektif dan menarik</label>
+                        <label><input type="radio" name="q18" value="C"> C. Menghitung biaya produksi</label>
+                        <label><input type="radio" name="q18" value="D"> D. Menentukan target pembaca</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 19 -->
+                <div class="question-block bab2 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 19</span>
+                        <p>"Satu Nusa, Satu Bangsa, Satu Bahasa"</p>
+                    </div>
+                    <p class="question-text">19. <span class="hots-tag">HOTS</span> Slogan pada stimulus di atas menggunakan gaya bahasa...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="A"> A. Metafora dan aliterasi</label>
+                        <label><input type="radio" name="q19" value="B"> B. Repetisi dan paralelisme</label>
+                        <label><input type="radio" name="q19" value="C"> C. Antonim dan imperatif</label>
+                        <label><input type="radio" name="q19" value="D"> D. Rima dan metafora</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 20 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 20</span>
+                        <p>"Direkomendasikan oleh 9 dari 10 dokter gigi!"<br>"Jutaan keluarga Indonesia sudah memilih Brand X!"</p>
+                    </div>
+                    <p class="question-text">20. Teknik persuasi yang digunakan dalam stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q20" value="A"> A. Humor</label>
+                        <label><input type="radio" name="q20" value="B"> B. Fear appeal</label>
+                        <label><input type="radio" name="q20" value="C"> C. Testimonial dan bandwagon</label>
+                        <label><input type="radio" name="q20" value="D"> D. Price appeal</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 21 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 21</span>
+                        <p>"Semakin sering kita membaca, semakin luas wawasan kita."</p>
+                    </div>
+                    <p class="question-text">21. Jenis perbandingan yang digunakan dalam stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q21" value="A"> A. Simile</label>
+                        <label><input type="radio" name="q21" value="B"> B. Kontras</label>
+                        <label><input type="radio" name="q21" value="C"> C. Superlatif</label>
+                        <label><input type="radio" name="q21" value="D"> D. Korelatif</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 22 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 22</span>
+                        <p>Perhatikan tahapan proyek kampanye iklan:</p>
+                        <p>1) Presentasi<br>
+                        2) Produksi<br>
+                        3) Pra-produksi<br>
+                        4) Pasca-produksi</p>
+                    </div>
+                    <p class="question-text">22. Urutan yang benar dalam proyek kampanye iklan berdasarkan stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q22" value="A"> A. 1-2-3-4</label>
+                        <label><input type="radio" name="q22" value="B"> B. 3-2-4-1</label>
+                        <label><input type="radio" name="q22" value="C"> C. 2-3-1-4</label>
+                        <label><input type="radio" name="q22" value="D"> D. 4-3-2-1</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 23 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 23</span>
+                        <p>"Generasi muda harus menjadi produsen, bukan sekadar konsumen, di era digital ini."</p>
+                    </div>
+                    <p class="question-text">23. Penggunaan antonim pada stimulus di atas berfungsi untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q23" value="A"> A. Menunjukkan persamaan makna</label>
+                        <label><input type="radio" name="q23" value="B"> B. Mempertegas kontras antara produsen dan konsumen</label>
+                        <label><input type="radio" name="q23" value="C"> C. Menghindari repetisi kata</label>
+                        <label><input type="radio" name="q23" value="D"> D. Menjelaskan konsep yang kompleks</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 24 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 24</span>
+                        <p>Perhatikan ciri-ciri slogan berikut:</p>
+                        <p>1) Singkat dan padat<br>
+                        2) Mudah diingat<br>
+                        3) Panjang dan detail<br>
+                        4) Persuasif<br>
+                        5) Bermakna dalam</p>
+                    </div>
+                    <p class="question-text">24. Ciri-ciri slogan yang efektif ditunjukkan oleh nomor...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q24" value="A"> A. 1, 2, 3, 4</label>
+                        <label><input type="radio" name="q24" value="B"> B. 1, 2, 4, 5</label>
+                        <label><input type="radio" name="q24" value="C"> C. 2, 3, 4, 5</label>
+                        <label><input type="radio" name="q24" value="D"> D. 1, 3, 4, 5</label>
+                    </div>
+                </div>
+
+                <!-- ===== SOAL 25-35: BAB 3 ===== -->
+                <h4 style="margin: 2rem 0 0.75rem; color: var(--bab3);">📕 BAB 3: Artikel Ilmiah Populer (Soal 25-35)</h4>
+
+                <!-- SOAL 25 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 25</span>
+                        <div class="stimulus-title">Artikel: "Bahaya Begadang bagi Pelajar"</div>
+                        <p>Tahukah Anda bahwa 70% pelajar Indonesia sering begadang hingga larut malam? Fenomena ini semakin mengkhawatirkan di era digital, di mana gadget dan media sosial menjadi "teman setia" hingga tengah malam. Padahal, kebiasaan begadang dapat berdampak serius terhadap kesehatan dan prestasi belajar.</p>
+                    </div>
+                    <p class="question-text">25. Berdasarkan stimulus di atas, ciri artikel ilmiah populer yang paling menonjol adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q25" value="A"> A. Menggunakan bahasa formal dan teknis untuk akademisi</label>
+                        <label><input type="radio" name="q25" value="B"> B. Menggunakan bahasa populer yang mudah dipahami masyarakat umum</label>
+                        <label><input type="radio" name="q25" value="C"> C. Hanya berisi opini pribadi tanpa data</label>
+                        <label><input type="radio" name="q25" value="D"> D. Merupakan laporan hasil observasi langsung</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 26 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 26</span>
+                        <p>"Menurut penelitian Harvard (2023), pelajar yang tidur cukup memiliki konsentrasi 30% lebih tinggi. Hal ini disebabkan karena saat tidur, otak melakukan konsolidasi memori. Oleh karena itu, menurut saya, pelajar harus memprioritaskan tidur yang cukup."</p>
+                    </div>
+                    <p class="question-text">26. Berdasarkan stimulus di atas, tiga unsur utama (PBA) yang terdapat dalam paragraf tersebut secara berurutan adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q26" value="A"> A. Pendapat - Bukti - Alasan</label>
+                        <label><input type="radio" name="q26" value="B"> B. Bukti - Alasan - Pendapat</label>
+                        <label><input type="radio" name="q26" value="C"> C. Alasan - Bukti - Pendapat</label>
+                        <label><input type="radio" name="q26" value="D"> D. Bukti - Pendapat - Alasan</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 27 -->
+                <div class="question-block bab3 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 27</span>
+                        <p>"Tidur yang cukup adalah investasi terbaik untuk masa depan otak Anda. Bayangkan otak Anda seperti ponsel yang perlu di-cas setiap malam agar bisa berfungsi optimal keesokan harinya."</p>
+                    </div>
+                    <p class="question-text">27. <span class="hots-tag">HOTS</span> Gaya bahasa yang digunakan dalam stimulus di atas untuk menjelaskan konsep tidur bagi otak adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q27" value="A"> A. Perbandingan langsung (simile)</label>
+                        <label><input type="radio" name="q27" value="B"> B. Antonim</label>
+                        <label><input type="radio" name="q27" value="C"> C. Sinonim</label>
+                        <label><input type="radio" name="q27" value="D"> D. Analogi</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 28 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 28</span>
+                        <p>"Menurut BPS, populasi Indonesia mencapai 275 juta jiwa pada 2023."<br>"Menurut saya, matematika adalah pelajaran tersulit."<br>"Seharusnya pemerintah membangun lebih banyak sekolah."<br>"Air mendidih pada suhu 100°C."</p>
+                    </div>
+                    <p class="question-text">28. Berdasarkan stimulus di atas, yang merupakan kalimat FAKTA ditunjukkan oleh nomor...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q28" value="A"> A. (1) dan (2)</label>
+                        <label><input type="radio" name="q28" value="B"> B. (1) dan (4)</label>
+                        <label><input type="radio" name="q28" value="C"> C. (2) dan (3)</label>
+                        <label><input type="radio" name="q28" value="D"> D. (3) dan (4)</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 29 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 29</span>
+                        <p>"Sel darah putih bekerja seperti tentara yang melindungi tubuh dari serangan penyakit."</p>
+                    </div>
+                    <p class="question-text">29. Gaya bahasa yang digunakan dalam stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q29" value="A"> A. Analogi</label>
+                        <label><input type="radio" name="q29" value="B"> B. Perbandingan (simile)</label>
+                        <label><input type="radio" name="q29" value="C"> C. Antonim</label>
+                        <label><input type="radio" name="q29" value="D"> D. Sinonim</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 30 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 30</span>
+                        <p>Seorang siswa ingin menulis artikel tentang "Kebiasaan Belajar Pelajar MTsN 10 Agam". Ia mendatangi Guru BK untuk mewawancarai tentang pola belajar siswa di madrasah tersebut.</p>
+                    </div>
+                    <p class="question-text">30. Metode pengumpulan data yang digunakan siswa dalam stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q30" value="A"> A. Observasi</label>
+                        <label><input type="radio" name="q30" value="B"> B. Kuesioner</label>
+                        <label><input type="radio" name="q30" value="C"> C. Wawancara</label>
+                        <label><input type="radio" name="q30" value="D"> D. Studi dokumentasi</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 31 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 31</span>
+                        <p>"1. Nama (inisial): .............<br>2. Kelas: VIII-...<br>3. Apakah Anda sarapan sebelum berangkat sekolah?<br>&nbsp;&nbsp;&nbsp;a. Selalu  b. Sering  c. Jarang  d. Tidak pernah<br>4. Saya dapat berkonsentrasi dengan baik di jam pelajaran pertama.<br>&nbsp;&nbsp;&nbsp;SS | S | N | TS | STS"</p>
+                    </div>
+                    <p class="question-text">31. Instrumen pada stimulus di atas disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q31" value="A"> A. Pedoman observasi</label>
+                        <label><input type="radio" name="q31" value="B"> B. Kuesioner/Angket</label>
+                        <label><input type="radio" name="q31" value="C"> C. Daftar wawancara</label>
+                        <label><input type="radio" name="q31" value="D"> D. Jurnal penelitian</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 32 -->
+                <div class="question-block bab3 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 32</span>
+                        <p>Perhatikan sumber data berikut:</p>
+                        <p>• Laporan BPS (bps.go.id)<br>
+                        • Publikasi WHO (who.int)<br>
+                        • Artikel di Kompas.com<br>
+                        • Blog pribadi tanpa referensi<br>
+                        • Pesan berantai WhatsApp</p>
+                    </div>
+                    <p class="question-text">32. <span class="hots-tag">HOTS</span> Berdasarkan stimulus di atas, sumber data yang TIDAK terpercaya adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q32" value="A"> A. Laporan BPS dan Publikasi WHO</label>
+                        <label><input type="radio" name="q32" value="B"> B. Artikel di Kompas.com</label>
+                        <label><input type="radio" name="q32" value="C"> C. Blog pribadi tanpa referensi dan pesan berantai WhatsApp</label>
+                        <label><input type="radio" name="q32" value="D"> D. Laporan BPS dan Artikel di Kompas.com</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 33 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 33</span>
+                        <p>Kerangka artikel:</p>
+                        <p><strong>Judul:</strong> "Manfaat Olahraga bagi Pelajar"<br>
+                        <strong>Pembuka:</strong> Data pelajar yang jarang olahraga<br>
+                        <strong>Isi:</strong> 3 subtopik (konsentrasi, mood, kesehatan)<br>
+                        <strong>Penutup:</strong> Simpulan + ajakan olahraga rutin</p>
+                    </div>
+                    <p class="question-text">33. Fungsi kerangka artikel pada stimulus di atas adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q33" value="A"> A. Menghias artikel agar terlihat menarik</label>
+                        <label><input type="radio" name="q33" value="B"> B. Menjadi peta yang memandu penulis dalam menulis draf</label>
+                        <label><input type="radio" name="q33" value="C"> C. Menggantikan isi artikel yang sebenarnya</label>
+                        <label><input type="radio" name="q33" value="D"> D. Menambah jumlah halaman artikel</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 34 -->
+                <div class="question-block bab3">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 34</span>
+                        <p>"Pintar", "cerdas", "pandai", "cendekia"</p>
+                    </div>
+                    <p class="question-text">34. Kata-kata pada stimulus di atas merupakan contoh...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q34" value="A"> A. Antonim</label>
+                        <label><input type="radio" name="q34" value="B"> B. Analogi</label>
+                        <label><input type="radio" name="q34" value="C"> C. Sinonim</label>
+                        <label><input type="radio" name="q34" value="D"> D. Perbandingan</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 35 -->
+                <div class="question-block bab3 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 35</span>
+                        <p>Perhatikan dua versi paragraf berikut:</p>
+                        <p><strong>Versi A:</strong> "Penelitian <em>menunjukkan</em> bahwa... Penelitian lain juga <em>menunjukkan</em> bahwa... Riset terbaru <em>menunjukkan</em> bahwa..."</p>
+                        <p><strong>Versi B:</strong> "Penelitian <em>menunjukkan</em> bahwa... Studi lain <em>membuktikan</em> bahwa... Riset terbaru <em>mengungkap</em> bahwa..."</p>
+                    </div>
+                    <p class="question-text">35. <span class="hots-tag">HOTS</span> Keunggulan Versi B dibandingkan Versi A adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="q35" value="A"> A. Versi B lebih panjang</label>
+                        <label><input type="radio" name="q35" value="B"> B. Versi B menggunakan variasi sinonim sehingga tidak monoton</label>
+                        <label><input type="radio" name="q35" value="C"> C. Versi B menggunakan bahasa yang lebih sulit</label>
+                        <label><input type="radio" name="q35" value="D"> D. Versi B menggunakan antonim</label>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- BAGIAN B: PG KOMPLEKS (5 soal × 2 = 10) -->
+                <!-- ============================================ -->
+                <h3 style="margin: 2.5rem 0 1rem; color: var(--primary);">✅ BAGIAN B: PILIHAN GANDA KOMPLEKS (5 Soal × 2 Poin = 10 Poin)</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;"><span class="badge badge-complex">Pilih LEBIH DARI SATU jawaban benar</span></p>
+
+                <!-- SOAL 36 - BAB 1 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 36</span>
+                        <p>Teks laporan hasil observasi memiliki ciri-ciri khas yang membedakannya dengan jenis teks lain.</p>
+                    </div>
+                    <p class="question-text">36. Berikut yang merupakan ciri-ciri teks laporan hasil observasi adalah... (pilih semua yang benar)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="q36" value="A"> A. Bersifat objektif dan faktual</label>
+                        <label><input type="checkbox" name="q36" value="B"> B. Disusun secara sistematis</label>
+                        <label><input type="checkbox" name="q36" value="C"> C. Menggunakan istilah ilmiah</label>
+                        <label><input type="checkbox" name="q36" value="D"> D. Mengandung unsur persuasif yang kuat</label>
+                        <label><input type="checkbox" name="q36" value="E"> E. Berdasarkan hasil pengamatan</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 37 - BAB 1 -->
+                <div class="question-block bab1">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 37</span>
+                        <p>Struktur teks LHO terdiri dari beberapa bagian penting yang saling melengkapi.</p>
+                    </div>
+                    <p class="question-text">37. Berikut yang merupakan bagian struktur teks laporan hasil observasi adalah... (pilih semua yang benar)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="q37" value="A"> A. Pernyataan umum</label>
+                        <label><input type="checkbox" name="q37" value="B"> B. Orientasi</label>
+                        <label><input type="checkbox" name="q37" value="C"> C. Deskripsi bagian</label>
+                        <label><input type="checkbox" name="q37" value="D"> D. Komplikasi</label>
+                        <label><input type="checkbox" name="q37" value="E"> E. Deskripsi manfaat</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 38 - BAB 2 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 38</span>
+                        <p>Iklan memiliki beberapa jenis berdasarkan tujuan dan sasarannya.</p>
+                    </div>
+                    <p class="question-text">38. Berikut yang merupakan jenis-jenis iklan adalah... (pilih semua yang benar)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="q38" value="A"> A. Iklan komersial</label>
+                        <label><input type="checkbox" name="q38" value="B"> B. Iklan nonkomersial</label>
+                        <label><input type="checkbox" name="q38" value="C"> C. Iklan layanan masyarakat</label>
+                        <label><input type="checkbox" name="q38" value="D"> D. Iklan berita</label>
+                        <label><input type="checkbox" name="q38" value="E"> E. Iklan kolom</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 39 - BAB 2 -->
+                <div class="question-block bab2">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 39</span>
+                        <p>Poster yang efektif harus memenuhi beberapa prinsip desain.</p>
+                    </div>
+                    <p class="question-text">39. Berikut yang merupakan unsur-unsur poster adalah... (pilih semua yang benar)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="q39" value="A"> A. Gambar/Ilustrasi</label>
+                        <label><input type="checkbox" name="q39" value="B"> B. Warna</label>
+                        <label><input type="checkbox" name="q39" value="C"> C. Tipografi</label>
+                        <label><input type="checkbox" name="q39" value="D"> D. Dialog antar karakter</label>
+                        <label><input type="checkbox" name="q39" value="E"> E. Pesan utama</label>
+                    </div>
+                </div>
+
+                <!-- SOAL 40 - BAB 3 -->
+                <div class="question-block bab3 hots">
+                    <div class="stimulus-box">
+                        <span class="stimulus-label">STIMULUS 40</span>
+                        <p>Perhatikan kalimat-kalimat berikut:</p>
+                        <p>(1) "Otak seperti komputer"<br>
+                        (2) "DNA layaknya buku resep kehidupan"<br>
+                        (3) "Generasi produktif, bukan konsumtif"<br>
+                        (4) "Menunjukkan → membuktikan → mengungkap"<br>
+                        (5) "Saya rasa itu benar"</p>
+                    </div>
+                    <p class="question-text">40. <span class="hots-tag">HOTS</span> Berdasarkan stimulus di atas, yang merupakan contoh penggunaan gaya bahasa yang tepat dalam artikel ilmiah populer adalah... (pilih semua yang benar)</p>
+                    <div class="options">
+                        <label><input type="checkbox" name="q40" value="A"> A. (1) Perbandingan</label>
+                        <label><input type="checkbox" name="q40" value="B"> B. (2) Analogi</label>
+                        <label><input type="checkbox" name="q40" value="C"> C. (3) Antonim</label>
+                        <label><input type="checkbox" name="q40" value="D"> D. (4) Sinonim</label>
+                        <label><input type="checkbox" name="q40" value="E"> E. (5) Tanpa bukti</label>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- BAGIAN C: BENAR/SALAH (5 soal × 2 = 10) -->
+                <!-- ============================================ -->
+                <h3 style="margin: 2.5rem 0 1rem; color: var(--primary);">✔️ BAGIAN C: BENAR / SALAH (5 Soal × 2 Poin = 10 Poin)</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;"><span class="badge badge-tf">Tentukan BENAR atau SALAH</span></p>
+
+                <!-- SOAL 41 - BAB 1 -->
+                <div class="tf-row" style="border-left-color: var(--bab1);">
+                    <p><strong>41.</strong> Teks laporan hasil observasi bersifat subjektif dan berdasarkan imajinasi penulis.</p>
+                    <div class="tf-options">
+                        <label><input type="radio" name="q41" value="B"><span>Benar</span></label>
+                        <label><input type="radio" name="q41" value="S"><span>Salah</span></label>
+                    </div>
+                </div>
+
+                <!-- SOAL 42 - BAB 1 -->
+                <div class="tf-row" style="border-left-color: var(--bab1);">
+                    <p><strong>42.</strong> Paragraf deduktif adalah paragraf yang gagasan utamanya terletak di awal paragraf.</p>
+                    <div class="tf-options">
+                        <label><input type="radio" name="q42" value="B"><span>Benar</span></label>
+                        <label><input type="radio" name="q42" value="S"><span>Salah</span></label>
+                    </div>
+                </div>
+
+                <!-- SOAL 43 - BAB 2 -->
+                <div class="tf-row" style="border-left-color: var(--bab2);">
+                    <p><strong>43.</strong> Iklan nonkomersial bertujuan untuk mencari keuntungan ekonomi.</p>
+                    <div class="tf-options">
+                        <label><input type="radio" name="q43" value="B"><span>Benar</span></label>
+                        <label><input type="radio" name="q43" value="S"><span>Salah</span></label>
+                    </div>
+                </div>
+
+                <!-- SOAL 44 - BAB 2 -->
+                <div class="tf-row" style="border-left-color: var(--bab2);">
+                    <p><strong>44.</strong> Slogan "Bersih Pangkal Sehat" menggunakan teknik rima untuk memudahkan pembaca mengingatnya.</p>
+                    <div class="tf-options">
+                        <label><input type="radio" name="q44" value="B"><span>Benar</span></label>
+                        <label><input type="radio" name="q44" value="S"><span>Salah</span></label>
+                    </div>
+                </div>
+
+                <!-- SOAL 45 - BAB 3 -->
+                <div class="tf-row" style="border-left-color: var(--bab3);">
+                    <p><strong>45.</strong> Artikel ilmiah populer boleh mengandung opini penulis asalkan didukung bukti dan alasan.</p>
+                    <div class="tf-options">
+                        <label><input type="radio" name="q45" value="B"><span>Benar</span></label>
+                        <label><input type="radio" name="q45" value="S"><span>Salah</span></label>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- BAGIAN D: MENJODOHKAN (5 soal × 2 = 10) -->
+                <!-- ============================================ -->
+                <h3 style="margin: 2.5rem 0 1rem; color: var(--primary);">🔗 BAGIAN D: MENJODOHKAN (5 Soal × 2 Poin = 10 Poin)</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;"><span class="badge badge-match">Pasangkan pernyataan kiri dengan jawaban kanan</span></p>
+
+                <!-- SOAL 46 - BAB 1 -->
+                <div class="match-container" style="border-left-color: var(--bab1);">
+                    <div class="match-left"><strong>46.</strong> Pernyataan Umum, Deskripsi Bagian, Deskripsi Manfaat</div>
+                    <div class="match-arrow">→</div>
+                    <div class="match-right">
+                        <select id="m46">
+                            <option value="">-- Pilih --</option>
+                            <option value="A">A. Struktur teks LHO</option>
+                            <option value="B">B. Metode pengumpulan data via tanya jawab</option>
+                            <option value="C">C. Kata yang berlawanan makna</option>
+                            <option value="D">D. Gaya bahasa menyamakan hubungan</option>
+                            <option value="E">E. Tahap perbaikan tulisan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SOAL 47 - BAB 1 -->
+                <div class="match-container" style="border-left-color: var(--bab1);">
+                    <div class="match-left"><strong>47.</strong> Paragraf yang menggambarkan objek secara rinci</div>
+                    <div class="match-arrow">→</div>
+                    <div class="match-right">
+                        <select id="m47">
+                            <option value="">-- Pilih --</option>
+                            <option value="A">A. Struktur teks LHO</option>
+                            <option value="B">B. Metode pengumpulan data via tanya jawab</option>
+                            <option value="C">C. Kata yang berlawanan makna</option>
+                            <option value="D">D. Paragraf deskripsi</option>
+                            <option value="E">E. Tahap perbaikan tulisan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SOAL 48 - BAB 2 -->
+                <div class="match-container" style="border-left-color: var(--bab2);">
+                    <div class="match-left"><strong>48.</strong> Kalimat yang berisi perintah, larangan, atau ajakan</div>
+                    <div class="match-arrow">→</div>
+                    <div class="match-right">
+                        <select id="m48">
+                            <option value="">-- Pilih --</option>
+                            <option value="A">A. Kalimat imperatif</option>
+                            <option value="B">B. Metode pengumpulan data via tanya jawab</option>
+                            <option value="C">C. Kata yang berlawanan makna</option>
+                            <option value="D">D. Gaya bahasa menyamakan hubungan</option>
+                            <option value="E">E. Tahap perbaikan tulisan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SOAL 49 - BAB 2 -->
+                <div class="match-container" style="border-left-color: var(--bab2);">
+                    <div class="match-left"><strong>49.</strong> Attention, Interest, Desire, Action</div>
+                    <div class="match-arrow">→</div>
+                    <div class="match-right">
+                        <select id="m49">
+                            <option value="">-- Pilih --</option>
+                            <option value="A">A. Struktur teks LHO</option>
+                            <option value="B">B. Prinsip efektivitas iklan</option>
+                            <option value="C">C. Kata yang berlawanan makna</option>
+                            <option value="D">D. Gaya bahasa menyamakan hubungan</option>
+                            <option value="E">E. Tahap perbaikan tulisan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SOAL 50 - BAB 3 -->
+                <div class="match-container" style="border-left-color: var(--bab3);">
+                    <div class="match-left"><strong>50.</strong> Pendapat, Bukti, Alasan</div>
+                    <div class="match-arrow">→</div>
+                    <div class="match-right">
+                        <select id="m50">
+                            <option value="">-- Pilih --</option>
+                            <option value="A">A. Struktur teks LHO</option>
+                            <option value="B">B. Metode pengumpulan data via tanya jawab</option>
+                            <option value="C">C. Tiga unsur utama artikel ilmiah populer</option>
+                            <option value="D">D. Gaya bahasa menyamakan hubungan</option>
+                            <option value="E">E. Tahap perbaikan tulisan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <!-- HASIL -->
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ PTS Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Guru dapat melakukan penyesuaian akhir jika diperlukan).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 PG</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-light);">/ 70</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✅ PG Kompleks</h4>
+                        <div class="value" id="skor-complex">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-light);">/ 10</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✔️ B/S</h4>
+                        <div class="value" id="skor-tf">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-light);">/ 10</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>🔗 Menjodohkan</h4>
+                        <div class="value" id="skor-match">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-light);">/ 10</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 TOTAL</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.8rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH TXT</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM EMAIL</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 ULANG</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="quote-box">
+            <p class="arabic">وَقُل رَّبِّ زِدْنِي عِلْمًا</p>
+            <p class="translation">"Dan katakanlah: 'Ya Tuhanku, tambahkanlah ilmu kepadaku'."</p>
+            <p class="source">— QS. Thaha [20]: 114</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                PTS ini bukan sekadar ujian, tetapi merupakan kesempatan untuk mengukur sejauh mana ilmu yang telah kita pelajari dari 3 BAB dan menjadi motivasi untuk terus belajar lebih giat.
+            </p>
+        </div>
+
+        <!-- Penutup -->
+        <div class="section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center;">
+            <h3 style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;">🎉 Selamat! PTS 3 BAB Selesai</h3>
+            <p style="opacity: 0.9; margin-bottom: 1.5rem;">Anda telah menyelesaikan Penilaian Tengah Semester yang mencakup seluruh materi Semester 1 dari 3 BAB (20 sub bab). Semoga hasil yang diperoleh memuaskan dan menjadi motivasi untuk terus belajar.</p>
+            <a href="index.html" class="btn btn-primary" style="display: inline-flex;">📖 Kembali ke Daftar Isi</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="21.html">← Sub Bab 3.6</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        // Kunci Jawaban PG
+        const kPG = {
+            q1: 'B', q2: 'B', q3: 'C', q4: 'B', q5: 'B',
+            q6: 'A', q7: 'B', q8: 'B', q9: 'B', q10: 'B',
+            q11: 'C', q12: 'B', q13: 'B', q14: 'B', q15: 'C',
+            q16: 'B', q17: 'B', q18: 'B', q19: 'B', q20: 'C',
+            q21: 'D', q22: 'B', q23: 'B', q24: 'B', q25: 'B',
+            q26: 'B', q27: 'D', q28: 'B', q29: 'B', q30: 'C',
+            q31: 'B', q32: 'C', q33: 'B', q34: 'C', q35: 'B'
+        };
+
+        // Kunci PG Kompleks
+        const kCX = {
+            q36: ['A', 'B', 'C', 'E'],
+            q37: ['A', 'C', 'E'],
+            q38: ['A', 'B', 'C', 'E'],
+            q39: ['A', 'B', 'C', 'E'],
+            q40: ['A', 'B', 'C', 'D']
+        };
+
+        // Kunci B/S
+        const kTF = {
+            q41: 'S',  // Teks LHO objektif, bukan subjektif
+            q42: 'B',  // Benar
+            q43: 'S',  // Iklan nonkomersial TIDAK mencari keuntungan
+            q44: 'B',  // Benar
+            q45: 'B'   // Benar, asal didukung bukti & alasan
+        };
+
+        // Kunci Menjodohkan
+        const kMT = {
+            m46: 'A',  // PBD = Struktur teks LHO
+            m47: 'D',  // Paragraf deskripsi
+            m48: 'A',  // Kalimat imperatif
+            m49: 'B',  // Prinsip efektivitas iklan (AIDA)
+            m50: 'C'   // Tiga unsur utama artikel ilmiah populer
+        };
+
+        function hitungSkor() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            // 1. Hitung PG (35 soal × 2 poin = 70)
+            let skorPG = 0;
+            for (let i = 1; i <= 35; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === kPG[`q${i}`]) {
+                    skorPG += 2;
+                }
+            }
+
+            // 2. Hitung PG Kompleks (5 soal × 2 poin = 10)
+            let skorComplex = 0;
+            for (let i = 36; i <= 40; i++) {
+                const selected = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                const selectedValues = Array.from(selected).map(x => x.value).sort();
+                const kunci = kCX[`q${i}`].sort();
+                
+                if (JSON.stringify(selectedValues) === JSON.stringify(kunci)) {
+                    skorComplex += 2;
+                } else {
+                    const correctCount = selectedValues.filter(v => kunci.includes(v)).length;
+                    const wrongCount = selectedValues.filter(v => !kunci.includes(v)).length;
+                    if (correctCount > 0 && wrongCount === 0) {
+                        skorComplex += 1;
+                    }
+                }
+            }
+
+            // 3. Hitung B/S (5 soal × 2 poin = 10)
+            let skorTF = 0;
+            for (let i = 41; i <= 45; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === kTF[`q${i}`]) {
+                    skorTF += 2;
+                }
+            }
+
+            // 4. Hitung Menjodohkan (5 soal × 2 poin = 10)
+            let skorMatch = 0;
+            for (let i = 46; i <= 50; i++) {
+                const selected = document.getElementById(`m${i}`).value;
+                if (selected === kMT[`m${i}`]) {
+                    skorMatch += 2;
+                }
+            }
+
+            const total = skorPG + skorComplex + skorTF + skorMatch;
+
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-complex').innerText = skorComplex;
+            document.getElementById('skor-tf').innerText = skorTF;
+            document.getElementById('skor-match').innerText = skorMatch;
+            document.getElementById('skor-akhir').innerText = total;
+            
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            document.querySelectorAll('#quizForm input, #quizForm select').forEach(x => x.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            html2pdf().set({
+                margin: 10,
+                filename: `PTS_3BAB_BI_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            }).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            
+            let d = `=== HASIL PTS 3 BAB - BAHASA INDONESIA ===\n`;
+            d += `Nama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nTanggal: ${tanggal}\n`;
+            d += `-----------------------------------\n`;
+            d += `Pilihan Ganda: ${document.getElementById('skor-pg').innerText}/70\n`;
+            d += `PG Kompleks: ${document.getElementById('skor-complex').innerText}/10\n`;
+            d += `Benar/Salah: ${document.getElementById('skor-tf').innerText}/10\n`;
+            d += `Menjodohkan: ${document.getElementById('skor-match').innerText}/10\n`;
+            d += `-----------------------------------\n`;
+            d += `TOTAL: ${document.getElementById('skor-akhir').innerText}/100\n`;
+
+            const b = new Blob([d], { type: 'text/plain' });
+            const u = URL.createObjectURL(b);
+            const a = document.createElement('a');
+            a.href = u;
+            a.download = `PTS_3BAB_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(u);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const kelas = document.getElementById('kelas').value;
+            const total = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil PTS 3 BAB - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut hasil PTS 3 BAB saya:\n\nNama: ${nama}\nKelas: ${kelas}\n\nRincian:\n- PG: ${document.getElementById('skor-pg').innerText}/70\n- PG Kompleks: ${document.getElementById('skor-complex').innerText}/10\n- B/S: ${document.getElementById('skor-tf').innerText}/10\n- Menjodohkan: ${document.getElementById('skor-match').innerText}/10\n\nTOTAL: ${total}/100\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Yakin ingin mengulang PTS? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                document.querySelectorAll('#quizForm input, #quizForm select').forEach(x => x.disabled = false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
