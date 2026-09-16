@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 3.5: Mengenal Langkah Penulisan Artikel Ilmiah Populer | Bahasa Indonesia Kelas VIII</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --pra: #6c5ce7;
+            --draf: #0984e3;
+            --revisi: #e17055;
+            --publikasi: #00b894;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '✍️';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -2rem;
+            right: -2rem;
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        /* Phase Cards */
+        .phase-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .phase-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .phase-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .phase-card.pra { background: linear-gradient(135deg, var(--pra), #a29bfe); }
+        .phase-card.draf { background: linear-gradient(135deg, var(--draf), #74b9ff); }
+        .phase-card.revisi { background: linear-gradient(135deg, var(--revisi), #fab1a0); }
+        .phase-card.publikasi { background: linear-gradient(135deg, var(--publikasi), #55efc4); }
+        .phase-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .phase-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .phase-card h5 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .phase-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+        .phase-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.75rem;
+        }
+        .phase-card ul li {
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .phase-card ul li:last-child { border-bottom: none; }
+        .phase-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Steps */
+        .steps {
+            counter-reset: step-counter;
+            margin: 1.5rem 0;
+        }
+        .step {
+            counter-increment: step-counter;
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent);
+            transition: 0.3s;
+        }
+        .step:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .step::before {
+            content: counter(step-counter);
+            flex-shrink: 0;
+            width: 45px;
+            height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .step-content h5 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .step-content p {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Outline Example */
+        .outline-example {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Inter', sans-serif;
+        }
+        .outline-example h5 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        .outline-example .outline-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border);
+        }
+        .outline-example .outline-item:last-child {
+            border-bottom: none;
+        }
+        .outline-example .outline-level-1 {
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 0.75rem;
+            font-size: 1rem;
+        }
+        .outline-example .outline-level-2 {
+            padding-left: 1.5rem;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        .outline-example .outline-level-3 {
+            padding-left: 3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Draft Example */
+        .draft-example {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+        .draft-example h4 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.75rem;
+        }
+        .draft-example .author {
+            text-align: center;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .draft-example p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .draft-example .annotation {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            font-weight: 600;
+            margin-left: 0.25rem;
+            vertical-align: middle;
+        }
+        .annotation.p { background: var(--pra); color: white; }
+        .annotation.b { background: var(--draf); color: white; }
+        .annotation.a { background: var(--publikasi); color: white; }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Checklist */
+        .checklist {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed var(--border);
+        }
+        .checklist-item:last-child { border-bottom: none; }
+        .checklist-item .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--success);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+        .checklist-item p {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="19.html">← Sub Bab 3.4</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="21.html">Sub Bab 3.6 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 3.5 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Langkah Penulisan Artikel Ilmiah Populer</h1>
+            <p class="subtitle">
+                Memahami tahapan sistematis dalam merancang kerangka dan menulis draf artikel ilmiah populer berdasarkan data yang telah direncanakan. 
+                Dengan mengikuti langkah-langkah yang tepat, kita dapat menghasilkan artikel ilmiah populer yang berkualitas, sistematis, dan mudah dipahami pembaca.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengantar -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengantar: Mengapa Langkah Penulisan Penting?</h3>
+            </div>
+            <p>Menulis artikel ilmiah populer bukan sekadar menuangkan ide ke dalam kertas. Proses menulis yang baik memerlukan <strong>langkah-langkah sistematis</strong> agar tulisan yang dihasilkan terstruktur, logis, faktual, dan mudah dipahami pembaca. Tanpa tahapan yang jelas, tulisan bisa menjadi tidak fokus, tidak lengkap, atau bahkan menyimpang dari topik yang seharusnya dibahas.</p>
+            
+            <div class="definition-box">
+                 <strong>MENGAPA PENTING?</strong><br>
+                Langkah penulisan yang sistematis akan membantu kita: (1) mengorganisir ide dengan baik, (2) memastikan kelengkapan informasi, (3) menghasilkan tulisan yang koheren dan logis, (4) menghemat waktu dan tenaga, serta (5) menghasilkan artikel berkualitas tinggi yang dapat dipertanggungjawabkan.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat <strong>merancang kerangka</strong> dan <strong>menulis draf</strong> artikel ilmiah populer berdasarkan data yang telah direncanakan.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Prinsip Dasar Penulisan Artikel Ilmiah Populer:</h4>
+            <ul class="feature-list">
+                <li><strong>Sistematis:</strong> Tulisan disusun secara terstruktur dan logis, mengikuti alur yang jelas dari pembuka hingga penutup.</li>
+                <li><strong>Berbasis Data:</strong> Setiap pendapat didukung oleh fakta dan data yang valid dari sumber terpercaya.</li>
+                <li><strong>PBA Lengkap:</strong> Terdapat pendapat (opini), bukti (data/fakta), dan alasan (penjelasan logis) yang saling melengkapi.</li>
+                <li><strong>Bahasa Populer:</strong> Menggunakan bahasa yang mudah dipahami masyarakat umum, tidak terlalu teknis.</li>
+                <li><strong>Orisinal:</strong> Tulisan merupakan hasil pemikiran sendiri, bukan plagiasi dari tulisan orang lain.</li>
+                <li><strong>Relevan:</strong> Topik yang dibahas relevan dengan kehidupan pembaca dan isu terkini.</li>
+                <li><strong>Menarik:</strong> Tulisan mampu memikat pembaca sejak awal hingga akhir.</li>
+            </ul>
+        </div>
+
+        <!-- Content B: 4 Tahapan Penulisan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Empat Tahapan Penulisan Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Secara umum, proses menulis artikel ilmiah populer terdiri dari empat tahapan utama yang saling berkaitan. Setiap tahapan memiliki peran penting dalam menghasilkan tulisan yang berkualitas.</p>
+
+            <div class="phase-cards">
+                <div class="phase-card pra">
+                    <div class="number">1</div>
+                    <div class="icon">📋</div>
+                    <h5>Pra-Penulisan</h5>
+                    <p>Tahap perencanaan: menentukan topik, mengumpulkan data, dan menyusun kerangka.</p>
+                    <ul>
+                        <li>Menentukan topik & tujuan</li>
+                        <li>Mengumpulkan data & referensi</li>
+                        <li>Menganalisis data</li>
+                        <li>Merumuskan tesis/pendapat</li>
+                        <li>Menyusun kerangka artikel</li>
+                    </ul>
+                </div>
+                <div class="phase-card draf">
+                    <div class="number">2</div>
+                    <div class="icon">✍️</div>
+                    <h5>Penulisan Draf</h5>
+                    <p>Tahap pengembangan: menuangkan ide ke dalam bentuk tulisan berdasarkan kerangka.</p>
+                    <ul>
+                        <li>Menulis judul yang menarik</li>
+                        <li>Menulis pembuka (lead/hook)</li>
+                        <li>Mengembangkan isi dengan PBA</li>
+                        <li>Menulis penutup yang kuat</li>
+                        <li>Menyisipkan data & fakta</li>
+                    </ul>
+                </div>
+                <div class="phase-card revisi">
+                    <div class="number">3</div>
+                    <div class="icon">🔍</div>
+                    <h5>Revisi & Penyuntingan</h5>
+                    <p>Tahap perbaikan: memperbaiki isi, struktur, bahasa, ejaan, dan tanda baca.</p>
+                    <ul>
+                        <li>Memperbaiki struktur PBA</li>
+                        <li>Memperbaiki bahasa & gaya</li>
+                        <li>Memverifikasi data & fakta</li>
+                        <li>Menyunting ejaan & tanda baca</li>
+                        <li>Mengecek koherensi antarparagraf</li>
+                    </ul>
+                </div>
+                <div class="phase-card publikasi">
+                    <div class="number">4</div>
+                    <div class="icon">📢</div>
+                    <h5>Publikasi</h5>
+                    <p>Tahap akhir: mempublikasikan artikel di media yang sesuai.</p>
+                    <ul>
+                        <li>Memilih media publikasi</li>
+                        <li>Menyesuaikan format media</li>
+                        <li>Mengirim ke redaksi/media</li>
+                        <li>Mempublikasikan di blog/website</li>
+                        <li>Mempromosikan artikel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Prinsip Penting</h4>
+                <p>Keempat tahapan ini <strong>tidak harus dilakukan secara kaku dan berurutan</strong>. Penulis boleh kembali ke tahapan sebelumnya jika menemukan masalah. Proses menulis bersifat <em>rekursif</em> (bolak-balik) untuk menghasilkan tulisan terbaik.</p>
+                <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">"Writing is rewriting" — Menulis adalah menulis ulang. Jangan takut untuk merevisi tulisan Anda berkali-kali!</p>
+            </div>
+
+            <div class="key-concept">
+                <h4>⏱️ Estimasi Waktu Penulisan</h4>
+                <p><strong>Tahap 1 - Pra-Penulisan:</strong> 30-40% dari total waktu (paling penting!)<br>
+                <strong>Tahap 2 - Penulisan Draf:</strong> 25-30% dari total waktu<br>
+                <strong>Tahap 3 - Revisi & Penyuntingan:</strong> 25-30% dari total waktu<br>
+                <strong>Tahap 4 - Publikasi:</strong> 5-10% dari total waktu</p>
+                <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">Contoh: Untuk artikel 1000 kata, alokasikan waktu 4-6 jam total.</p>
+            </div>
+        </div>
+
+        <!-- Content C: Tahap 1 - Pra-Penulisan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--pra); color: white;">1</div>
+                <h3>Tahap 1: Pra-Penulisan (Perencanaan)</h3>
+            </div>
+            <p>Tahap pra-penulisan adalah <strong>fondasi</strong> dari seluruh proses menulis. Pada tahap ini, penulis mempersiapkan segala sesuatu yang dibutuhkan sebelum mulai menulis. Tahap ini meliputi beberapa kegiatan penting:</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-content">
+                        <h5>1.1 Menentukan Topik dan Tujuan</h5>
+                        <p>Pilih topik yang <strong>relevan, menarik, dan dikuasai</strong>. Topik yang baik harus spesifik, tidak terlalu luas, dan memiliki cukup data untuk dibahas. Tentukan tujuan artikel: apakah untuk mengedukasi, memberikan solusi, mengajak bertindak, atau mengkritisi suatu isu?</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);"><strong>Tips:</strong> Buat judul sementara sebagai panduan. Contoh: "Bahaya Begadang bagi Pelajar: Mengapa Tidur Cukup Sangat Penting?"</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <h5>1.2 Mengumpulkan Data dan Referensi</h5>
+                        <p>Kumpulkan data dari sumber terpercaya: jurnal ilmiah, laporan resmi (BPS, WHO, Kemenkes), buku, wawancara dengan ahli, atau observasi lapangan. Pastikan data terkini (5-10 tahun terakhir) dan dapat diverifikasi. Gunakan metode pengumpulan data yang telah dipelajari di Sub Bab 3.4.</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);"><strong>Tips:</strong> Catat semua sumber referensi dengan lengkap untuk memudahkan sitasi nanti.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <h5>1.3 Menganalisis Data</h5>
+                        <p>Olah data yang telah dikumpulkan. Identifikasi fakta-fakta penting, pola, tren, atau temuan menarik yang bisa menjadi dasar argumentasi artikel. Pisahkan antara fakta dan opini. Pilih data yang paling relevan dan kuat untuk mendukung pendapat Anda.</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);"><strong>Tips:</strong> Buat tabel atau ringkasan data untuk memudahkan analisis.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <h5>1.4 Merumuskan Pendapat (Tesis)</h5>
+                        <p>Berdasarkan data yang ada, rumuskan pendapat atau tesis utama yang ingin disampaikan dalam artikel. Pendapat ini harus didukung oleh bukti dan alasan yang kuat. Tesis akan menjadi "benang merah" yang menyatukan seluruh artikel.</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);"><strong>Tips:</strong> Tesis harus jelas, spesifik, dan dapat diargumentasikan. Contoh: "Begadang merugikan kesehatan dan prestasi pelajar, sehingga pelajar harus memprioritaskan tidur yang cukup."</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <h5>1.5 Menyusun Kerangka Artikel</h5>
+                        <p>Buat kerangka artikel yang sistematis. Kerangka ini akan menjadi "peta" yang memandu Anda dalam menulis draf. Kerangka yang baik akan memastikan artikel terstruktur, logis, dan tidak ada informasi penting yang terlewat.</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);"><strong>Tips:</strong> Kerangka bisa berupa outline sederhana atau detail, tergantung preferensi penulis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📋 Struktur Kerangka Artikel Ilmiah Populer</h4>
+                <p><strong>I. JUDUL</strong> — Menarik, singkat, mencerminkan isi artikel<br>
+                <strong>II. PEMBUKA (LEAD/HOOK)</strong><br>
+                &nbsp;&nbsp;&nbsp;A. Hook (fakta mengejutkan/pertanyaan retoris/cerita singkat)<br>
+                &nbsp;&nbsp;&nbsp;B. Latar belakang masalah<br>
+                &nbsp;&nbsp;&nbsp;C. Tujuan artikel<br>
+                <strong>III. ISI (BODY)</strong><br>
+                &nbsp;&nbsp;&nbsp;A. Subtopik 1 (PBA: Pendapat + Bukti + Alasan)<br>
+                &nbsp;&nbsp;&nbsp;B. Subtopik 2 (PBA: Pendapat + Bukti + Alasan)<br>
+                &nbsp;&nbsp;&nbsp;C. Subtopik 3 (PBA: Pendapat + Bukti + Alasan)<br>
+                &nbsp;&nbsp;&nbsp;(Bisa lebih dari 3 subtopik tergantung kebutuhan)<br>
+                <strong>IV. PENUTUP</strong><br>
+                &nbsp;&nbsp;&nbsp;A. Simpulan (ringkasan pendapat utama)<br>
+                &nbsp;&nbsp;&nbsp;B. Saran/Ajakan (call to action)<br>
+                &nbsp;&nbsp;&nbsp;C. Pertanyaan reflektif (opsional, untuk mengajak pembaca berpikir)<br>
+                <strong>V. DAFTAR PUSTAKA</strong> (jika ada referensi formal)</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Kerangka Artikel Lengkap</h5>
+                <div class="outline-example">
+                    <h5>📝 Kerangka: "Bahaya Begadang bagi Pelajar"</h5>
+                    
+                    <div class="outline-level-1">I. JUDUL</div>
+                    <div class="outline-level-2">"Bahaya Begadang bagi Pelajar: Mengapa Tidur Cukup Sangat Penting?"</div>
+
+                    <div class="outline-level-1">II. PEMBUKA</div>
+                    <div class="outline-level-2">A. Hook: "Tahukah Anda bahwa 70% pelajar Indonesia sering begadang hingga larut malam?"</div>
+                    <div class="outline-level-2">B. Latar belakang: Fenomena begadang di kalangan pelajar di era digital</div>
+                    <div class="outline-level-2">C. Tujuan: Menjelaskan dampak begadang dan solusi mengatasinya</div>
+
+                    <div class="outline-level-1">III. ISI</div>
+                    <div class="outline-level-2">A. Dampak begadang terhadap konsentrasi belajar</div>
+                    <div class="outline-level-3">- Pendapat: Begadang menurunkan konsentrasi hingga 40%</div>
+                    <div class="outline-level-3">- Bukti: Data National Sleep Foundation (2024)</div>
+                    <div class="outline-level-3">- Alasan: Penjelasan mekanisme konsolidasi memori saat tidur</div>
+
+                    <div class="outline-level-2">B. Dampak begadang terhadap kesehatan fisik</div>
+                    <div class="outline-level-3">- Pendapat: Begadang melemahkan sistem imun tubuh</div>
+                    <div class="outline-level-3">- Bukti: Penelitian Harvard University (2023)</div>
+                    <div class="outline-level-3">- Alasan: Penjelasan proses regenerasi sel dan produksi sitokin</div>
+
+                    <div class="outline-level-2">C. Dampak begadang terhadap kesehatan mental</div>
+                    <div class="outline-level-3">- Pendapat: Begadang meningkatkan risiko kecemasan dan depresi</div>
+                    <div class="outline-level-3">- Bukti: Studi Dr. Matthew Walker (UC Berkeley, 2017)</div>
+                    <div class="outline-level-3">- Alasan: Hubungan tidur dengan regulasi emosi</div>
+
+                    <div class="outline-level-1">IV. PENUTUP</div>
+                    <div class="outline-level-2">A. Simpulan: Begadang bukan sekadar kebiasaan buruk, melainkan ancaman serius</div>
+                    <div class="outline-level-2">B. Saran: Tidur 7-8 jam, hindari gadget sebelum tidur, buat jadwal tidur teratur</div>
+                    <div class="outline-level-2">C. Ajakan: "Mulailah dari malam ini — matikan gadget jam 9 malam!"</div>
+
+                    <div class="outline-level-1">V. DAFTAR PUSTAKA</div>
+                    <div class="outline-level-2">- National Sleep Foundation (2024). Sleep and Teen Health</div>
+                    <div class="outline-level-2">- Harvard University (2023). Sleep and Immune Function</div>
+                    <div class="outline-level-2">- Walker, M. (2017). Why We Sleep. Scribner</div>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Tips Menyusun Kerangka yang Efektif</h4>
+                <p>1. <strong>Mulai dari tesis</strong> — tentukan pendapat utama terlebih dahulu<br>
+                2. <strong>Identifikasi subtopik</strong> — apa saja yang perlu dibahas untuk mendukung tesis?<br>
+                3. <strong>Urutkan secara logis</strong> — dari umum ke khusus, atau dari masalah ke solusi<br>
+                4. <strong>Pastikan kelengkapan PBA</strong> — setiap subtopik harus memiliki pendapat, bukti, dan alasan<br>
+                5. <strong>Sertakan hook yang kuat</strong> — pembuka yang menarik perhatian pembaca<br>
+                6. <strong>Akhiri dengan call to action</strong> — ajakan yang jelas untuk pembaca</p>
+            </div>
+        </div>
+
+        <!-- Content D: Tahap 2 - Penulisan Draf -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--draf); color: white;">2</div>
+                <h3>Tahap 2: Penulisan Draf</h3>
+            </div>
+            <p>Setelah kerangka artikel tersusun, tahap selanjutnya adalah <strong>mengembangkan kerangka menjadi tulisan utuh</strong>. Pada tahap ini, penulis menuangkan semua ide dan data ke dalam bentuk paragraf-paragraf yang saling berkaitan.</p>
+
+            <div class="key-concept">
+                <h4>✍️ Tips Menulis Draf yang Efektif</h4>
+                <p>1. <strong>Ikuti kerangka</strong> — kembangkan setiap poin menjadi paragraf yang utuh<br>
+                2. <strong>Tulis dengan lancar</strong> — jangan terlalu fokus pada kesempurnaan di tahap ini<br>
+                3. <strong>Gunakan bahasa populer</strong> — hindari istilah teknis yang rumit, atau jelaskan jika harus menggunakannya<br>
+                4. <strong>Sertakan PBA</strong> — setiap pendapat harus didukung bukti dan alasan<br>
+                5. <strong>Gunakan transisi</strong> — hubungkan antarparagraf dengan kata penghubung (oleh karena itu, selain itu, di sisi lain)<br>
+                6. <strong>Tulis pembuka yang menarik</strong> — gunakan hook untuk memikat pembaca sejak kalimat pertama<br>
+                7. <strong>Akhiri dengan kuat</strong> — penutup yang berkesan dan mengajak bertindak<br>
+                8. <strong>Jangan takut menulis</strong> — draf pertama tidak harus sempurna, yang penting ide tertuang semua</p>
+            </div>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">📝 Struktur Paragraf dalam Artikel Ilmiah Populer:</h4>
+            <ul class="feature-list">
+                <li><strong>Paragraf Pembuka:</strong> Berisi hook, latar belakang, dan tujuan artikel. Harus menarik perhatian pembaca sejak kalimat pertama. Gunakan fakta mengejutkan, pertanyaan retoris, atau cerita singkat yang relevan.</li>
+                <li><strong>Paragraf Isi:</strong> Setiap paragraf fokus pada satu subtopik. Mengandung PBA (Pendapat + Bukti + Alasan) yang saling melengkapi. Gunakan data, kutipan ahli, atau contoh konkret untuk memperkuat argumen.</li>
+                <li><strong>Paragraf Penutup:</strong> Berisi simpulan, saran, atau ajakan. Harus memberikan kesan mendalam dan memotivasi pembaca untuk bertindak. Hindari mengulang informasi yang sudah ada di isi.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>💡 Contoh Draf Artikel Lengkap dengan Anotasi PBA</h5>
+                <div class="draft-example">
+                    <h4>Bahaya Begadang bagi Pelajar: Mengapa Tidur Cukup Sangat Penting?</h4>
+                    <p class="author">Oleh: [Nama Penulis]</p>
+
+                    <p><strong>[PEMBUKA]</strong> Tahukah Anda bahwa 70% pelajar Indonesia sering begadang hingga larut malam? <span class="annotation p">[HOOK]</span> Fenomena ini semakin mengkhawatirkan di era digital, di mana gadget dan media sosial menjadi "teman setia" hingga tengah malam. Padahal, kebiasaan begadang dapat berdampak serius terhadap kesehatan dan prestasi belajar. Artikel ini akan menjelaskan mengapa tidur yang cukup sangat penting bagi pelajar dan bagaimana cara mengatasinya. <span class="annotation p">[TUJUAN]</span></p>
+
+                    <p><strong>[ISI - Subtopik 1]</strong> <span class="annotation p">[P]</span> Menurut saya, begadang adalah musuh utama konsentrasi belajar. <span class="annotation b">[B]</span> Menurut penelitian dari National Sleep Foundation (2024), remaja yang tidur kurang dari 7 jam per hari memiliki risiko mengalami penurunan konsentrasi hingga 40%. <span class="annotation a">[A]</span> Hal ini disebabkan karena saat tidur, otak melakukan proses konsolidasi memori — yaitu memindahkan informasi dari memori jangka pendek ke memori jangka panjang. Ketika tidur terganggu, proses ini tidak berjalan optimal, sehingga informasi yang dipelajari siang hari mudah terlupakan.</p>
+
+                    <p><strong>[ISI - Subtopik 2]</strong> <span class="annotation p">[P]</span> Selain menurunkan konsentrasi, begadang juga melemahkan sistem imun tubuh. <span class="annotation b">[B]</span> Penelitian dari Harvard University (2023) menunjukkan bahwa pelajar yang kurang tidur memiliki risiko sakit 3x lebih tinggi dibandingkan yang tidur cukup. <span class="annotation a">[A]</span> Hal ini terjadi karena saat tidur, tubuh memproduksi sitokin — protein yang berperan penting dalam melawan infeksi. Ketika tidur terganggu, produksi sitokin menurun, sehingga tubuh lebih rentan terhadap penyakit.</p>
+
+                    <p><strong>[ISI - Subtopik 3]</strong> <span class="annotation p">[P]</span> Dampak begadang tidak hanya fisik, tetapi juga mental. <span class="annotation b">[B]</span> Dr. Matthew Walker, ahli neurosains dari UC Berkeley, dalam bukunya "Why We Sleep" (2017) menyatakan bahwa remaja yang kurang tidur memiliki risiko kecemasan dan depresi 2x lipat. <span class="annotation a">[A]</span> Hal ini disebabkan karena tidur yang cukup diperlukan untuk regulasi emosi. Otak yang kurang tidur sulit mengelola stres dan emosi negatif, sehingga lebih mudah cemas dan depresi.</p>
+
+                    <p><strong>[PENUTUP]</strong> Dari uraian di atas, jelaslah bahwa begadang bukan sekadar kebiasaan buruk, melainkan ancaman serius bagi kesehatan dan prestasi pelajar. <span class="annotation p">[SIMPULAN]</span> Sudah seharusnya kita mengubah mindset: "belajar giat" bukan berarti "begadang sampai pagi", melainkan "belajar cerdas dengan tidur cukup". <span class="annotation p">[SARAN]</span> Mulailah dari malam ini — matikan gadget jam 9 malam, tidur nyenyak 7-8 jam, dan rasakan perbedaannya besok pagi! Ingat, tidur yang cukup adalah investasi terbaik untuk masa depan Anda. <span class="annotation p">[AJAKAN]</span></p>
+                </div>
+                <p style="margin-top: 1rem;"><strong>🔍 Analisis:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><span class="annotation p">P</span> = Pendapat penulis (opini/argumen)</li>
+                    <li><span class="annotation b">B</span> = Bukti (data/fakta/kutipan ahli)</li>
+                    <li><span class="annotation a">A</span> = Alasan (penjelasan logis)</li>
+                    <li>Setiap paragraf isi memiliki struktur PBA yang lengkap</li>
+                    <li>Pembuka menggunakan hook (fakta mengejutkan) dan tujuan yang jelas</li>
+                    <li>Penutup mengandung simpulan, saran, dan ajakan bertindak</li>
+                </ul>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Tips Menulis Pembuka yang Menarik (Hook)</h4>
+                <p><strong>1. Fakta Mengejutkan:</strong> "Tahukah Anda bahwa 70% pelajar Indonesia sering begadang?"<br>
+                <strong>2. Pertanyaan Retoris:</strong> "Pernahkah Anda bertanya-tanya mengapa sulit berkonsentrasi di kelas pagi?"<br>
+                <strong>3. Cerita Singkat:</strong> "Setiap pagi, Rina selalu mengantuk di kelas. Ia tidak tahu bahwa kebiasaan begadangnya adalah penyebab utamanya..."<br>
+                <strong>4. Kutipan:</strong> "'Tidur adalah investasi terbaik untuk otak,' kata Dr. Matthew Walker."<br>
+                <strong>5. Analogi:</strong> "Otak manusia seperti ponsel yang perlu di-cas setiap malam..."</p>
+            </div>
+        </div>
+
+        <!-- Content E: Tahap 3 - Revisi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--revisi); color: white;">3</div>
+                <h3>Tahap 3: Revisi dan Penyuntingan</h3>
+            </div>
+            <p>Tahap revisi dan penyuntingan adalah <strong>tahap paling krusial</strong> dalam proses menulis. Pada tahap ini, penulis membaca kembali tulisannya secara kritis dan melakukan perbaikan di berbagai aspek. Banyak penulis profesional yang mengatakan bahwa "menulis adalah menulis ulang".</p>
+
+            <div class="key-concept">
+                <h4>📋 Checklist Revisi Artikel Ilmiah Populer</h4>
+                <p><strong>✓ Struktur PBA:</strong> Apakah setiap pendapat didukung bukti dan alasan?<br>
+                <strong>✓ Kelengkapan Informasi:</strong> Apakah semua aspek topik telah dibahas?<br>
+                <strong>✓ Koherensi:</strong> Apakah alur tulisan mengalir dengan baik? Apakah antarparagraf terhubung?<br>
+                <strong>✓ Kebahasaan:</strong> Apakah bahasa sudah populer dan mudah dipahami?<br>
+                <strong>✓ Ejaan & Tanda Baca:</strong> Apakah sudah sesuai PUEBI?<br>
+                <strong>✓ Data & Fakta:</strong> Apakah semua data valid dan dari sumber terpercaya?<br>
+                <strong>✓ Objektivitas:</strong> Apakah artikel bebas dari bias yang tidak perlu?<br>
+                <strong>✓ Judul:</strong> Apakah judul menarik dan sesuai isi?<br>
+                <strong>✓ Pembuka:</strong> Apakah hook sudah memikat pembaca?<br>
+                <strong>✓ Penutup:</strong> Apakah penutup berkesan dan mengajak bertindak?<br>
+                <strong>✓ Panjang Artikel:</strong> Apakah sesuai dengan target (500-2000 kata)?<br>
+                <strong>✓ Gaya Bahasa:</strong> Apakah sudah menggunakan perbandingan, analogi, antonim, sinonim dengan tepat?</p>
+            </div>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Revisi Paragraf</h5>
+                <p><strong>❌ SEBELUM REVISI:</strong><br>
+                <em>"Begadang itu tidak bagus. Banyak orang yang begadang jadi sakit. Jadi jangan begadang ya."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Tidak ada PBA, bahasa terlalu sederhana, tidak ada data, tidak meyakinkan)</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✅ SESUDAH REVISI:</strong><br>
+                <em>"Menurut saya, begadang adalah musuh utama konsentrasi belajar. Menurut penelitian dari National Sleep Foundation (2024), remaja yang tidur kurang dari 7 jam per hari memiliki risiko mengalami penurunan konsentrasi hingga 40%. Hal ini disebabkan karena saat tidur, otak melakukan proses konsolidasi memori yang penting untuk mengingat informasi."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Lengkap PBA, bahasa populer, ada data valid, alasan logis, meyakinkan)</span></p>
+
+                <p style="margin-top: 1.5rem;"><strong>❌ SEBELUM REVISI:</strong><br>
+                <em>"Tidur itu penting. Semua orang tahu itu. Jadi tidurlah yang cukup."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Pembuka membosankan, tidak ada hook, tidak menarik)</span></p>
+
+                <p style="margin-top: 1rem;"><strong>✅ SESUDAH REVISI:</strong><br>
+                <em>"Tahukah Anda bahwa 70% pelajar Indonesia sering begadang hingga larut malam? Fenomena ini semakin mengkhawatirkan di era digital..."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Hook dengan fakta mengejutkan, menarik perhatian pembaca)</span></p>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Tips Revisi yang Efektif</h4>
+                <p>1. <strong>Jeda sebelum merevisi</strong> — tunggu minimal 1 jam (idealnya 1 hari) setelah menulis draf<br>
+                2. <strong>Baca dengan suara keras</strong> — akan terdengar bagian yang tidak mengalir<br>
+                3. <strong>Baca dari akhir ke awal</strong> — untuk fokus pada ejaan dan tanda baca<br>
+                4. <strong>Minta masukan orang lain</strong> — perspektif baru akan menemukan盲区 yang tidak terlihat<br>
+                5. <strong>Jangan takut menghapus</strong> — kalimat yang tidak perlu harus dihapus, meskipun sudah ditulis dengan susah payah<br>
+                6. <strong>Fokus pada satu aspek per revisi</strong> — revisi 1: struktur, revisi 2: bahasa, revisi 3: ejaan</p>
+            </div>
+        </div>
+
+        <!-- Content F: Tahap 4 - Publikasi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--publikasi); color: white;">4</div>
+                <h3>Tahap 4: Publikasi</h3>
+            </div>
+            <p>Setelah artikel selesai direvisi dan disunting, tahap terakhir adalah <strong>mempublikasikan artikel</strong> agar dapat dibaca oleh khalayak. Artikel yang baik akan sia-sia jika tidak dibaca oleh orang lain.</p>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">📢 Media Publikasi Artikel Ilmiah Populer:</h4>
+            <ul class="feature-list">
+                <li><strong>Koran/Majalah:</strong> Rubrik sains, kesehatan, pendidikan di koran nasional (Kompas, Tempo) atau majalah populer. Cocok untuk artikel yang sudah sangat matang.</li>
+                <li><strong>Website Berita:</strong> Portal berita online yang memiliki rubrik sains/kesehatan (kompas.com, detik.com, tirto.id). Jangkauan luas dan cepat.</li>
+                <li><strong>Blog Pribadi:</strong> Platform seperti WordPress, Blogger, atau Medium untuk memublikasikan artikel sendiri. Fleksibel dan mudah.</li>
+                <li><strong>Media Sosial:</strong> Instagram, Facebook, LinkedIn, atau Twitter untuk menjangkau audiens yang lebih luas. Bisa dalam bentuk utas (thread) atau artikel lengkap.</li>
+                <li><strong>Majalah Sekolah:</strong> Majalah dinding atau majalah sekolah sebagai wadah pertama untuk berlatih. Lingkungan yang mendukung.</li>
+                <li><strong>Website Sekolah:</strong> Memublikasikan artikel di website resmi sekolah. Membangun reputasi dan portofolio.</li>
+                <li><strong>Platform Khusus:</strong> Kompasiana, IDN Times, atau platform user-generated content lainnya.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Tips Publikasi yang Efektif</h4>
+                <p>1. <strong>Pilih media yang sesuai</strong> — sesuaikan dengan target pembaca dan gaya artikel<br>
+                2. <strong>Ikuti format media</strong> — setiap media memiliki gaya selingkung berbeda (panjang, gaya bahasa, format)<br>
+                3. <strong>Tulis bio penulis</strong> — cantumkan identitas dan latar belakang Anda secara singkat<br>
+                4. <strong>Sertakan foto/ilustrasi</strong> — visual yang menarik meningkatkan minat baca<br>
+                5. <strong>Promosikan artikel</strong> — bagikan di media sosial untuk menjangkau lebih banyak pembaca<br>
+                6. <strong>Respon komentar</strong> — berinteraksi dengan pembaca untuk membangun komunitas<br>
+                7. <strong>Evaluasi respon</strong> — pelajari apa yang disukai pembaca untuk artikel berikutnya</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Bio Penulis</h5>
+                <div class="text-sample" style="font-style: normal;">
+                    <strong>[Nama Penulis]</strong> adalah siswa kelas VIII di MTsN 10 Agam. Ia memiliki minat khusus dalam bidang kesehatan dan pendidikan. Artikel-artikelnya sering dimuat di majalah sekolah dan blog pribadi. Ia bercita-cita menjadi jurnalis sains yang mampu menyampaikan informasi ilmiah dengan cara yang mudah dipahami masyarakat umum.
+                </div>
+            </div>
+        </div>
+
+        <!-- Content G: Kesalahan Umum -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Kesalahan Umum dalam Menulis Artikel Ilmiah Populer</h3>
+            </div>
+            <p>Berikut adalah kesalahan yang sering dilakukan penulis pemula saat menulis artikel ilmiah populer:</p>
+
+            <ul class="feature-list">
+                <li><strong>Tidak Menyusun Kerangka:</strong> Langsung menulis tanpa perencanaan, sehingga tulisan tidak terstruktur dan melebar ke mana-mana.</li>
+                <li><strong>PBA Tidak Lengkap:</strong> Hanya menyampaikan pendapat tanpa bukti dan alasan, atau sebaliknya. Artikel menjadi tidak meyakinkan.</li>
+                <li><strong>Bahasa Terlalu Teknis:</strong> Menggunakan istilah ilmiah yang rumit tanpa penjelasan, sehingga sulit dipahami pembaca umum.</li>
+                <li><strong>Data Tidak Valid:</strong> Menggunakan data dari sumber yang tidak kredibel atau sudah kadaluarsa. Merusak kredibilitas artikel.</li>
+                <li><strong>Pembuka Membosankan:</strong> Tidak menggunakan hook yang menarik, sehingga pembaca kehilangan minat di awal.</li>
+                <li><strong>Penutup Lemah:</strong> Tidak ada simpulan atau ajakan yang kuat di akhir artikel. Pembaca bingung apa yang harus dilakukan setelah membaca.</li>
+                <li><strong>Tidak Melakukan Revisi:</strong> Menganggap draf pertama sudah final, sehingga banyak kesalahan yang tidak diperbaiki.</li>
+                <li><strong>Plagiarisme:</strong> Mengambil tulisan orang lain tanpa mencantumkan sumber. Pelanggaran etika serius.</li>
+                <li><strong>Topik Terlalu Luas:</strong> Membahas topik yang terlalu umum, sehingga pembahasan tidak mendalam dan dangkal.</li>
+                <li><strong>Tidak Sesuai Target Pembaca:</strong> Gaya bahasa dan konten tidak sesuai dengan audiens yang dituju.</li>
+                <li><strong>Terlalu Banyak Subtopik:</strong> Membahas terlalu banyak hal dalam satu artikel, sehingga fokus hilang.</li>
+                <li><strong>Tidak Menggunakan Gaya Bahasa:</strong> Tulisan monoton tanpa variasi perbandingan, analogi, antonim, atau sinonim.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Kesalahan vs Perbaikan</h5>
+                <p><strong>❌ KESALAHAN:</strong> Topik terlalu luas<br>
+                <em>"Pengaruh Teknologi terhadap Kehidupan Manusia"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Terlalu luas, tidak fokus, sulit dibahas mendalam dalam satu artikel)</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✅ PERBAIKAN:</strong> Topik spesifik<br>
+                <em>"Pengaruh Media Sosial terhadap Konsentrasi Belajar Pelajar MTs"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Spesifik, fokus, bisa dibahas mendalam)</span></p>
+
+                <p style="margin-top: 1.5rem;"><strong>❌ KESALAHAN:</strong> Bahasa terlalu teknis<br>
+                <em>"Konsolidasi memori merupakan proses neurobiologis yang melibatkan hippocampus dan neocortex dalam transfer informasi dari short-term memory ke long-term memory."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Terlalu teknis, sulit dipahami pembaca umum)</span></p>
+
+                <p style="margin-top: 1rem;"><strong>✅ PERBAIKAN:</strong> Bahasa populer<br>
+                <em>"Saat tidur, otak memindahkan informasi yang kita pelajari siang hari dari memori sementara ke memori jangka panjang. Proses ini seperti memindahkan file dari folder 'sementara' ke folder 'arsip' di komputer."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Bahasa populer, menggunakan analogi, mudah dipahami)</span></p>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Tips Sukses Menulis Artikel Ilmiah Populer</h4>
+                <p>1. <strong>Baca banyak artikel berkualitas</strong> — pelajari gaya penulisan dari artikel berkualitas<br>
+                2. <strong>Tulis secara rutin</strong> — semakin sering menulis, semakin terampil<br>
+                3. <strong>Minta masukan</strong> — mintalah teman atau guru mereview tulisan Anda<br>
+                4. <strong>Jangan takut merevisi</strong> — tulisan yang baik adalah hasil dari banyak revisi<br>
+                5. <strong>Kenali pembaca Anda</strong> — sesuaikan gaya bahasa dengan target audiens<br>
+                6. <strong>Jaga orisinalitas</strong> — tulis dengan gaya Anda sendiri, jangan meniru<br>
+                7. <strong>Fokus pada satu topik</strong> — jangan melebar ke mana-mana<br>
+                8. <strong>Gunakan gaya bahasa</strong> — perbandingan, analogi, antonim, sinonim untuk memperkaya tulisan<br>
+                9. <strong>Nikmati prosesnya</strong> — menulis adalah kegiatan kreatif yang menyenangkan<br>
+                10. <strong>Publikasikan</strong> — jangan simpan tulisan di laci, bagikan kepada dunia!</p>
+            </div>
+        </div>
+
+        <!-- Content H: Contoh Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Contoh Lengkap: Dari Kerangka ke Artikel Jadi</h3>
+            </div>
+            <p>Berikut adalah contoh lengkap proses menulis artikel ilmiah populer, mulai dari kerangka hingga artikel jadi:</p>
+
+            <div class="example-box">
+                <h5>📖 Topik: "Pentingnya Sarapan bagi Pelajar"</h5>
+                
+                <p style="margin-top: 1rem;"><strong>📋 KERANGKA:</strong></p>
+                <div class="outline-example">
+                    <div class="outline-level-1">I. JUDUL: "Pentingnya Sarapan bagi Pelajar: Bahan Bakar Otak untuk Prestasi Maksimal"</div>
+                    <div class="outline-level-1">II. PEMBUKA: Hook (data pelajar yang tidak sarapan) + tujuan artikel</div>
+                    <div class="outline-level-1">III. ISI:</div>
+                    <div class="outline-level-2">A. Sarapan meningkatkan konsentrasi (PBA)</div>
+                    <div class="outline-level-2">B. Sarapan memperbaiki mood (PBA)</div>
+                    <div class="outline-level-2">C. Sarapan sehat = prestasi optimal (PBA)</div>
+                    <div class="outline-level-1">IV. PENUTUP: Simpulan + ajakan sarapan sehat</div>
+                </div>
+
+                <p style="margin-top: 1.5rem;"><strong>✍️ ARTIKEL JADI:</strong></p>
+                <div class="draft-example">
+                    <h4>Pentingnya Sarapan bagi Pelajar: Bahan Bakar Otak untuk Prestasi Maksimal</h4>
+                    <p class="author">Oleh: [Nama Penulis]</p>
+
+                    <p>Tahukah Anda bahwa 40% pelajar di Indonesia sering melewatkan sarapan? Data dari Kemenkes (2024) menunjukkan bahwa kebiasaan ini semakin mengkhawatirkan, terutama di kalangan pelajar yang sering terburu-buru berangkat sekolah. Padahal, sarapan adalah "bahan bakar" utama otak untuk memulai hari dengan optimal. Artikel ini akan menjelaskan mengapa sarapan sangat penting bagi pelajar dan bagaimana memilih sarapan yang sehat.</p>
+
+                    <p>Menurut saya, sarapan adalah kunci utama konsentrasi belajar. Menurut penelitian dari Harvard University (2023), pelajar yang sarapan setiap hari memiliki konsentrasi 30% lebih tinggi dibandingkan yang tidak sarapan. Hal ini terjadi karena otak membutuhkan glukosa dari makanan untuk berfungsi optimal. Ketika kita tidak sarapan, kadar glukosa darah menurun, sehingga otak sulit berkonsentrasi dan memproses informasi.</p>
+
+                    <p>Selain konsentrasi, sarapan juga berperan penting dalam memperbaiki mood. Dr. Elizabeth Ward, ahli gizi dari Amerika Serikat, dalam bukunya "Healthy Foods for Healthy Kids" (2019) menyatakan bahwa pelajar yang sarapan memiliki mood lebih stabil dan tingkat stres lebih rendah. Hal ini disebabkan karena sarapan membantu menyeimbangkan hormon kortisol (hormon stres) dan serotonin (hormon kebahagiaan) dalam tubuh.</p>
+
+                    <p>Lantas, sarapan seperti apa yang sehat untuk pelajar? Idealnya, sarapan harus mengandung karbohidrat kompleks (roti gandum, oatmeal), protein (telur, susu), dan serat (buah, sayur). Hindari sarapan tinggi gula seperti donat atau minuman bersoda, karena hanya memberikan energi sesaat dan membuat cepat lapar kembali.</p>
+
+                    <p>Dari uraian di atas, jelaslah bahwa sarapan bukan sekadar kebiasaan pagi, melainkan investasi untuk kesehatan dan prestasi. Sudah seharusnya setiap pelajar membiasakan sarapan sehat sebelum berangkat sekolah. Mulailah dari besok pagi — siapkan sarapan bergizi, dan rasakan perbedaannya di kelas! Ingat, otak yang kenyang adalah otak yang cerdas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Langkah Penulisan</span>
+                <span class="keyword-tag">Pra-Penulisan</span>
+                <span class="keyword-tag">Kerangka Artikel</span>
+                <span class="keyword-tag">Draf Artikel</span>
+                <span class="keyword-tag">Revisi</span>
+                <span class="keyword-tag">Penyuntingan</span>
+                <span class="keyword-tag">Publikasi</span>
+                <span class="keyword-tag">Struktur PBA</span>
+                <span class="keyword-tag">Hook</span>
+                <span class="keyword-tag">Lead</span>
+                <span class="keyword-tag">Paragraf</span>
+                <span class="keyword-tag">Transisi</span>
+                <span class="keyword-tag">Koherensi</span>
+                <span class="keyword-tag">Orisinalitas</span>
+                <span class="keyword-tag">Plagiarisme</span>
+                <span class="keyword-tag">Media Publikasi</span>
+                <span class="keyword-tag">Target Pembaca</span>
+                <span class="keyword-tag">Gaya Selingkung</span>
+                <span class="keyword-tag">Checklist Revisi</span>
+                <span class="keyword-tag">Bio Penulis</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">ن ۭ وَٱلْقَلَمِ وَمَا يَسْطُرُونَ</p>
+            <p class="translation">"Nun. Demi pena dan apa yang mereka tuliskan."</p>
+            <p class="source">— QS. Al-Qalam [68]: 1</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini menegaskan kemuliaan pena dan aktivitas menulis. Dalam menulis artikel ilmiah populer, kita sedang menjalankan aktivitas mulia yaitu menyebarkan ilmu pengetahuan kepada masyarakat luas. Maka, lakukanlah dengan sebaik-baiknya melalui proses yang sistematis dan penuh kesungguhan.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 3.5</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Tahapan penulisan artikel ilmiah populer, kerangka artikel, penulisan draf, revisi, publikasi, dan contoh lengkap.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Tahapan pertama dalam menulis artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Penulisan draf</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Pra-penulisan (perencanaan)</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Revisi</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Publikasi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Kerangka artikel ilmiah populer berfungsi untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Menghias artikel agar terlihat menarik</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Menjadi peta yang memandu penulis dalam menulis draf</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Menggantikan isi artikel yang sebenarnya</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Menambah jumlah halaman artikel</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Struktur kerangka artikel ilmiah populer yang benar adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Judul - Pembuka - Isi - Penutup</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Abstrak - Pendahuluan - Metode - Hasil</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Orientasi - Komplikasi - Resolusi</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Pernyataan umum - Deskripsi bagian - Deskripsi manfaat</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Hook dalam pembuka artikel ilmiah populer berfungsi untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Menyimpulkan isi artikel</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Menarik perhatian pembaca sejak awal</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Mencantumkan daftar pustaka</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Memberikan saran kepada pembaca</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Dalam tahap penulisan draf, setiap paragraf isi harus mengandung...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Hanya pendapat penulis</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Hanya data dan fakta</label>
+                        <label><input type="radio" name="pg5" value="C"> C. PBA (Pendapat + Bukti + Alasan)</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Hanya pertanyaan retoris</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Tahap revisi dalam penulisan artikel ilmiah populer bertujuan untuk...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Menulis ulang artikel dari awal</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Memperbaiki isi, struktur, bahasa, dan ejaan</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Menghapus seluruh tulisan</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Menambah opini pribadi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Berikut ini yang merupakan media publikasi artikel ilmiah populer, KECUALI...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Koran dan majalah</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Blog pribadi</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Jurnal ilmiah akademik</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Website berita</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Kesalahan umum dalam menulis artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Menyusun kerangka sebelum menulis</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Menggunakan bahasa populer yang mudah dipahami</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Tidak melakukan revisi setelah menulis draf</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Menggunakan data dari sumber terpercaya</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Prinsip "writing is rewriting" berarti...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Menulis hanya perlu dilakukan sekali</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Tulisan yang baik adalah hasil dari banyak revisi</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Tidak perlu menulis draf, langsung final</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Menulis ulang berarti menyalin tulisan orang lain</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Ayat "Nun. Demi pena dan apa yang mereka tuliskan" terdapat dalam surat...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Al-Baqarah</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Al-'Alaq</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Al-Qalam</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Al-Mujadilah</label>
+                    </div>
+                </div>
+
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Sebutkan dan jelaskan 4 (empat) tahapan dalam menulis artikel ilmiah populer! Mengapa setiap tahapan penting untuk dilakukan?</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Jelaskan struktur kerangka artikel ilmiah populer! Berikan contoh kerangka artikel bertema "Manfaat Olahraga bagi Pelajar" yang lengkap!</p>
+                    <textarea id="essay2" class="form-control" style="min-height: 150px;" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Apa yang dimaksud dengan hook dalam pembuka artikel ilmiah populer? Sebutkan dan jelaskan 3 (tiga) jenis hook yang efektif, beserta masing-masing satu contoh!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Jelaskan perbedaan antara tahap revisi dan penyuntingan! Sebutkan minimal 5 (lima) aspek yang harus diperiksa dalam tahap revisi artikel ilmiah populer!</p>
+                    <textarea id="essay4" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Berdasarkan kerangka berikut, tulislah draf artikel ilmiah populer lengkap (minimal 4 paragraf) yang mengandung struktur PBA!<br><br><em>Kerangka:<br>
+                    Judul: "Dampak Media Sosial terhadap Prestasi Belajar Pelajar"<br>
+                    Pembuka: Data penggunaan media sosial oleh pelajar<br>
+                    Isi A: Dampak negatif terhadap konsentrasi (PBA)<br>
+                    Isi B: Dampak negatif terhadap waktu belajar (PBA)<br>
+                    Isi C: Solusi bijak menggunakan media sosial (PBA)<br>
+                    Penutup: Simpulan dan ajakan menggunakan media sosial bijak</em></p>
+                    <textarea id="essay5" class="form-control" style="min-height: 250px;" placeholder="Tulis draf artikel Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="21.html">Selanjutnya → Sub Bab 3.6</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'B', pg3: 'A', pg4: 'B', pg5: 'C',
+            pg6: 'B', pg7: 'C', pg8: 'C', pg9: 'B', pg10: 'C'
+        };
+
+        function hitungSkor() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10;
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_3.5_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 3.5 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Mengenal Langkah Penulisan Artikel Ilmiah Populer\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_3.5_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 3.5 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Mengenal Langkah Penulisan Artikel Ilmiah Populer\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

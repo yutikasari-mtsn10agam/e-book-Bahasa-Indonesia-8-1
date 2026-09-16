@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 3.4: Cara Mengumpulkan Data dalam Artikel Ilmiah Populer | Bahasa Indonesia Kelas VIII</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --danger: #e74c3c;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --wawancara: #6c5ce7;
+            --kuesioner: #0984e3;
+            --observasi: #00b894;
+            --dokumentasi: #e17055;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '📊';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -2rem;
+            right: -2rem;
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        /* Method Cards */
+        .method-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .method-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .method-card.wawancara { background: linear-gradient(135deg, var(--wawancara), #a29bfe); }
+        .method-card.kuesioner { background: linear-gradient(135deg, var(--kuesioner), #74b9ff); }
+        .method-card.observasi { background: linear-gradient(135deg, var(--observasi), #55efc4); }
+        .method-card.dokumentasi { background: linear-gradient(135deg, var(--dokumentasi), #fab1a0); }
+        .method-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .method-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .method-card h5 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .method-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+        .method-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.75rem;
+        }
+        .method-card ul li {
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .method-card ul li:last-child { border-bottom: none; }
+        .method-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Questionnaire Example */
+        .questionnaire-example {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .questionnaire-example h5 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        .questionnaire-example .question-item {
+            padding: 0.75rem;
+            background: var(--bg);
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            border-left: 3px solid var(--accent);
+        }
+        .questionnaire-example .question-number {
+            font-weight: 700;
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+        .questionnaire-example .options-list {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+        .questionnaire-example .options-list li {
+            padding: 0.25rem 0;
+            font-size: 0.9rem;
+            list-style: disc;
+        }
+
+        /* Interview Example */
+        .interview-example {
+            background: white;
+            border: 2px solid var(--wawancara);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .interview-example h5 {
+            color: var(--wawancara);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--wawancara);
+            padding-bottom: 0.5rem;
+        }
+        .interview-example .question-group {
+            margin-bottom: 1.25rem;
+        }
+        .interview-example .group-title {
+            font-weight: 700;
+            color: var(--wawancara);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .interview-example .question-item {
+            padding: 0.5rem 0.75rem;
+            background: rgba(108, 92, 231, 0.05);
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Observation Checklist */
+        .obs-checklist {
+            background: white;
+            border: 2px solid var(--observasi);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .obs-checklist h5 {
+            color: var(--observasi);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--observasi);
+            padding-bottom: 0.5rem;
+        }
+        .obs-checklist table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .obs-checklist th {
+            background: var(--observasi);
+            color: white;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        .obs-checklist td {
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Steps */
+        .steps {
+            counter-reset: step-counter;
+            margin: 1.5rem 0;
+        }
+        .step {
+            counter-increment: step-counter;
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent);
+            transition: 0.3s;
+        }
+        .step:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .step::before {
+            content: counter(step-counter);
+            flex-shrink: 0;
+            width: 45px;
+            height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .step-content h5 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .step-content p {
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="18.html">← Sub Bab 3.3</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="20.html">Sub Bab 3.5 →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 3.4 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Cara Mengumpulkan Data dalam Artikel Ilmiah Populer</h1>
+            <p class="subtitle">
+                Memahami berbagai metode pengumpulan data dan mampu merancang instrumen pengumpulan data sederhana seperti daftar pertanyaan wawancara dan kuesioner. 
+                Data yang valid dan terpercaya merupakan fondasi utama artikel ilmiah populer yang berkualitas dan dapat dipertanggungjawabkan.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengantar -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengantar: Mengapa Data Penting dalam Artikel Ilmiah Populer?</h3>
+            </div>
+            <p>Dalam artikel ilmiah populer, <strong>data</strong> berperan sebagai <em>BUKTI</em> yang mendukung pendapat penulis. Tanpa data yang valid, artikel hanya akan menjadi kumpulan opini yang tidak dapat dipertanggungjawabkan. Oleh karena itu, kemampuan <strong>mengumpulkan data</strong> dengan metode yang tepat menjadi keterampilan penting bagi setiap penulis artikel ilmiah populer.</p>
+            
+            <div class="definition-box">
+                 <strong>MENGAPA DATA PENTING?</strong><br>
+                Data yang berkualitas akan: (1) memperkuat argumentasi penulis, (2) meningkatkan kredibilitas artikel, (3) meyakinkan pembaca, dan (4) membedakan artikel ilmiah populer dengan tulisan populer biasa. Sebaliknya, artikel tanpa data akan dianggap tidak ilmiah dan tidak dapat dipercaya.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat <strong>merancang instrumen pengumpulan data sederhana</strong> berupa daftar pertanyaan wawancara dan kuesioner.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Kriteria Data yang Baik:</h4>
+            <ul class="feature-list">
+                <li><strong>Valid:</strong> Data benar-benar mengukur apa yang seharusnya diukur.</li>
+                <li><strong>Reliabel:</strong> Data konsisten jika diukur berulang kali.</li>
+                <li><strong>Objektif:</strong> Data tidak dipengaruhi oleh subjektivitas pengumpul.</li>
+                <li><strong>Relevan:</strong> Data berkaitan langsung dengan topik yang dibahas.</li>
+                <li><strong>Up to Date:</strong> Data terkini dan tidak kadaluarsa (idealnya 5-10 tahun terakhir).</li>
+                <li><strong>Lengkap:</strong> Data mencukupi untuk mendukung argumentasi.</li>
+                <li><strong>Dapat Dipertanggungjawabkan:</strong> Ada sumber yang jelas dan dapat diverifikasi.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Rumus Data Berkualitas: VRO-RL</h4>
+                <p><strong>V</strong> = <em>Valid</em> (tepat ukur)<br>
+                <strong>R</strong> = <em>Reliabel</em> (konsisten)<br>
+                <strong>O</strong> = <em>Objektif</em> (bebas bias)<br>
+                <strong>R</strong> = <em>Relevan</em> (sesuai topik)<br>
+                <strong>L</strong> = <em>Lengkap</em> (mencukupi)</p>
+            </div>
+        </div>
+
+        <!-- Content B: 4 Metode Utama -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">B</div>
+                <h3>Empat Metode Utama Pengumpulan Data</h3>
+            </div>
+            <p>Ada empat metode utama yang sering digunakan dalam pengumpulan data untuk artikel ilmiah populer. Setiap metode memiliki kelebihan dan kekurangan masing-masing, sehingga pemilihan metode harus disesuaikan dengan tujuan dan topik artikel.</p>
+
+            <div class="method-cards">
+                <div class="method-card wawancara">
+                    <div class="number">1</div>
+                    <div class="icon">🎤</div>
+                    <h5>Wawancara</h5>
+                    <p>Tanya jawab langsung dengan narasumber untuk mendapatkan informasi mendalam.</p>
+                    <ul>
+                        <li>Data mendalam & kualitatif</li>
+                        <li>Bisa klarifikasi langsung</li>
+                        <li>Membutuhkan waktu lama</li>
+                        <li>Contoh: wawancara ahli</li>
+                    </ul>
+                </div>
+                <div class="method-card kuesioner">
+                    <div class="number">2</div>
+                    <div class="icon">📋</div>
+                    <h5>Kuesioner/Angket</h5>
+                    <p>Daftar pertanyaan tertulis yang diisi oleh responden secara mandiri.</p>
+                    <ul>
+                        <li>Data kuantitatif</li>
+                        <li>Bisa menjangkau banyak orang</li>
+                        <li>Efisien waktu & biaya</li>
+                        <li>Contoh: survei kepuasan</li>
+                    </ul>
+                </div>
+                <div class="method-card observasi">
+                    <div class="number">3</div>
+                    <div class="icon">👁️</div>
+                    <h5>Observasi</h5>
+                    <p>Pengamatan langsung terhadap objek atau fenomena di lapangan.</p>
+                    <ul>
+                        <li>Data langsung & faktual</li>
+                        <li>Rekaman kejadian nyata</li>
+                        <li>Membutuhkan ketelitian</li>
+                        <li>Contoh: observasi perilaku</li>
+                    </ul>
+                </div>
+                <div class="method-card dokumentasi">
+                    <div class="number">4</div>
+                    <div class="icon">📚</div>
+                    <h5>Studi Dokumentasi</h5>
+                    <p>Pengumpulan data dari dokumen, laporan, atau sumber tertulis lainnya.</p>
+                    <ul>
+                        <li>Data sekunder</li>
+                        <li>Sumber terpercaya</li>
+                        <li>Tidak perlu turun lapangan</li>
+                        <li>Contoh: data BPS, jurnal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4 style="margin: 2rem 0 1rem 0;">📊 Perbandingan Keempat Metode</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Wawancara</th>
+                        <th>Kuesioner</th>
+                        <th>Observasi</th>
+                        <th>Dokumentasi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Jenis Data</strong></td>
+                        <td>Kualitatif</td>
+                        <td>Kuantitatif</td>
+                        <td>Kualitatif/Kuantitatif</td>
+                        <td>Sekunder</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sumber</strong></td>
+                        <td>Narasumber langsung</td>
+                        <td>Responden</td>
+                        <td>Objek/Peristiwa</td>
+                        <td>Dokumen/Laporan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Waktu</strong></td>
+                        <td>Lama</td>
+                        <td>Sedang</td>
+                        <td>Lama</td>
+                        <td>Cepat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biaya</strong></td>
+                        <td>Tinggi</td>
+                        <td>Rendah</td>
+                        <td>Sedang</td>
+                        <td>Rendah</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kelebihan</strong></td>
+                        <td>Mendalam, bisa klarifikasi</td>
+                        <td>Banyak responden, efisien</td>
+                        <td>Data langsung, faktual</td>
+                        <td>Sumber terpercaya</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kekurangan</strong></td>
+                        <td>Subjektivitas pewawancara</td>
+                        <td>Responden tidak jujur</td>
+                        <td>Membutuhkan waktu lama</td>
+                        <td>Data mungkin usang</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cocok untuk</strong></td>
+                        <td>Topik mendalam, opini ahli</td>
+                        <td>Survei, data statistik</td>
+                        <td>Perilaku, fenomena alam</td>
+                        <td>Data historis, laporan resmi</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>💡 Tips Memilih Metode yang Tepat</h4>
+                <p>1. <strong>Tentukan tujuan</strong> — apa yang ingin digali?<br>
+                2. <strong>Pertimbangkan sumber data</strong> — siapa/apa yang akan menjadi sumber?<br>
+                3. <strong>Perhitungkan waktu & biaya</strong> — apakah realistis?<br>
+                4. <strong>Kombinasikan metode</strong> — gunakan triangulasi untuk data yang lebih kuat<br>
+                5. <strong>Sesuaikan dengan topik</strong> — topik berbeda butuh metode berbeda</p>
+            </div>
+        </div>
+
+        <!-- Content C: Wawancara -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--wawancara); color: white;">1</div>
+                <h3>Metode 1: Wawancara</h3>
+            </div>
+            <p><strong>Wawancara</strong> adalah metode pengumpulan data melalui tanya jawab langsung antara pewawancara (peneliti) dengan narasumber (informan). Metode ini cocok untuk mendapatkan informasi mendalam, pendapat ahli, atau pengalaman pribadi yang tidak dapat diperoleh melalui metode lain.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI WAWANCARA:</strong><br>
+                Wawancara adalah proses pengumpulan data melalui komunikasi langsung (lisan) antara pewawancara dan narasumber, dengan menggunakan daftar pertanyaan yang telah disiapkan sebelumnya untuk mendapatkan informasi yang mendalam dan terstruktur.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Jenis-Jenis Wawancara:</h4>
+            <ul class="feature-list">
+                <li><strong>Wawancara Terstruktur:</strong> Menggunakan daftar pertanyaan yang telah disiapkan secara rinci. Jawaban narasumber cenderung seragam. Cocok untuk data yang terukur.<br>
+                <em>Contoh: Wawancara sensus penduduk, survei terstandar.</em></li>
+                <li><strong>Wawancara Semi-Terstruktur:</strong> Ada pedoman pertanyaan, tetapi pewawancara bisa mengembangkan pertanyaan lanjutan sesuai jawaban narasumber. Paling sering digunakan.<br>
+                <em>Contoh: Wawancara jurnalistik, wawancara penelitian kualitatif.</em></li>
+                <li><strong>Wawancara Tidak Terstruktur:</strong> Lebih seperti percakapan bebas. Cocok untuk eksplorasi topik yang belum banyak diketahui.<br>
+                <em>Contoh: Wawancara eksploratif, life story.</em></li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>📋 7 Langkah Melakukan Wawancara</h4>
+                <p><strong>1. Tentukan Tujuan Wawancara</strong><br>Apa informasi yang ingin digali? Apa pertanyaan penelitian? Siapa narasumber yang tepat?</p>
+                <p style="margin-top: 1rem;"><strong>2. Identifikasi Narasumber</strong><br>Pilih narasumber yang kompeten dan relevan dengan topik. Pastikan narasumber memiliki pengetahuan/pengalaman yang memadai.</p>
+                <p style="margin-top: 1rem;"><strong>3. Susun Daftar Pertanyaan</strong><br>Buat pertanyaan yang jelas, terstruktur, dan tidak mengarahkan (leading question). Urutkan dari umum ke khusus.</p>
+                <p style="margin-top: 1rem;"><strong>4. Hubungi Narasumber</strong><br>Janjikan waktu dan tempat wawancara. Beritahu tujuan wawancara dan perkiraan durasi.</p>
+                <p style="margin-top: 1rem;"><strong>5. Lakukan Wawancara</strong><br>Ajukan pertanyaan dengan sopan, dengarkan dengan aktif, catat jawaban. Jaga kontak mata dan bahasa tubuh.</p>
+                <p style="margin-top: 1rem;"><strong>6. Rekam & Dokumentasikan</strong><br>Gunakan alat rekam (dengan izin narasumber) dan catatan tertulis sebagai cadangan. Foto dokumentasi jika diperlukan.</p>
+                <p style="margin-top: 1rem;"><strong>7. Olah & Verifikasi Data</strong><br>Transkrip hasil wawancara, verifikasi kebenaran informasi, analisis, dan kutip dengan mencantumkan sumber.</p>
+            </div>
+
+            <div class="interview-example">
+                <h5>🎤 Contoh Daftar Pertanyaan Wawancara</h5>
+                <p style="margin-bottom: 0.5rem;"><strong>Topik:</strong> "Dampak Media Sosial terhadap Prestasi Belajar Pelajar"</p>
+                <p style="margin-bottom: 1rem;"><strong>Narasumber:</strong> Guru BK MTsN 10 Agam</p>
+
+                <div class="question-group">
+                    <div class="group-title">🔓 Pembuka (Membangun Rapport)</div>
+                    <div class="question-item">1. Bolehkah Bapak/Ibu memperkenalkan diri secara singkat?</div>
+                    <div class="question-item">2. Sudah berapa lama Bapak/Ibu menjadi guru BK di madrasah ini?</div>
+                </div>
+
+                <div class="question-group">
+                    <div class="group-title">🎯 Inti (Menggali Informasi)</div>
+                    <div class="question-item">3. Menurut pengamatan Bapak/Ibu, bagaimana pengaruh media sosial terhadap prestasi belajar siswa di madrasah ini?</div>
+                    <div class="question-item">4. Kasus apa yang paling sering Bapak/Ibu temui terkait dampak negatif media sosial?</div>
+                    <div class="question-item">5. Berapa persen siswa yang menurut Bapak/Ibu mengalami penurunan prestasi akibat media sosial?</div>
+                    <div class="question-item">6. Apa saja ciri-ciri siswa yang kecanduan media sosial?</div>
+                    <div class="question-item">7. Bagaimana solusi yang biasa Bapak/Ibu terapkan untuk mengatasi masalah ini?</div>
+                </div>
+
+                <div class="question-group">
+                    <div class="group-title">🔒 Penutup (Refleksi & Saran)</div>
+                    <div class="question-item">8. Apa pesan Bapak/Ibu bagi para pelajar terkait penggunaan media sosial yang bijak?</div>
+                    <div class="question-item">9. Apakah ada saran lain untuk madrasah dalam mengedukasi siswa tentang literasi digital?</div>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Tips Pertanyaan Wawancara yang Baik</h4>
+                <p>1. <strong>Gunakan pertanyaan terbuka</strong> — hindari pertanyaan yang hanya dijawab "ya/tidak"<br>
+                2. <strong>Mulai dari yang umum ke khusus</strong> — bangun kepercayaan narasumber<br>
+                3. <strong>Hindari pertanyaan mengarahkan</strong> — jangan "menyetir" jawaban narasumber<br>
+                4. <strong>Satu pertanyaan, satu topik</strong> — jangan menggabungkan beberapa pertanyaan<br>
+                5. <strong>Gunakan bahasa sopan</strong> — hargai narasumber<br>
+                6. <strong>Siapkan pertanyaan cadangan</strong> — jika narasumber kurang responsif<br>
+                7. <strong>Akhiri dengan positif</strong> — berikan apresiasi atas waktu narasumber</p>
+            </div>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Pertanyaan Baik vs Buruk</h5>
+                <p><strong>❌ PERTANYAAN BURUK (Mengarahkan):</strong><br>
+                <em>"Bukankah media sosial berbahaya bagi pelajar?"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Menyetir narasumber untuk menjawab "ya")</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✅ PERTANYAAN BAIK (Terbuka):</strong><br>
+                <em>"Menurut Bapak/Ibu, apa dampak media sosial terhadap pelajar?"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Memberi ruang narasumber untuk menjawab bebas)</span></p>
+
+                <p style="margin-top: 1.5rem;"><strong>❌ PERTANYAAN BURUK (Tertutup):</strong><br>
+                <em>"Apakah siswa sering begadang karena main HP?"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Hanya dijawab ya/tidak)</span></p>
+
+                <p style="margin-top: 1rem;"><strong>✅ PERTANYAAN BAIK (Terbuka):</strong><br>
+                <em>"Bagaimana pola tidur siswa di madrasah ini, dan apa faktor yang mempengaruhinya?"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Mendorong narasumber menjelaskan lebih detail)</span></p>
+            </div>
+        </div>
+
+        <!-- Content D: Kuesioner -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--kuesioner); color: white;">2</div>
+                <h3>Metode 2: Kuesioner (Angket)</h3>
+            </div>
+            <p><strong>Kuesioner</strong> (atau angket) adalah metode pengumpulan data melalui daftar pertanyaan tertulis yang diisi oleh responden secara mandiri. Metode ini cocok untuk mendapatkan data dari banyak responden dalam waktu singkat, terutama data kuantitatif.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI KUESIONER:</strong><br>
+                Kuesioner adalah instrumen pengumpulan data yang terdiri dari serangkaian pertanyaan tertulis yang diberikan kepada responden untuk diisi secara mandiri, dengan tujuan mendapatkan informasi, pendapat, atau data statistik dari sekelompok orang.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Jenis-Jenis Pertanyaan dalam Kuesioner:</h4>
+            <ul class="feature-list">
+                <li><strong>Pertanyaan Tertutup:</strong> Responden memilih dari pilihan jawaban yang telah disediakan (pilihan ganda, ya/tidak). Mudah diolah secara statistik.<br>
+                <em>Contoh: "Apakah Anda sarapan? ( ) Ya ( ) Tidak"</em></li>
+                <li><strong>Pertanyaan Terbuka:</strong> Responden menjawab dengan kata-kata sendiri (esai singkat). Memberikan kedalaman informasi.<br>
+                <em>Contoh: "Menurut Anda, apa solusi terbaik untuk masalah sampah di sekolah?"</em></li>
+                <li><strong>Skala Likert:</strong> Mengukur tingkat persetujuan (Sangat Setuju — Setuju — Netral — Tidak Setuju — Sangat Tidak Setuju). Sangat populer dalam survei.<br>
+                <em>Contoh: "Saya belajar minimal 2 jam per hari." (SS | S | N | TS | STS)</em></li>
+                <li><strong>Pertanyaan Demografi:</strong> Data identitas responden (usia, jenis kelamin, kelas, dll). Penting untuk analisis kelompok.<br>
+                <em>Contoh: "Kelas: VIII-A / VIII-B / VIII-C / VIII-D"</em></li>
+                <li><strong>Skala Rating:</strong> Responden memberi rating pada skala numerik (1-5, 1-10).<br>
+                <em>Contoh: "Seberapa puas Anda dengan layanan perpustakaan? (1-10)"</em></li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>📋 8 Langkah Merancang Kuesioner</h4>
+                <p><strong>1. Tentukan Tujuan Kuesioner</strong><br>Apa data yang ingin dikumpulkan? Apa pertanyaan penelitian?</p>
+                <p style="margin-top: 1rem;"><strong>2. Identifikasi Responden</strong><br>Siapa target responden? Berapa jumlah sampel yang dibutuhkan? (minimal 30 orang untuk data statistik)</p>
+                <p style="margin-top: 1rem;"><strong>3. Susun Kerangka Kuesioner</strong><br>Bagi kuesioner menjadi beberapa bagian: identitas, pertanyaan inti, penutup.</p>
+                <p style="margin-top: 1rem;"><strong>4. Buat Pertanyaan</strong><br>Gunakan bahasa yang jelas, singkat, dan tidak ambigu. Satu pertanyaan = satu topik.</p>
+                <p style="margin-top: 1rem;"><strong>5. Tentukan Jenis Pertanyaan</strong><br>Pilih antara pertanyaan tertutup, terbuka, atau skala Likert sesuai kebutuhan.</p>
+                <p style="margin-top: 1rem;"><strong>6. Uji Coba (Pilot Test)</strong><br>Cobakan kuesioner pada 5-10 orang untuk mengecek kejelasan pertanyaan.</p>
+                <p style="margin-top: 1rem;"><strong>7. Revisi Kuesioner</strong><br>Perbaiki berdasarkan masukan dari uji coba.</p>
+                <p style="margin-top: 1rem;"><strong>8. Sebarkan Kuesioner</strong><br>Distribusikan kepada responden (bisa online via Google Form atau offline dengan kertas).</p>
+            </div>
+
+            <div class="questionnaire-example">
+                <h5>📋 Contoh Kuesioner Lengkap</h5>
+                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-light);"><em>Petunjuk: Isilah kuesioner ini dengan jujur. Data yang Anda berikan akan digunakan untuk kepentingan penelitian dan dijaga kerahasiaannya.</em></p>
+
+                <p style="font-weight: 700; margin-bottom: 0.5rem;">A. IDENTITAS RESPONDEN</p>
+                <div class="question-item">
+                    <span class="question-number">1.</span> Nama (boleh inisial): ........................................
+                </div>
+                <div class="question-item">
+                    <span class="question-number">2.</span> Kelas: VIII-A / VIII-B / VIII-C / VIII-D
+                </div>
+                <div class="question-item">
+                    <span class="question-number">3.</span> Jenis Kelamin: Laki-laki / Perempuan
+                </div>
+                <div class="question-item">
+                    <span class="question-number">4.</span> Usia: ..... tahun
+                </div>
+
+                <p style="font-weight: 700; margin: 1.5rem 0 0.5rem 0;">B. KEBIASAAN BELAJAR (Pilihan Ganda)</p>
+                <div class="question-item">
+                    <span class="question-number">5.</span> Berapa jam Anda belajar di rumah setiap hari?
+                    <ul class="options-list">
+                        <li>a. Kurang dari 1 jam</li>
+                        <li>b. 1-2 jam</li>
+                        <li>c. 2-3 jam</li>
+                        <li>d. Lebih dari 3 jam</li>
+                    </ul>
+                </div>
+                <div class="question-item">
+                    <span class="question-number">6.</span> Kapan waktu belajar yang paling efektif bagi Anda?
+                    <ul class="options-list">
+                        <li>a. Pagi hari (05.00-07.00)</li>
+                        <li>b. Siang hari (13.00-15.00)</li>
+                        <li>c. Sore hari (16.00-18.00)</li>
+                        <li>d. Malam hari (19.00-22.00)</li>
+                    </ul>
+                </div>
+
+                <p style="font-weight: 700; margin: 1.5rem 0 0.5rem 0;">C. SIKAP TERHADAP BELAJAR (Skala Likert)</p>
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem;"><em>Keterangan: SS = Sangat Setuju, S = Setuju, N = Netral, TS = Tidak Setuju, STS = Sangat Tidak Setuju</em></p>
+
+                <div class="question-item">
+                    <span class="question-number">7.</span> Saya belajar minimal 2 jam setiap hari di rumah.
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">SS | S | N | TS | STS</div>
+                </div>
+                <div class="question-item">
+                    <span class="question-number">8.</span> Saya membuat jadwal belajar mingguan.
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">SS | S | N | TS | STS</div>
+                </div>
+                <div class="question-item">
+                    <span class="question-number">9.</span> Saya belajar di tempat yang tenang dan nyaman.
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">SS | S | N | TS | STS</div>
+                </div>
+                <div class="question-item">
+                    <span class="question-number">10.</span> Saya sering menggunakan gadget saat belajar.
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">SS | S | N | TS | STS</div>
+                </div>
+
+                <p style="font-weight: 700; margin: 1.5rem 0 0.5rem 0;">D. TANTANGAN BELAJAR (Pilihan Ganda)</p>
+                <div class="question-item">
+                    <span class="question-number">11.</span> Apa tantangan terbesar Anda dalam belajar?
+                    <ul class="options-list">
+                        <li>a. Kurang motivasi</li>
+                        <li>b. Gangguan gadget/media sosial</li>
+                        <li>c. Materi sulit dipahami</li>
+                        <li>d. Lingkungan tidak mendukung</li>
+                        <li>e. Lainnya: ....................</li>
+                    </ul>
+                </div>
+
+                <p style="font-weight: 700; margin: 1.5rem 0 0.5rem 0;">E. SARAN (Pertanyaan Terbuka)</p>
+                <div class="question-item">
+                    <span class="question-number">12.</span> Apa saran Anda agar pelajar dapat belajar lebih efektif?
+                    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-light);">............................................................................................</div>
+                    <div style="font-size: 0.9rem; color: var(--text-light);">............................................................................................</div>
+                </div>
+
+                <p style="margin-top: 1.5rem; text-align: center; font-style: italic; color: var(--text-light);">Terima kasih atas partisipasi Anda! 🙏</p>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Prinsip Penyusunan Kuesioner yang Baik</h4>
+                <p>1. <strong>Bahasa jelas dan sederhana</strong> — mudah dipahami semua responden<br>
+                2. <strong>Pertanyaan tidak ambigu</strong> — satu pertanyaan, satu makna<br>
+                3. <strong>Tidak mengarahkan</strong> — jangan "menyetir" jawaban responden<br>
+                4. <strong>Urutan logis</strong> — dari umum ke khusus, mudah ke sulit<br>
+                5. <strong>Tidak terlalu panjang</strong> — idealnya 10-20 pertanyaan<br>
+                6. <strong>Jaga kerahasiaan</strong> — beri jaminan privasi kepada responden<br>
+                7. <strong>Uji coba dulu</strong> — pastikan pertanyaan dipahami sebelum disebar<br>
+                8. <strong>Beri instruksi jelas</strong> — cara pengisian harus dijelaskan</p>
+            </div>
+        </div>
+
+        <!-- Content E: Observasi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--observasi); color: white;">3</div>
+                <h3>Metode 3: Observasi</h3>
+            </div>
+            <p><strong>Observasi</strong> adalah metode pengumpulan data melalui pengamatan langsung terhadap objek, peristiwa, atau fenomena di lapangan. Metode ini cocok untuk mendapatkan data faktual tentang perilaku, kondisi, atau proses yang sedang berlangsung.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI OBSERVASI:</strong><br>
+                Observasi adalah proses pengumpulan data melalui pengamatan dan pencatatan secara sistematis terhadap objek, peristiwa, atau fenomena yang sedang diamati, dengan menggunakan panca indra (terutama penglihatan) sebagai alat utama.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Jenis-Jenis Observasi:</h4>
+            <ul class="feature-list">
+                <li><strong>Observasi Partisipan:</strong> Pengamat ikut terlibat dalam kegiatan yang diamati. Mendapatkan data dari dalam.<br>
+                <em>Contoh: Peneliti ikut kegiatan komunitas, guru ikut kegiatan siswa.</em></li>
+                <li><strong>Observasi Non-Partisipan:</strong> Pengamat hanya mengamati dari luar tanpa terlibat. Lebih objektif.<br>
+                <em>Contoh: Mengamati perilaku siswa di kantin, mengamati lalu lintas.</em></li>
+                <li><strong>Observasi Terstruktur:</strong> Menggunakan pedoman observasi yang sudah disiapkan (checklist, rating scale). Data lebih terukur.<br>
+                <em>Contoh: Checklist kehadiran, rating skala perilaku.</em></li>
+                <li><strong>Observasi Tidak Terstruktur:</strong> Pengamatan bebas tanpa pedoman khusus, lebih fleksibel.<br>
+                <em>Contoh: Observasi eksploratif fenomena sosial.</em></li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>📋 6 Langkah Melakukan Observasi</h4>
+                <p><strong>1. Tentukan Objek yang Diamati</strong><br>Apa yang ingin diamati? Perilaku, peristiwa, atau kondisi? Buat definisi operasional yang jelas.</p>
+                <p style="margin-top: 1rem;"><strong>2. Susun Pedoman Observasi</strong><br>Buat checklist atau format pencatatan yang sistematis. Tentukan aspek-aspek yang akan diamati.</p>
+                <p style="margin-top: 1rem;"><strong>3. Pilih Waktu & Tempat</strong><br>Kapan dan di mana observasi akan dilakukan? Pastikan waktu representatif.</p>
+                <p style="margin-top: 1rem;"><strong>4. Lakukan Pengamatan</strong><br>Amati dengan teliti, catat semua yang relevan. Jangan mempengaruhi objek yang diamati.</p>
+                <p style="margin-top: 1rem;"><strong>5. Dokumentasikan</strong><br>Catat hasil observasi, foto, atau rekam video (jika diizinkan). Catat juga konteks dan kondisi saat observasi.</p>
+                <p style="margin-top: 1rem;"><strong>6. Analisis Data</strong><br>Olah hasil observasi menjadi informasi yang bermakna. Identifikasi pola, tren, atau temuan menarik.</p>
+            </div>
+
+            <div class="obs-checklist">
+                <h5>👁️ Contoh Pedoman Observasi</h5>
+                <p style="margin-bottom: 1rem;"><strong>Topik:</strong> "Kebiasaan Membaca Siswa di Perpustakaan MTsN 10 Agam"</p>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;"><strong>Waktu:</strong> Senin, 10 September 2026, pukul 10.00-11.00 WIB<br><strong>Tempat:</strong> Perpustakaan MTsN 10 Agam<br><strong>Pengamat:</strong> [Nama Anda]</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Aspek yang Diamati</th>
+                            <th>Ya</th>
+                            <th>Tidak</th>
+                            <th>Catatan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Siswa meminjam buku</td><td>☐</td><td>☐</td><td>Jumlah: ... siswa</td></tr>
+                        <tr><td>2</td><td>Siswa membaca di tempat</td><td>☐</td><td>☐</td><td>Jumlah: ... siswa</td></tr>
+                        <tr><td>3</td><td>Siswa menggunakan gadget</td><td>☐</td><td>☐</td><td>Jumlah: ... siswa</td></tr>
+                        <tr><td>4</td><td>Siswa berdiskusi dengan teman</td><td>☐</td><td>☐</td><td>Jumlah: ... siswa</td></tr>
+                        <tr><td>5</td><td>Suasa perpustakaan tenang</td><td>☐</td><td>☐</td><td>Keterangan: ...</td></tr>
+                        <tr><td>6</td><td>Rak buku tertata rapi</td><td>☐</td><td>☐</td><td>Keterangan: ...</td></tr>
+                        <tr><td>7</td><td>Penjaga perpustakaan aktif membantu</td><td>☐</td><td>☐</td><td>Keterangan: ...</td></tr>
+                    </tbody>
+                </table>
+
+                <p style="margin-top: 1rem;"><strong>Catatan Tambahan Pengamat:</strong></p>
+                <div style="background: rgba(0, 184, 148, 0.05); padding: 1rem; border-radius: 6px; font-style: italic; font-size: 0.9rem;">
+                    "Perpustakaan cukup ramai pada jam istirahat. Mayoritas siswa datang untuk meminjam buku pelajaran, bukan membaca di tempat. Beberapa siswa terlihat menggunakan gadget meskipun ada larangan. Suasana cukup kondusif untuk belajar."
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Tips Observasi yang Efektif</h4>
+                <p>1. <strong>Jangan mempengaruhi objek</strong> — observasi harus natural<br>
+                2. <strong>Catat secara objektif</strong> — hindari interpretasi pribadi saat pencatatan<br>
+                3. <strong>Gunakan alat bantu</strong> — kamera, stopwatch, checklist<br>
+                4. <strong>Amati dalam waktu cukup</strong> — jangan terlalu singkat<br>
+                5. <strong>Catat konteks</strong> — waktu, tempat, kondisi saat observasi<br>
+                6. <strong>Lakukan berulang</strong> — untuk memastikan reliabilitas data</p>
+            </div>
+        </div>
+
+        <!-- Content F: Studi Dokumentasi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--dokumentasi); color: white;">4</div>
+                <h3>Metode 4: Studi Dokumentasi</h3>
+            </div>
+            <p><strong>Studi Dokumentasi</strong> adalah metode pengumpulan data dari sumber-sumber tertulis seperti buku, jurnal, laporan, artikel, website resmi, atau dokumen lainnya. Metode ini paling efisien karena tidak memerlukan turun langsung ke lapangan.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI STUDI DOKUMENTASI:</strong><br>
+                Studi dokumentasi adalah metode pengumpulan data melalui penelusuran dan analisis dokumen-dokumen tertulis (baik cetak maupun digital) yang relevan dengan topik penelitian, seperti buku, jurnal, laporan resmi, artikel ilmiah, dan website terpercaya.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Sumber-Sumber Dokumentasi:</h4>
+            <ul class="feature-list">
+                <li><strong>Buku:</strong> Buku pelajaran, ensiklopedia, buku referensi. Sumber terpercaya untuk teori dan konsep.</li>
+                <li><strong>Jurnal Ilmiah:</strong> Artikel penelitian dari jurnal terakreditasi (Sinta, Scopus). Sumber primer untuk data penelitian.</li>
+                <li><strong>Laporan Resmi:</strong> Laporan BPS, Kemenkes, Kemendikbud, WHO, UNESCO. Sumber data statistik resmi.</li>
+                <li><strong>Artikel Berita:</strong> Dari media kredibel (Kompas, Tempo, BBC Indonesia). Sumber informasi terkini.</li>
+                <li><strong>Website Resmi:</strong> Situs lembaga pemerintah (.go.id), universitas (.ac.id), organisasi internasional (.org).</li>
+                <li><strong>Skripsi/Tesis:</strong> Karya ilmiah mahasiswa yang dapat diakses di repositori kampus.</li>
+                <li><strong>Dokumen Sejarah:</strong> Arsip, dokumen kuno, catatan sejarah.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>📋 5 Langkah Melakukan Studi Dokumentasi</h4>
+                <p><strong>1. Tentukan Kata Kunci Pencarian</strong><br>Identifikasi kata kunci yang relevan dengan topik artikel. Gunakan bahasa Indonesia dan Inggris.</p>
+                <p style="margin-top: 1rem;"><strong>2. Cari Sumber Terpercaya</strong><br>Gunakan Google Scholar, perpustakaan, atau website resmi. Prioritaskan sumber akademik.</p>
+                <p style="margin-top: 1rem;"><strong>3. Evaluasi Kredibilitas Sumber</strong><br>Periksa penulis, penerbit, tahun terbit, dan referensi. Gunakan kriteria CRAAP (Currency, Relevance, Authority, Accuracy, Purpose).</p>
+                <p style="margin-top: 1rem;"><strong>4. Catat Informasi Penting</strong><br>Buat catatan sistematis dari setiap sumber yang dibaca. Kutip dengan benar.</p>
+                <p style="margin-top: 1rem;"><strong>5. Sitasi dengan Benar</strong><br>Cantumkan sumber referensi dengan format yang tepat untuk menghindari plagiarisme.</p>
+            </div>
+
+            <div class="key-concept">
+                <h4>⚠️ Kriteria Sumber Terpercaya (CRAAP)</h4>
+                <p><strong>C</strong> = <em>Currency</em> (Keterkinian) — Diterbitkan dalam 5-10 tahun terakhir?<br>
+                <strong>R</strong> = <em>Relevance</em> (Relevansi) — Sesuai dengan topik?<br>
+                <strong>A</strong> = <em>Authority</em> (Otoritas) — Ditulis oleh ahli/lembaga kredibel?<br>
+                <strong>A</strong> = <em>Accuracy</em> (Akurasi) — Didukung bukti dan referensi?<br>
+                <strong>P</strong> = <em>Purpose</em> (Tujuan) — Objektif atau bermuatan kepentingan?</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Sumber Terpercaya vs Tidak Terpercaya</h5>
+                <p><strong>✅ SUMBER TERPERCAYA:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li>Laporan BPS (bps.go.id)</li>
+                    <li>Jurnal kesehatan dari Kemenkes</li>
+                    <li>Publikasi WHO (who.int)</li>
+                    <li>Artikel di Kompas, Tempo, The Jakarta Post</li>
+                    <li>Buku dari penerbit ternama</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>❌ SUMBER TIDAK TERPERCAYA:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li>Blog pribadi tanpa referensi</li>
+                    <li>Postingan media sosial tanpa sumber</li>
+                    <li>Website abal-abal (.blogspot, .wordpress tanpa kredibilitas)</li>
+                    <li>Berita hoaks dari situs tidak jelas</li>
+                    <li>Informasi dari pesan berantai WhatsApp</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content G: Merancang Instrumen -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Merancang Instrumen Pengumpulan Data</h3>
+            </div>
+            <p><strong>Instrumen pengumpulan data</strong> adalah alat yang digunakan untuk mengumpulkan data, seperti daftar pertanyaan wawancara, kuesioner, pedoman observasi, atau format dokumentasi. Merancang instrumen yang baik sangat penting untuk mendapatkan data yang valid dan reliabel.</p>
+
+            <div class="key-concept">
+                <h4>📋 Prinsip Merancang Instrumen yang Baik</h4>
+                <p>1. <strong>Sesuai dengan tujuan</strong> — instrumen harus mengukur apa yang ingin diukur<br>
+                2. <strong>Bahasa jelas dan sederhana</strong> — mudah dipahami oleh responden/narasumber<br>
+                3. <strong>Tidak mengarahkan</strong> — pertanyaan tidak "menyetir" jawaban<br>
+                4. <strong>Sistematis</strong> — urutan pertanyaan logis dan terstruktur<br>
+                5. <strong>Reliabel</strong> — jika diulang, memberikan hasil yang konsisten<br>
+                6. <strong>Praktis</strong> — mudah diisi, tidak terlalu panjang, efisien</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Lengkap Instrumen Pengumpulan Data</h5>
+                <p style="margin-bottom: 0.5rem;"><strong>Topik Artikel:</strong> "Pengaruh Sarapan terhadap Konsentrasi Belajar Siswa"</p>
+                <p style="margin-bottom: 1rem;"><strong>Metode:</strong> Kombinasi kuesioner + observasi + dokumentasi</p>
+
+                <p style="font-weight: 700; margin-top: 1.5rem;">📋 KUESIONER: Kebiasaan Sarapan Siswa</p>
+                <p style="font-weight: 700; margin: 1rem 0 0.5rem 0;">A. IDENTITAS</p>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">1.</span> Nama (inisial): .............
+                </div>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">2.</span> Kelas: VIII-...
+                </div>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">3.</span> Usia: ..... tahun
+                </div>
+
+                <p style="font-weight: 700; margin: 1.5rem 0 0.5rem 0;">B. KEBIASAAN SARAPAN</p>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">4.</span> Apakah Anda sarapan sebelum berangkat sekolah?
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">a. Selalu  b. Sering  c. Jarang  d. Tidak pernah</div>
+                </div>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">5.</span> Apa yang biasanya Anda makan saat sarapan?
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">a. Nasi  b. Roti  c. Mie  d. Buah  e. Tidak sarapan</div>
+                </div>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">6.</span> Pukul berapa Anda biasanya sarapan?
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">a. Sebelum 06.00  b. 06.00-07.00  c. 07.00-08.00  d. Tidak sarapan</div>
+                </div>
+
+                <p style="font-weight: 700; margin: 1.5rem 0 0.5rem 0;">C. KONSENTRASI BELAJAR (Skala Likert)</p>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">7.</span> Saya dapat berkonsentrasi dengan baik di jam pelajaran pertama.
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">SS | S | N | TS | STS</div>
+                </div>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">8.</span> Saya sering merasa mengantuk di kelas pagi.
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">SS | S | N | TS | STS</div>
+                </div>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">9.</span> Saya sulit memahami materi di jam pertama.
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem;">SS | S | N | TS | STS</div>
+                </div>
+
+                <p style="font-weight: 700; margin: 1.5rem 0 0.5rem 0;">D. PERTANYAAN TERBUKA</p>
+                <div class="question-item" style="padding: 0.5rem 0.75rem; background: var(--bg); border-radius: 6px; margin-bottom: 0.5rem; border-left: 3px solid var(--accent);">
+                    <span style="font-weight: 700; color: var(--accent);">10.</span> Menurut Anda, apakah sarapan mempengaruhi konsentrasi belajar? Jelaskan!
+                </div>
+            </div>
+        </div>
+
+        <!-- Content H: Kesalahan Umum -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Kesalahan Umum dalam Pengumpulan Data</h3>
+            </div>
+            <p>Berikut adalah kesalahan yang sering dilakukan saat mengumpulkan data untuk artikel ilmiah populer:</p>
+
+            <ul class="feature-list">
+                <li><strong>Pertanyaan Mengarahkan (Leading Question):</strong> Pertanyaan yang "menyetir" jawaban responden.<br>
+                <em>Contoh: "Bukankah media sosial berbahaya?" → seharusnya: "Menurut Anda, apa dampak media sosial?"</em></li>
+                <li><strong>Pertanyaan Ambigu:</strong> Pertanyaan yang bisa ditafsirkan ganda.<br>
+                <em>Contoh: "Apakah Anda sering belajar?" → "sering" bisa berarti berbeda bagi tiap orang.</em></li>
+                <li><strong>Sampel Tidak Representatif:</strong> Responden tidak mewakili populasi yang diteliti.<br>
+                <em>Contoh: meneliti "pelajar Indonesia" tapi hanya mewawancarai 5 orang teman sekelas.</em></li>
+                <li><strong>Tidak Uji Coba Instrumen:</strong> Langsung menyebarkan kuesioner tanpa uji coba terlebih dahulu.</li>
+                <li><strong>Sumber Tidak Kredibel:</strong> Menggunakan data dari blog pribadi, bukan dari lembaga resmi atau jurnal ilmiah.</li>
+                <li><strong>Tidak Mencantumkan Sumber:</strong> Menggunakan data tanpa menyebutkan sumbernya (plagiarisme).</li>
+                <li><strong>Data Kadaluarsa:</strong> Menggunakan data yang sudah terlalu lama (misalnya data 20 tahun lalu untuk topik terkini).</li>
+                <li><strong>Sample Size Terlalu Kecil:</strong> Jumlah responden terlalu sedikit sehingga hasilnya tidak valid.</li>
+                <li><strong>Tidak Objektif:</strong> Membiarkan subjektivitas pribadi mempengaruhi pengumpulan data.</li>
+                <li><strong>Tidak Melakukan Triangulasi:</strong> Hanya menggunakan satu metode, padahal kombinasi metode akan memberikan data yang lebih kuat.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Kesalahan vs Perbaikan</h5>
+                <p><strong>✗ PERTANYAAN MENGARAHKAN:</strong><br>
+                <em>"Bukankah Anda setuju bahwa begadang berbahaya bagi kesehatan?"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Mengarahkan responden untuk menjawab "setuju")</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✓ PERBAIKAN:</strong><br>
+                <em>"Menurut Anda, apa dampak begadang terhadap kesehatan?"</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Pertanyaan terbuka, tidak mengarahkan)</span></p>
+
+                <p style="margin-top: 1.5rem;"><strong>✗ SUMBER TIDAK KREDIBEL:</strong><br>
+                <em>"Menurut blog pribadi si A, 90% remaja kecanduan gadget."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Sumber tidak jelas, tidak dapat diverifikasi)</span></p>
+
+                <p style="margin-top: 1rem;"><strong>✓ PERBAIKAN:</strong><br>
+                <em>"Menurut survei APJII (2024), 79,5% remaja Indonesia menggunakan internet lebih dari 5 jam per hari."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Sumber resmi, data terkini, dapat diverifikasi)</span></p>
+            </div>
+        </div>
+
+        <!-- Content I: Etika Pengumpulan Data -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">I</div>
+                <h3>Etika dalam Pengumpulan Data</h3>
+            </div>
+            <p>Dalam mengumpulkan data, kita harus mematuhi prinsip-prinsip etika untuk menghormati narasumber dan responden:</p>
+
+            <ul class="feature-list">
+                <li><strong>Informed Consent (Persetujuan Sukarela):</strong> Narasumber/responden harus tahu tujuan pengumpulan data dan menyetujui secara sukarela. Tidak boleh dipaksa.</li>
+                <li><strong>Kerahasiaan (Confidentiality):</strong> Data pribadi responden harus dijaga kerahasiaannya. Tidak boleh disebarluaskan tanpa izin.</li>
+                <li><strong>Anonimitas:</strong> Boleh menggunakan inisial atau nama samaran untuk melindungi identitas responden.</li>
+                <li><strong>Kejujuran:</strong> Tidak memanipulasi data atau membuat data palsu. Data harus apa adanya.</li>
+                <li><strong>Objektivitas:</strong> Tidak membiarkan subjektivitas pribadi mempengaruhi pengumpulan data.</li>
+                <li><strong>Apresiasi:</strong> Berterima kasih kepada narasumber/responden atas partisipasinya.</li>
+                <li><strong>Manfaat:</strong> Hasil pengumpulan data harus memberikan manfaat, bukan merugikan.</li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>🏆 Checklist Etika Pengumpulan Data</h4>
+                <p>✅ Narasumber/responden sudah memberikan persetujuan<br>
+                ✅ Tujuan pengumpulan data sudah dijelaskan dengan jelas<br>
+                ✅ Identitas responden dijaga kerahasiaannya<br>
+                ✅ Data tidak dimanipulasi atau dipalsukan<br>
+                ✅ Sumber data dicantumkan dengan benar<br>
+                ✅ Narasumber/responden sudah diapresiasi<br>
+                ✅ Hasil pengumpulan data memberikan manfaat</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Penerapan Etika</h5>
+                <p><strong>SEBELUM WAWANCARA:</strong><br>
+                <em>"Selamat pagi, Bapak/Ibu. Perkenalkan saya [nama] dari MTsN 10 Agam. Saya sedang menulis artikel tentang dampak media sosial terhadap pelajar. Bolehkah saya mewawancarai Bapak/Ibu selama ±30 menit? Data yang Bapak/Ibu berikan akan digunakan untuk artikel dan identitas Bapak/Ibu akan saya samarkan jika diperlukan."</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>SETELAH WAWANCARA:</strong><br>
+                <em>"Terima kasih banyak atas waktu dan informasi yang Bapak/Ibu berikan. Jawaban Bapak/Ibu sangat membantu artikel saya. Jika ada yang perlu diklarifikasi, saya akan menghubungi kembali."</em></p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Pengumpulan Data</span>
+                <span class="keyword-tag">Wawancara</span>
+                <span class="keyword-tag">Kuesioner</span>
+                <span class="keyword-tag">Angket</span>
+                <span class="keyword-tag">Observasi</span>
+                <span class="keyword-tag">Studi Dokumentasi</span>
+                <span class="keyword-tag">Instrumen</span>
+                <span class="keyword-tag">Narasumber</span>
+                <span class="keyword-tag">Responden</span>
+                <span class="keyword-tag">Skala Likert</span>
+                <span class="keyword-tag">Pertanyaan Terbuka</span>
+                <span class="keyword-tag">Pertanyaan Tertutup</span>
+                <span class="keyword-tag">Data Valid</span>
+                <span class="keyword-tag">Data Reliabel</span>
+                <span class="keyword-tag">Sampel</span>
+                <span class="keyword-tag">Populasi</span>
+                <span class="keyword-tag">Etika Penelitian</span>
+                <span class="keyword-tag">Informed Consent</span>
+                <span class="keyword-tag">Triangulasi</span>
+                <span class="keyword-tag">CRAAP</span>
+                <span class="keyword-tag">Pilot Test</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍ فَتَبَيَّنُوٓا۟</p>
+            <p class="translation">"Wahai orang-orang yang beriman! Jika seseorang yang fasik datang kepadamu membawa suatu berita, maka telitilah kebenarannya (tabayyun)..."</p>
+            <p class="source">— QS. Al-Hujurat [49]: 6</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini mengajarkan prinsip <em>tabayyun</em> (verifikasi) dalam menerima informasi. Dalam konteks pengumpulan data, kita harus memastikan bahwa data yang kita kumpulkan benar-benar valid, berasal dari sumber terpercaya, dan dapat dipertanggungjawabkan. Data yang tidak valid akan menghasilkan artikel yang menyesatkan.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 3.4</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Metode pengumpulan data (wawancara, kuesioner, observasi, dokumentasi), perancangan instrumen, etika pengumpulan data.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Metode pengumpulan data melalui tanya jawab langsung dengan narasumber disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Observasi</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Kuesioner</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Wawancara</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Studi dokumentasi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. Daftar pertanyaan tertulis yang diisi oleh responden secara mandiri disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Pedoman observasi</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Kuesioner/Angket</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Daftar wawancara</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Jurnal penelitian</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Metode pengumpulan data melalui pengamatan langsung terhadap objek di lapangan disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Observasi</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Wawancara</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Kuesioner</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Studi pustaka</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Skala Likert adalah skala yang digunakan untuk mengukur...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Tinggi badan responden</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Tingkat persetujuan terhadap suatu pernyataan</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Jumlah responden</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Waktu pengisian kuesioner</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Berikut ini yang merupakan contoh pertanyaan TERBUKA dalam kuesioner adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. "Apakah Anda sarapan? (Ya/Tidak)"</label>
+                        <label><input type="radio" name="pg5" value="B"> B. "Berapa kali Anda berolahraga dalam seminggu?"</label>
+                        <label><input type="radio" name="pg5" value="C"> C. "Menurut Anda, apa solusi terbaik untuk masalah sampah di sekolah?"</label>
+                        <label><input type="radio" name="pg5" value="D"> D. "Pilih salah satu: a. Sangat Setuju, b. Setuju, c. Netral"</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. Data dari BPS, WHO, atau jurnal ilmiah termasuk jenis data...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Data primer dari observasi</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Data sekunder dari studi dokumentasi</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Data dari wawancara</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Data dari kuesioner</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Pertanyaan yang "menyetir" jawaban responden disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Pertanyaan terbuka</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Pertanyaan netral</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Pertanyaan mengarahkan (leading question)</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Pertanyaan tertutup</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Prinsip etika yang mengharuskan narasumber/responden memberikan persetujuan sukarela disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Anonimitas</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Informed consent</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Objektivitas</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Reliabilitas</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Langkah pertama dalam merancang kuesioner adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Menyebarkan kuesioner ke responden</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Menentukan tujuan kuesioner</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Menganalisis data</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Mencetak kuesioner</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Data yang benar-benar mengukur apa yang seharusnya diukur disebut data yang...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Reliabel</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Valid</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Subjektif</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Kadaluarsa</label>
+                    </div>
+                </div>
+
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Sebutkan dan jelaskan 4 (empat) metode pengumpulan data dalam artikel ilmiah populer! Berikan masing-masing satu contoh penggunaannya!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Jelaskan perbedaan antara wawancara dan kuesioner sebagai metode pengumpulan data! Kapan sebaiknya menggunakan wawancara, dan kapan sebaiknya menggunakan kuesioner?</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Sebutkan dan jelaskan 6 (enam) prinsip merancang instrumen pengumpulan data yang baik! Mengapa setiap prinsip tersebut penting?</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Rancanglah sebuah kuesioner sederhana (minimal 8 pertanyaan) bertema "Kebiasaan Tidur Pelajar MTsN 10 Agam"! Kuesioner harus memuat: (a) identitas responden, (b) pertanyaan tertutup, (c) pertanyaan dengan skala Likert, dan (d) pertanyaan terbuka!</p>
+                    <textarea id="essay4" class="form-control" style="min-height: 200px;" placeholder="Tulis rancangan kuesioner Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Jelaskan prinsip-prinsip etika dalam pengumpulan data! Mengapa etika pengumpulan data penting untuk dihormati? Berikan contoh pelanggaran etika yang mungkin terjadi!</p>
+                    <textarea id="essay5" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="20.html">Selanjutnya → Sub Bab 3.5</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        const kunciJawabanPG = {
+            pg1: 'C', pg2: 'B', pg3: 'A', pg4: 'B', pg5: 'C',
+            pg6: 'B', pg7: 'C', pg8: 'B', pg9: 'B', pg10: 'B'
+        };
+
+        function hitungSkor() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10;
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_3.4_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 3.4 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Cara Mengumpulkan Data dalam Artikel Ilmiah Populer\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_3.4_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 3.4 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Cara Mengumpulkan Data dalam Artikel Ilmiah Populer\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Bab 3.6: Kalimat Perbandingan, Analogi, Antonim, dan Sinonim | Bahasa Indonesia Kelas VIII</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f3e5ab;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+            --banding: #0984e3;
+            --analogi: #6c5ce7;
+            --antonim: #e17055;
+            --sinonim: #00b894;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        .arabic { font-family: 'Amiri', serif; font-size: 1.4rem; line-height: 2; color: var(--primary); }
+
+        a { text-decoration: none; color: var(--accent); font-weight: 600; transition: 0.3s; }
+        a:hover { color: var(--primary); }
+
+        .nav-bar {
+            background: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .nav-bar a { color: var(--accent-light); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-bar a:hover { color: #fff; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '🔤';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: -2rem;
+            right: -2rem;
+        }
+        .hero h1 { color: var(--accent-light); font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 1.5rem; font-weight: 300; }
+        .hero .meta {
+            display: inline-flex;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hero .meta strong { color: var(--accent); }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg);
+        }
+        .section-icon {
+            width: 45px; height: 45px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.3rem;
+        }
+        .section h3 { font-size: 1.6rem; margin: 0; }
+
+        .definition-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        .key-concept {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .key-concept h4 { color: var(--accent); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        ul.feature-list { list-style: none; padding-left: 0; }
+        ul.feature-list li {
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--bg);
+        }
+        ul.feature-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.05), transparent);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-box h5 {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-sample {
+            background: white;
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        /* 4 Type Cards */
+        .type-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .type-card {
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            color: white;
+        }
+        .type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .type-card.banding { background: linear-gradient(135deg, var(--banding), #74b9ff); }
+        .type-card.analogi { background: linear-gradient(135deg, var(--analogi), #a29bfe); }
+        .type-card.antonim { background: linear-gradient(135deg, var(--antonim), #fab1a0); }
+        .type-card.sinonim { background: linear-gradient(135deg, var(--sinonim), #55efc4); }
+        .type-card .number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+        .type-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .type-card h5 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+        }
+        .type-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+        .type-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.75rem;
+        }
+        .type-card ul li {
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .type-card ul li:last-child { border-bottom: none; }
+        .type-card ul li::before {
+            content: '✓ ';
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* Tag Colors */
+        .tag-banding { background: var(--banding); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+        .tag-analogi { background: var(--analogi); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+        .tag-antonim { background: var(--antonim); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+        .tag-sinonim { background: var(--sinonim); color: white; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+
+        /* Example Sentence Cards */
+        .sentence-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .sentence-card {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 1.25rem;
+            border-left: 4px solid var(--accent);
+            transition: 0.3s;
+        }
+        .sentence-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .sentence-card.banding { border-left-color: var(--banding); }
+        .sentence-card.analogi { border-left-color: var(--analogi); }
+        .sentence-card.antonim { border-left-color: var(--antonim); }
+        .sentence-card.sinonim { border-left-color: var(--sinonim); }
+        .sentence-card .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .sentence-card.banding .label { color: var(--banding); }
+        .sentence-card.analogi .label { color: var(--analogi); }
+        .sentence-card.antonim .label { color: var(--antonim); }
+        .sentence-card.sinonim .label { color: var(--sinonim); }
+        .sentence-card .sentence {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--primary);
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .sentence-card .context {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Word Pair Cards */
+        .word-pair-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .word-pair {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 1.25rem;
+            text-align: center;
+            border: 2px solid var(--border);
+            transition: 0.3s;
+        }
+        .word-pair:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .word-pair .word-a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--antonim);
+            margin-bottom: 0.5rem;
+        }
+        .word-pair .vs {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin: 0.25rem 0;
+        }
+        .word-pair .word-b {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--sinonim);
+            margin-top: 0.5rem;
+        }
+        .word-pair .meaning {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .keyword-tag {
+            background: var(--bg);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .quote-box {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: linear-gradient(to bottom, #fff, var(--bg));
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+        }
+        .quote-box .arabic { margin-bottom: 1rem; color: var(--primary); }
+        .quote-box .translation { font-style: italic; color: var(--text-light); margin-bottom: 0.5rem; }
+        .quote-box .source { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .form-control {
+            width: 100%; padding: 0.85rem; border: 1px solid var(--border);
+            border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 1rem;
+            transition: 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        
+        .question-block {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+        .options label {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.6rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+        }
+        .options label:hover { background: rgba(212, 175, 55, 0.1); }
+        .options input[type="radio"] { accent-color: var(--accent); transform: scale(1.2); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.85rem 1.5rem; border: none; border-radius: 6px;
+            font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: #c4a030; transform: translateY(-2px); }
+        .btn-secondary { background: var(--primary); color: white; }
+        .btn-secondary:hover { background: #252545; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+        #hasil-ujian {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--success);
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .score-display {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0;
+        }
+        .score-box {
+            background: var(--bg); padding: 1.5rem; border-radius: 8px;
+        }
+        .score-box h4 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
+        .score-box .value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .score-box .value.gold { color: var(--accent); }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            .score-display { grid-template-columns: 1fr; }
+            .hero .meta { flex-direction: column; gap: 0.5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+            .section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="20.html">← Sub Bab 3.5</a>
+        <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Bahasa Indonesia Kelas VIII</span>
+        <a href="22.html">PTS (Sub Bab 3.7) →</a>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>— Sub Bab 3.6 —</h1>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">Mengenal Kalimat Perbandingan, Analogi, Antonim, dan Sinonim</h1>
+            <p class="subtitle">
+                Memahami dan menggunakan empat jenis gaya bahasa penting untuk memperkaya tulisan dalam artikel ilmiah populer: 
+                <strong>kalimat perbandingan, analogi, antonim, dan sinonim</strong>. Keempat unsur ini akan membuat tulisan Anda lebih hidup, variatif, dan mudah dipahami pembaca.
+            </p>
+            <div class="meta">
+                <span><strong>Yutika Sari, S.Pd.</strong></span>
+                <span>|</span>
+                <span>MTsN 10 Agam</span>
+            </div>
+        </div>
+
+        <!-- Content A: Pengantar -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">A</div>
+                <h3>Pengantar: Mengapa Gaya Bahasa Penting dalam Artikel?</h3>
+            </div>
+            <p>Artikel ilmiah populer yang baik tidak hanya berisi fakta dan data, tetapi juga harus <strong>menarik untuk dibaca</strong>. Di sinilah peran <strong>gaya bahasa</strong> — teknik kebahasaan yang membuat tulisan lebih hidup, variatif, dan mudah dipahami. Empat gaya bahasa yang akan kita pelajari adalah: <strong>kalimat perbandingan, analogi, antonim, dan sinonim</strong>.</p>
+            
+            <div class="definition-box">
+                 <strong>MENGAPA PENTING?</strong><br>
+                Gaya bahasa yang tepat akan: (1) membuat konsep abstrak menjadi konkret, (2) memperkaya variasi kalimat sehingga tidak monoton, (3) memudahkan pembaca memahami konsep yang kompleks, (4) memberikan efek estetika pada tulisan, dan (5) meningkatkan daya tarik artikel.
+            </div>
+
+            <div class="key-concept">
+                <h4>🎯 Tujuan Pembelajaran</h4>
+                <p>Peserta didik dapat <strong>mengidentifikasi</strong> dan <strong>menggunakan</strong> kalimat perbandingan, analogi, antonim, dan sinonim untuk memperkaya tulisan dalam artikel ilmiah populer.</p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Empat Pilar Gaya Bahasa dalam Artikel Ilmiah Populer:</h4>
+            <div class="type-cards">
+                <div class="type-card banding">
+                    <div class="number">1</div>
+                    <div class="icon">⚖️</div>
+                    <h5>Perbandingan</h5>
+                    <p>Membandingkan dua hal untuk menunjukkan persamaan atau perbedaan.</p>
+                    <ul>
+                        <li>Memperjelas konsep</li>
+                        <li>Membuat abstrak → konkret</li>
+                        <li>Kata kunci: seperti, bagai, ibarat</li>
+                    </ul>
+                </div>
+                <div class="type-card analogi">
+                    <div class="number">2</div>
+                    <div class="icon">🔗</div>
+                    <h5>Analogi</h5>
+                    <p>Menyamakan hubungan antara dua hal yang berbeda.</p>
+                    <ul>
+                        <li>Menjelaskan konsep kompleks</li>
+                        <li>Menghubungkan yang dikenal & baru</li>
+                        <li>Kata kunci: sama seperti, layaknya</li>
+                    </ul>
+                </div>
+                <div class="type-card antonim">
+                    <div class="number">3</div>
+                    <div class="icon">↔️</div>
+                    <h5>Antonim</h5>
+                    <p>Menggunakan kata lawan untuk mempertegas makna.</p>
+                    <ul>
+                        <li>Mempertegas kontras</li>
+                        <li>Memberi efek dramatis</li>
+                        <li>Contoh: hidup-mati, besar-kecil</li>
+                    </ul>
+                </div>
+                <div class="type-card sinonim">
+                    <div class="number">4</div>
+                    <div class="icon">🔄</div>
+                    <h5>Sinonim</h5>
+                    <p>Menggunakan kata persamaan untuk variasi bahasa.</p>
+                    <ul>
+                        <li>Menghindari repetisi</li>
+                        <li>Memperkaya kosakata</li>
+                        <li>Contoh: pintar = cerdas = pandai</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content B: Kalimat Perbandingan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--banding); color: white;">1</div>
+                <h3>Kalimat Perbandingan</h3>
+            </div>
+            <p><strong>Kalimat perbandingan</strong> adalah kalimat yang membandingkan dua hal atau lebih untuk menunjukkan persamaan, perbedaan, atau tingkatan. Kalimat ini sangat efektif untuk menjelaskan konsep yang abstrak dengan membandingkannya dengan sesuatu yang sudah dikenal pembaca.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI:</strong><br>
+                Kalimat perbandingan adalah kalimat yang menyatakan perbandingan antara dua hal atau lebih, baik untuk menunjukkan persamaan (simile), perbedaan (kontras), maupun tingkatan (superlatif).
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Jenis-Jenis Kalimat Perbandingan:</h4>
+            <ul class="feature-list">
+                <li><strong>Perbandingan Sama (Simile):</strong> Membandingkan dua hal yang memiliki kesamaan. Menggunakan kata: <em>seperti, bagai, ibarat, laksana, sebagaimana</em>.<br>
+                <em>Contoh: "Otak manusia bekerja seperti komputer — memproses informasi, menyimpan data, dan menghasilkan output."</em></li>
+                <li><strong>Perbandingan Berbeda (Kontras):</strong> Membandingkan dua hal yang berbeda untuk mempertegas perbedaan. Menggunakan kata: <em>berbeda dengan, bertolak belakang, sebaliknya, sedangkan</em>.<br>
+                <em>Contoh: "Berbeda dengan artikel ilmiah akademik yang menggunakan bahasa formal, artikel ilmiah populer menggunakan bahasa yang santai dan mudah dipahami."</em></li>
+                <li><strong>Perbandingan Tingkatan (Superlatif):</strong> Membandingkan untuk menunjukkan tingkatan. Menggunakan kata: <em>lebih...daripada, paling, ter-</em>.<br>
+                <em>Contoh: "Tidur adalah aktivitas paling penting untuk pemulihan otak setelah seharian beraktivitas."</em></li>
+                <li><strong>Perbandingan Korelatif:</strong> Membandingkan dua hal yang berhubungan. Menggunakan kata: <em>semakin...semakin, makin...makin, càng...càng</em>.<br>
+                <em>Contoh: "Semakin cukup tidur seorang pelajar, semakin tinggi konsentrasi belajarnya."</em></li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Fungsi Kalimat Perbandingan dalam Artikel</h4>
+                <p>1. <strong>Memperjelas konsep abstrak</strong> — dengan membandingkan pada hal konkret<br>
+                2. <strong>Memudahkan pemahaman</strong> — pembaca dapat membayangkan melalui perbandingan<br>
+                3. <strong>Memberi efek dramatis</strong> — memperkuat pesan yang ingin disampaikan<br>
+                4. <strong>Membuat tulisan variatif</strong> — tidak monoton, lebih menarik dibaca</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Kalimat Perbandingan dalam Artikel</h5>
+                <div class="sentence-cards">
+                    <div class="sentence-card banding">
+                        <div class="label">⚖️ Perbandingan Sama</div>
+                        <div class="sentence">"Sel darah putih bekerja seperti tentara yang melindungi tubuh dari serangan penyakit."</div>
+                        <div class="context">Membandingkan sel darah putih dengan tentara untuk memperjelas fungsinya.</div>
+                    </div>
+                    <div class="sentence-card banding">
+                        <div class="label">⚖️ Perbandingan Berbeda</div>
+                        <div class="sentence">"Berbeda dengan generasi sebelumnya yang lebih aktif di luar rumah, generasi Z lebih banyak menghabiskan waktu di dunia digital."</div>
+                        <div class="context">Mempertegas perbedaan antar generasi.</div>
+                    </div>
+                    <div class="sentence-card banding">
+                        <div class="label">⚖️ Perbandingan Tingkatan</div>
+                        <div class="sentence">"Air adalah kebutuhan paling dasar bagi kelangsungan hidup manusia."</div>
+                        <div class="context">Menunjukkan tingkatan prioritas kebutuhan.</div>
+                    </div>
+                    <div class="sentence-card banding">
+                        <div class="label">⚖️ Perbandingan Korelatif</div>
+                        <div class="sentence">"Semakin sering kita membaca, semakin luas wawasan yang kita peroleh."</div>
+                        <div class="context">Menunjukkan hubungan sebab-akibat yang berbanding lurus.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content C: Kalimat Analogi -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--analogi); color: white;">2</div>
+                <h3>Kalimat Analogi</h3>
+            </div>
+            <p><strong>Kalimat analogi</strong> adalah kalimat yang menyamakan hubungan antara dua hal yang berbeda, dengan tujuan menjelaskan konsep yang kompleks melalui sesuatu yang sudah dikenal pembaca. Analogi adalah "jembatan" antara yang abstrak dan konkret.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI:</strong><br>
+                Analogi adalah gaya bahasa yang membandingkan dua hal yang berbeda namun memiliki kesamaan dalam hubungan atau fungsi, dengan tujuan menjelaskan konsep yang kompleks melalui hal yang lebih familiar bagi pembaca.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Perbedaan Analogi dengan Perbandingan:</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspek</th>
+                        <th>Perbandingan</th>
+                        <th>Analogi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Fokus</strong></td>
+                        <td>Membandingkan sifat dua hal</td>
+                        <td>Menyamakan hubungan dua hal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tujuan</strong></td>
+                        <td>Memperjelas kesamaan/perbedaan</td>
+                        <td>Menjelaskan konsep kompleks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kata Kunci</strong></td>
+                        <td>seperti, bagai, ibarat</td>
+                        <td>sama seperti, layaknya, ibaratnya</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh</strong></td>
+                        <td>"Dia cepat seperti kilat"</td>
+                        <td>"Otak layaknya CPU komputer"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Jenis-Jenis Analogi:</h4>
+            <ul class="feature-list">
+                <li><strong>Analogi Fungsi:</strong> Menyamakan fungsi dua hal yang berbeda.<br>
+                <em>Contoh: "Jantung berfungsi layaknya pompa air yang mengalirkan darah ke seluruh tubuh."</em></li>
+                <li><strong>Analogi Struktur:</strong> Menyamakan struktur dua hal.<br>
+                <em>Contoh: "Struktur atom mirip dengan tata surya — inti atom seperti matahari, elektron seperti planet."</em></li>
+                <li><strong>Analogi Proses:</strong> Menyamakan proses dua hal.<br>
+                <em>Contoh: "Proses belajar di otak seperti menanam benih — butuh waktu, perawatan, dan kesabaran untuk tumbuh."</em></li>
+                <li><strong>Analogi Hubungan:</strong> Menyamakan hubungan dua hal.<br>
+                <em>Contoh: "Guru bagi murid ibarat pelita bagi pejalan malam — memberikan cahaya di tengah kegelapan."</em></li>
+            </ul>
+
+            <div class="key-concept">
+                <h4>💡 Mengapa Analogi Efektif dalam Artikel?</h4>
+                <p>1. <strong>Membuat konsep abstrak menjadi konkret</strong> — pembaca dapat membayangkannya<br>
+                2. <strong>Menghubungkan yang dikenal dengan yang baru</strong> — memudahkan pemahaman<br>
+                3. <strong>Menciptakan gambaran mental</strong> — tulisan lebih hidup dan berkesan<br>
+                4. <strong>Menyederhanakan hal kompleks</strong> — cocok untuk pembaca awam</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Analogi dalam Artikel Ilmiah Populer</h5>
+                <div class="sentence-cards">
+                    <div class="sentence-card analogi">
+                        <div class="label">🔗 Analogi Fungsi</div>
+                        <div class="sentence">"DNA layaknya buku resep kehidupan — menyimpan semua instruksi untuk membangun dan menjalankan tubuh manusia."</div>
+                        <div class="context">Menjelaskan fungsi DNA yang kompleks melalui analogi buku resep.</div>
+                    </div>
+                    <div class="sentence-card analogi">
+                        <div class="label">🔗 Analogi Struktur</div>
+                        <div class="sentence">"Sel otak (neuron) mirip dengan jaringan listrik — saling terhubung dan menghantarkan sinyal ke seluruh tubuh."</div>
+                        <div class="context">Menjelaskan struktur neuron melalui analogi jaringan listrik.</div>
+                    </div>
+                    <div class="sentence-card analogi">
+                        <div class="label">🔗 Analogi Proses</div>
+                        <div class="sentence">"Proses pencernaan makanan layaknya pabrik pengolahan — makanan masuk, diolah, dipilah, lalu didistribusikan ke seluruh tubuh."</div>
+                        <div class="context">Menjelaskan proses pencernaan melalui analogi pabrik.</div>
+                    </div>
+                    <div class="sentence-card analogi">
+                        <div class="label">🔗 Analogi Hubungan</div>
+                        <div class="sentence">"Air bagi tumbuhan ibarat darah bagi manusia — sumber kehidupan yang harus terus mengalir."</div>
+                        <div class="context">Menjelaskan pentingnya air bagi tumbuhan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content D: Antonim -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--antonim); color: white;">3</div>
+                <h3>Antonim (Kata Lawan)</h3>
+            </div>
+            <p><strong>Antonim</strong> adalah kata yang berlawanan makna dengan kata lain. Dalam artikel ilmiah populer, penggunaan antonim berfungsi untuk <strong>mempertegas kontras</strong>, memberikan efek dramatis, dan membuat tulisan lebih variatif.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI:</strong><br>
+                Antonim (dari bahasa Yunani <em>anti</em> = lawan, <em>onoma</em> = nama) adalah kata yang memiliki makna berlawanan dengan kata lain. Penggunaan antonim dalam artikel ilmiah populer berfungsi untuk mempertegas makna dan memberikan efek kontras yang menarik.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Jenis-Jenis Antonim:</h4>
+            <ul class="feature-list">
+                <li><strong>Antonim Gradasional (Bertahap):</strong> Pasangan kata yang memiliki tingkatan di antaranya.<br>
+                <em>Contoh: besar — kecil (ada sedang), panas — dingin (ada hangat), tinggi — rendah (ada sedang).</em></li>
+                <li><strong>Antonim Komplementer (Mutlak):</strong> Pasangan kata yang tidak memiliki tingkatan di antaranya — salah satu pasti benar.<br>
+                <em>Contoh: hidup — mati, benar — salah, ada — tiada.</em></li>
+                <li><strong>Antonim Relasional (Hubungan):</strong> Pasangan kata yang bermakna lawan berdasarkan hubungan.<br>
+                <em>Contoh: guru — murid, beli — jual, atas — bawah, memberi — menerima.</em></li>
+                <li><strong>Antonim Hierarkial (Tingkatan):</strong> Pasangan kata yang memiliki tingkatan dalam hierarki.<br>
+                <em>Contoh: kapten — prajurit, jenderal — prajurit, professor — mahasiswa.</em></li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Contoh Pasangan Antonim Populer:</h4>
+            <div class="word-pair-cards">
+                <div class="word-pair">
+                    <div class="word-a">Hidup</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Mati</div>
+                    <div class="meaning">Antonim komplementer</div>
+                </div>
+                <div class="word-pair">
+                    <div class="word-a">Besar</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Kecil</div>
+                    <div class="meaning">Antonim gradual</div>
+                </div>
+                <div class="word-pair">
+                    <div class="word-a">Panas</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Dingin</div>
+                    <div class="meaning">Antonim gradual</div>
+                </div>
+                <div class="word-pair">
+                    <div class="word-a">Cepat</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Lambat</div>
+                    <div class="meaning">Antonim gradual</div>
+                </div>
+                <div class="word-pair">
+                    <div class="word-a">Guru</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Murid</div>
+                    <div class="meaning">Antonim relasional</div>
+                </div>
+                <div class="word-pair">
+                    <div class="word-a">Beli</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Jual</div>
+                    <div class="meaning">Antonim relasional</div>
+                </div>
+                <div class="word-pair">
+                    <div class="word-a">Optimis</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Pesimis</div>
+                    <div class="meaning">Antonim gradual</div>
+                </div>
+                <div class="word-pair">
+                    <div class="word-a">Produktif</div>
+                    <div class="vs">↔</div>
+                    <div class="word-b">Konsumtif</div>
+                    <div class="meaning">Antonim gradual</div>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>💡 Fungsi Antonim dalam Artikel Ilmiah Populer</h4>
+                <p>1. <strong>Mempertegas kontras</strong> — menunjukkan perbedaan yang jelas<br>
+                2. <strong>Memberi efek dramatis</strong> — membuat tulisan lebih menarik<br>
+                3. <strong>Memperjelas makna</strong> — dengan menunjukkan kebalikannya<br>
+                4. <strong>Membuat tulisan variatif</strong> — tidak monoton<br>
+                5. <strong>Menciptakan ritme</strong> — melalui paralelisme antonim</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Penggunaan Antonim dalam Artikel</h5>
+                <div class="sentence-cards">
+                    <div class="sentence-card antonim">
+                        <div class="label">↔️ Mempertegas Kontras</div>
+                        <div class="sentence">"Generasi muda harus menjadi produsen, bukan sekadar konsumen, di era digital ini."</div>
+                        <div class="context">Antonim produsen-konsumen mempertegas pesan.</div>
+                    </div>
+                    <div class="sentence-card antonim">
+                        <div class="label">↔️ Efek Dramatis</div>
+                        <div class="sentence">"Kebiasaan buruk yang kecil hari ini bisa menjadi masalah besar di masa depan."</div>
+                        <div class="context">Antonim kecil-besar memberi efek dramatis.</div>
+                    </div>
+                    <div class="sentence-card antonim">
+                        <div class="label">↔️ Memperjelas Makna</div>
+                        <div class="sentence">"Pendidikan bukan hanya tentang mengisi pikiran, tetapi juga menyalakan api semangat belajar."</div>
+                        <div class="context">Antonim mengisi-menyalakan memperjelas makna pendidikan.</div>
+                    </div>
+                    <div class="sentence-card antonim">
+                        <div class="label">↔️ Paralelisme</div>
+                        <div class="sentence">"Yang kita tanam hari ini, itulah yang kita tuai esok hari."</div>
+                        <div class="context">Antonim tanam-tuai menciptakan ritme paralel.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content E: Sinonim -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--sinonim); color: white;">4</div>
+                <h3>Sinonim (Kata Persamaan)</h3>
+            </div>
+            <p><strong>Sinonim</strong> adalah kata yang memiliki makna sama atau mirip dengan kata lain. Dalam artikel ilmiah populer, penggunaan sinonim berfungsi untuk <strong>menghindari repetisi</strong>, memperkaya kosakata, dan membuat tulisan lebih variatif.</p>
+            
+            <div class="definition-box">
+                 <strong>DEFINISI:</strong><br>
+                Sinonim (dari bahasa Yunani <em>syn</em> = sama, <em>onoma</em> = nama) adalah kata yang memiliki makna sama atau mirip dengan kata lain. Penggunaan sinonim dalam artikel ilmiah populer berfungsi untuk menghindari pengulangan kata yang monoton dan memperkaya variasi bahasa.
+            </div>
+
+            <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Jenis-Jenis Sinonim:</h4>
+            <ul class="feature-list">
+                <li><strong>Sinonim Mutlak:</strong> Dua kata yang benar-benar sama maknanya, bisa saling menggantikan tanpa mengubah makna.<br>
+                <em>Contoh: tanggal = tarikh, November = Nopember, apotek = apotik.</em></li>
+                <li><strong>Sinonim Dekat (Mirip):</strong> Dua kata yang maknanya mirip tetapi tidak sama persis, penggunaannya tergantung konteks.<br>
+                <em>Contoh: pintar ≈ cerdas ≈ pandai ≈ pandai ≈ cendekia.</em></li>
+                <li><strong>Sinonim Kontekstual:</strong> Dua kata yang bersinonim hanya dalam konteks tertentu.<br>
+                <em>Contoh: "melihat" = "menonton" (dalam konteks film), tapi tidak selalu sinonim di konteks lain.</em></li>
+            </ul>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Contoh Sinonim Populer dalam Artikel Ilmiah:</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Kata Dasar</th>
+                        <th>Sinonim</th>
+                        <th>Nuansa Makna</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pintar</strong></td>
+                        <td>Cerdas, pandai, cendekia, cerdas, brilian</td>
+                        <td>Bervariasi dari umum hingga formal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bagus</strong></td>
+                        <td>Baik, indah, elok, apik, prima</td>
+                        <td>Dari umum hingga puitis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Banyak</strong></td>
+                        <td>Berlimpah, melimpah, beraneka, beragam</td>
+                        <td>Dari kuantitas hingga variasi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Penting</strong></td>
+                        <td>Krusial, vital, esensial, utama, signifikan</td>
+                        <td>Dari umum hingga akademis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Berpengaruh</strong></td>
+                        <td>Berdampak, signifikan, berarti, bermakna</td>
+                        <td>Tingkat pengaruh</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mengubah</strong></td>
+                        <td>Mengubah, memodifikasi, merevolusi, mentransformasi</td>
+                        <td>Tingkat perubahan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Berbahaya</strong></td>
+                        <td>Berisiko, mengancam, fatal, mematikan</td>
+                        <td>Tingkat bahaya</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mudah</strong></td>
+                        <td>Sederhana, praktis, gampang, simpel</td>
+                        <td>Dari umum hingga teknis</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="key-concept">
+                <h4>💡 Fungsi Sinonim dalam Artikel Ilmiah Populer</h4>
+                <p>1. <strong>Menghindari repetisi</strong> — tidak mengulang kata yang sama terus-menerus<br>
+                2. <strong>Memperkaya kosakata</strong> — memperkenalkan variasi kata kepada pembaca<br>
+                3. <strong>Menyesuaikan nuansa</strong> — memilih kata yang paling tepat untuk konteks<br>
+                4. <strong>Membuat tulisan variatif</strong> — lebih menarik dan tidak monoton<br>
+                5. <strong>Menunjukkan penguasaan bahasa</strong> — penulis menguasai banyak kata</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Contoh Penggunaan Sinonim dalam Artikel</h5>
+                <p><strong>❌ SEBELUM (Monoton):</strong><br>
+                <em>"Tidur <strong>penting</strong> bagi kesehatan. Tidur juga <strong>penting</strong> untuk konsentrasi. Tidur sangat <strong>penting</strong> untuk pertumbuhan."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Pengulangan kata "penting" membuat tulisan monoton)</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✅ SESUDAH (Variatif):</strong><br>
+                <em>"Tidur <strong>penting</strong> bagi kesehatan. Tidur juga <strong>krusial</strong> untuk konsentrasi. Tidur sangat <strong>vital</strong> untuk pertumbuhan."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Variasi sinonim: penting → krusial → vital)</span></p>
+
+                <p style="margin-top: 1.5rem;"><strong>❌ SEBELUM (Monoton):</strong><br>
+                <em>"Penelitian <strong>menunjukkan</strong> bahwa... Penelitian lain juga <strong>menunjukkan</strong> bahwa..."</em></p>
+
+                <p style="margin-top: 1rem;"><strong>✅ SESUDAH (Variatif):</strong><br>
+                <em>"Penelitian <strong>menunjukkan</strong> bahwa... Studi lain <strong>membuktikan</strong> bahwa... Riset terbaru <strong>mengungkap</strong> bahwa..."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Variasi sinonim: menunjukkan → membuktikan → mengungkap)</span></p>
+            </div>
+        </div>
+
+        <!-- Content F: Cara Menggunakan dalam Artikel -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">F</div>
+                <h3>Cara Menggunakan Keempat Gaya Bahasa dalam Artikel</h3>
+            </div>
+            <p>Untuk membuat artikel ilmiah populer yang menarik dan variatif, kita perlu <strong>mengombinasikan</strong> keempat gaya bahasa ini secara tepat. Berikut adalah panduan penggunaannya:</p>
+
+            <div class="key-concept">
+                <h4>📋 Panduan Penggunaan Gaya Bahasa</h4>
+                <p><strong>🔵 PERBANDINGAN</strong> — Gunakan saat ingin memperjelas konsep abstrak dengan hal konkret<br>
+                <strong>🟣 ANALOGI</strong> — Gunakan saat ingin menjelaskan konsep kompleks melalui hal yang familiar<br>
+                <strong>🟠 ANTONIM</strong> — Gunakan saat ingin mempertegas kontras atau memberi efek dramatis<br>
+                <strong>🟢 SINONIM</strong> — Gunakan saat ingin menghindari repetisi dan memperkaya variasi bahasa</p>
+            </div>
+
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Tips Mengombinasikan Gaya Bahasa:</h4>
+            <ul class="feature-list">
+                <li><strong>Jangan berlebihan:</strong> Gunakan gaya bahasa secukupnya, jangan di setiap kalimat. Terlalu banyak gaya bahasa akan membuat tulisan terasa dibuat-buat.</li>
+                <li><strong>Sesuaikan dengan konteks:</strong> Pilih gaya bahasa yang sesuai dengan topik dan target pembaca.</li>
+                <li><strong>Perhatikan kesesuaian:</strong> Pastikan perbandingan atau analogi yang digunakan relevan dan mudah dipahami pembaca.</li>
+                <li><strong>Varasikan:</strong> Jangan hanya menggunakan satu jenis gaya bahasa. Kombinasikan keempatnya untuk efek maksimal.</li>
+                <li><strong>Baca ulang:</strong> Setelah menulis, baca ulang untuk memastikan gaya bahasa yang digunakan tepat dan tidak berlebihan.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>💡 Contoh Paragraf yang Mengombinasikan Keempat Gaya Bahasa</h5>
+                <div class="text-sample" style="font-style: normal;">
+                    <strong>"Mengapa Tidur adalah Investasi Terbaik untuk Otak?"</strong><br><br>
+
+                    Otak manusia <span class="tag-banding">seperti</span> mesin canggih yang perlu istirahat setelah bekerja keras seharian. <span class="tag-analogi">Layaknya</span> ponsel yang perlu di-cas setiap malam agar bisa berfungsi optimal keesokan harinya, otak kita juga membutuhkan tidur yang cukup untuk memulihkan energi dan memproses informasi yang diterima sepanjang hari.<br><br>
+
+                    Penelitian dari Harvard University (2023) <span class="tag-sinonim">mengungkap</span> bahwa pelajar yang tidur 7-8 jam per hari memiliki konsentrasi yang jauh lebih baik dibandingkan yang kurang tidur. Studi lain <span class="tag-sinonim">membuktikan</span> bahwa tidur yang cukup juga meningkatkan daya ingat dan kemampuan memecahkan masalah. Riset terbaru bahkan <span class="tag-sinonim">menunjukkan</span> bahwa tidur yang berkualitas dapat menurunkan risiko penyakit degeneratif di masa tua.<br><br>
+
+                    <span class="tag-antonim">Berbeda dengan</span> anggapan umum bahwa begadang berarti belajar lebih giat, fakta menunjukkan bahwa begadang justru <span class="tag-antonim">merugikan</span> prestasi. <span class="tag-banding">Semakin</span> cukup tidur seorang pelajar, <span class="tag-banding">semakin</span> tinggi pula prestasinya. Jadi, sudah seharusnya kita mengubah pola pikir: tidur bukan tanda kemalasan, melainkan <span class="tag-antonim">investasi</span> terbaik untuk masa depan otak kita.
+                </div>
+                <p style="margin-top: 1rem;"><strong>🔍 Analisis:</strong></p>
+                <ul class="feature-list" style="margin-top: 0.5rem;">
+                    <li><span class="tag-banding">PERBANDINGAN</span>: "seperti mesin canggih", "Semakin...semakin..."</li>
+                    <li><span class="tag-analogi">ANALOGI</span>: "Layaknya ponsel yang perlu di-cas"</li>
+                    <li><span class="tag-sinonim">SINONIM</span>: mengungkap → membuktikan → menunjukkan (variasi kata)</li>
+                    <li><span class="tag-antonim">ANTONIM</span>: "Berbeda dengan", "merugikan", "investasi" (kontras dengan kemalasan)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content G: Contoh Analisis Lengkap -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">G</div>
+                <h3>Contoh Analisis Gaya Bahasa dalam Artikel</h3>
+            </div>
+            <p>Berikut adalah contoh analisis lengkap penggunaan keempat gaya bahasa dalam sebuah artikel ilmiah populer:</p>
+
+            <div class="example-box">
+                <h5>📖 Artikel: "Media Sosial: Teman atau Musuh?"</h5>
+                <div class="text-sample" style="font-style: normal;">
+                    Media sosial <span class="tag-analogi">ibarat pisau bermata dua</span> — bisa menjadi alat yang bermanfaat, tetapi juga bisa melukai jika digunakan sembarangan. Di satu sisi, media sosial <span class="tag-banding">seperti</span> jendela dunia yang membuka akses ke berbagai informasi dan koneksi global. Di sisi lain, ia juga <span class="tag-banding">bagaikan</span> racun yang perlahan menggerogoti kesehatan mental penggunanya.<br><br>
+
+                    Menurut survei Common Sense Media (2024), remaja Indonesia menghabiskan <span class="tag-antonim">rata-rata</span> 7 jam per hari di media sosial — angka yang <span class="tag-antonim">sangat tinggi</span> dibandingkan generasi sebelumnya. Dr. Jean Twenge, psikolog dari San Diego State University, <span class="tag-sinonim">menyatakan</span> bahwa penggunaan media sosial berlebihan dapat meningkatkan risiko kecemasan dan depresi. Penelitian lain <span class="tag-sinonim">membuktikan</span> bahwa remaja yang aktif di media sosial memiliki kualitas tidur yang lebih buruk. Studi terbaru bahkan <span class="tag-sinonim">mengungkap</span> bahwa algoritma media sosial dirancang untuk membuat pengguna <span class="tag-antonim">kecanduan</span>, bukan <span class="tag-antonim">produktif</span>.<br><br>
+
+                    <span class="tag-banding">Berbeda dengan</span> generasi sebelumnya yang lebih aktif di luar rumah, generasi Z cenderung menghabiskan waktu di dunia digital. <span class="tag-banding">Semakin</span> sering kita scrolling, <span class="tag-banding">semakin</span> sulit bagi kita untuk fokus pada hal-hal penting dalam kehidupan nyata. Oleh karena itu, sudah saatnya kita menjadi <span class="tag-antonim">pengendali</span> teknologi, bukan <span class="tag-antonim">dikendalikan</span> olehnya.
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>📊 Hasil Analisis Gaya Bahasa</h4>
+                
+                <p><span class="tag-banding">PERBANDINGAN</span> (4 kalimat):</p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.3rem 0;">1. "Media sosial seperti jendela dunia" — perbandingan sama</li>
+                    <li style="padding: 0.3rem 0;">2. "Bagaikan racun yang perlahan menggerogoti" — perbandingan sama</li>
+                    <li style="padding: 0.3rem 0;">3. "Berbeda dengan generasi sebelumnya" — perbandingan berbeda</li>
+                    <li style="padding: 0.3rem 0;">4. "Semakin...semakin..." — perbandingan korelatif</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><span class="tag-analogi">ANALOGI</span> (1 kalimat):</p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.3rem 0;">1. "Media sosial ibarat pisau bermata dua" — analogi hubungan (manfaat & bahaya)</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><span class="tag-sinonim">SINONIM</span> (3 variasi kata):</p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.3rem 0;">1. menyatakan → membuktikan → mengungkap (variasi kata "menunjukkan")</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><span class="tag-antonim">ANTONIM</span> (5 pasangan):</p>
+                <ul style="list-style: none; padding-left: 0; color: white;">
+                    <li style="padding: 0.3rem 0;">1. tinggi (vs rendah) — mempertegas angka</li>
+                    <li style="padding: 0.3rem 0;">2. kecanduan vs produktif — kontras dampak</li>
+                    <li style="padding: 0.3rem 0;">3. pengendali vs dikendalikan — kontras posisi</li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;"><strong>🏆 PENILAIAN:</strong></p>
+                <p>Artikel ini <strong>SANGAT BAIK</strong> karena mengombinasikan keempat gaya bahasa secara seimbang, membuat tulisan hidup, variatif, dan mudah dipahami pembaca.</p>
+            </div>
+        </div>
+
+        <!-- Content H: Kesalahan Umum -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">H</div>
+                <h3>Kesalahan Umum dalam Menggunakan Gaya Bahasa</h3>
+            </div>
+            <p>Berikut adalah kesalahan yang sering dilakukan penulis pemula saat menggunakan gaya bahasa dalam artikel ilmiah populer:</p>
+
+            <ul class="feature-list">
+                <li><strong>Analogi yang Tidak Relevan:</strong> Menggunakan analogi yang tidak sesuai dengan konteks atau sulit dipahami pembaca. Contoh: "Otak seperti mesin uap" — kurang relevan untuk pembaca modern.</li>
+                <li><strong>Terlalu Banyak Gaya Bahasa:</strong> Setiap kalimat menggunakan gaya bahasa, sehingga tulisan terasa dibuat-buat dan melelahkan untuk dibaca.</li>
+                <li><strong>Sinonim yang Tidak Tepat:</strong> Menggunakan sinonim tanpa memperhatikan nuansa makna. Contoh: "Dia <em>almarhum</em> di kelas" — salah, karena "almarhum" hanya untuk yang sudah meninggal.</li>
+                <li><strong>Antonim yang Tidak Seimbang:</strong> Menggunakan antonim yang tidak paralel. Contoh: "Kita harus <em>produktif</em>, bukan <em>malas</em>" — seharusnya: "produktif, bukan konsumtif".</li>
+                <li><strong>Perbandingan yang Klise:</strong> Menggunakan perbandingan yang sudah terlalu sering dipakai. Contoh: "Cantik seperti bidadari" — terlalu klise.</li>
+                <li><strong>Tidak Sesuai Target Pembaca:</strong> Menggunakan analogi yang hanya dipahami kalangan tertentu, padahal artikel ditujukan untuk masyarakat umum.</li>
+            </ul>
+
+            <div class="example-box">
+                <h5>⚠️ Contoh Kesalahan vs Perbaikan</h5>
+                <p><strong>❌ KESALAHAN:</strong><br>
+                <em>"Otak manusia seperti mesin uap yang kompleks dan canggih."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Analogi mesin uap kurang relevan untuk pembaca modern)</span></p>
+                
+                <p style="margin-top: 1rem;"><strong>✅ PERBAIKAN:</strong><br>
+                <em>"Otak manusia layaknya komputer super yang memproses miliaran informasi setiap detik."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Analogi komputer lebih relevan dan mudah dipahami)</span></p>
+
+                <p style="margin-top: 1.5rem;"><strong>❌ KESALAHAN:</strong><br>
+                <em>"Kita harus menjadi generasi yang <strong>cerdas</strong>, bukan <strong>malas</strong>."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Antonim tidak seimbang: cerdas vs malas bukan antonim yang tepat)</span></p>
+
+                <p style="margin-top: 1rem;"><strong>✅ PERBAIKAN:</strong><br>
+                <em>"Kita harus menjadi generasi yang <strong>produktif</strong>, bukan <strong>konsumtif</strong>."</em><br>
+                <span style="font-size: 0.85rem; color: var(--text-light);">(Antonim seimbang dan bermakna)</span></p>
+            </div>
+        </div>
+
+        <!-- Content I: Tips Memperkaya Tulisan -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">I</div>
+                <h3>Tips Memperkaya Tulisan dengan Gaya Bahasa</h3>
+            </div>
+            <p>Berikut adalah tips praktis untuk menggunakan keempat gaya bahasa ini dalam menulis artikel ilmiah populer:</p>
+
+            <div class="key-concept">
+                <h4>🏆 10 Tips Memperkaya Tulisan</h4>
+                <p>1. <strong>Baca banyak artikel berkualitas</strong> — pelajari bagaimana penulis profesional menggunakan gaya bahasa<br>
+                2. <strong>Kumpulkan kosakata sinonim</strong> — buat kamus pribadi sinonim untuk kata-kata yang sering digunakan<br>
+                3. <strong>Latih membuat analogi</strong> — coba jelaskan konsep kompleks dengan analogi sederhana<br>
+                4. <strong>Gunakan antonim untuk kontras</strong> — pertegas pesan dengan menunjukkan kebalikannya<br>
+                5. <strong>Perbandingan yang konkret</strong> — bandingkan dengan hal yang sudah dikenal pembaca<br>
+                6. <strong>Jangan berlebihan</strong> — gunakan gaya bahasa secukupnya, tidak di setiap kalimat<br>
+                7. <strong>Sesuaikan dengan target pembaca</strong> — analogi untuk anak berbeda dengan untuk dewasa<br>
+                8. <strong>Baca ulang tulisan</strong> — cek apakah gaya bahasa yang digunakan tepat dan tidak berlebihan<br>
+                9. <strong>Minta masukan</strong> — mintalah teman atau guru mereview tulisan Anda<br>
+                10. <strong>Latihan rutin</strong> — semakin sering menulis, semakin terampil menggunakan gaya bahasa</p>
+            </div>
+
+            <div class="example-box">
+                <h5>💡 Latihan: Ubah Kalimat Biasa Menjadi Lebih Menarik</h5>
+                <p><strong>KALIMAT BIASA:</strong><br>
+                <em>"Air penting untuk tubuh."</em></p>
+                
+                <p style="margin-top: 1rem;"><strong>VERSI DIPERKAYA:</strong><br>
+                <em>"Air <span class="tag-sinonim">merupakan</span> <span class="tag-sinonim">sumber kehidupan</span> yang <span class="tag-sinonim">vital</span> bagi tubuh manusia. <span class="tag-banding">Layaknya</span> bahan bakar bagi mobil, air <span class="tag-banding">mengalirkan</span> nutrisi ke seluruh sel tubuh. <span class="tag-antonim">Tanpa</span> air yang cukup, tubuh akan <span class="tag-antonim">lemah</span> dan <span class="tag-antonim">rentan</span> terhadap penyakit. <span class="tag-banding">Semakin</span> banyak kita minum air, <span class="tag-banding">semakin</span> sehat pula tubuh kita."</em></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">(Kalimat biasa 4 kata → versi diperkaya dengan 4 gaya bahasa)</p>
+            </div>
+        </div>
+
+        <!-- Keywords & Quote -->
+        <div class="section">
+            <h4 style="margin-bottom: 1rem;">◆ Kata Kunci Sub Bab Ini</h4>
+            <div class="keywords">
+                <span class="keyword-tag">Kalimat Perbandingan</span>
+                <span class="keyword-tag">Analogi</span>
+                <span class="keyword-tag">Antonim</span>
+                <span class="keyword-tag">Sinonim</span>
+                <span class="keyword-tag">Gaya Bahasa</span>
+                <span class="keyword-tag">Simile</span>
+                <span class="keyword-tag">Kontras</span>
+                <span class="keyword-tag">Superlatif</span>
+                <span class="keyword-tag">Korelatif</span>
+                <span class="keyword-tag">Gradasi</span>
+                <span class="keyword-tag">Komplementer</span>
+                <span class="keyword-tag">Relasional</span>
+                <span class="keyword-tag">Variasi Bahasa</span>
+                <span class="keyword-tag">Repetisi</span>
+                <span class="keyword-tag">Konkret</span>
+                <span class="keyword-tag">Abstrak</span>
+                <span class="keyword-tag">Nuansa Makna</span>
+                <span class="keyword-tag">Kreativitas Menulis</span>
+            </div>
+        </div>
+
+        <div class="quote-box">
+            <p class="arabic">وَعَلَّمَ ءَادَمَ ٱلْأَسْمَآءَ كُلَّهَا</p>
+            <p class="translation">"Dan Dia mengajarkan kepada Adam nama-nama (benda) seluruhnya..."</p>
+            <p class="source">— QS. Al-Baqarah [2]: 31</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Ayat ini menegaskan kemuliaan manusia yang dianugerahi kemampuan berbahasa dan memahami nama-nama (kata-kata). Dengan memperkaya kosakata melalui sinonim, antonim, dan gaya bahasa lainnya, kita sedang mensyukuri anugerah bahasa yang diberikan Allah. Gunakanlah kemampuan ini untuk menulis karya yang bermanfaat bagi sesama.
+            </p>
+        </div>
+
+        <!-- Uji Formatif Section -->
+        <div class="section" id="uji-formatif">
+            <div class="section-header">
+                <div class="section-icon" style="background: var(--primary); color: var(--accent);">📝</div>
+                <h3>Uji Formatif Sub Bab 3.6</h3>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">
+                📋 <strong>Bagian A:</strong> Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; 
+                ✍️ <strong>Bagian B:</strong> Essay (5 soal, skor 20/soal)<br>
+                <em>Materi: Kalimat perbandingan, analogi, antonim, sinonim, cara menggunakan, dan contoh analisis dalam artikel ilmiah populer.</em>
+            </p>
+
+            <form id="quizForm" onsubmit="event.preventDefault(); hitungSkor();">
+                <div style="background: var(--bg); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">📋 Identitas Siswa</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="nama" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="nis" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>📅 Tanggal Ujian *</label>
+                            <input type="date" id="tanggal" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Kelas *</label>
+                            <select id="kelas" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label>Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="1 (Satu)">1 (Satu)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">1. Kalimat yang membandingkan dua hal untuk menunjukkan persamaan dengan kata "seperti", "bagai", "ibarat" disebut kalimat...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg1" value="A"> A. Analogi</label>
+                        <label><input type="radio" name="pg1" value="B"> B. Perbandingan</label>
+                        <label><input type="radio" name="pg1" value="C"> C. Antonim</label>
+                        <label><input type="radio" name="pg1" value="D"> D. Sinonim</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">2. "Otak layaknya CPU komputer" merupakan contoh gaya bahasa...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg2" value="A"> A. Perbandingan</label>
+                        <label><input type="radio" name="pg2" value="B"> B. Antonim</label>
+                        <label><input type="radio" name="pg2" value="C"> C. Sinonim</label>
+                        <label><input type="radio" name="pg2" value="D"> D. Analogi</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">3. Kata yang berlawanan makna disebut...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg3" value="A"> A. Sinonim</label>
+                        <label><input type="radio" name="pg3" value="B"> B. Antonim</label>
+                        <label><input type="radio" name="pg3" value="C"> C. Analogi</label>
+                        <label><input type="radio" name="pg3" value="D"> D. Perbandingan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">4. Kata "pintar", "cerdas", "pandai" merupakan contoh...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg4" value="A"> A. Antonim</label>
+                        <label><input type="radio" name="pg4" value="B"> B. Analogi</label>
+                        <label><input type="radio" name="pg4" value="C"> C. Sinonim</label>
+                        <label><input type="radio" name="pg4" value="D"> D. Perbandingan</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">5. Fungsi utama analogi dalam artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg5" value="A"> A. Menghindari repetisi kata</label>
+                        <label><input type="radio" name="pg5" value="B"> B. Menjelaskan konsep kompleks melalui hal yang familiar</label>
+                        <label><input type="radio" name="pg5" value="C"> C. Mempertegas kontras</label>
+                        <label><input type="radio" name="pg5" value="D"> D. Menunjukkan persamaan dua hal</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">6. "Semakin sering kita membaca, semakin luas wawasan kita." Kalimat ini menggunakan jenis perbandingan...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg6" value="A"> A. Simile</label>
+                        <label><input type="radio" name="pg6" value="B"> B. Kontras</label>
+                        <label><input type="radio" name="pg6" value="C"> C. Superlatif</label>
+                        <label><input type="radio" name="pg6" value="D"> D. Korelatif</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">7. Pasangan kata "hidup-mati" termasuk jenis antonim...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg7" value="A"> A. Gradasional</label>
+                        <label><input type="radio" name="pg7" value="B"> B. Komplementer</label>
+                        <label><input type="radio" name="pg7" value="C"> C. Relasional</label>
+                        <label><input type="radio" name="pg7" value="D"> D. Hierarkial</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">8. Fungsi sinonim dalam artikel ilmiah populer adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg8" value="A"> A. Mempertegas kontras</label>
+                        <label><input type="radio" name="pg8" value="B"> B. Menghindari repetisi dan memperkaya variasi bahasa</label>
+                        <label><input type="radio" name="pg8" value="C"> C. Menjelaskan konsep kompleks</label>
+                        <label><input type="radio" name="pg8" value="D"> D. Membandingkan dua hal</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">9. Kesalahan umum dalam menggunakan gaya bahasa adalah...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg9" value="A"> A. Menggunakan gaya bahasa secukupnya</label>
+                        <label><input type="radio" name="pg9" value="B"> B. Menggunakan analogi yang relevan</label>
+                        <label><input type="radio" name="pg9" value="C"> C. Menggunakan terlalu banyak gaya bahasa di setiap kalimat</label>
+                        <label><input type="radio" name="pg9" value="D"> D. Memilih sinonim yang tepat</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">10. Ayat "Dan Dia mengajarkan kepada Adam nama-nama (benda) seluruhnya" terdapat dalam surat...</p>
+                    <div class="options">
+                        <label><input type="radio" name="pg10" value="A"> A. Al-'Alaq</label>
+                        <label><input type="radio" name="pg10" value="B"> B. Al-Qalam</label>
+                        <label><input type="radio" name="pg10" value="C"> C. Al-Baqarah</label>
+                        <label><input type="radio" name="pg10" value="D"> D. Al-Hujurat</label>
+                    </div>
+                </div>
+
+                <h4 style="margin: 2.5rem 0 1.5rem 0; color: var(--primary);">✍️ Bagian B: Essay</h4>
+                
+                <div class="question-block">
+                    <p class="question-text">Essay 1 (20 POIN)<br>Jelaskan perbedaan antara kalimat perbandingan dan kalimat analogi! Berikan masing-masing dua contoh kalimat!</p>
+                    <textarea id="essay1" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 2 (20 POIN)<br>Sebutkan dan jelaskan 4 (empat) jenis antonim! Berikan masing-masing dua contoh pasangan kata!</p>
+                    <textarea id="essay2" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 3 (20 POIN)<br>Jelaskan fungsi sinonim dalam artikel ilmiah populer! Berikan 3 contoh kelompok sinonim (masing-masing minimal 4 kata) dan jelaskan nuansa maknanya!</p>
+                    <textarea id="essay3" class="form-control" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 4 (20 POIN)<br>Bacalah paragraf berikut, kemudian identifikasi: (a) 2 kalimat perbandingan, (b) 1 analogi, (c) 2 penggunaan antonim, (d) 3 variasi sinonim!<br><br><em>"Generasi Z ibarat pedang bermata dua — di satu sisi mereka sangat melek teknologi, di sisi lain rentan terhadap kecanduan gadget. Berbeda dengan generasi sebelumnya yang lebih aktif di luar rumah, generasi Z lebih banyak menghabiskan waktu di dunia digital. Semakin sering mereka scrolling, semakin sulit bagi mereka untuk fokus pada hal-hal penting. Penelitian menunjukkan bahwa remaja yang aktif di media sosial memiliki kualitas tidur yang lebih buruk. Studi lain membuktikan bahwa penggunaan gadget berlebihan dapat meningkatkan risiko kecemasan. Riset terbaru bahkan mengungkap bahwa algoritma media sosial dirancang untuk membuat pengguna kecanduan, bukan produktif."</em></p>
+                    <textarea id="essay4" class="form-control" style="min-height: 150px;" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">Essay 5 (20 POIN)<br>Tulislah satu paragraf artikel ilmiah populer bertema "Pentingnya Olahraga bagi Pelajar" yang mengandung minimal: (1) 1 kalimat perbandingan, (2) 1 analogi, (3) 2 penggunaan antonim, dan (4) 3 variasi sinonim! Tandai masing-masing dengan warna yang berbeda!</p>
+                    <textarea id="essay5" class="form-control" style="min-height: 200px;" placeholder="Tulis paragraf Anda di sini..."></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                </div>
+            </form>
+
+            <div id="hasil-ujian">
+                <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Uji Formatif Selesai!</h3>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Berikut adalah hasil penilaian otomatis Anda. <br><em>(Catatan: Penilaian essay bersifat otomatis berdasarkan kelengkapan jawaban. Guru dapat melakukan penyesuaian akhir).</em></p>
+                
+                <div class="score-display">
+                    <div class="score-box">
+                        <h4>📋 Pilihan Ganda</h4>
+                        <div class="value" id="skor-pg">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box">
+                        <h4>✍️ Essay</h4>
+                        <div class="value" id="skor-essay">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 100</div>
+                    </div>
+                    <div class="score-box" style="border: 2px solid var(--accent);">
+                        <h4>🏆 Skor Akhir</h4>
+                        <div class="value gold" id="skor-akhir">0</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">/ 200</div>
+                    </div>
+                </div>
+
+                <div class="btn-group" style="justify-content: center;">
+                    <button onclick="unduhPDF()" class="btn btn-secondary">📥 UNDUH PDF LENGKAP</button>
+                    <button onclick="unduhTXT()" class="btn btn-outline">📄 UNDUH SKOR (TXT)</button>
+                    <button onclick="kirimEmail()" class="btn btn-primary">📧 KIRIM KE EMAIL GURU</button>
+                    <button onclick="mulaiUlang()" class="btn btn-outline" style="border-color: #e74c3c; color: #e74c3c;">🔄 MULAI ULANG</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Penutup Bab 3 -->
+        <div class="section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center;">
+            <h3 style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;">🎉 Selamat! Anda Telah Menyelesaikan Sub Bab 3.6</h3>
+            <p style="opacity: 0.9; margin-bottom: 1.5rem;">Anda telah mempelajari cara memperkaya tulisan dengan kalimat perbandingan, analogi, antonim, dan sinonim. Sekarang Anda siap untuk menghadapi PTS (Penilaian Tengah Semester) yang akan menguji seluruh pemahaman Anda tentang Bab 3!</p>
+            <a href="22.html" class="btn btn-primary" style="display: inline-flex;">Lanjut ke PTS (Sub Bab 3.7) →</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">📖 Daftar Isi</a>
+            <a href="mailto:yutika.sari06@gmail.com">📧 Email Penulis</a>
+            <a href="22.html">Selanjutnya → PTS (Sub Bab 3.7)</a>
+        </div>
+        <p>&copy; 2026 Yutika Sari, S.Pd. — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang</p>
+        <p style="margin-top: 0.5rem;">Email: <a href="mailto:yutika.sari06@gmail.com">yutika.sari06@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('tanggal').valueAsDate = new Date();
+
+        const kunciJawabanPG = {
+            pg1: 'B', pg2: 'D', pg3: 'B', pg4: 'C', pg5: 'B',
+            pg6: 'D', pg7: 'B', pg8: 'B', pg9: 'C', pg10: 'C'
+        };
+
+        function hitungSkor() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi identitas siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let skorPG = 0;
+            let skorEssay = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciJawabanPG[`pg${i}`]) {
+                    skorPG += 10;
+                }
+            }
+
+            for (let i = 1; i <= 5; i++) {
+                const jawaban = document.getElementById(`essay${i}`).value.trim();
+                if (jawaban.length > 30) {
+                    skorEssay += 20;
+                } else if (jawaban.length > 0) {
+                    skorEssay += 10;
+                }
+            }
+
+            const skorAkhir = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').innerText = skorPG;
+            document.getElementById('skor-essay').innerText = skorEssay;
+            document.getElementById('skor-akhir').innerText = skorAkhir;
+            
+            document.getElementById('hasil-ujian').style.display = 'block';
+            document.getElementById('hasil-ujian').scrollIntoView({ behavior: 'smooth' });
+            
+            const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+            inputs.forEach(input => input.disabled = true);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('hasil-ujian');
+            const nama = document.getElementById('nama').value;
+            const opt = {
+                margin: 10,
+                filename: `Hasil_Uji_Formatif_3.6_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const skorPG = document.getElementById('skor-pg').innerText;
+            const skorEssay = document.getElementById('skor-essay').innerText;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+
+            let textData = `=== HASIL UJI FORMATIF SUB BAB 3.6 ===\n`;
+            textData += `Nama: ${nama}\n`;
+            textData += `NIS: ${nis}\n`;
+            textData += `Kelas: ${kelas}\n`;
+            textData += `Tanggal: ${tanggal}\n`;
+            textData += `Materi: Kalimat Perbandingan, Analogi, Antonim, dan Sinonim\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Skor Pilihan Ganda: ${skorPG} / 100\n`;
+            textData += `Skor Essay: ${skorEssay} / 100\n`;
+            textData += `SKOR AKHIR: ${skorAkhir} / 200\n`;
+            textData += `-----------------------------------\n`;
+            textData += `Catatan: Penilaian essay bersifat otomatis.\n`;
+            textData += `Guru dapat melakukan penyesuaian akhir.\n`;
+
+            const blob = new Blob([textData], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Uji_Formatif_3.6_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const kelas = document.getElementById('kelas').value;
+            const skorAkhir = document.getElementById('skor-akhir').innerText;
+            
+            const subject = `Hasil Uji Formatif Sub Bab 3.6 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Yutika Sari, S.Pd.,\n\nBerikut adalah hasil uji formatif saya:\n\nNama: ${nama}\nNIS: ${nis}\nKelas: ${kelas}\nMateri: Kalimat Perbandingan, Analogi, Antonim, dan Sinonim\nSkor Akhir: ${skorAkhir} / 200\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:yutika.sari06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function mulaiUlang() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('tanggal').valueAsDate = new Date();
+                document.getElementById('hasil-ujian').style.display = 'none';
+                
+                const inputs = document.querySelectorAll('#quizForm input, #quizForm textarea, #quizForm select');
+                inputs.forEach(input => input.disabled = false);
+                
+                window.scrollTo({ top: document.getElementById('uji-formatif').offsetTop - 100, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
